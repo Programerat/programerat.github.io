@@ -1,0 +1,17 @@
+<nav class="main-nav">
+    <div class="left">
+        <a class="cta-social" target="_blank" href="https://www.linkedin.com/in/{{ site.authorLinkedin }}"><i class="fa fa-linkedin"></i></a>
+        <a class="cta-social" target="_blank" href="https://github.com/{{ site.authorGithub }}"><i class="fa fa-github"></i></a>
+        <a class="cta-social" target="_blank" href="https://stackoverflow.com/users/3591281/diar-selimi"><i class="fa fa-stack-overflow"></i></a>
+    </div>
+    <div class="right">
+        {% if page.url != "/" %}
+            <a href="{{ "/" | relative_url  }}"> <span class="arrow">←</span> Home </a>
+        {% endif %}
+    
+        {% if page.url != "/about/" %}
+            <a href="{{ "/" | relative_url  }}about">About </a>
+        {% endif %}
+        <a class="cta" target="_blank" href="{{ "/" | relative_url }}motivation">Motivation Page</a>
+    </div>
+</nav>

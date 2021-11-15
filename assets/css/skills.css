@@ -1,0 +1,21 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:100';
+
+.panel hr{
+    border: 0;
+    border-top: 1px solid #dee2e5;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.panel .tag{
+    background-color: #495057;
+    border-radius: 20px;
+    padding: 7px 16px;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px 0;
+    line-height: 1.5;
+}

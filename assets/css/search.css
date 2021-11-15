@@ -1,0 +1,20 @@
+#search {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    width: 40%;
+    left: 30%;
+    background-color: #555;
+    color: #fff;
+    padding: 12px 20px;
+    box-shadow: 2px 15px 15px 5px #ccc;
+    font-size: 1.2rem;
+    display: none;
+    border-radius: 5px;
+    border: 0;
+}
+
+input:focus {
+    border:0;
+    outline: 0;
+}
