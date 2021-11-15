@@ -1,6 +1,6 @@
-name: Diar Selimi
-description: Blogging about Accomplishments, Software Development and Design
-meta_description: "Diar's blog is about my accomplishments, software development and design."
+name: Programerat
+description: Blogging about Software Development, DDD, TDD, SOLID etc
+meta_description: "Blogging about Software Development, DDD, TDD, SOLID"
 
 aboutPage: true
 
@@ -9,18 +9,18 @@ highlighter: rouge
 
 plugins: [jekyll-paginate]
 paginate: 5
-domain_name: 'https://diarselimi.github.io'
+domain_name: 'https://programerat.github.io'
 google_analytics: 'UA-55839922-3'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'https://diarselimi.github.io'
+url:            'https://programerat.github.io'
 author:         'Diar Selimi'
 authorTwitter:  'diarselimi92'
 authorLinkedin: 'diarselimi'
 authorGithub:   'diarselimi'
-gravatar:       'https://s.gravatar.com/avatar/8c03827422592572104af48f0fecb627?s=80'
+# gravatar:       'https://s.gravatar.com/avatar/8c03827422592572104af48f0fecb627?s=80'
 
 permalink:       /:year/:title/
 
