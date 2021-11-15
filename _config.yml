@@ -2,7 +2,7 @@ name: Programerat
 description: Blogging about Software Development, DDD, TDD, SOLID etc
 meta_description: "Blogging about Software Development, DDD, TDD, SOLID"
 
-aboutPage: true
+# aboutPage: true
 
 markdown: kramdown
 highlighter: rouge
