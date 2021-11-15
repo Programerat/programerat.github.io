@@ -1,3 +1,9 @@
+---
+title:  "Principet S.O.L.I.D dhe si ti aplikoni ne kod"
+date:   2021-11-15 22:06:20
+description: Ktu jam duke folur per njerat nga principet e para qe duhet ti mesoni ne programim.
+tags: SOLID, OO, PHP, PROGRAMERAT
+---
 ###  Principet S.O.L.I.D dhe si ti aplikoni ne kod
 
 Pasi te keni shpenzuar ca kohe duke lexuar dhe duke menduar rreth shembujve qe merren ne kete artikull, ateher ju do te kuptoni SOLID principet dhe do te jeni te gatshem ti aplikoni ato.
