@@ -83,6 +83,18 @@
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
   </script>
+  <script>
+    $(function () {
+      var txt = $(".post")[0].textContent,
+    
+    wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
+
+    var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
+    var readingTimeAsString = readingTimeInMinutes + " min";
+    
+    $('article .reading-time').html(readingTimeAsString);
+});
+  </script>
 </body>
 </html>
 
