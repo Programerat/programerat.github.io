@@ -651,6 +651,30 @@ h2.month {
   margin-left: 2px;
 }
 
+.logo a img {
+	width: 150px;
+	height: 150px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Logo */
+.logo a > img {
+	width: 120px;
+	max-width: 100%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: -webkit-box-shadow 0.3s ease;
+	transition: box-shadow 0.3s ease;
+	-webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+	box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .logo a:hover > img {
+	-webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+  }
+
 /* Media Queries */
 @media screen and (max-width: 540px) {
 	#wrapper { padding:20px 20px 20px 20px;}
