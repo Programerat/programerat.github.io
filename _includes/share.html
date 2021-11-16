@@ -1,3 +1,6 @@
+{% if page.url != "/" %}
+  <a href="{{ "/" | relative_url  }}"> <span class="arrow">←</span> Home </a>
+{% endif %}
 <a target="_blank" class="twitter" href="https://twitter.com/intent/tweet?text={{ site.domain_name }}{{ page.url }} - {{page.title}} by @{{ site.authorTwitter }}"><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
