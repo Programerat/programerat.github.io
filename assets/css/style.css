@@ -152,17 +152,16 @@ h2 {
 
 nav.main-nav {
 	padding: 20px 20px 0;
-	width:10%;
+	width:100%;
 	background: #fff;
 	background: rgba(255,255,255,.90);
 	margin: 0 auto;
-	position: fixed;
 	z-index: 100;
 }
 
 nav.main-nav .left {
-	width: 20%;
-	display: inline-block;
+	width: 100%;
+	text-align: center;
 	font-size: 1.5rem;
 }
 
