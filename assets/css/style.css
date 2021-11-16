@@ -152,13 +152,11 @@ h2 {
 
 nav.main-nav {
 	padding: 20px 20px 0;
-
-	/*max-width: 600px;*/
-	width:100%;
+	width:10%;
 	background: #fff;
 	background: rgba(255,255,255,.90);
 	margin: 0 auto;
-	/*position: fixed;*/
+	position: fixed;
 	z-index: 100;
 }
 
