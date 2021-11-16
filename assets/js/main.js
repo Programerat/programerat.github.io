@@ -34,3 +34,6 @@ function retina() {
 };
  
 $(document).ready(retina);
+
+var tags = $('.tags').attr('content').split(',');
+tags.map(function(tag){ $('.tags').append('<div class="tag">'+tag+'</div>') });
