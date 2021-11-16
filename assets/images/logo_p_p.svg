@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="130.787 80.915 198.898 198.9" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, -44.762657, -103.544617)">
+    <g>
+      <rect x="255.11" y="264.02" class="st3" width="39.78" height="39.78" style="fill: rgb(124, 124, 124);"/>
+      <g>
+        <rect x="215.33" y="184.46" width="39.78" height="39.78"/>
+        <rect x="255.11" y="184.46" class="st3" width="39.78" height="39.78" style="fill: rgb(124, 124, 124);"/>
+        <rect x="294.89" y="184.46" width="39.78" height="39.78"/>
+      </g>
+      <g>
+        <rect x="255.11" y="343.58" class="st3" width="39.78" height="39.78" style="fill: rgb(124, 124, 124);"/>
+        <rect x="294.89" y="343.58" width="39.78" height="39.78"/>
+      </g>
+      <g>
+        <rect x="334.67" y="224.24" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 598.6883 -110.4284)" width="39.78" height="39.78"/>
+        <rect x="334.67" y="264.02" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 638.4675 -70.6492)" class="st3" width="39.78" height="39.78" style="fill: rgb(124, 124, 124);"/>
+        <rect x="334.67" y="303.8" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 678.2466 -30.87)" width="39.78" height="39.78"/>
+      </g>
+      <g>
+        <rect x="175.55" y="224.24" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 439.5716 48.6883)" width="39.78" height="39.78"/>
+        <rect x="175.55" y="264.02" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 479.3508 88.4675)" class="st3" width="39.78" height="39.78" style="fill: rgb(124, 124, 124);"/>
+        <rect x="175.55" y="303.8" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 519.1299 128.2466)" width="39.78" height="39.78"/>
+      </g>
+    </g>
+  </g>
+</svg>
