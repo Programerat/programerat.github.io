@@ -1,34 +1,35 @@
 ---
-title:  "Principet S.O.L.I.D dhe si ti aplikoni ne kod"
-date:   2021-11-15 22:06:20
-description: Ktu jam duke folur per njerat nga principet e para qe duhet ti mesoni ne programim.
-tags: SOLID, OO, PHP, PROGRAMERAT
+title:  "Principet S.O.L.I.D dhe si ti aplikojme ne kod"
+date:   2021-11-17 09:09:09
+description: Mesoni SOLID principet dhe si ti aplikoni ne probleme te ndryshme.
+tags: SOLID, OO, PHP, PROGRAMERAT, QYSHME
 ---
-###  Principet S.O.L.I.D dhe si ti aplikoni ne kod
+###  Principet S.O.L.I.D dhe si ti aplikojme ne kod
 
 Pasi te keni shpenzuar ca kohe duke lexuar dhe duke menduar rreth shembujve qe merren ne kete artikull, ateher ju do te kuptoni SOLID principet dhe do te jeni te gatshem ti aplikoni ato.
 
-Secila kompani ne Gjermani qe do te aplikoni do ju pyet ne interviste rreth SOLID principeve.
+Secila kompani ne Gjermani qe do te aplikoni si programer, do ju pyet ne interviste rreth SOLID principeve.
 
-Principet SOLID ne OO programmim do të ndihmojne shumë ne karrierën tuaj si programer.
+Principet SOLID ne OO programim do të ndihmojne shumë ne karrierën tuaj si programer.
 Do te kesh nje baze te mrekullueshem per te ecur perpara, pa patur parasysh produktin qe ti e nderton.
 
 ### Prezantimi i problemit
-Para se me fillu do tju prezentoj me problemin ose projektin qe do te punoj gjat te gjitha shembujve qe do ti spjegoj, pra do te jete vetem nje projekt dhe do te mundohem ti aplikoj solid principet duke marrur shembuj nga i njejti projekt.
+Para se me fillu, do ta prezantoj problemin qe do te punoj gjat te gjitha shembujve qe do ti shpjegoj. 
+Pra do te jete vetem nje projekt dhe do te mundohem ti aplikoj solid principet duke marrur shembuj nga i njejti projekt.
 
 #### Problemi
-Ta marrim shembull nje person i familjes po te kerkon me ja ndertu nje aplikacion, ky aplikacion do t’ja digjitalizon porosit ne restaurantin e tij _Villa Natyra_ qe vetem ben piza dhe hamburgera.
+Ta marrim shembull nje person i familjes po të kerkon me ja ndertu nje aplikacion, ky aplikacion do ti digjitalizon porosit ne restaurantin e tij _Villa Natyra_ qe vetem ben piza dhe hamburgera.
 
-Tash aj po kerkon qe ne _hamburgera_ munden me shtu deri ne 5 _shtesa_ gjithashtu edhe ne _pizza_, dhe vetem 2 here mundet me shtu te njejten shtese.
+Tash ai po kerkon qe ne _hamburgera_ munden me shtu deri ne pese _shtesa_, gjithashtu edhe ne _pizza_, dhe vetem 2 here mundet me shtu te njejten shtese.
 
-Na si programera te mir qe jem ja ndertojme aplikacionin edhe tash ai pe perdor dhe eshte i kenaqur.
+Na si programera te mir qe jem ja ndertojme aplikacionin, tash ai po e perdor dhe eshte i kenaqur.
 
-Ne rregull masi e kem ndertu produktin tash hajde te flasim per principet.
+Ne rregull, masi e kem ndertu produktin tash hajde te flasim per principet.
 
-### Principi i parë - Nje Klase Nje pergjegjësi
+### Principi i parë - Nje Klase, nje pergjegjësi
 > Një klasë duhet të ketë vetëm një përgjegjësi dhe nje arsyje të ndryshoj.
 
-Nje shembull ku ky rregull nuk respektohet
+Nje shembull ku ky princip nuk respektohet
 ```
 class Hamburgeri
 {
@@ -71,7 +72,7 @@ class Hamburgeri
 
 Nëse e kemi një klas vetëm për hamburgerin edhe kjo klasë pranon shtesa sikur sallatë, domate etj.
 Gjithashtu e percaktojme kategorine mbrenda klases, i ruajm te dhenat ne databaze dhe e kalkulojme shumen.
-Ateher kjo klase do te ndryshoj sa her qe menyra e ruajtjes ne databaze ose menyra e kalkulimit ose menyra e percaktimit te kategorise ndryshojne.
+Ateher kjo klase do te ndryshoj sa here qe menyra e ruajtjes ne databaze ose menyra e kalkulimit ose menyra e percaktimit te kategorise ndryshojne.
 ```
 interface Ushqim {}
  
@@ -119,15 +120,15 @@ class Faktura
 }
 
 ```
-Kurse ketu siq edhe shihet qe i kemi ndare klasat me pergjegjesi te ndryshme, sa her qe kalkulimi i qmimit ndryshon ateher klasa `KalkulatoriUshqimit` ndryshon. 
+Kurse ketu sic edhe shihet qe i kemi ndare klasat me pergjegjesi te ndryshme, sa here qe kalkulimi i qmimit ndryshon ateher klasa `KalkulatoriUshqimit` ndryshon. 
 Nese vendosim ta ndrrojme menyren se si i ruajme te dhenat ateher klasa `RuajtjaFaktures` ndryshon.
 
 ### Principi i dytë - E hapur për zgjatje, e mbyllur per ndryshime.
-> Nje klase duhet te jete e mbyllur per modifikime ndersa e hapur per zgjatje.
+> Nje klase duhet te jete e mbyllur per ndryshime ndersa e hapur per zgjatje.
 
-Ta marrim shembull klasen qe i ben kalkulimet `KalkulatoriUshqimit` dhe ta shohim se si do te ndryshoj nese nje kerkes e re na vjen, shembull “Po me duhet qe per studente qmimi final te eshte 20% me lire”
+Ta marrim shembull klasen qe i ben kalkulimet `KalkulatoriUshqimit` dhe ta shohim si do te ndryshoj nese nje kerkes e re na vjen, shembull “Po me duhet qe per studente qmimi final te dale 20% me lire”
 
-Tash na si programera pa dijeni per kete princip do ta bejme nje ndryshim si ne vijim
+Tash na si programera pa dijeni per kete princip “E mbyllur per ndryshime” do ta bejme nje ndryshim si ne vijim
 ```
 interface Ushqim {}
  
@@ -153,9 +154,10 @@ class KalkulatoriUshqimit
 }
 ```
 Nese bejme dicka si kjo ateher se pari klasa ka jo nje arsye por dy per te ndryshuar, qe e then edhe principin e pare, shohim qe po e kalkulon shumen e ushqimit dhe zbritjen per studenta. 
-Tash nese ndryshon menyra e kalkulimit te ushqimit ose perqindja per studenta ndryshon ateher kjo klas duhet te modifikohet.
+Tash nese ndryshon menyra e kalkulimit te ushqimit ose perqindja per studenta, ateher kjo klase duhet te modifikohet.
 
 Nese i konsiderojm Principin e pare, zbritja duhet te jete ne nje klas ndamas dhe ne baze te principit te dyte, klasa e re mund ta perdor klasen qe kalkulon por nuk duhet ta ndryshoj ate.
+
 Si rezultat kemi bere nje ndryshim si ne vijim.
 ```
 interface Ushqim {}
@@ -191,7 +193,7 @@ class KalkulatoriUshqimitPerStudente extends KalkulatoriUshqimit
 }
 
 ```
-Sic edhe pe shihni i kemi ndare pergjegjsite ne klasa te ndryshme tash nese menyra e kalkulimit te ushqimit ndryshone ateher do te ndryshoje vetem `KalkulatoriUshqimit` dhe nese zbritja per student ndryshon ateher do te ndryshoj vetem klasa `KalkulatoriUshqimitPerStudente`.
+Sic edhe pe shihni i kemi ndare pergjegjsite ne klasa te ndryshme, tash nese menyra e kalkulimit te ushqimit ndryshone ateher do te ndryshoje vetem `KalkulatoriUshqimit` dhe nese zbritja per student ndryshon ateher do te ndryshoj vetem klasa `KalkulatoriUshqimitPerStudente`.
 
 ### Principi i trete - Zevendesimi Liskov 
 > Ky princip thot qe nese funksioni f(x) punon me objektet e tipit T. Ateher funksioni f(y) duhet te punoj me objektet y te tipit S ku S eshte nen tip i T.
@@ -231,7 +233,7 @@ class KalkulatoriUshqimitPerStudente extends KalkulatoriUshqimit
 }
 
 ```
-Pra ky kod eshte pjese e principit te dyte ku e kem zgjatur klasen KalkulatoriUshqimit, me kete ndryshim te metodes `merrShumen` e kemi thyer rregullin e principit te trete.
+Kjo pjese e kodit eshte pjese e principit te dyte ku e kem zgjatur klasen KalkulatoriUshqimit, me kete ndryshim te metodes `merrShumen` e kemi thyer rregullin e principit te trete.
 Nese i referohemi definicionit i bjen qe e njejta metode nuk duhet te kthen vlera te ndryshme edhe pse eshte klase tjeter.
 
 Do ta rregullojme kete klase si ne vijim.
@@ -316,7 +318,7 @@ class Hamburger implements Ushqim {
 }
 
 ```
-Siq e shohim ne shembullin me larte shtesa  `Ketchup` edhe pse eshte falas  duhet ta implementoj metoden `merrShumen` dhe kjo nuk e respekton principin e katert, nje klase nuk duhet ta implementoj nje metode qe nuk i nevojitet.
+Sic e shohim ne shembullin me larte, shtesa  `Ketchup` edhe pse eshte falas  duhet ta implementoj metoden `merrShumen` dhe kjo nuk e respekton principin e katert, nje klase nuk duhet ta implementoj nje metode qe nuk i nevojitet.
 
 Keshtu duhet  ta ndryshojme kodin qe ta respektojme principin e katert.
 ```
@@ -436,11 +438,19 @@ class Faktura
 }
 
 ```
-Ne kete shembull e shohim qe tani kemi nje kontrate `Databaza` dhe nje klas ku gjendet implementimi i ruajtjes se fakturave `HapsiraRuajtjesSeFakturave`, tash nese vendosim ta ndryshojme databazen ne MongoDB ose NoSQL ose ckado qofte nuk kemi nevoj ta ndryshojm klasen `RuajtjaFaktures` sepse ajo varet ne kontrat e jo ne implementim direkt.
+Ne kete shembull e shohim qe tani kemi nje kontrate `Databaza` dhe nje klas ku gjendet implementimi i ruajtjes se fakturave `HapsiraRuajtjesSeFakturave`, tash nese vendosim ta ndryshojme databazen ne MongoDB, NoSQL ose ckado qofte nuk kemi nevoj ta ndryshojm klasen `RuajtjaFaktures` sepse ajo varet ne kontrat e jo ne implementim.
 
-Finalizimi dhe hapat e tjere
-Kto jane pra pese principet ne OO te cilat shikohen ne secilen interviste se sa mir i ke kuptuar dhe a din ku ti perdor ato.
-Hapat e radhes jane qe te provosh ti aplikosh keto principe duhet startuar nje projekt te vogel apo edhe ne punen ku punon.
+### Finalizimi dhe hapat e tjere
+Keto jane pra pese principet ne OO te cilat shikohen ne secilen interviste se sa mir i ke kuptuar dhe a din si ti perdor ato.
+Hapat e radhes jane: 
+1. Qe te provosh ti aplikosh keto principe duhet startuar nje projekt te vogel apo edhe ne punen ku punon.
+2. Kur e shikon nje kod ne fillim te merr kohe ti shikosh te gjitha principet, por pas ca kohe behet me e lehte.
+3. Perserite kete proces disa here.
 
-Nese keni ndonje koment, kritike ose   vetem don te kemi nje bised rreth OO ateher me kontakto ne rrjetet sociale. 
+🤘 🤓
+
+Nese keni ndonje koment, kritike ose   vetem don te kemi nje bised rreth OO ateher me kontakto ne rrjetet sociale.
 [Github](https://github.com/diarselimi)
+
+
+
