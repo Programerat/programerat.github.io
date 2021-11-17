@@ -21,9 +21,6 @@ Para se të fillojm, do ta prezantoj problemin që do të punoj gjatë të gjith
 
 ### Problemi
 Të marrim shembull një klient i juaj do të ju kërkoj me zhvillu një aplikacion. Ky aplikacion do ti digjitalizoj porosit në restaurantin e tij _Villa Natyra_ që vetëm bën piza dhe hamburgera.
-
-Tash ai po kërkon që në _hamburgera_ munden me shtu deri në pesë _shtesa_, gjithashtu edhe në _pizza_, dhe vetem dy herë mundet me shtu të njëjten shtesë.
-
 Ne si programera të mirë që jem ja ndërtojm aplikacionin, tash ai po e përdor dhe është i kënaqur.
 
 Në rregull, masi e kem ndërtu produktin tash hajde të flasim për principet.
@@ -48,7 +45,7 @@ class Hamburgeri
  
    private function përcaktoKategorine(string $llojiIMishit): string
    {
-       if (in_array($llojiIMishit, ['file_pule', 'pleskavice', 'dyner'])) {
+       if (in_array($llojiIMishit, ['file_pule', 'mish_lope'])) {
            return 'zgare';
        }
  
