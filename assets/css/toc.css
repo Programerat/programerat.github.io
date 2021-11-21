@@ -3,7 +3,7 @@
     color: #6c63fe;
   }
 
-  div#fix_toc.hide {
+  .hide {
     display: none;
   }
 
