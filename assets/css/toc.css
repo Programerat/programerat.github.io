@@ -3,6 +3,10 @@
     color: #6c63fe;
   }
 
+  div#fix_toc.hide {
+    display: none;
+  }
+
   button.toc_toggle {
     padding: 0;
     background: transparent;
