@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/skills.css">
   <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/info_bubble.css">
   <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/search.css">
+  <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/toc.css">
+  <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ "/" | relative_url  }}feed.xml">
   <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/highlight.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -26,11 +28,12 @@
   <section id="wrapper" class="{% if page.profile %}home{% endif %}">
     {{ content }}
   </section>
-
+  
   <script id="dsq-count-scr" src="//programerat.disqus.com/count.js" async></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="{{ "/" | relative_url  }}assets/js/main.js"></script>
   <script src="{{ "/" | relative_url  }}assets/js/highlight.js"></script>
+  <script src="{{ "/" | relative_url  }}assets/js/table_of_contents.js"></script>
   <script>hljs.initHighlightingOnLoad();</script><script>
     var posts;
     $.getJSON('{{site.baseurl}}/search.json', function(data){
