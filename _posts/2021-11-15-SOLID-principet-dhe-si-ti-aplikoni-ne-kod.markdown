@@ -3,6 +3,14 @@ title:  "Principet S.O.L.I.D dhe si të aplikojmë ato në kod"
 date:   2021-11-17 08:15:20
 description: Krijoni një bazë të fortë në programim duke mësuar SOLID principet.
 tags: SOLID, OO, PHP, PROGRAMERAT
+profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
+author: Diar Selimi
+author_github: https://github.com/diarselimi
+author_linkedin: https://linkedin.com/in/diarselimi
+author_description: "* Worked mainly with PHP and Mysql, Symfony 3, Symfony 4, Unit testing, Functional testing, Docker, AWS services, GO lang, Jenkins, GitHub for code review and deployment.
+* Using the best coding practices and standards for the projects like SOLID principles, KISS, DDD, DI, Design Patterns.
+* Testing the code based on the testing pyramid, Behat and Phpunit."
+author_title: Senior Backend Engineer
 ---
 
 E pyeta një të afërm timin pse duhet ti mësojmë SOLID principet?
