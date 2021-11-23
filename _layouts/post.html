@@ -22,11 +22,11 @@ archive: true
     </section>
 </article>
 <footer id="post-meta" class="clearfix">
-    <a href="https://www.linkedin.com/in/{{ site.authorLinkedin }}">
-        <img class="avatar" src="{{ "/" | relative_url  }}assets/images/p_logo.svg">
+    <a href="https://www.linkedin.com/in/{{ page.author_linkedin }}">
+        <img class="avatar" src="{{ page.profile_image }}">
         <div>
-            <span class="dark">{{ site.author }}</span>
-            <span>{{ site.description }}</span>
+            <span class="dark">{{ page.author }}</span>
+            <span>{{ page.author_description }}</span>
         </div>
     </a>
 
