@@ -92,8 +92,9 @@ p code {
 html, body { height: 100%; }
 
 body {
+	background: #eee;
 	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #666;
+	color: #555;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -153,8 +154,7 @@ h2 {
 nav.main-nav {
 	padding: 20px 20px 0;
 	width:100%;
-	background: #fff;
-	background: rgba(255,255,255,.90);
+	background: #eee;
 	margin: 0 auto;
 	z-index: 100;
 }
@@ -490,7 +490,9 @@ Post List
 }
 
 .post {
-	margin: 80px 100px 0 0;
+	margin: 0;
+	padding: 5%;
+	background: #eee;
 }
 
 #post-meta {
