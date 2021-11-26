@@ -35,5 +35,27 @@ function retina() {
  
 $(document).ready(retina);
 
-var tags = $('.tags').attr('content').split(',');
-tags.map(function(tag){ $('.tags').append('<div class="tag">'+tag+'</div>') });
+function getElementByClass(className){
+	var elements = document.getElementsByClassName(className);
+	return elements[0];
+}
+
+function getAttributeValue(element, attributeName) {
+	var attribute = element.getAttribute(attributeName);
+	return attribute;
+}
+
+function appendElementsToElement(element, items) {
+	for (var i = 0; i < items.length; i++) {
+		var item = items[i];
+		var newElement = document.createElement('div');
+		newElement.className = 'tag';
+		newElement.innerHTML = item;
+		element.appendChild(newElement);
+	}
+}
+
+var tags = getAttributeValue(getElementByClass('tags'), 'content').split(',');
+if (tags.length > 0) {
+	appendElementsToElement(getElementByClass('tags'), tags);
+}
