@@ -55,8 +55,11 @@ function appendElementsToElement(element, items) {
 	}
 }
 
-if (getElementByClass('tags') != null) {
-	var tagElement = getElementByClass('tags');
-	var tags = getAttributeValue(tagElement, 'content').split(',');
-	appendElementsToElement(getElementByClass('tags'), tags);
+var tags = document.getElementsByClassName('tags');
+if (tags !== undefined) {
+	for (var i = 0; i < tags.length; i++) {
+		var tag = tags[i];
+		var tags = getAttributeValue(tag, 'content').split(',');
+		appendElementsToElement(tag, tags);
+	}
 }
