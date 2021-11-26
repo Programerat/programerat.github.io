@@ -529,7 +529,7 @@ Post List
 .toc {
 	margin: 0 10px;
 	background: #fff;
-	padding: 5px;
+	padding: 10px;
 	float: left;
 	width: 200px;
 	height: auto;
@@ -541,6 +541,7 @@ Post List
 	color: #333;
 	font-weight: bold;
 	text-align: center;
+	border-bottom: 1px solid #333;
 }
 
 /* Post Page */

@@ -9,6 +9,6 @@ if (article != null) {
     tocHeaders.push(headers[i].innerText);
   }
 
-  appendElementsToElement(getElementByClass('toc-content'), tocHeaders, 'li', false);
+  appendElementsToElement(getElementByClass('toc-content'), tocHeaders, 'li', false); // rethink this
 }
 
