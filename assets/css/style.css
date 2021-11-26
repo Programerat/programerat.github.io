@@ -503,12 +503,17 @@ Post List
 .social-media li {
 	display: inline-block;
 	list-style: none;
-	padding: 0;
+	padding: 5px;
 	margin: 0;
 	background: #aaa;
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
+}
+
+.social-media li:hover {
+	background: #5694f1;
+	color: #fff;
 }
 
 .social-media li a {
