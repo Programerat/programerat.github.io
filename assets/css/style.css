@@ -516,11 +516,6 @@ Post List
 	color: #fff;
 }
 
-.social-media li a:hover {
-	color: #fff;
-	background: #333;
-}
-
 .social-media li a {
 	display: block;
 	width: 40px;
