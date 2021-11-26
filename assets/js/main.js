@@ -49,7 +49,9 @@ function appendElementsToElement(element, items, type = 'div', className = 'tag'
 	for (var i = 0; i < items.length; i++) {
 		var item = items[i];
 		var newElement = document.createElement(type);
-		newElement.className = className;
+		if (className) {
+			newElement.className = className;
+		}
 		newElement.innerHTML = item;
 		element.appendChild(newElement);
 	}
