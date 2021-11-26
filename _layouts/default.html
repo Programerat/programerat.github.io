@@ -88,16 +88,15 @@
     ga('send', 'pageview');
   </script>
   <script>
-    $(function () {
-      var txt = $(".post")[0].textContent,
+    if (getElementByClass('post') !== undefined) {
     
-    wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
-
-    var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
-    var readingTimeAsString = readingTimeInMinutes + " min";
+      var txt = getElementByClass('post').innerText;    
+      wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
+      var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
+      var readingTimeAsString = readingTimeInMinutes + " min";
     
-    $('article .reading-time').html(readingTimeAsString);
-});
+      $('article .reading-time').html(readingTimeAsString);
+    }
   </script>
 </body>
 </html>
