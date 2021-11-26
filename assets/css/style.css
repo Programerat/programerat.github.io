@@ -678,6 +678,23 @@ h2.month {
   margin-left: 2px;
 }
 
+/* Social footer  */
+.social .item a {
+    color: #555;
+    line-height: inherit;
+}
+.social .item {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    background: #fff;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
 .logo {
 	display: inline-block;
 }
@@ -698,6 +715,16 @@ h2.month {
 .logo img {
 	width: 40px;
 	height: 40px;
+}
+
+#post-list {
+	background: #fff;
+}
+
+#post-list li{
+	background: #fff;
+    padding: 2%;
+    border-bottom: 1px solid #777;
 }
 
 /* Media Queries */
