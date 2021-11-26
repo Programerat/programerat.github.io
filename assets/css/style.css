@@ -724,7 +724,8 @@ h2.month {
 #post-list li{
 	background: #fff;
     padding: 2%;
-    border-bottom: 1px solid #777;
+    border-bottom: 2px solid #aaa;
+	margin: 0;
 }
 
 /* Media Queries */
