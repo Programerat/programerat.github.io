@@ -488,8 +488,8 @@ Post List
 	width: 50%;
 	margin: 0;
 	padding: 0;
-	display: inline-block;
 	text-align: left;
+	float: left;
 }
 
 .right {
@@ -505,6 +505,10 @@ Post List
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	background: #aaa;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
 }
 
 .social-media li a {
@@ -514,6 +518,7 @@ Post List
 	line-height: 40px;
 	border-radius: 50%;
 	text-align: center;
+	color: #333;
 }
 
 /* Post Page */
