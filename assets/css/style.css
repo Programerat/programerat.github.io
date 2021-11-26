@@ -534,6 +534,7 @@ Post List
 	width: 200px;
 	height: auto;
 	color: #333;
+	overflow: hidden;
 }
 
 .toc .title {
