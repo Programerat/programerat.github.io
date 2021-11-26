@@ -45,11 +45,11 @@ function getAttributeValue(element, attributeName) {
 	return attribute;
 }
 
-function appendElementsToElement(element, items) {
+function appendElementsToElement(element, items, type = 'div', className = 'tag') {
 	for (var i = 0; i < items.length; i++) {
 		var item = items[i];
-		var newElement = document.createElement('div');
-		newElement.className = 'tag';
+		var newElement = document.createElement(type);
+		newElement.className = className;
 		newElement.innerHTML = item;
 		element.appendChild(newElement);
 	}

@@ -526,6 +526,22 @@ Post List
 	color: #fff;
 }
 
+.toc {
+	margin: 0 10px;
+	background: #fff;
+	padding: 5px;
+	float: left;
+	width: 200px;
+	height: auto;
+	color: #333;
+}
+
+.toc .title {
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+}
+
 /* Post Page */
 #header {
 	border-bottom: 1px solid #eee;
