@@ -531,10 +531,27 @@ Post List
 	background: #fff;
 	padding: 10px;
 	float: left;
-	width: 200px;
+	width: 14%;
 	height: auto;
 	color: #333;
 	overflow: hidden;
+}
+
+.toc li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333;
+}
+
+.toc a {
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px;
 }
 
 .toc .title {
