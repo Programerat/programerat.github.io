@@ -557,8 +557,9 @@ Post List
 .toc .title {
 	color: #333;
 	font-weight: bold;
+	line-height: 2;
 	text-align: center;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #888;
 }
 
 /* Post Page */
