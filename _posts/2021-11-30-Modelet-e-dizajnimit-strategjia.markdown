@@ -1,3 +1,16 @@
+---
+title:  "Modelet e dizajnimit - Strategjia"
+date:   2021-11-17 08:15:20
+description: Modelet e dizajnimit - Strategjia
+tags: SOLID, OO, PHP, PROGRAMERAT
+profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
+author: Diar Selimi
+author_github: https://github.com/diarselimi
+author_linkedin: diarselimi
+author_description: "Coding is an art, if you know what you're doing."
+author_title: Senior Backend Engineer
+---
+
 # Modelet e dizajnimit - Strategjia
 Strategjia e mundëson që ti izolojmë algoritmet në klasa të ndame por që secila mundet me u përdor.
 Strategjia gjithashtu të mundson që me shtu klasa të tjera që implementojnë algoritme të ndryshme por jan të tipit të njejtë.
