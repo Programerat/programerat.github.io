@@ -11,16 +11,13 @@ plugins: [jekyll-paginate]
 paginate: 5
 domain_name: 'https://programerat.github.io'
 google_analytics: 'UA-55839922-3'
-disqus: true
+disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
 url:            'https://programerat.github.io'
 author:         'Programerat'
-# authorTwitter:  'diarselimi92'
-# authorLinkedin: 'progra'
 authorGithub:   'programerat'
-# gravatar:       'https://s.gravatar.com/avatar/8c03827422592572104af48f0fecb627?s=80'
 
 permalink:       /:year/:title/
 

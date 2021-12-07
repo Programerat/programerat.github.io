@@ -25,7 +25,12 @@
   {% endif %}
   
   {% include navigation.html %}
-
+  {% if page.url != "/" %}
+  <div class="toc">
+    <div class="title">Permbajtja</div>
+    <ul class="toc-content"></ul>
+  </div>
+  {% endif %}
   <section id="wrapper" class="{% if page.profile %}home{% endif %}">
     {{ content }}
   </section>
@@ -88,16 +93,15 @@
     ga('send', 'pageview');
   </script>
   <script>
-    $(function () {
-      var txt = $(".post")[0].textContent,
+    if (getElementByClass('post') !== undefined) {
     
-    wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
-
-    var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
-    var readingTimeAsString = readingTimeInMinutes + " min";
+      var txt = getElementByClass('post').innerText;    
+      wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
+      var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
+      var readingTimeAsString = readingTimeInMinutes + " min";
     
-    $('article .reading-time').html(readingTimeAsString);
-});
+      $('article .reading-time').html(readingTimeAsString);
+    }
   </script>
 </body>
 </html>

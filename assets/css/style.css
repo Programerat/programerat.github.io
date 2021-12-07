@@ -488,8 +488,8 @@ Post List
 	width: 50%;
 	margin: 0;
 	padding: 0;
-	display: inline-block;
 	text-align: left;
+	float: left;
 }
 
 .right {
@@ -503,8 +503,17 @@ Post List
 .social-media li {
 	display: inline-block;
 	list-style: none;
-	padding: 0;
-	margin: 0;
+	padding: 10px;
+	margin: 5px;
+	background: #333;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.social-media li:hover {
+	background: #333;
+	color: #fff;
 }
 
 .social-media li a {
@@ -514,6 +523,43 @@ Post List
 	line-height: 40px;
 	border-radius: 50%;
 	text-align: center;
+	color: #fff;
+}
+
+.toc {
+	margin: 0 10px;
+	background: #fff;
+	padding: 10px;
+	float: left;
+	width: 14%;
+	height: auto;
+	color: #333;
+	overflow: hidden;
+}
+
+.toc li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333;
+}
+
+.toc a {
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.toc .title {
+	color: #333;
+	font-weight: bold;
+	line-height: 2;
+	text-align: center;
+	border-bottom: 1px solid #888;
 }
 
 /* Post Page */

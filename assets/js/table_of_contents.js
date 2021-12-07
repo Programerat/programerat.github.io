@@ -1,14 +1,22 @@
-var article = document.getElementsByClassName('post')[0];
-var headers = article.getElementsByTagName('h3');
+var article = getElementByClass('post');
 
-function appendHeader(header){
-  var content = document.getElementsByClassName('table_of_contents');
-  var html = '<li><a href="#'+header+'">'+header+'</a></li>';
-  content[0].innerHTML += html;
+if (article != null) {
+  var headers = article.getElementsByTagName('h3');
+  var tocHeaders = [];
+
+  for(var i=0; i < headers.length; i++) {
+    headers[i].setAttribute('id', headers[i].innerHTML)
+    tocHeaders.push(headers[i].innerText);
+  }
+
+  appendListToList(getElementByClass('toc-content'), tocHeaders);
 }
 
-for(var i=0; i < headers.length; i++) {
-  appendHeader(headers[i].innerHTML);  
-  headers[i].setAttribute('id', headers[i].innerHTML)
+function appendListToList(list, items) {
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    var newElement = document.createElement('li');
+    newElement.innerHTML = '<a href="#' + item + '">' + item + '</a>';
+    list.appendChild(newElement);
+  }
 }
-
