@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title:  "Modelet e dizajnimit - Strategjia"
 date:   2021-11-17 08:15:20
@@ -32,8 +30,8 @@ E kemi bere nje api te thjesht ku kemi simple authentication me user edhe fjalka
 ### Kodi si duket paraprakisht, kodi primitiv ku nuk perdor strategji modelin.
 <script src="https://gist.github.com/Diarselimi/bfd539de510e269233dee8cdf5987403.js"></script>
 
-### uML Modeli i strategjise
-<iframe width="768" height="432" src="https://miro.com/app/board/o9J_lmlGRFs=/?pres=1&frameId=3458764514163267405" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+### UML Modeli i strategjise
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_lmlGRFs=/?moveToViewport=-128,416,529,326" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 
 ### Implementimi ne kod
 
