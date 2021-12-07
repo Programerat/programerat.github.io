@@ -9,6 +9,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
+archive: false
 ---
 
 E pyeta një të afërm timin pse duhet ti mësojmë SOLID principet?
@@ -200,7 +201,7 @@ class KalkulatoriUshqimitPerStudente extends KalkulatoriUshqimit
 ```
 Siç edhe pe shihni i kemi ndarë përgjegjsit në klasa të ndryshme, tash nëse mënyra e kalkulimit të ushqimit ndryshon atëher do të ndryshoj vetem `KalkulatoriUshqimit` dhe nëse zbritja për student ndryshon atëher do të ndryshoj vetëm klasa `KalkulatoriUshqimitPerStudente`.
 
-### Principi i tretë - Zëvendesimi Liskov 
+### Principi i tretë - Zëvendesimi Liskov
 > Ky princip thot që nëse funksioni f(x) punon me objektet e tipit T. Atëher funksioni f(y) duhet të punoj me objektet y të tipit S ku S është nën tip i T.
 
 Ndoshta shembulli që e then këtë princip do ta lehtsoj kuptimin e ketij principi.
