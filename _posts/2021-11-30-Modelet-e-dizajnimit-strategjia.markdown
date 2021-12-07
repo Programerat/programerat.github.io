@@ -9,6 +9,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
+draft: true
 ---
 
 # Modelet e dizajnimit - Strategjia
