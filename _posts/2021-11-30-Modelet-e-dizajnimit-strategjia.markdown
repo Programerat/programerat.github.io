@@ -35,7 +35,7 @@ Tash po na kerkohet qe ta shtojme nje menyr te re te transportit, si do ta shton
 <img src="{{ "/" | relative_url  }}assets/diagrams/transporti.png" alt="uml diagrami" />
 
 ### Implementimi korrent i dizajnit
-//correct implementation
+<script src="https://gist.github.com/Diarselimi/d5eafb20f04cea71f0fe7b28b81d8b67.js"></script>
 
 ### Mbyllja
 Nuk po dini cka me lexu tash? 
