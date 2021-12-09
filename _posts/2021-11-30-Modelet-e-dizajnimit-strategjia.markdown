@@ -29,14 +29,13 @@ Tash po na kerkohet qe ta shtojme nje menyr te re te transportit, si do ta shton
 
 
 ### Nje shembull se si nuk duhej ta implementonim.
-> Some code here
-<script src="https://gist.github.com/Diarselimi/bfd539de510e269233dee8cdf5987403.js"></script>
+<script src="https://gist.github.com/Diarselimi/ab34e500d821307baf0bf48827f92039.js"></script>
 
 ### UML Modeli i strategjise
-<img src="http://www.plantuml.com/plantuml/png/dP4z3i8m38NtdEADW2W7G4mmiY341K8nD6r9Ik8W9CJTSNyeeXEGnScJ_JxRIKiT0bQb8SigRH_ECjrOjIAI9Eab8y4VTKhOUMr3vJpZhex67ZQQir7b905wYlQo7y-nTP59FLJdW8cuzRMg8ovZ41l8MUSEXMY4SxG72ixYGc32AQUC6Dx7aqP57ZQdkgwfaXQR-4qZtOpQ3uXV0Q_4qTFiP-XhJbDGXor-mUvDQegI-1_o-wCMilfwOv-AR6AO8rq-0G00" alt="uml diagrami" />
+<img src="{{ "/" | relative_url  }}assets/diagrams/transporti.png" alt="uml diagrami" />
 
 ### Implementimi korrent i dizajnit
-
+//correct implementation
 
 ### Mbyllja
 Nuk po dini cka me lexu tash? 
