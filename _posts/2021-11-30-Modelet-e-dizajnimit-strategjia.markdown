@@ -33,7 +33,7 @@ Tash po na kerkohet qe ta shtojme nje menyr te re te transportit, si do ta shton
 <script src="https://gist.github.com/Diarselimi/bfd539de510e269233dee8cdf5987403.js"></script>
 
 ### UML Modeli i strategjise
-<img src="{{ "/" | relative_url  }}assets/diagrams/transporti.csv" alt="uml diagrami" />
+<img src="//www.plantuml.com/plantuml/uml/dP4z3i8m38NtdEADW2W7G4mmiY341K8nD6r9Ik8W9CJTSNyeeXEGnScJ_JxRIKiT0bQb8SigRH_ECjrOjIAI9Eab8y4VTKhOUMr3vJpZhex67ZQQir7b905wYlQo7y-nTP59FLJdW8cuzRMg8ovZ41l8MUSEXMY4SxG72ixYGc32AQUC6Dx7aqP57ZQdkgwfaXQR-4qZtOpQ3uXV0Q_4qTFiP-XhJbDGXor-mUvDQegI-1_o-wCMilfwOv-AR6AO8rq-0G00" alt="uml diagrami" />
 
 ### Implementimi korrent i dizajnit
 
