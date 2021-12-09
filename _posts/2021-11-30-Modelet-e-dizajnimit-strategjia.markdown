@@ -12,31 +12,38 @@ author_title: Senior Backend Engineer
 archive: true
 ---
 
-# Modelet e dizajnimit - Strategjia
-Strategjia e mundëson që ti izolojmë algoritmet në klasa të ndame por që secila mundet me u përdor.
+Strategjia e mundëson që ti izolojmë algoritmet në klasa të ndame por që secila mundet me u përdor ne vend te tjetres.
 Strategjia gjithashtu të mundson që me shtu klasa të tjera që implementojnë algoritme të ndryshme por jan të tipit të njejtë.
 
 Gjithashtu kjo e suporton principin e pare  (Hapur per zgjatje e mbyllur per ndryshime)[link], ku nese egzekutimi i hapave është gjithmonë i njejt atëher klasa nuk ka nevoj që të ndryshohet.
-Suporton edhe principin e peste ne SOLID ku gjithqka varet ne kontrat e jo ne implementim.
+Suporton edhe principin e peste ne SOLID ku gjithqka varet ne kontrat dhe jo ne implementim.
 
 ### Shembull konkret ne jeten reale
+Nese shembull deshirijme me udhtu prej nje qyteti A ne qytetin B, ne duhet ta dijme se si mund te arrijme me shpejt ne destinacion.
+Ta zejme qe e kemi ndertuar nje aplikacion ku e kalkulon rrugen me te shpejt me veture.
+Ky shembull ne kod do te duket si ne vijim 
 <script src="https://gist.github.com/Diarselimi/bfd539de510e269233dee8cdf5987403.js"></script>
 
+### Nje shtese
+Tash po na kerkohet qe ta shtojme nje menyr te re te transportit, si do ta shtonim nje menyr te re te transportit pa e thy rregullat SOLID?
 
-### Problemi
-E kemi bere nje api te thjesht ku kemi simple authentication me user edhe fjalkalim, tash po dojm me shtu nje metod te re per me u qas ne api me nje qels (api key).
 
-
-### Kodi si duket paraprakisht, kodi primitiv ku nuk perdor strategji modelin.
+### Nje shembull se si nuk duhej ta implementonim.
+> Some code here
 <script src="https://gist.github.com/Diarselimi/bfd539de510e269233dee8cdf5987403.js"></script>
 
-### UML Modeli i strategjis
-<img src="//www.plantuml.com/plantuml/png/VO_1Je0m38RlVOhAIKts0fp06-7YAmmeMQKRkdKUDBwx44S2CU7u__txzM-Jr4RDNk117Nd2JnwY3GgZs9Im5wQWZC11ASvs9AowQRTcNjXp1KVYsHWyJ-0ii4O-vEhourF1lzWlNl0RUjAC0pdIaYjhMv-SAEBa2EStAuiLzc2CWIkknc5T1NuAjdtdUsZxsk472QKxrlM3BVXNzv-zduE6mfIz_080" alt="UML diagrami" />
+### UML Modeli i strategjise
+<img src="{{ "/" | relative_url  }}assets/diagrams/transporti.csv" alt="uml diagrami" />
 
-### Implementimi ne kod
+### Implementimi korrent i dizajnit
 
 
 ### Mbyllja
+Nuk po dini cka me lexu tash? 
+Sygjerimi i imi eshte qe reflektoni ne kete dizajn pak edhe mendoni se si do e kishit perdorur edhe ne cfar probleme mundet me u apliku ky dizajn?
+
+
+
 
 
 
