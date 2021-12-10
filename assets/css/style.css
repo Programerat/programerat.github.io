@@ -91,13 +91,41 @@ p code {
 /* Base */
 html, body { height: 100%; }
 
-body {
-	background: #eee;
-	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #555;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+
+@media (prefers-color-scheme: light) {
+  body {
+		background: #eee;
+		color: #333;
+	}
+
+	nav.main-nav {
+		background: #eee;
+		color: #333;
+	}
+
+	.post {
+		background: #fff;
+		color: #333;
+	}
 }
+@media (prefers-color-scheme: dark) {
+  body {
+		background: #555;
+		color: #fff;
+	}
+
+	nav.main-nav {
+		background: #555;
+		color: #fff;
+	}
+
+	.post {
+		background: #222;
+		color: #fff;
+	}
+}
+
+
 
 h1 {
 	font-size: 30px;
@@ -570,7 +598,6 @@ Post List
 .post {
 	margin: 0;
 	padding: 5%;
-	background: #fff;
 }
 
 #post-meta {
