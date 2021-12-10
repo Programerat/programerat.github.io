@@ -92,7 +92,7 @@ p code {
 html, body { height: 100%; }
 
 
-@media (prefers-color-scheme: light) {
+/*@media (prefers-color-scheme: light) {*/
 
   body {
 		background: #eee;
@@ -113,29 +113,6 @@ html, body { height: 100%; }
 		background: #fff;
 		color:  #333;
 	}
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-		background: #555;
-		color: #fff;
-	}
-
-	nav.main-nav {
-		background: #555;
-		color: #fff;
-	}
-
-	.post {
-		background: #222;
-		color: #fff;
-	}
-
-	.toc {
-		background: #222;
-		color:  #fff;
-	}
-}
 
 
 
