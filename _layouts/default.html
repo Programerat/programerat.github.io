@@ -25,10 +25,13 @@
   {% endif %}
   
   {% include navigation.html %}
+
   {% if page.url != "/" %}
-  <div class="toc">
-    <div class="title">Permbajtja</div>
-    <ul class="toc-content"></ul>
+  <div class="sidebar">
+      <div class="toc">
+        <div class="title">Permbajtja</div>
+        <ul class="toc-content"></ul>
+      </div>
   </div>
   {% endif %}
   <section id="wrapper" class="{% if page.profile %}home{% endif %}">
