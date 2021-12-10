@@ -211,12 +211,6 @@ nav.main-nav a.cta-social {
 }
 
 #wrapper {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 0px 100px 100px 100px;
-}
-
-#wrapper.home {
 	display: inline-table;
   max-width: 80%;
   margin: 0 auto;
