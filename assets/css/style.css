@@ -93,6 +93,7 @@ html, body { height: 100%; }
 
 
 @media (prefers-color-scheme: light) {
+
   body {
 		background: #eee;
 		color: #333;
@@ -113,6 +114,7 @@ html, body { height: 100%; }
 		color:  #333;
 	}
 }
+
 @media (prefers-color-scheme: dark) {
   body {
 		background: #555;
@@ -190,10 +192,12 @@ h2 {
 }
 
 nav.main-nav {
-	padding: 20px 20px 0;
-	width:100%;
-	margin: 0 auto;
-	z-index: 100;
+		display: block;
+    padding: 0;
+    width: auto;
+    margin: 0 auto;
+    z-index: 100;
+    text-align: center;
 }
 
 nav.main-nav .left {
@@ -236,9 +240,10 @@ nav.main-nav a.cta-social {
 }
 
 #wrapper.home {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 0px 40px 20px 40px;
+	display: inline-table;
+  max-width: 80%;
+  margin: 0 auto;
+    padding: 0;
 }
 
 .home #avatar {
@@ -555,12 +560,10 @@ Post List
 }
 
 .toc {
-	margin: 0 10px;
-	padding: 10px;
-	float: left;
-	width: 14%;
-	height: auto;
-	overflow: hidden;
+    margin: 0 10px;
+    width: 15%;
+    height: auto;
+    display: inline-table;
 }
 
 .toc li {
@@ -571,10 +574,11 @@ Post List
 	font-size: 13px;
 	font-weight: bold;
 	color: #333;
+	margin: 2px;
+  background: #efefef;
 }
 
 .toc a {
-	color: #333;
 	text-align: center;
 	text-decoration: none;
 	padding: 5px;
