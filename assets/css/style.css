@@ -14,6 +14,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 .hidden { display: none; }
 
+
 /* Icons */
 @font-face {
 	font-family: 'icons';
@@ -91,13 +92,31 @@ p code {
 /* Base */
 html, body { height: 100%; }
 
-body {
-	background: #eee;
-	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #555;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-}
+
+/*@media (prefers-color-scheme: light) {*/
+
+  body {
+		background: #eee;
+		color: #333;
+	}
+
+	nav.main-nav {
+		background: #eee;
+		color: #333;
+	}
+
+	.post {
+		background: #fff;
+		color: #333;
+    font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+	}
+
+	.toc {
+		background: #fff;
+		color:  #333;
+	}
+
+
 
 h1 {
 	font-size: 30px;
@@ -152,11 +171,12 @@ h2 {
 }
 
 nav.main-nav {
-	padding: 20px 20px 0;
-	width:100%;
-	background: #eee;
-	margin: 0 auto;
-	z-index: 100;
+		display: block;
+    padding: 0;
+    width: auto;
+    margin: 0 auto;
+    z-index: 100;
+    text-align: center;
 }
 
 nav.main-nav .left {
@@ -193,15 +213,10 @@ nav.main-nav a.cta-social {
 }
 
 #wrapper {
+	display: inline-table;
   max-width: 80%;
   margin: 0 auto;
-  padding: 0px 100px 100px 100px;
-}
-
-#wrapper.home {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 0px 40px 20px 40px;
+    padding: 0;
 }
 
 .home #avatar {
@@ -221,6 +236,12 @@ a,
 	text-decoration: none;
 	color: #5badf0;
 	color: #5694f1;
+}
+
+#postlist {
+	width: auto;
+	margin: 0 10%;
+	font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
 
 p a { color: #5694f1; }
@@ -272,24 +293,20 @@ em, i { font-style: italic; }
 
 .home h2 {
 	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
 }
 
 .post header {
 	text-align:center;
-
 }
 
 .post h1 {
 	margin-bottom: 20px;
-	color: #222;
 	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
 
 .post h2 {
 	margin-bottom: 40px;
 	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
-	  color: #111;
 }
 
 
@@ -297,7 +314,6 @@ em, i { font-style: italic; }
 	/*font: italic 22px/1.3em Georgia,serif;*/
 	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
-	color: #b2b9be;
 	  font-size: 13px;
 	  text-transform: uppercase;
 	  letter-spacing: 2px;
@@ -312,8 +328,6 @@ em, i { font-style: italic; }
 	margin-top: 2px;
 }
 
-h3, h4, h5 { color:#333; }
-
 h3 { font-size:20px; font-weight: 400; }
 h4 { font-size:16px; font-weight:bold; }
 h5 { font-size:15px; font-weight: bold; }
@@ -321,12 +335,10 @@ h5 { font-size:15px; font-weight: bold; }
 h6 {
 	font-size: 13px;
 	font-weight: bold;
-	color: #666;
 	margin-bottom: 6px;
 }
 
 p.small {
-	color: #bbb;
 	font-size: 14px;
 	line-height: 1.5;
 	display: block;
@@ -526,36 +538,38 @@ Post List
 	color: #fff;
 }
 
+.sidebar {
+    margin: 0 10px;
+    width: 15%;
+    height: auto;
+    display: inline-block;
+    float: left;
+    font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+}
+
 .toc {
-	margin: 0 10px;
 	background: #fff;
-	padding: 10px;
-	float: left;
-	width: 14%;
-	height: auto;
-	color: #333;
-	overflow: hidden;
+	padding: 5px;
+	color:  #333;
 }
 
 .toc li {
-	list-style: none;
 	margin: 0;
 	padding: 0;
 	line-height: 1.5em;
 	font-size: 13px;
 	font-weight: bold;
 	color: #333;
+	margin: 2px;
 }
 
 .toc a {
-	color: #333;
 	text-align: center;
 	text-decoration: none;
 	padding: 5px;
 }
 
 .toc .title {
-	color: #333;
 	font-weight: bold;
 	line-height: 2;
 	text-align: center;
@@ -570,7 +584,6 @@ Post List
 .post {
 	margin: 0;
 	padding: 5%;
-	background: #fff;
 }
 
 #post-meta {
