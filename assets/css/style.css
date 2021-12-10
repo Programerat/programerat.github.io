@@ -107,6 +107,11 @@ html, body { height: 100%; }
 		background: #fff;
 		color: #333;
 	}
+
+	.toc {
+		background: #fff;
+		color:  #333;
+	}
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -122,6 +127,11 @@ html, body { height: 100%; }
 	.post {
 		background: #222;
 		color: #fff;
+	}
+
+	.toc {
+		background: #222;
+		color:  #fff;
 	}
 }
 
@@ -182,7 +192,6 @@ h2 {
 nav.main-nav {
 	padding: 20px 20px 0;
 	width:100%;
-	background: #eee;
 	margin: 0 auto;
 	z-index: 100;
 }
@@ -300,24 +309,20 @@ em, i { font-style: italic; }
 
 .home h2 {
 	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
 }
 
 .post header {
 	text-align:center;
-
 }
 
 .post h1 {
 	margin-bottom: 20px;
-	color: #222;
 	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
 
 .post h2 {
 	margin-bottom: 40px;
 	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
-	  color: #111;
 }
 
 
@@ -325,7 +330,6 @@ em, i { font-style: italic; }
 	/*font: italic 22px/1.3em Georgia,serif;*/
 	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
-	color: #b2b9be;
 	  font-size: 13px;
 	  text-transform: uppercase;
 	  letter-spacing: 2px;
@@ -340,8 +344,6 @@ em, i { font-style: italic; }
 	margin-top: 2px;
 }
 
-h3, h4, h5 { color:#333; }
-
 h3 { font-size:20px; font-weight: 400; }
 h4 { font-size:16px; font-weight:bold; }
 h5 { font-size:15px; font-weight: bold; }
@@ -349,12 +351,10 @@ h5 { font-size:15px; font-weight: bold; }
 h6 {
 	font-size: 13px;
 	font-weight: bold;
-	color: #666;
 	margin-bottom: 6px;
 }
 
 p.small {
-	color: #bbb;
 	font-size: 14px;
 	line-height: 1.5;
 	display: block;
@@ -556,12 +556,10 @@ Post List
 
 .toc {
 	margin: 0 10px;
-	background: #fff;
 	padding: 10px;
 	float: left;
 	width: 14%;
 	height: auto;
-	color: #333;
 	overflow: hidden;
 }
 
@@ -583,7 +581,6 @@ Post List
 }
 
 .toc .title {
-	color: #333;
 	font-weight: bold;
 	line-height: 2;
 	text-align: center;
