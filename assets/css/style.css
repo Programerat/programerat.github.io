@@ -72,8 +72,8 @@ white-space: nowrap;
 .icon-facebook-rect:before { content: '\e803'; }
 
 /* Spacing */
-.post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
-margin-bottom: 20px;
+.post h1, h3, h4, h5,h6 {
+	margin-top: 20px;
 }
 
 p code {
@@ -301,7 +301,7 @@ em, i { font-style: italic; }
 
 .post h1 {
 	margin-bottom: 20px;
-	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
+	font: 300 32px/1.4em, Helvetica,Arial,sans-serif;
 }
 
 .post h2 {
@@ -326,6 +326,10 @@ em, i { font-style: italic; }
 	color: #aaa;
 	max-width: 400px;
 	margin-top: 2px;
+}
+
+.post h3:before {
+    content: "# ";
 }
 
 h3 { font-size:20px; font-weight: 400; }
@@ -538,6 +542,23 @@ Post List
 	color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+  .sidebar {
+    visibility: hidden;
+    display: none !important;
+    float: left;
+  }
+  #postlist {
+  	width: 100%;
+  	margin: 0;
+  }
+  .post {
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+  }
+}
+
 .sidebar {
     margin: 0 10px;
     width: 15%;
@@ -556,7 +577,6 @@ Post List
 .toc li {
 	margin: 0;
 	padding: 0;
-	line-height: 1.5em;
 	font-size: 13px;
 	font-weight: bold;
 	color: #333;
@@ -566,10 +586,9 @@ Post List
 .toc a {
 	text-align: center;
 	text-decoration: none;
-	padding: 5px;
 }
 
-.toc .title {
+.toc .title, .sb-item .title {
 	font-weight: bold;
 	line-height: 2;
 	text-align: center;
@@ -586,15 +605,28 @@ Post List
 	padding: 5%;
 }
 
+.side-author {
+	text-align: center;
+	padding: 10px;
+}
+
+.sb-item {
+	margin: 0 0 10px 0;
+	display: block;
+	background: #fff;
+	font-size: 13px;
+	padding: 5px;
+}
+
+.sb-item li {
+	margin: 10px 0;
+}
+
 #post-meta {
 	font-size: 13px;
 	font-weight: bold;
 	line-height: 1.4;
 	border-top: 1px solid #eee;
-	padding-top: 40px;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
-	margin-top: 40px;
 	color:#444;
 	border-bottom: 1px solid #eee;
 }
@@ -608,11 +640,6 @@ Post List
 #post-meta div span.dark {
 	color: #1E2025;
 
-}
-
-#post-meta div {
-	margin: 0 25px 0 0;
-	float: left;
 }
 
 #sharing {
@@ -721,12 +748,10 @@ h2.month {
 }
 
 #post-meta img.avatar {
-  height: 36px;
-  width: 36px;
-  float: left;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   margin-top: 3px;
-  margin-right: 20px;
   box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 

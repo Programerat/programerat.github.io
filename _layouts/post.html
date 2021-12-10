@@ -21,19 +21,6 @@ archive: false
         {{content}}
     </section>
 </article>
-<footer id="post-meta" class="clearfix">
-    <a href="https://www.linkedin.com/in/{{ page.author_linkedin }}">
-        <img class="avatar" src="{{ page.profile_image }}">
-        <div>
-            <span class="dark">{{ page.author }} - {{ page.author_title }}</span>
-            <span>{{ page.author_description }}</span>
-        </div>
-    </a>
-
-    <section id="sharing">
-        {% include share.html %}
-    </section>
-</footer>
 
 <!-- Disqus comments -->
 {% if site.disqus %}
@@ -43,17 +30,6 @@ archive: false
     </div>
 {% endif %}
 
-<!-- Archive post list -->
-{% if page.archive %}
-    <ul id="post-list" class="archive readmore">
-        <h3>Read more</h3>
-        {% for post in site.posts %}
-            <li>
-                <a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}<aside class="dates">{{ post.date | date:"%b %d" }}</aside></a>
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
 
 
 

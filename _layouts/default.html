@@ -26,15 +26,41 @@
   
   {% include navigation.html %}
 
-  
+   {% if page.url != "/" %}
   <div class="sidebar">
-    {% if page.url != "/" %}
-      <div class="toc">
+   
+      <div class="sb-item toc">
         <div class="title">Permbajtja</div>
         <ul class="toc-content"></ul>
       </div>
-    {% endif %} 
+
+      <div class="sb-item side-author" id="post-meta">
+        <div class="title">Autori</div>
+          <img class="avatar" src="{{ page.profile_image }}">
+          <div>
+            <span class="dark">{{ page.author }} - {{ page.author_title }}</span>
+            <span>{{ page.author_description }}</span>
+          </div>
+      </div>
+
+      <div class="sb-item readmore">
+        <div class="title">Tjera artikuj</div>
+        <ul>
+        {% for post in site.posts %}
+            <li>
+                <a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+      </div>
+
+      <div class="sb-item">
+        <div class="title">Shperndaje</div>
+        {% include share.html %}
+      </div>
+   
   </div>
+   {% endif %} 
   
   <section id="{% if page.url == "/" %}postlist{% else %}wrapper{% endif %}" class="{% if page.profile %}home{% endif %}">
     {{ content }}
