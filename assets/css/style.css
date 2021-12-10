@@ -238,6 +238,12 @@ a,
 	color: #5694f1;
 }
 
+#postlist {
+	width: auto;
+	margin: 0 100px;
+	font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+}
+
 p a { color: #5694f1; }
 
 /*Transitions*/
