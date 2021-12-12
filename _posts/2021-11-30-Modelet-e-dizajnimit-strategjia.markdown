@@ -12,7 +12,7 @@ author_title: Senior Backend Engineer
 archive: true
 ---
 
-Paterni strategji e mundëson që ti izolojmë algoritmet në klasa të ndryshme, por që secila mundet me u përdor në vend të tjetrës.
+Paterni strategji e mundëson që ti izolojmë algoritmet në klasa të ndryshme, por që secila mundet të përdoret në vend të tjetrës.
 Pra paterni strategji të mundëson që të shtojmë klasa të tjera që implementojnë algoritme të ndryshme por jan të tipit të njejtë.
 
 Gjithashtu kjo e mbështet principin e parë  <a href="https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20dytë%20-%20E%20hapur%20për%20zgjatje,%20e%20mbyllur%20për%20ndryshime."> Hapur për zgjatje e mbyllur për ndryshime.</a>
@@ -40,7 +40,7 @@ Kjo klasë në jetën reale do të ishte klasa më e madhe në projekt nëse do 
 ### UML Modeli i strategjise
 <img src="{{ "/" | relative_url  }}assets/diagrams/transporti.png" alt="uml diagrami" />
 Në diagram shohim se kemi një kontratë `Transport`, pastaj çdo klasë me zbatim të ndryshëm në bazë të kontratës.
-Klientit nuk i intereson sesi zbatohet algoritmi, ai varet në kontrat, kjo mbështet principin e pestë<a href="https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20pest%C3%AB%20-%20Inversioni%20i%20var%C3%ABsis%C3%AB"> Inversionin i varësisë</a>.
+Klientit nuk i intereson sesi zbatohet algoritmi sepse ai varet në kontrat dhe kjo e mbështet principin e pestë<a href="https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20pest%C3%AB%20-%20Inversioni%20i%20var%C3%ABsis%C3%AB"> Inversionin i varësisë</a>.
 
 ### Implementimi korrent i dizajnit
 <script src="https://gist.github.com/Diarselimi/d5eafb20f04cea71f0fe7b28b81d8b67.js"></script>
