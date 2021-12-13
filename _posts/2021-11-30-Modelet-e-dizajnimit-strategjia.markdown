@@ -13,9 +13,11 @@ archive: false
 ---
 
 Paterni strategji mundësonë që ti izolojmë algoritmet në klasa të ndryshme, dhe mundëson zëvendesimin e algoritmeve pa pasur nevojë qe kodi të ndryshohet. Pra paterni strategji na mundësonë që të shtojmë klasa të tjera që implementojnë algoritme të ndryshme por janë të tipit të njëjtë.  
+  
+Gjithashtu kjo e mbështetë  principin e parë <a href="https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20dytë%20-%20E%20hapur%20për%20zgjatje,%20e%20mbyllur%20për%20ndryshime."> Hapur për zgjerim e mbyllur për ndryshime.</a> E mbështetë  edhe principin e pestë në SOLID ku gjithçka varet në kontratë dhe jo në zbatim. 
+Prandaj ky patern na mundësonë që të kemi shumë zbatime të bazuara  në një kontratë.  
 
-Gjithashtu kjo e mbështetë  principin e parë <a href="https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20dytë%20-%20E%20hapur%20për%20zgjatje,%20e%20mbyllur%20për%20ndryshime."> Hapur për zgjerim e mbyllur për ndryshime.</a> E mbështetë  edhe principin e pestë në SOLID ku gjithçka varet në kontratë dhe jo në zbatim. Prandaj ky patern na mundësonë që të kemi shumë zbatime të bazuara  në një kontratë.  
-
+  
 > Mos harroni <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> para çdo gjëje tjetër.
 
 ### Shembull konkret nga jeta reale
@@ -49,9 +51,11 @@ Gjithmonë kur shkruajmë kod duhet të përpiqemi të lidhim problemin me jetë
 Zbatimi i principeve dhe modeleve bëhet më i lehtë kur e kuptoni problemin. Për të parë nëse e kuptoni problemin atëherë  provoni t’ia shpjegoni dikujt ose përdorni metodën <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck.</a>
 
 > Siç thotë shprehja, nëse mund t’ia shpjegoni dikujt me fjalë të thjeshta, atëherë e kuptoni problemin.  
+  
 
 Rubber duck është një metodë shumë e popullarizuar që programuesit e përdorin sepse shpesh nuk kemi pyetje pasi që mendojmë se gjithçka është e qartë, ndërsa nëse përpiqemi ta shpjegojmë atë atëherë e shohim që nuk e kemi kuptuar në të vërtetë.  
 Në vazhdim do të postoj për modele të tjera por edhe për metoda të ndryshme që përdorin programuesit.  
+  
 
 Kodim të këndshëm. `<3 </>`  
 
