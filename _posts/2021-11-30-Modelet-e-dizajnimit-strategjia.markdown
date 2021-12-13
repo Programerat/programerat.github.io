@@ -50,8 +50,11 @@ Këtë pjesë mund ta shpjegoj kur të shkruaj për paternin Factory më në det
 ### Mbyllja
 Gjithmonë kur shkruajmë kod duhet të përpiqemi të lidhim problemin me jetën e përditshme, nëse nuk është e mundur me biznesin.
 Zbatimi i principeve dhe modeleve bëhet më i lehtë kur e kuptoni problemin. Për të parë nëse e kuptoni problemin atëherë  provoni t’ia shpjegoni dikujt ose përdorni metodën <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck.</a>
+&nbsp;
 
 > Siç thotë shprehja, nëse mund t’ia shpjegoni dikujt me fjalë të thjeshta, atëherë e kuptoni problemin.  
+
+&nbsp;
 &nbsp;
 
 Rubber duck është një metodë shumë e popullarizuar që programuesit e përdorin sepse shpesh nuk kemi pyetje pasi që mendojmë se gjithçka është e qartë, ndërsa nëse përpiqemi ta shpjegojmë atë atëherë e shohim që nuk e kemi kuptuar në të vërtetë.  
