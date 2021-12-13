@@ -19,7 +19,7 @@ url:            'https://programerat.github.io'
 author:         'Programerat'
 authorGithub:   'programerat'
 
-permalink:       /:year/:title/
+permalink:       /:title/
 
 defaults:
     -
