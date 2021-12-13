@@ -1,7 +1,7 @@
 ---
-title:  "Modelet e dizajnimit - Paterni Strategji"
+title:  "Paternet e dizajnimit - Paterni Strategji"
 date:   2021-12-13 17:35:00
-description: Si të aplikojmë paternin e strategjisë në kod.
+description: Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.
 tags: OO, Design Patterns, PHP
 profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
 author: Diar Selimi
