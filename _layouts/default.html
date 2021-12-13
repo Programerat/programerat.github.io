@@ -47,9 +47,11 @@
         <div class="title">Tjera artikuj</div>
         <ul>
         {% for post in site.posts %}
+          {% if post.archive == false && post.url != page.url %}
             <li>
                 <a href="{{ "/" | relative_url  }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
             </li>
+          {% endif %}
         {% endfor %}
         </ul>
       </div>
