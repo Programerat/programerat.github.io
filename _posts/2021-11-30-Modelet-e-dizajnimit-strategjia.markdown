@@ -9,7 +9,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
-archive: true
+archive: false
 ---
 
 Paterni strategji mundësonë që ti izolojmë algoritmet në klasa të ndryshme, dhe mundëson zëvendesimin e algoritmeve pa pasur nevojë qe kodi të ndryshohet. Pra paterni strategji na mundësonë që të shtojmë klasa të tjera që implementojnë algoritme të ndryshme por janë të tipit të njëjtë. 
