@@ -11,7 +11,7 @@ plugins: [jekyll-paginate]
 paginate: 5
 domain_name: 'https://programerat.github.io'
 google_analytics: 'UA-55839922-3'
-disqus: true
+disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
