@@ -9,7 +9,7 @@ highlighter: rouge
 
 plugins: [jekyll-paginate]
 paginate: 5
-repo_url: https://github.com/programerat
+repo_url: https://github.com/Programerat/programerat.github.io
 domain_name: 'https://programerat.github.io'
 google_analytics: 'UA-55839922-3'
 disqus: false
