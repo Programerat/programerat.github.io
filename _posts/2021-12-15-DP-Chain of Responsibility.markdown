@@ -3,5 +3,6 @@ title: Design Patterns - Chain of Responsibility (Shqip)
 archive: true
 ---
 
-Chain of Responsibility
-Also known as: CoR, Chain of Command
+### Chain of Responsibility
+
+Gjithashtu njihet si: CoR, Chain of Command

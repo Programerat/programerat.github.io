@@ -1,50 +1,51 @@
----
-title:  Fjalori i perdorur ne shqip rreth artikujve ne IT.
-archive: true
----
+# Fjalori i perdorur në shqip rreth artikujve në IT.
 
-Perderisa mungesa e fjaleve ne shqip ne teknologji eshte shum e madhe, zgjidhja qe do te perdoret ne shpjegimin e Metodave dhe principeve te ndryshme ne programim do te jete si ne vijim.
+Përderisa mungesa e fjalëve në shqip rreth teknologjisë është shumë e madhe, zgjidhja që do të përdoret në shpjegimin e
+metodave dhe principeve të ndryshme në programim do të bëhet si në vijim.
 
-Te gjithe emrat dhe shkurtesat ne gjuhen angleze do te barten direkt ne gjuhen shqipe, edhe pse disa nga shkronjat nuk egzistojne ne alfabetin tone.
+Të gjitha emrat dhe shkurtesat në gjuhën angleze do të barten direkt në gjuhën shqipe, edhe pse disa nga shkronjat nuk
+egzistojnë në alfabetin tonë.
 
-Arsyet jane keto:
-1. Nese mesoni dicka te re ne gjuhen shqipe dhe mos ta keni problemin si ta gjeni ate ne gjuhen angleze; Perveq atyre fjaleve qe vetem egzistojne dhe jane te njohura.
-2. Komunikimi i rrjedhshem me te gjith programeret.
-3. Te krijohet nje lidhje ne gjuhen shqipe me ate angleze me termet qe perdoren ne IT.
-4. Te mund te kapim nje bisede rreth nje Principle apo nje Pattern pa u brengosur se mos dikush po na e gjykon gjuhen; (Nese nje gjerman mundet mos me me gjyku si flas mundet edhe nje i yti).
+Arsyet janë këto:
 
-Nje ide tjeter do te ishte te gjitha emrat qe jan ne Anglisht ta ken nje markim qe te dihet si te lexohet, P.SH `Factory``, `§Factory` ose Factory(perkthimi ketu).
+1. Së pari të kemi një burim ku ti referohemi komunitetit tonë, ti qasemi problemeve dhe të i zgjidhim së bashku.
+2. Nëse mësoni diçka të re në gjuhën shqipe, ta keni më të lehtë që të gjeni referenca në gjuhën angleze, përveç atyre
+   fjalëve që vetëm egzistojnë dhe janë të njohura.
+3. Komunikim i rrjedhshëm me të gjithë programerët.
+4. Të krijohet një lidhje në gjuhën shqipe me atë angleze me termet që perdoren në IT.
+5. Të mund të kapim një bisedë rreth një Principle apo një Pattern pa u brengosur se mos dikush po na e gjykon gjuhën.
+6. Që të mos e izolojmë vetën duke u munduar që të i përkthejmë fjalët ndersa fjalë të reja dalin çdo ditë në Anglisht.
 
 
-P.SH
-_________________________________________
-Anglisht 			|	Shqip (Shqiptimi)
------------------------------------------
-Class				|	Class (Kllas)							<-- Emer
-Factory Method		|	Factory Method (Fektori Method) 		<-- Emer
-Algorithm			|	Algoritem 								<-- Egzison
-Chain of command	|	Chain of command (Qain of Komand) 		<--- Emer
-YANKI				|	YANKI (Janki) 							<-- shkurtese
-OOP					|	OOP (OOPE) 								<-- shkurtese
-DDD					|	DDD (DiDiDi) 							<-- shkurtese
-Domain Driven Design| 	Dizajn i orientuar ne Domain 			<--- Emer 
-Architecture		|	Arkitektura 							<--- Egzison
-Software Architecture|  Software Architecture(Akitekture Softuerike)<- Emer
-Framework			|	Framework (Frameuork) 					<-- Emer 
-KISS				|	KISS (Kis) 								<-- shkurtese 
-Mental Overloading	|	Mental Overload (Mentall Overlload) 	<-- Emer
-SOLID				|	SOLID (Solid)							<-- Emer
-Software Development|	Software Development(Softuer Development)<- Emer
-Interface			|	Interface (Interfejs)					<-- Emer
+**P.SH**
 
-Keto jane disa nga shembujt e fjalve se si do te perdoren ne artikuj.
+|        Anglisht         |       Shqip (Shqiptimi)        |       Shqiptimi        |
+|:-----------------------:|:------------------------------:|:----------------------:|
+|          Class          |             Class              |          Klas          
+|     Factory Method      |         Factory Method         |     Faktory Method     
+|        Algorithm        |           Algoritem            |       Algoritem        
+|    Chain of command     |        Chain of command        |     Qain of Komand     
+|          YANKI          |             YANKI              |         Janki          
+|           OOP           |              OOP               |          OOPE          
+|           DDD           |              DDD               |       Di\`Di\`Di       
+|  Domain Driven Design   |  Dizajn i orientuar në Domain  |           ~            
+|      Architecture       |          Arkitektura           |           ~            
+|  Software Architecture  |     Software Architecture      | Akitekture Softuerike  
+|        Framework        |           Framework            |       Frameuork        
+|          KISS           |              KISS              |          Kis           
+|     Mental Overload     |        Mental Overload         |    Mental Overload     
+|          SOLID          |             SOLID              |         Solid          
+|  Software Development   |      Software Development      |  Softuer Development   
+|        Interface        |           Interface            |       Interfejs        
 
-Pse duhet ti perdorim keto fjale?
-Thjeshte, nese i perdorim emertimin e njejte si ne Anglisht ateher gjetja definicioneve ne anglisht do te jet me e lehte ne te ardhmen.
+Këto janë disa nga shembujt e fjalëve se si do të perdoren në artikuj.
 
-Ashtu kshtu kur flasim ne shqip rreth teknologjise i perdorim termet e njejta, prandaj te pakten te jemi konsistent qe te gjithe ti perdorim fjalet e njeta edhe pse nuk jan fjal te futura nga Albanologet.
+**Pse duhet të perdorim këto fjalë?** 
+* Thjeshtë, nëse i perdorim emertimin e njejtë si në Anglisht atëher gjetja e definicioneve në anglisht do të bëhet më e lehtë në të ardhmen.
+* Ashtu edhe kur flasim në shqip rreth teknologjisë i perdorim emrat dhe shkurtesat ne gjuhë angleze, prandaj të paktën të jemi konsistent që
+të gjithë ti perdorim fjalët e njeta edhe pse nuk janë fjalë të që egzistojnë në fjalor.
 
-Nuk na izolon por na e mundeson qe te kapemi per termet angleze, gje qe e forcon lidhjen me anglishten.
+* Nuk na izolon por do të na e mundëson që të kapemi për termet angleze, gje që e forcon lidhjen me anglishten.
 
-Un besoj qe kjo nuk ka me zgjidh problemin, por e mundeson qe te pakten ta inicjojme zgjidhjen.
+Un besoj që kjo do të ndihmojë ose kontribojë në nismën për iniciativën për të pasur një fjalor të përditsuar.
 
