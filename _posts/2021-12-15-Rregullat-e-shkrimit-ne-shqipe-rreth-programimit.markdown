@@ -4,7 +4,7 @@ title: Fjalori i perdorur në shqip rreth artikujve në IT.
 Përderisa mungesa e fjalëve në shqip rreth teknologjisë është shumë e madhe, zgjidhja që do të përdoret në shpjegimin e
 metodave dhe principeve të ndryshme në programim do të bëhet si në vijim. &nbsp; Të gjitha emrat dhe shkurtesat në
 gjuhën angleze do të barten direkt në gjuhën shqipe, edhe pse disa nga shkronjat nuk egzistojnë në alfabetin tonë.
-&nbsp;
+&nbsp;<br />
 
 **Arsyet janë këto:**
 1. Së pari të kemi një burim ku ti referohemi komunitetit tonë, ti qasemi problemeve dhe të i zgjidhim së bashku. 
@@ -36,7 +36,7 @@ gjuhën angleze do të barten direkt në gjuhën shqipe, edhe pse disa nga shkro
 |        Interface        |           Interface            |       Interfejs
 
 Këto janë disa nga shembujt e fjalëve se si do të perdoren në artikuj. 
-&nbsp;
+&nbsp; <br />
 
 **Pse duhet të perdorim këto fjalë?**
 
@@ -44,7 +44,9 @@ Këto janë disa nga shembujt e fjalëve se si do të perdoren në artikuj.
   lehtë në të ardhmen. 
 - Ashtu edhe kur flasim në shqip rreth teknologjisë i perdorim emrat dhe shkurtesat ne gjuhë angleze, prandaj të paktën
   të jemi konsistent që të gjithë ti perdorim fjalët e njeta edhe pse nuk janë fjalë të që egzistojnë në fjalor. 
-- Nuk na izolon por do të na e mundëson që të kapemi për termet angleze, gje që e forcon lidhjen me anglishten. &nbsp;
-  Un besoj që kjo do të ndihmojë ose kontribojë në nismën për iniciativën për të pasur një fjalor të përditsuar.
+- Nuk na izolon por do të na e mundëson që të kapemi për termet angleze, gje që e forcon lidhjen me anglishten. 
+
+&nbsp;<br />
+Un besoj që kjo do të ndihmojë ose kontribojë në nismën për iniciativën për të pasur një fjalor të përditsuar.
 
 Komentoni mendimin tuaj.
