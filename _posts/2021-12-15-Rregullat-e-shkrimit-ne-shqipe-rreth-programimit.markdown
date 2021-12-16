@@ -2,7 +2,10 @@
 title: Fjalori i perdorur në shqip rreth artikujve në IT.
 ---
 Përderisa mungesa e fjalëve në shqip rreth teknologjisë është shumë e madhe, zgjidhja që do të përdoret në shpjegimin e
-metodave dhe principeve të ndryshme në programim do të bëhet si në vijim. &nbsp; Të gjitha emrat dhe shkurtesat në
+metodave dhe principeve të ndryshme në programim do të bëhet si në vijim. 
+&nbsp; <br /> 
+
+Të gjitha emrat dhe shkurtesat në
 gjuhën angleze do të barten direkt në gjuhën shqipe, edhe pse disa nga shkronjat nuk egzistojnë në alfabetin tonë.
 &nbsp;<br />
 
