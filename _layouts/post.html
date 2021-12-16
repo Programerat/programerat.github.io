@@ -12,7 +12,7 @@ archive: false
         </div>
         <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
     </header>
-    <div class="fix_toc hide">    
+    <div class="fix_toc hide">
         <div class="widget hide">
             <ul class="table_of_contents"></ul>
         </div>
@@ -21,7 +21,7 @@ archive: false
         {{content}}
     </section>
 </article>
-
+{% if page.archive != false %}
 <script src="https://utteranc.es/client.js"
         repo="programerat/programerat.github.io"
         issue-term="title"
@@ -30,7 +30,7 @@ archive: false
         crossorigin="anonymous"
         async>
 </script>
-
+{% endif %}
 
 
 
