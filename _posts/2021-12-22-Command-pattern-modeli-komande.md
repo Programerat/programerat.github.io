@@ -104,17 +104,18 @@ class ConfirmOrderController {}
     
 ```
 
-Pastaj le te themi se dojm ta ndryshojme se si i ruajme te dhenat ose si i dergojm mesazhet.
+Pastaj le te themi se dojm ta ndryshojme se si i ruajme te dhenat ose si i dergojm mesazhet.  
+
 &nbsp;
 
-Tani pasi aplikacioni yne komunikon me aplikacione te tjera nuk dojme qe te dergojm mesazhe ne aplikacionet tjera nese nuk ka shkuar gjithqka ne rretull ne aplikacionin tone.
+Tani pasi aplikacioni yne komunikon me aplikacione te tjera nuk dojme qe te dergojm mesazhe ne aplikacionet tjera nese nuk ka shkuar gjithqka ne rretull ne aplikacionin tone.  
 &nbsp;
 
-Zgjidhja do te jet qe ta bejme komanden qe te ruaj te dhenat me transaksion.
+Zgjidhja do te jet qe ta bejme komanden qe te ruaj te dhenat me transaksion.  
 &nbsp;
 
 Pasi qe gjithqka shkon ne rregull ateher ne commit i ruajm tedhenat dhe i dergojm mesazhet ne aplikacionet tjera.
-Nese e marrim shbullin e mehershem te kodit ateher per ta prezentuar kete ndryshim duhet te gjitha controlleret ose usecases ti ndryshojme e cila e then rregullin e principit te dyte.
+Nese e marrim shbullin e mehershem te kodit ateher per ta prezentuar kete ndryshim duhet te gjitha controlleret ose usecases ti ndryshojme e cila e then rregullin e <a href="">principit te dyte</a>.  
 &nbsp;
 
-Per ta bere te mundur qe ti ndryshojme se si komandat ruhen ose egzekutohen, dhe kjo arrihet duke e bere i treguar komandes se cilat metoda egzistojne tek pranuesi.
+Per ta bere te mundur qe ti ndryshojme se si komandat ruhen ose egzekutohen, dhe kjo arrihet duke e bere i treguar komandes se cilat metoda egzistojne tek pranuesi.  
