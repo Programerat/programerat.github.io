@@ -3,16 +3,11 @@ title:  "Modelet e strukturimit te kodit, Modeli Komande"
 date:   2021-11-17 08:15:20
 description: "Modelet e strukturimit te kodit, Modeli Komande"
 tags: Design Patterns, Command
-profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
-author: Diar Selimi
-author_github: https://github.com/diarselimi
-author_linkedin: diarselimi
-author_description: "Coding is an art, if you know what you're doing."
-author_title: Senior Backend Engineer
+author: "diar"
 archive: true
 ---
 
-### Modeli Komande (eng. Command Patterns)
+### Modeli Komande (eng. Command Pattern)
 
 Njihet edhe si: Veprim (eng. Action), Transakcion (eng. Transaction)
 
