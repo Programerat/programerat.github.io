@@ -5,7 +5,9 @@ meta_description: "Blogging Software Design, DDD, OO, TDD, Design Patterns"
 aboutPage: false
 
 markdown: kramdown
-highlighter: rouge
+    highlighter: rouge
+    kramdown:
+      input: GFM
 
 plugins: [jekyll-paginate]
 paginate: 5
