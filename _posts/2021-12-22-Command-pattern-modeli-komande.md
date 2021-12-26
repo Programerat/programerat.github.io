@@ -40,10 +40,11 @@ Te fokusohemi ne thirrje e `/autorizimi`, me posht eshte nje UML diagram ku esht
 ### Diagrami i modelit Komande.
 <img src="{{ "/" | relative_url  }}assets/diagrams/TheCommandPattern.png" alt="UML diagrami i modelit komande" />
 
-Klasa qe therret(eng. Invoke) komandat ajo e din se cilen metode ta egzekutoj ne komande, por nuk ka dijeni se cka ben ajo metode.
+Klasa qe therret(eng. Invoke) komandat ajo e din se cilen metode me cilat parametra ta egzekutoj, por nuk ka dijeni se cka ben ajo metode.
 
 
 ### Implementimi pa modelin komande.
+Ne shembullin e ardshem do ta shihni se nese nje kerkese vjen qe ta krijojme nje order, 
 
 ```php
 
@@ -87,8 +88,14 @@ class CreateOrderController
 
     public function create(Request $request)
     {
-        $command = $this->createCommand($request);
+        $command = $this->validateRequest($request);
         $this->createOrderUseCase->execute($command);
+    }
+
+    private function validateRequest(Request $request) {
+        //...
+        //...
+        return $command;
     }
 }
     
