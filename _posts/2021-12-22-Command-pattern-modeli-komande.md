@@ -114,8 +114,81 @@ Tani pasi aplikacioni yne komunikon me aplikacione te tjera nuk dojme qe te derg
 Zgjidhja do te jet qe ta bejme komanden qe te ruaj te dhenat me transaksion.  
 &nbsp;
 
+P.SH 
+
+```php
+class DbTransactionExecutor
+{
+    public functin __construct(CommandHandlerLocator $locator, MessageBus $messageBus)
+    {
+        $this->locator = $locator;
+        $this->messageBus = $messageBus;
+    }
+
+    public function execute(Command $command)
+    {
+        $handler = $this->locator->getHandler($command);
+        $connection = new PDO('mysql:host=localhost;dbname=my_db', 'root', 'root');
+        $connection->beginTransaction();
+        try {
+            $handler->execute($command);
+            $connection->commit();
+        } catch (Exception $e) {
+            $connection->rollback();
+            throw $e;
+        }
+
+        $this->messageBus->send(new OrderCreated($order));
+    }
+}
+
+class CommandHandlerLocator {
+    private array $commandHandlers = [
+        CreateOrderCommand::class => CreateOrderHandler::class,
+        UpdateOrderCommand::class => UpdateOrderHandler::class,
+        DeleteOrderCommand::class => DeleteOrderHandler::class,
+        GetOrderCommand::class => GetOrderHandler::class,
+        CreateInvoiceCommand::class => CreateInvoiceHandler::class,
+        ConfirmOrderCommand::class => ConfirmOrderHandler::class,
+    ];
+
+    public function __construct(array $commandHandlers)
+    {
+        array_merge($this->commandHandlers, $commandHandlers);
+    }
+
+    public function getHandlerFor(Command $command)
+    {
+        return $this->commandHandlers[get_class($command)];
+    }
+}
+
+class CreateOrderController 
+{
+    DbTransactionExecutor $dbTransactionExecutor;
+    public function __construct(DbTransactionExecutor $transactionExecutor)
+    {
+        $this->createOrderUseCase = $transactionExecutor;
+    }
+
+    public function create(Request $request)
+    {
+        $command = $this->validateRequest($request);
+        $this->dbTransactionExecutor->execute($command); //ky eshte ndryshimi ne te gjitha kontrolleret.
+    }
+
+    private function validateRequest(Request $request) {
+        //...
+        //...
+        return $command;
+    }
+}
+```
+
 Pasi qe gjithqka shkon ne rregull ateher ne commit i ruajm tedhenat dhe i dergojm mesazhet ne aplikacionet tjera.
 Nese e marrim shbullin e mehershem te kodit ateher per ta prezentuar kete ndryshim duhet te gjitha controlleret ose usecases ti ndryshojme e cila e then rregullin e <a href="">principit te dyte</a>.  
 &nbsp;
 
 Per ta bere te mundur qe ti ndryshojme se si komandat ruhen ose egzekutohen, dhe kjo arrihet duke e bere i treguar komandes se cilat metoda egzistojne tek pranuesi.  
+
+### Implementimi me modelin komande.
