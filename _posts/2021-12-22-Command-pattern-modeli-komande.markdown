@@ -45,7 +45,7 @@ Klasa qe therret(eng. Invoke) komandat ajo e din se cilen metode ta egzekutoj ne
 
 ### Implementimi pa modelin komande.
 
-```PHP
+{% highlight php %}
 
 class CreateOrderUseCase
 {
@@ -91,6 +91,7 @@ class CreateOrderController
         $this->createOrderUseCase->execute($command);
     }
 }
-```
+    
+{% endhighlight %}
 
 
