@@ -192,3 +192,55 @@ Nese e marrim shbullin e mehershem te kodit ateher per ta prezentuar kete ndrysh
 Per ta bere te mundur qe ti ndryshojme se si komandat ruhen ose egzekutohen, dhe kjo arrihet duke e bere i treguar komandes se cilat metoda egzistojne tek pranuesi.  
 
 ### Implementimi me modelin komande.
+
+Pra secila komande e njeh pranuesin
+P.SH
+
+```php
+class CreateOrderCommand implements Command {
+    
+    private CreateOrderHandler $receiver;
+    public function __construct(Receiver $receiver)
+    {
+        $this->receiver = $receiver;
+    }
+    //some properties
+
+// the command knows the receiver AND knows what the methods need but doesnt know what they do.
+    public function execute(): void
+    {
+        $this->receiver->checkMoneyLimit($this->totalAmount());
+        $this->receiver->identifyCompany($this->getComapany());
+        $this->receiver->checkRisk($this->getCustomer());
+        $this->receiver->authorizeOrder($this->getOrder())
+    }
+}
+
+class CreateOrderHandler implements CommandHandler {
+    public function authorizeOrder(Order $order)
+    {
+        //...
+    }
+
+    //...
+}
+
+//the controller would look like this.
+class CreateOrderController 
+{
+    private CreateOrderHandler $createOrderHandler;
+    private CommandExecutor $commandExecutor;
+    public function __construct(CreateOrderHandler $createOrderHandler, CommandExecutor $dbTransactionCommandExecutor)
+    {
+        $this->createOrderHandler = $createOrderHandler;
+        $this->commandExecutor = $dbTransactionCommandExecutor;
+    }
+
+    public function execute(Request $request)
+    {
+        $command = new CreateOrderCommand($this->createOrderHandler, $request);
+        $this->commandExecutor->execute($command);
+    }
+}
+
+```
