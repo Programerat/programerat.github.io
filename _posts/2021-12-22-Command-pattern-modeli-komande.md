@@ -11,108 +11,142 @@ archive: true
 
 Njihet edhe si: Veprim (eng. Action), Transakcion (eng. Transaction)
 
-Komanda eshte nje model i sjelljes i cili e kthen kerkesen ne nje objekt ku i ka te gjitha informatat rreth kerkeses. Ky transformim te lejon qe te i passon kerkasat si argumente ne metode, mund te vendoset ne radhe per tu egzekutuar.
+Modeli Komande permbane te gjitha parametrat e nevojshme per veprimin i cili do te behet ne nje komande.
+Prandaj kjo na lejon qe komanda te egzekutohet ne menyra te ndryshme.
 
-Komanda eshte nje metode shum e perdorur ne aplikacion te ndryshme, sepse e mundeson qe nje komand te egzekutohet ne mbrapavije perderisa perdoruesi nuk eshte duke pritur per nje rezultat.
+Perparsit e modelit komande:
+1. E ben ndarjen e klases qe fillon procesin prej klases qe e kryen punen.
+2. Lejon qe te bejme nje group te komandave njepasnjeshme duke na e mundesuar nje sistem radhë pritje (eng. Queue System).
+3. Zgjerimi eshte i lehte, mund te behet pa u ndryshuar kodi egzistues.
+4. Mund te definohet sistemi per fshirjen e ndryshimeve (eng. Rollback).
 
 
 ### Shembull konkret
-//billie example.
-Ta zejme qe kemi nje aplikacion ku jep mundsi me u perdor si metode per pagese nga dyqanet e ndryshme.
-Tash na si metode per pagese kur shitorja na jep te dhenat se kush eshte duke blere edhe cka eshte duke blere, ne e bejme nje vlersim dhe ju pergjigjemi me nje response.
+Ta zejme qe jemi ne nje shitore online, dhe deshirojm ta bejme nje blerje.
+Zgjedhim produktin e fusim ne kosh dhe klikojm ne butonin Bli.
+Kjo na drejton ne nje dritare per te marrur te dhenat bankare dhe te konfirmojm blerjen.
 
-Tash Shitorja perpara se me na shfaq neve sikur nje opcion per pagese, duhet te na pyes se a jemi ne gjendje me be pagese, kjo behet permes nje thirrje ne API `/initiate`.
+### Shembulli konkret i aplikuar ne kod
+Kodi ne nje MVC framework sikur symfony do te dukej si ne vijim.
 
-Pastaj ata na e dergojn nje thirrje ne API ku na japin te gjihta te dhenat qe neve na nevoiten, kjo thirrje behete ne `/autorizimi`
+```php
+class CreateOrderController {
+    
+    public function execute(Request $request) {
 
-Pastaj nje tjeter thirrje duhet te dergohet nga shitorja per ta konfirmuar qe kjo blerje eshte approvuar nga bleresi.
-Kjo thirrje behet ne `/konfirmo`.
+        $this->validate($request); //validimi i requestit do te behet ne controller
+        $order = $this->createOrder($request);
 
-Te fokusohemi ne thirrje e `/autorizimi`, me posht eshte nje UML diagram ku eshte e bere me shembullin konkret.
+        if ($this->shouldBeApproved($order)) {
+            $this->approve($order);
+        }
+
+        $this->orderRepository->create($order);
+        $this->integrationBus->send($order); //njofton sistemet tjera qe blerja u krijua
+    }
+
+}
+```
+Nese punojme me mvc dhe nuk perdorim ndonje organizim te kodit ateher nuk do te kemi ndarje se ku behet thirrja e serviseve dhe ku kryhet puna.
+Nuk mund ti grupojme ose egzekutojme disa pune radhazi, shembull nese nje `order` mund ta krijojme ku na duhet ta konfirmojme menjehere ateher duhet te vendosim kushte ne kontroller ose ta krijojme nje servis tjeter qe e ben krijimin e nje `order` pa pritur per konfirmimin e saj.
+Nese dojm ta shtojme nje mekanizem per kthimin e egzekutimit qe mos te ruajme te dhenat te gjysmuara ateher duhet ti ndryshojme te gjitha kontrolleret.
 
 
-
-### Diagrami i modelit Komande.
+### UML Diagrami i modelit Komande.
 <img src="{{ "/" | relative_url  }}assets/diagrams/TheCommandPattern.png" alt="UML diagrami i modelit komande" />
 
 Klasa qe therret(eng. Invoke) komandat ajo e din se cilen metode me cilat parametra ta egzekutoj, por nuk ka dijeni se cka ben ajo metode.
 
 
-### Implementimi pa modelin komande.
-Ne shembullin e ardshem do ta shihni se nese nje kerkese vjen qe ta krijojme nje order, 
+### Implementimi i modelit komande
+Ne shembullin e ardshem do ta shihni se nese nje kerkese vjen qe ta krijojme nje order  
 
 ```php
 
-class CreateOrderUseCase
-{
-    OrderRepository $orderRepository;
-    RiskChecker $riskChecker;
-    MessageBus $messageBus;
-    public function __construct(OrderRepository $order, RiskCheckService $riskCheckService, MessageBus $messageBus)
+class CreateOrderCommand implements Command {
+    
+    private CreateOrderHandler $receiver;
+    public function __construct(Receiver $receiver)
     {
-        $this->orderRepository = $order;
-        $this->riskChecker = $riskCheckService;
-        $this->messageBus = $messageBus;
+        $this->receiver = $receiver;
     }
+    //some properties
 
-    public function execute(CreateOrderCommand $command)
+    // the command knows the receiver AND knows what the methods need but doesnt know what they do.
+    public function execute(): void
     {
-        $order = new Order();
-        $order->setCustomer($command->getCustomer());
-        $order->setProduct($command->getProduct());
-        $order->setQuantity($command->getQuantity());
-        $order->setPrice($command->getPrice());
-        $order->setTotal($command->getTotal());
-        $order->setStatus(OrderStatus::PENDING);
-
-        $this->riskCheckService->check($order);
-
-        $this->orderRepository->save($order);
-
-        $this->messageBus->send(new OrderCreated($order));
+        $this->receiver->checkMoneyLimit($this->totalAmount());
+        $this->receiver->identifyCompany($this->getComapany());
+        $this->receiver->checkRisk($this->getCustomer());
+        $this->receiver->authorizeOrder($this->getOrder())
     }
 }
 
+class CreateOrderHandler implements CommandHandler {
+    public function authorizeOrder(Order $order)
+    {
+        //...
+    }
+
+    //...
+}
+
+class CreateOrderInvoker {
+    private array $commands = [];
+    public function addCommand(Command $command)
+    {
+        $this->commands[] = $command;
+    }
+
+    public function execute(): void
+    {
+        $this->db->beginTransaction(); //transaction for rollback support
+        try {
+            foreach ($this->commands as $command) {
+                $command->execute();
+            }
+        } catch (Exception $e) {
+            $this->db->rollback();
+            throw $e;
+        }
+
+        $this->db->commit();
+        $this->dispatchIntegrationMessages(); 
+    }
+
+    private function dispatchIntegrationMessages(): void //integration messages after everything went well.
+    {
+        $this->bus->dispatch(new OrderCreated($order));
+    }
+}
+
+//the controller would look like this.
 class CreateOrderController 
 {
-    CreateOrderUseCase $createOrderUseCase;
-    public function __construct(CreateOrderUseCase $createOrderUseCase)
+    private CreateOrderHandler $createOrderHandler;
+    private CreateOrderInvoker $invoker;
+    public function __construct(CreateOrderHandler $createOrderHandler, CreateOrderInvoker $invoker)
     {
-        $this->createOrderUseCase = $createOrderUseCase;
+        $this->createOrderHandler = $createOrderHandler;
+        $this->invoker = $invoker;
     }
 
-    public function create(Request $request)
+    public function execute(Request $request)
     {
-        $command = $this->validateRequest($request);
-        $this->createOrderUseCase->execute($command);
-    }
+        $command = new CreateOrderCommand($this->createOrderHandler, $request);
+        
+        $this->invoker
+        ->addCommand($command)
+        ->execute();
 
-    private function validateRequest(Request $request) {
-        //...
-        //...
-        return $command;
+        //ose
+        //->addCommand($createOrderCommand)
+        //->addCommand($confirmOrderCommand)
+        //->queue();
     }
 }
 
-// Te gjitha kontrolleret permbajne pothuajse permbajtjen e njejte.
-class UpdateOrderController {}
-class DeleteOrderController {}
-class GetOrderController {}
-class CreateInvoiceController {}
-class ConfirmOrderController {}
-//...
-    
 ```
-
-Pastaj le te themi se dojm ta ndryshojme se si i ruajme te dhenat ose si i dergojm mesazhet.  
-
-&nbsp;
-
-Tani pasi aplikacioni yne komunikon me aplikacione te tjera nuk dojme qe te dergojm mesazhe ne aplikacionet tjera nese nuk ka shkuar gjithqka ne rretull ne aplikacionin tone.  
-&nbsp;
-
-Zgjidhja do te jet qe ta bejme komanden qe te ruaj te dhenat me transaksion.  
-&nbsp;
 
 P.SH 
 
@@ -196,51 +230,3 @@ Per ta bere te mundur qe ti ndryshojme se si komandat ruhen ose egzekutohen, dhe
 Pra secila komande e njeh pranuesin
 P.SH
 
-```php
-class CreateOrderCommand implements Command {
-    
-    private CreateOrderHandler $receiver;
-    public function __construct(Receiver $receiver)
-    {
-        $this->receiver = $receiver;
-    }
-    //some properties
-
-// the command knows the receiver AND knows what the methods need but doesnt know what they do.
-    public function execute(): void
-    {
-        $this->receiver->checkMoneyLimit($this->totalAmount());
-        $this->receiver->identifyCompany($this->getComapany());
-        $this->receiver->checkRisk($this->getCustomer());
-        $this->receiver->authorizeOrder($this->getOrder())
-    }
-}
-
-class CreateOrderHandler implements CommandHandler {
-    public function authorizeOrder(Order $order)
-    {
-        //...
-    }
-
-    //...
-}
-
-//the controller would look like this.
-class CreateOrderController 
-{
-    private CreateOrderHandler $createOrderHandler;
-    private CommandExecutor $commandExecutor;
-    public function __construct(CreateOrderHandler $createOrderHandler, CommandExecutor $dbTransactionCommandExecutor)
-    {
-        $this->createOrderHandler = $createOrderHandler;
-        $this->commandExecutor = $dbTransactionCommandExecutor;
-    }
-
-    public function execute(Request $request)
-    {
-        $command = new CreateOrderCommand($this->createOrderHandler, $request);
-        $this->commandExecutor->execute($command);
-    }
-}
-
-```
