@@ -9,10 +9,12 @@ archive: true
 
 ### Modeli Komande (eng. Command Pattern)
 
-Njihet edhe si: Veprim (eng. Action), Transakcion (eng. Transaction)
+Njihet edhe si: Veprim (eng. Action), Transakcion (eng. Transaction)  
+
 
 Modeli Komande permbane te gjitha parametrat e nevojshme per veprimin i cili do te behet ne nje komande.
-Prandaj kjo na lejon qe komanda te egzekutohet ne menyra te ndryshme.
+Prandaj kjo na lejon qe komanda te egzekutohet ne menyra te ndryshme.  
+  
 
 Perparsit e modelit komande:
 1. E ben ndarjen e klases qe fillon procesin prej klases qe e kryen punen.
@@ -144,6 +146,8 @@ class CreateOrderController
         //->addCommand($confirmOrderCommand)
         //->queue();
     }
+
+    //...
 }
 
 ```
