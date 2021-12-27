@@ -158,8 +158,9 @@ Nese e marrim shbullin e mehershem te kodit ateher per ta prezentuar kete ndrysh
 
 Per ta bere te mundur qe ti ndryshojme se si komandat ruhen ose egzekutohen, dhe kjo arrihet duke e bere i treguar komandes se cilat metoda egzistojne tek pranuesi.  
 
-### Implementimi me modelin komande.
+### Veshtiresite qe ka ky model
+Shum klasa duhet te inkuadrohen ne process qe te kryhet nje komande, andaj edhe duhet te punohet me kujdes te shtuar duke menduar mire se cfar klasa shtohen.
+Sugjyeroj qe nese perdorni DDD (eng. Domain Driven Design) ateher ky model do te jet me natyral ne projektin tuaj.  
 
-Pra secila komande e njeh pranuesin
-P.SH
+
 
