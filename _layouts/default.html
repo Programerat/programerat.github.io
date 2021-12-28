@@ -75,8 +75,9 @@
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
     AUTHORS = null;
-    authors = $.getJSON('/authors.json');
-    AUTHORS = authors.responseJSON;
+    authors = $.getJSON('/authors.json', function(json) {
+      AUTHORS = json;
+    });
   </script>
   
   <script>
