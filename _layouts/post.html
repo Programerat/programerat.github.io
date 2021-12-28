@@ -23,7 +23,18 @@ archive: true
 </article>
 
 <script>
-    //loadAuthor("{{ page.author }}");
+    loadAuthor("{{ page.author }}");
+    function loadAuthor(author) {
+        if (AUTHORS) {
+            var author = AUTHORS[author];
+            if (author) {
+                $(".side-author .avatar").attr("src", author.avatar);
+                $(".side-author #author-title").text(author.name + ' - ' +author.name);
+                $(".side-author #author-quote").text(author.quote);
+            }
+        }
+    }
+    loadAuthor("{{ page.author }}");
 </script>
 {% if page.archive == false %}
 <script src="https://utteranc.es/client.js"
