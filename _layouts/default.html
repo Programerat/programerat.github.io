@@ -77,7 +77,21 @@
     AUTHORS = null;
     authors = $.getJSON('/authors.json', function(json) {
       AUTHORS = json;
+      if ($('.post')) {
+        loadAuthor("{{ page.author }}");
+      }
     });
+
+    function loadAuthor(author) {
+        if (AUTHORS) {
+            var author = AUTHORS[author];
+            if (author) {
+                $(".side-author .avatar").attr("src", author.avatar);
+                $(".side-author #author-title").text(author.name + ' - ' +author.name);
+                $(".side-author #author-quote").text(author.quote);
+            }
+        }
+    }
   </script>
   
   <script>
