@@ -73,6 +73,12 @@
   <script src="{{ "/" | relative_url  }}assets/js/highlight.js"></script>
   <script src="{{ "/" | relative_url  }}assets/js/table_of_contents.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    const AUTHORS = null;
+    $.getJSON('{{site.baseurl}}/authors.json', function(json) {
+        AUTHORS = json;
+    });
+  </script>
   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
