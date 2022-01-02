@@ -53,12 +53,12 @@ layout: default
     <h2>Artikujt</h2>
     <ul>
         {% for post in site.posts %}
-        {% if post.archive == false %}
-        <li>
-		<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
-        </li>
-        {% endif %}
+            {% if post.archive == false %}
+            <li>
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+            </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </section>
