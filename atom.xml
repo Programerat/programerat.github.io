@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Programerat</title>
+ <link href="https://programeret.github.io//atom.xml" rel="self"/>
+ <link href="https://programeret.github.io//"/>
+ <updated>2022-01-02T19:41:08+01:00</updated>
+ <id>https://programeret.github.io</id>
+ <author>
+   <name>programerat</name>
+   <email>your-email@email.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>MODELET E STRUKTURIMIT TË KODIT, MODELI KOMANDË (ENG. COMMAND PATTERN)</title>
+   <link href="https://programeret.github.io//2021/12/31/command-pattern-modeli-komande"/>
+   <updated>2021-12-31T09:15:20+01:00</updated>
+   <id>https://programeret.github.io/2021/12/31/Command-pattern-modeli-komande</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;Njihet edhe si Veprim (eng. Action), Transakcion (eng. Transaction)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Modeli Komandë përmbanë të gjitha parametrat e nevojshme për veprimin i cili do të bëhet në një komandë. Prandaj kjo na lejon që komanda të ekzekutohet  në mënyra të ndryshme.&lt;/p&gt;
+
+&lt;p&gt;Perparësitë e modelit komandë:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;E bën ndarjen e klasës që fillon procesin prej klasës që e kryen punën.&lt;/li&gt;
+  &lt;li&gt;Lejon që të bëjmë një grup të komandave të njëpasnjëshme duke na e mundësuar një sistem rradhë pritje (eng. Queue System).&lt;/li&gt;
+  &lt;li&gt;Zgjerimi  është i lehtë, mund të bëhet pa u ndryshuar kodi ekzistues.&lt;/li&gt;
+  &lt;li&gt;Mund të definohet sistemi për fshirjen e ndryshimeve (eng. Rollback).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;konteksti-se-ku-do-ta-aplikojmë-modelin&quot;&gt;Konteksti se ku do ta aplikojmë modelin&lt;/h3&gt;
+&lt;p&gt;Ta zëmë  që jemi në një shitore online, dhe dëshirojmë ta bëjmë një blerje. 
+Zgjedhim produktin e fusim në kosh dhe klikojmë në butonin Bli. 
+Kjo na drejton në një dritare për të mbushur të dhënat bankare dhe të konfirmojmë blerjen.&lt;/p&gt;
+
+&lt;h3 id=&quot;shembulli-konkret-i-aplikuar-në-kod&quot;&gt;Shembulli konkret i aplikuar në kod&lt;/h3&gt;
+&lt;p&gt;Kodi në një &lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot; target=&quot;_blank&quot;&gt;MVC&lt;/a&gt; kornizë pune (&lt;em&gt;eng. framework&lt;/em&gt;) sikur &lt;a href=&quot;https://symfony.com/&quot; target=&quot;_blank&quot;&gt; symfony &lt;/a&gt; do të dukej si në vijim.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateOrderController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//validimi i kërkesës do të bëhet në controller&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$order&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;createOrder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shouldBeApproved&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;approve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integrationBus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//njofton sistemet tjera që një blerje është bërë &lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Nëse punojmë me një kornizë të punës (eng. Framework) MVC dhe nuk përdorim ndonjë organizim të kodit atëherë nuk do të kemi ndarje aty ku bëhet thirrja e serviseve dhe ku kryhet puna, andaj e gjithë logjika do të vendoset në një klasë të vetme. Prandaj edhe shtimi i logjikës të re ose ndryshimeve nuk do të jetë shumë i lehtë.&lt;/p&gt;
+
+&lt;p&gt;Ndryshimi se si do të ekzekutohet  logjika në këtë rast, do të ishte shumë e vështirë.&lt;br /&gt;
+Gjithashtu nëse dëshirojmë ta shtojmë një mekanizëm për kthimin e ekzekutimit që mos të ruajmë të dhënat të përgjysmuara atëherë duhet ti ndryshojmë të gjithë  kontrollerët.&lt;/p&gt;
+
+&lt;h3 id=&quot;uml-diagrami-i-modelit-komandë&quot;&gt;UML Diagrami i modelit Komandë&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/diagrams/TheCommandPattern.png&quot; alt=&quot;UML diagrami i modelit komandë&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klasa që thërret (eng. Invoke) komandat e di  se cilën metodë dhe cilat parametra ti ekzekutojë, por nuk ka dijeni se çka bën ajo metodë.&lt;/p&gt;
+
+&lt;p&gt;P.SH: Nëse e dërgon veturën tek miku yt mekanik, ai nuk mund të bëj asgjë nëse nuk i tregon se çfarë dëshiron ti.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$mechanic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Mechanic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$mechanic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;replaceWheels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;implementimi-i-modelit-komandë&quot;&gt;Implementimi i modelit komandë&lt;/h3&gt;
+&lt;p&gt;Në shembullin e ardshëm do ta shihni që nëse një kërkesë vjen që ta krijojmë një blerje.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateOrderCommand&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CreateOrderHandler&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Receiver&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//komanda e njeh pranuesin por nuk ka dijeni se cka ben ai.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;checkMoneyLimit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;totalAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;identifyCompany&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getComapany&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;checkRisk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getCustomer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;authorizeOrder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getOrder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//në rastin e mekanikut kjo klasë do ta luaj rolin e ndërmjetsuesit në mes teje dhe mekanikut.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateOrderInvoker&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$commands&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Command&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commands&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;foreach&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commands&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dispatchIntegrationMessages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//kjo i dërgon mesazhet për të njoftuar sistemet tjera që një blerje është bërë.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispatchIntegrationMessages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderCreated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//kontrolleri do te duket si ne vijim.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateOrderController&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CreateOrderHandler&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$createOrderHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CreateOrderInvoker&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$invoker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CreateOrderHandler&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$createOrderHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CreateOrderInvoker&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$invoker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;createOrderHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$createOrderHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$invoker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateOrderCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;createOrderHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoker&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;//ose&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//-&amp;gt;addCommand($createOrderCommand)&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//-&amp;gt;addCommand($confirmOrderCommand)&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//-&amp;gt;queue();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Siç shihet në shembull,  komandat mund të shtohen njëra pas tjetrës. , Mënyra se si do të ekzekutohen  ato mund të përmbaj logjikë specifike dhe nëse diçka shkon gabim atëherë mund të vendoset një mekanizëm që i kthen ndryshimet e prezentuara  (eng. Rollback).&lt;/p&gt;
+
+&lt;p&gt;Nëse duam  të shtojmë komanda të reja atëherë nuk ka nevojë që ta ndryshojmë kodin ekzistues, gjë që i mbështetë principet solid.&lt;/p&gt;
+
+&lt;h3 id=&quot;vështiresit-që-ka-ky-model&quot;&gt;Vështiresit që ka ky model&lt;/h3&gt;
+&lt;p&gt;Shumë klasa duhet të inkuadrohen në procese që të kryhet një komandë, andaj edhe duhet të punohet me kujdes të shtuar duke menduar mirë se çfarë klasa shtohen. Sygjeroj që nëse përdorni DDD (eng. Domain Driven Design) atëherë ky model do të jetë më natyral në projektin tuaj.&lt;/p&gt;
+
+&lt;p&gt;Sugjerohet  në disa libra që edhe komanda prej kërkesës (eng. Query) të jetë e ndarë. Komanda nuk duhet të kthej rezultat ndërsa kërkesa është që të kthej rezultat. Ky term është propozuar nga autori  &lt;a href=&quot;https://www.amazon.com/gp/product/0136291554/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0136291554&amp;amp;linkCode=as2&amp;amp;tag=martinfowlerc-20&quot; target=&quot;_blank&quot;&gt; Bertrand Meyer në librin e tij&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Si të krijoni aplikacionin tuaj të parë me Docker</title>
+   <link href="https://programeret.github.io//2021/12/13/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker"/>
+   <updated>2021-12-13T18:35:00+01:00</updated>
+   <id>https://programeret.github.io/2021/12/13/Si-te-krijoni-aplikacionin-tuaj-te-pare-me-Docker</id>
+   <content type="html">&lt;p&gt;Së pari do të bëjm një prezantim të shkurtër se çfarë është Docker dhe pse ta përdorni, më pastaj do të marr një shembull si të krijoni aplikacionin tuaj të parë me Docker.&lt;/p&gt;
+
+&lt;h3 id=&quot;çfarë-është-docker&quot;&gt;Çfarë është Docker?&lt;/h3&gt;
+&lt;p&gt;Docker është një platformë e hapur për zhvillimin,laciminin dhe ekzekutimin e aplikacioneve pa pas nevoj me instalu servera(XAMPP,Apache Tomcat) në makinën tuaj lokale. Po ashtu me Docker, ju mund të menaxhoni infrastrukturën tuaj në të njëjten mënyre siç e menaxhoni aplikacionin tuaj.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker.png&quot; alt=&quot;Docker&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pra Docker i lejon përdoruesit të krijojnë mjedis të pavarur dhe të izoluar për të lançuar aplikacionet e juaja. Këto mjedise quhen kontenjerë (eng. Containers).&lt;/p&gt;
+
+&lt;p&gt;Në një kontejnerë mund të vendosni aplikacionin e juaj, një databaze ose një sistem operative etj. Kjo do t’i lejojë zhvilluesit të ekzekutojë një apo më shumë kontejnerë në çfardo makine, server apo cloud.&lt;/p&gt;
+
+&lt;h3 id=&quot;imazhet&quot;&gt;Imazhet&lt;/h3&gt;
+
+&lt;p&gt;Një imazh Docker përmban gjithçka që nevojitet për të ekzekutuar një aplikacion si një kontejner. Kjo perfshin:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;kodi&lt;/li&gt;
+  &lt;li&gt;koha e ekzekutimit (runtime)&lt;/li&gt;
+  &lt;li&gt;librarit(libraries)&lt;/li&gt;
+  &lt;li&gt;variablat e mjedisit(enviroment variables)&lt;/li&gt;
+  &lt;li&gt;skedarët e konfigurimit(configuration files)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Imazhi më pas mund të vendoset në çdo mjedis Docker dhe të ekzekutohet si një kontejner.&lt;/p&gt;
+
+&lt;h3 id=&quot;kontejner&quot;&gt;Kontejner&lt;/h3&gt;
+&lt;p&gt;Një kontejner është një shembull i një imazhi në kohën e ekzekutimit. Nga një imazh mund të krijoni kontejnerë të shumtë (të gjithë ekzekutojnë aplikacionin e mostrës) në platformën e shumëfishtë Docker.
+Një kontejner funksionon si një proces diskret në makinën tuaj. Për shkak se kontejneri funksionon pa nevojën për të nisur një sistem operativ të ftuar, ai është i lehtë dhe kufizon burimet (p.sh. memorien) që nevojiten për ta lënë të funksionojë.&lt;/p&gt;
+
+&lt;h3 id=&quot;pse-duhet-me-përdor-docker-një-zhvillues&quot;&gt;Pse duhet me përdor Docker një zhvillues?&lt;/h3&gt;
+
+&lt;p&gt;Për t’iu përgjigje më së miri kësaj pyetje, shih listën më poshtë për përfitimet që mund të gjeni:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Docker është i shpejtë. Ndryshe nga një makinë virtuale, aplikacioni juaj mund të fillojë në pak sekonda dhe të ndalojë po aq shpejt.&lt;/li&gt;
+  &lt;li&gt;Docker është multi-platformë. Ju mund të nisni kontejnerin tuaj në çdo sistem.&lt;/li&gt;
+  &lt;li&gt;Kontejnerët mund të ndërtohen dhe shkatërrohen më shpejt se një makinë virtuale.&lt;/li&gt;
+  &lt;li&gt;Nuk ka më vështirësi në konfigurimin e mjedisit tuaj të punës. Pasi të konfigurohet Docker juaj, nuk do t’ju duhet të riinstaloni më manualisht varësitë tuaja. Nëse ndryshoni kompjuterë ose nëse një punonjës i bashkohet kompanisë suaj, ju duhet t’i jepni atyre vetëm konfigurimin tuaj.&lt;/li&gt;
+  &lt;li&gt;Ju e mbani të pastër hapësirën tuaj të punës, pasi secili prej mjediseve tuaja do të jetë i izoluar dhe ju mund t’i fshini ato në çdo kohë pa ndikuar në pjesën tjetër.&lt;/li&gt;
+  &lt;li&gt;Do të jetë më e lehtë të lanconi projektin tuaj në serverin tuaj në mënyrë që ta vendosni atë në internet.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;si-te-instalojm-docker&quot;&gt;Si te instalojm Docker?&lt;/h3&gt;
+
+&lt;p&gt;Docker është në dispozicionë për të gjitha sistemet operative, MacOS, Windows dhe Linux.&lt;/p&gt;
+
+&lt;p&gt;Për detaje se si te instaloni Docker në sistemin operative mund te gjeni në këtë link &lt;a href=&quot;https://docs.docker.com/get-docker/&quot;&gt;https://docs.docker.com/get-docker/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pasi të instalohet Docker me sukses dhe startoni në kompjuterin e juaj hapeni një terminal dhe shkruani këtë komandë për të shikuar se cili version i Docker është instaluar:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker-version.png&quot; alt=&quot;DockerVersion&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;shembull-si-të-paketojme-aplikacionin-tuaj-ne-docker&quot;&gt;Shembull si të paketojme aplikacionin tuaj ne Docker&lt;/h3&gt;
+
+&lt;p&gt;Tani keni njohuri se cfare është Docker, është koha për të krijuar aplikacionin tuaj të parë!&lt;/p&gt;
+
+&lt;p&gt;Qëllimi i ketij tutoriali të shkurter është të paketojm një htlm faqe duke perdor Ngnix web server, dhe këtë html faqe do te nise permes nje Dockerfile.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;Dockerfile është një tekst që përmbanë të gjitha komandat për te ndërtuar një imazh.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Për më shumë detaje për NGNIX ju lutem shikoni ne kete link &lt;a href=&quot;https://www.nginx.com/&quot;&gt;https://www.nginx.com/&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;krijo-projektin-e-tuaj&quot;&gt;Krijo projektin e tuaj&lt;/h4&gt;
+
+&lt;p&gt;Për të krijuar aplikacionin tuaj të parë Docker, ju rekomandoj të krijoni një folder të strukturuar si më posht:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── html-page
+    ── index.html
+└── Dockerfile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html-page/index.html&lt;/code&gt; (Eshtë një htlm faqe statike).
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; (Ky skedar do të përmbajë udhezimet e nevojshme se si të shpërndajm html faqen).&lt;/p&gt;
+
+&lt;h4 id=&quot;edito-html-skedar-dhe-shto-nje-titull&quot;&gt;Edito html skedar dhe shto nje titull&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Docker eshte magjik&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;edito-docker-skedar&quot;&gt;Edito Docker skedar&lt;/h4&gt;
+&lt;p&gt;Gjëja e parë që duhet të bëni kur dëshironi të krijoni skedarin tuaj Docker është të pyesni veten se çfarë doni të bëni. Qëllimi ynë këtu është të shpërndaj html faqen.&lt;/p&gt;
+
+&lt;p&gt;Hapi i parë që duhet të bëni kur krijoni një skedar Docker është të hyni në faqen e internetit të &lt;a href=&quot;https://hub.docker.com/&quot;&gt;DockerHub&lt;/a&gt;. Kjo faqe përmban shumë imazhe të para-projektuara për të kursyer kohën tuaj (për shembull: të gjitha imazhet për ngnix).&lt;/p&gt;
+
+&lt;p&gt;Në rastin tonë, ne do të shkruajmë “Ngnix” në shiritin e kërkimit. Rezultati i parë është imazhi zyrtar i krijuar për të ekzekutuar Nginx. Pra, ne do ta përdorim atë!&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;FROM nginx:latest&lt;/span&gt; 
+&lt;span class=&quot;s&quot;&gt;COPY html-page /usr/share/nginx/html&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Duke përdorur komandën FROM në rreshtin e parë, ne po deklarojmë se imazhi i ri duhet të bazohet në imazhin nginx.
+Komanda COPY përdoret në rreshtin e dytë për të kopjuar përmbajtjen nga direktoria html-page e sistemit pritës në direktorinë /usr/share/nginx/html të kontejnerit që do të krijohet.&lt;/p&gt;
+
+&lt;h4 id=&quot;krijo-imazhin-docker&quot;&gt;Krijo imazhin Docker&lt;/h4&gt;
+&lt;p&gt;Pasi kodi juaj është i shkruar ne Dockerfile, gjithçka që duhet të bëni është të krijoni imazhin tuaj që të përmbajë aplikacionin tuaj.&lt;/p&gt;
+
+&lt;p&gt;Hapeni nje terminal dhe shkruani komaden me poshte:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker build -t first-app:latest . &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Opsioni ‘-t’ ju lejon të përcaktoni emrin e imazhit tuaj. Në rastin tonë ne kemi zgjedhur ‘first-app’ por ju mund të vendosni atë që dëshironi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker-build.png&quot; alt=&quot;DockerBuild&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ekzekutoni-imazhin-docker&quot;&gt;Ekzekutoni imazhin Docker&lt;/h4&gt;
+&lt;p&gt;Pasi të krijohet imazhi, kodi juaj është gati për t’u lëshuar.&lt;/p&gt;
+
+&lt;p&gt;Për të startuar kontenjerin mund të ekzekutoni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run first-app:latest&lt;/code&gt;, mirpo ne dëshirojm që ti qasemi aplikacionit nga shfletuesi, për atë duhet të specifikojm portin -p 8080:80 ku i tregojm docker që duhet të lidhesh portin 80 të kontenjerit me 8080 të makinës kryesore.
+Po ashtu ju duhet të vendosni emrin e imazhit tuaj pas ‘docker run’.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run --name first-app -p 8080:80 first-app:latest&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Hapeni shfletuesin shkruani &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:8080&lt;/code&gt; dhe do te shihni html faqen qe e keni edituar më parë me shkrimin ‘Docker është magjik’.
+Pra index.html është ruajtur brenda kotenjerit sepse e kemi ndërtuar në imazhin tonë duke përdor Dockerfile nga lartë.&lt;/p&gt;
+
+&lt;p&gt;Këtë projekt mund ta bëni clone nga Github në këtë link &lt;a href=&quot;https://github.com/Programerat/first-html-image&quot;&gt;First HTML Image&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Paternet e dizajnimit - Paterni Strategji</title>
+   <link href="https://programeret.github.io//2021/12/13/dp-chain-of-responsibility"/>
+   <updated>2021-12-13T18:35:00+01:00</updated>
+   <id>https://programeret.github.io/2021/12/13/DP-Chain of Responsibility</id>
+   <content type="html">&lt;h3 id=&quot;chain-of-responsibility&quot;&gt;Chain of Responsibility&lt;/h3&gt;
+
+&lt;p&gt;Gjithashtu njihet si: CoR, Chain of Command&lt;/p&gt;
+
+&lt;p&gt;PErshkrimi 
+Shembulli&lt;/p&gt;
+
+&lt;p&gt;Principet qe supporton&lt;/p&gt;
+
+&lt;p&gt;Nje tip rreth programmming&lt;/p&gt;
+
+&lt;h3 id=&quot;shembull-konkret-nga-jeta-reale&quot;&gt;Shembull konkret nga jeta reale&lt;/h3&gt;
+
+&lt;h3 id=&quot;një-veçori-e-re&quot;&gt;Një veçori e re&lt;/h3&gt;
+
+&lt;h3 id=&quot;një-shembull-se-si-nuk-duhet-të-zbatohet&quot;&gt;Një shembull se si nuk duhet të zbatohet.&lt;/h3&gt;
+
+&lt;h3 id=&quot;uml-modeli-i-strategjise&quot;&gt;UML Modeli i strategjise&lt;/h3&gt;
+
+&lt;h3 id=&quot;implementimi-korrent-i-dizajnit&quot;&gt;Implementimi korrent i dizajnit&lt;/h3&gt;
+
+&lt;h3 id=&quot;mbyllja&quot;&gt;Mbyllja&lt;/h3&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Paternet e dizajnimit - Paterni Strategji</title>
+   <link href="https://programeret.github.io//2021/12/13/modelet-e-dizajnimit-strategjia"/>
+   <updated>2021-12-13T18:35:00+01:00</updated>
+   <id>https://programeret.github.io/2021/12/13/Modelet-e-dizajnimit-strategjia</id>
+   <content type="html">&lt;p&gt;Paterni strategji mundësonë që ti izolojmë algoritmet në klasa të ndryshme, dhe mundëson zëvendesimin e algoritmeve pa pasur nevojë qe kodi të ndryshohet. Pra paterni strategji na mundësonë që të shtojmë klasa të tjera që implementojnë algoritme të ndryshme por janë të tipit të njëjtë.&lt;br /&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Gjithashtu kjo e mbështetë  principin e parë &lt;a href=&quot;https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20dytë%20-%20E%20hapur%20për%20zgjatje,%20e%20mbyllur%20për%20ndryshime.&quot;&gt; Hapur për zgjerim e mbyllur për ndryshime.&lt;/a&gt; E mbështetë  edhe principin e pestë në SOLID ku gjithçka varet në kontratë dhe jo në zbatim. 
+Prandaj ky patern na mundësonë që të kemi shumë zbatime të bazuara  në një kontratë.&lt;br /&gt;
+ &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Mos harroni &lt;a href=&quot;https://en.wikipedia.org/wiki/KISS_principle&quot;&gt;KISS&lt;/a&gt; para çdo gjëje tjetër.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;shembull-konkret-nga-jeta-reale&quot;&gt;Shembull konkret nga jeta reale&lt;/h3&gt;
+&lt;p&gt;Nëse për shembull duam të udhëtojmë nga qyteti  A në qytetin B, ne duhet ta dimë se si të arrijmë më shpejtë në destinacion. Supozojmë që ne e  kemi ndërtuar një aplikacion i cili e llogaritë rrugën më të shpejtë me makinë.&lt;/p&gt;
+
+&lt;p&gt;Implementimi në kod do të duket si më poshtë:
+&lt;script src=&quot;https://gist.github.com/Diarselimi/bfd539de510e269233dee8cdf5987403.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;një-veçori-e-re&quot;&gt;Një veçori e re&lt;/h3&gt;
+&lt;p&gt;Tani na kërkohet të shtojmë një mënyrë të re transporti. Si do të shtonim një mënyrë të re transporti pa shkelur rregullat SOLID?&lt;/p&gt;
+
+&lt;h3 id=&quot;një-shembull-se-si-nuk-duhet-të-zbatohet&quot;&gt;Një shembull se si nuk duhet të zbatohet.&lt;/h3&gt;
+&lt;p&gt;Në shembullin e mëposhtëm shohim se si rregulli i parë i principeve SOLID është thyer, &lt;a href=&quot;https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20par%C3%AB%20-%20Nj%C3%AB%20klas%C3%AB,%20nj%C3%AB%20p%C3%ABrgjegj%C3%ABsi&quot;&gt;Principi i një përgjegjësie&lt;/a&gt;. &lt;a href=&quot;https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20dyt%C3%AB%20-%20E%20hapur%20p%C3%ABr%20zgjatje,%20e%20mbyllur%20p%C3%ABr%20ndryshime.&quot;&gt;Gjithashtu thyen principin e dytë e mbyllur për ndryshime&lt;/a&gt;, nëse metoda e njërit prej transporteve ndryshon atëhere edhe  kjo klasë duhet të ndryshojë.
+&lt;script src=&quot;https://gist.github.com/Diarselimi/ab34e500d821307baf0bf48827f92039.js&quot;&gt;&lt;/script&gt;
+Kjo klasë,  në jetën reale do të ishte klasa më e madhe në projekt  nëse do të punonim në një aplikacion si në shembullin më lartë.&lt;/p&gt;
+
+&lt;h3 id=&quot;uml-modeli-i-strategjise&quot;&gt;UML Modeli i strategjise&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/diagrams/transporti.png&quot; alt=&quot;uml diagrami&quot; /&gt;
+Në diagram e shohim se e kemi një kontratë &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Transport&lt;/code&gt;, pastaj, çdo klasë me zbatime të ndryshme në bazë të kontratës. Klientit nuk i intereson sesi zbatohet algoritmi sepse ai varet në kontratë dhe kjo e mbështetë principin e pestë &lt;a href=&quot;https://programerat.github.io/2021/SOLID-principet-dhe-si-ti-aplikoni-ne-kod/#Principi%20i%20pest%C3%AB%20-%20Inversioni%20i%20var%C3%ABsis%C3%AB&quot;&gt; Inversionin i varësisë&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementimi-korrent-i-dizajnit&quot;&gt;Implementimi korrent i dizajnit&lt;/h3&gt;
+&lt;script src=&quot;https://gist.github.com/Diarselimi/d5eafb20f04cea71f0fe7b28b81d8b67.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Pjesa me &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;switch&lt;/code&gt; mund të bartet në një factory ku në bazë të inputit e krijon klasën specifike. 
+P.SH
+&lt;script src=&quot;https://gist.github.com/Diarselimi/a3191d3e3b6ff9bf3ba3e31331bf15e5.js&quot;&gt;&lt;/script&gt;
+Këtë pjesë mund ta shpjegoj kur të shkruaj për paternin Factory më në detaje.&lt;/p&gt;
+
+&lt;h3 id=&quot;mbyllja&quot;&gt;Mbyllja&lt;/h3&gt;
+&lt;p&gt;Gjithmonë kur shkruajmë kod duhet të përpiqemi të lidhim problemin me jetën e përditshme, nëse nuk është e mundur me biznesin.
+Zbatimi i principeve dhe modeleve bëhet më i lehtë kur e kuptoni problemin. Për të parë nëse e kuptoni problemin atëherë  provoni t’ia shpjegoni dikujt ose përdorni metodën &lt;a href=&quot;https://en.wikipedia.org/wiki/Rubber_duck_debugging&quot;&gt;Rubber Duck.&lt;/a&gt;
+ &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Siç thotë shprehja, nëse mund t’ia shpjegoni dikujt me fjalë të thjeshta, atëherë e kuptoni problemin.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt;Rubber duck është një metodë shumë e popullarizuar që programuesit e përdorin sepse shpesh nuk kemi pyetje pasi që mendojmë se gjithçka është e qartë, ndërsa nëse përpiqemi ta shpjegojmë atë atëherë e shohim që nuk e kemi kuptuar në të vërtetë.&lt;br /&gt;
+Në vazhdim do të postoj për modele të tjera por edhe për metoda të ndryshme që përdorin programuesit.&lt;br /&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Kodim të këndshëm. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;3 &amp;lt;/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Principet S.O.L.I.D dhe si të aplikojmë ato në kod</title>
+   <link href="https://programeret.github.io//2021/11/17/solid-principet-dhe-si-ti-aplikoni-ne-kod"/>
+   <updated>2021-11-17T09:15:20+01:00</updated>
+   <id>https://programeret.github.io/2021/11/17/SOLID-principet-dhe-si-ti-aplikoni-ne-kod</id>
+   <content type="html">&lt;p&gt;E pyeta një të afërm timin pse duhet ti mësojmë SOLID principet?
+Ja si përgjigjet ai…&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Dallimi në mes amaterëve dhe profesinistëve që kërkohen nga cdo kompani, perfshir: Tesla, Google, Apple, SpaceX etj gjendet tek aplikimi i principeve të ndryshme.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Pasi të lexoni këtë artikull, si dhe të analizoni shembujt që janë në këtë artikull, ju do të kuptoni principet SOLID dhe do të jeni të gatshëm ti aplikoni ato.&lt;/p&gt;
+
+&lt;p&gt;Çdo kompani në Gjermani që do të aplikoni si zhvillues softveri, do të ju parashtrojn pytje në intervistë në lidhje me principet SOLID.&lt;/p&gt;
+
+&lt;p&gt;Principet SOLID në OO programim do të ndihmojnë shumë në karrierën tuaj si programer.
+Do të kesh një bazë stabile për të ecur përpara, pa pasur parasysh produktin që ti e ndërton.&lt;/p&gt;
+
+&lt;h3 id=&quot;prezantimi-i-problemit&quot;&gt;Prezantimi i problemit&lt;/h3&gt;
+&lt;p&gt;Para se të fillojm, do ta prezantoj problemin që do të punoj gjatë të gjithë shembujve që i marr.&lt;/p&gt;
+
+&lt;h3 id=&quot;problemi&quot;&gt;Problemi&lt;/h3&gt;
+&lt;p&gt;Të marrim shembull një klient i juaj do të ju kërkoj me zhvillu një aplikacion. Ky aplikacion do ti digjitalizoj porosit në restaurantin e tij &lt;em&gt;Villa Natyra&lt;/em&gt; që vetëm bën piza dhe hamburgera.
+Ne si programera të mirë që jem ja ndërtojm aplikacionin, tash ai po e përdor dhe është i kënaqur.&lt;/p&gt;
+
+&lt;p&gt;Në rregull, masi e kem ndërtu produktin tash hajde të flasim për principet.&lt;/p&gt;
+
+&lt;h3 id=&quot;principi-i-parë---një-klasë-një-përgjegjësi&quot;&gt;Principi i parë - Një klasë, një përgjegjësi&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Një klasë duhet të këtë vetëm një përgjegjësi dhe një arsyje të ndryshoj.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Një shembull ku ky princip nuk respektohet&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;class Hamburgeri
+{
+   private string $kategoria;
+   private array $shtesat;
+   private string $llojiIMishit;
+ 
+   public function __constructor(string $llojiIMishit, array $shtesat)
+   {
+       $this-&amp;gt;kategoria = $this-&amp;gt;percaktoKategorine($llojiIMishit);
+       $this-&amp;gt;shtesat = $shtesat;
+       $this-&amp;gt;llojiIMishit = $llojiIMishit;
+   }
+ 
+   private function përcaktoKategorine(string $llojiIMishit): string
+   {
+       if (in_array($llojiIMishit, ['file_pule', 'mish_lope'])) {
+           return 'zgare';
+       }
+ 
+       return 'furre';
+   }
+ 
+   public function llogaritShumen(): double
+   {
+       double $shuma = 0;
+       foreach($this-&amp;gt;shtesat as $shtesa) {
+           $shuma += $shtesa-&amp;gt;merrQmimin();
+       }
+ 
+       return $this-&amp;gt;llojiIMishit + $shuma;
+   }
+ 
+   public function ruajFakturen(): void
+   {
+       //ktu ruhet faktura në databazë
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nëse e kemi një klasë vetëm për hamburgerin edhe kjo klasë pranon shtesa sikur sallatë, domate etj.
+Gjithashtu e përcaktojmë kategorinë mbrenda klasës, i ruajm të dhënat në databazë dhe e kalkulojmë shumën.
+Atëher kjo klasë do të ndryshoj sa herë që mënyra e ruajtjës në databazë ose mënyra e kalkulimit ose mënyra e përcaktimit të kategorise ndryshojnë.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+ 
+class Hamburgeri implements Ushqim
+{
+   private const KATEGORIA = 'furre';
+   public array $shtesat;
+   public string $llojiIMishit;
+   public double $shuma;
+ 
+   public function __constructor(string $llojiIMishit, array $shtesat)
+   {
+       $this-&amp;gt;kategoria = $this-&amp;gt;percaktoKategorine($llojiIMishit);
+       $this-&amp;gt;shtesat = $shtesat;
+       $this-&amp;gt;llojiIMishit = $llojiIMishit;
+   }
+ 
+   public function merrKategorine(): string
+   {
+       return self::KATEGORIA;
+   }
+}
+ 
+class KalkulatoriUshqimit
+{
+   public function __constructor(Ushqim $ushqimi){}
+ 
+   public function merrShumen(): double
+   {
+       return 0.0; //ktu  kalkulohet shuma.
+   }
+}
+ 
+class RuajtjaFaktures
+{
+   public function ruaj(Faktura $faktura): void
+   {
+       $this-&amp;gt;save($faktura);
+   }
+}
+ 
+class Faktura
+{
+   public function __constructor(Ushqim $ushqimi, double $shuma)
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Kurse këtu siç edhe shihet që i kemi ndarë klasat me përgjegjësi të ndryshme, sa herë që kalkulimi i çmimit ndryshon atëher klasa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KalkulatoriUshqimit&lt;/code&gt; po ashtu ndryshon. 
+Nëse vendosim ta ndrrojmë mënyrën se si i ruajmë të dhënat atëher klasa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RuajtjaFaktures&lt;/code&gt; ndryshon.&lt;/p&gt;
+
+&lt;h3 id=&quot;principi-i-dytë---e-hapur-për-zgjatje-e-mbyllur-për-ndryshime&quot;&gt;Principi i dytë - E hapur për zgjatje, e mbyllur për ndryshime.&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Një klasë duhet të jete e mbyllur për ndryshime ndërsa e hapur për zgjatje.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ta marrim shembull klasën që i bën kalkulimet &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KalkulatoriUshqimit&lt;/code&gt; dhe ta shohim si do të ndryshoj nëse një kërkes e re na vjen, shembull “Po me duhet që për studente çmimi final të dal 20% më lirë”&lt;/p&gt;
+
+&lt;p&gt;Tash na si programera pa dijeni për këtë princip “E mbyllur për ndryshime” do ta bëjme një ndryshim si në vijim&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+ 
+class KalkulatoriUshqimit
+{
+   public function merrShumen(Ushqim $ushqim): double
+   {
+       $shuma = $ushqimi-&amp;gt;merrLlojinEMishit()-&amp;gt;merrShumen();
+       foreach($ushqimi-&amp;gt;merrShtesat() as $shtesa) {
+           $shuma += $shtesa-&amp;gt;merrShumen();
+       }
+ 
+       return $shuma;
+   }
+ 
+   public function merrShumenPerStudente(Ushqim $ushqim): double
+   {
+       $shuma = $this-&amp;gt;merrShumen($ushqim);
+ 
+       return $shuma - ($shuma * 0.2);
+   }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nëse bëjme diçka si kjo atëher së pari klasa ka jo një arsye por dy për të ndryshuar, që e then edhe principin e parë, shohim që po e kalkulon shumën e ushqimit dhe zbritjen për studenta. 
+Tash nëse ndryshon mënyra e kalkulimit të ushqimit ose përqindja për studenta, atëher kjo klasë duhet të modifikohet.&lt;/p&gt;
+
+&lt;p&gt;Nëse e konsiderojm Principin e parë, zbritja duhet të jete në një klas ndamas dhe në bazë të principit të dytë, klasa e re mund ta përdor klasën që kalkulon por nuk duhet ta ndryshoj atë.&lt;/p&gt;
+
+&lt;p&gt;Si rezultat kemi bërë një ndryshim si në vijim.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+ 
+class KalkulatoriUshqimit
+{
+   public function merrShumen(Ushqim $ushqim): double
+   {
+       $shuma = $ushqimi-&amp;gt;merrLlojinEMishit()-&amp;gt;merrShumen();
+       foreach($ushqimi-&amp;gt;merrShtesat() as $shtesa) {
+           $shuma += $shtesa-&amp;gt;merrShumen();
+       }
+ 
+       return $shuma;
+   }
+ 
+}
+ 
+class KalkulatoriUshqimitPerStudente extends KalkulatoriUshqimit
+{
+   private const ZBRITJE_NE_PERQINDJE = 0.2;
+ 
+   public function merrShumen(Ushqim $ushqimi): double
+   {
+       return $this-&amp;gt;zbritShumen(parent::merrShumen($ushqimi));
+   }
+ 
+   private function zbritShumen(double $shuma): double
+   {
+       return $shuma - ($shuma * self::ZBRITJE_NE_PERQINDJE);
+   }
+ 
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Siç edhe pe shihni i kemi ndarë përgjegjsit në klasa të ndryshme, tash nëse mënyra e kalkulimit të ushqimit ndryshon atëher do të ndryshoj vetem &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KalkulatoriUshqimit&lt;/code&gt; dhe nëse zbritja për student ndryshon atëher do të ndryshoj vetëm klasa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KalkulatoriUshqimitPerStudente&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;principi-i-tretë---zëvendesimi-liskov&quot;&gt;Principi i tretë - Zëvendesimi Liskov&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ky princip thot që nëse funksioni f(x) punon me objektet e tipit T. Atëher funksioni f(y) duhet të punoj me objektet y të tipit S ku S është nën tip i T.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ndoshta shembulli që e then këtë princip do ta lehtsoj kuptimin e ketij principi.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+ 
+class KalkulatoriUshqimit
+{
+   public function merrShumen(Ushqim $ushqim): double
+   {
+       $shuma = $ushqimi-&amp;gt;merrLlojinEMishit()-&amp;gt;merrShumen();
+       foreach($ushqimi-&amp;gt;merrShtesat() as $shtesa) {
+           $shuma += $shtesa-&amp;gt;merrShumen();
+       }
+ 
+       return $shuma;
+   }
+ 
+}
+ 
+class KalkulatoriUshqimitPerStudente extends KalkulatoriUshqimit
+{
+   private const ZBRITJE_NE_PERQINDJE = 0.2;
+ 
+   public function merrShumen(Ushqim $ushqimi): double
+   {
+       return $this-&amp;gt;zbritShumen(parent::merrShumen($ushqimi));
+   }
+ 
+   private function zbritShumen(double $shuma): double
+   {
+       return $shuma - ($shuma * self::ZBRITJE_NE_PERQINDJE);
+   }
+ 
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Kjo pjese e kodit është pjesë e principit të dytë ku e kem zgjatur klasën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KalkulatoriUshqimit&lt;/code&gt;, me këtë ndryshim të metodës &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;merrShumen&lt;/code&gt; e kemi thyer rregullin e principit të tretë.
+Nëse i referohemi definicionit i bjen që e njëjta metodë nuk duhet të kthen vlera të ndryshme edhe pse është klasë tjeter.&lt;/p&gt;
+
+&lt;p&gt;Do ta rregullojme këtë klasë si në vijim.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+ 
+class KalkulatoriUshqimit
+{
+   public function merrShumen(Ushqim $ushqim): double
+   {
+       $shuma = $ushqimi-&amp;gt;merrLlojinEMishit()-&amp;gt;merrShumen();
+       foreach($ushqimi-&amp;gt;merrShtesat() as $shtesa) {
+           $shuma += $shtesa-&amp;gt;merrShumen();
+       }
+ 
+       return $shuma;
+   }
+ 
+}
+ 
+class KalkulatoriUshqimitPerStudente extends KalkulatoriUshqimit
+{
+   private const ZBRITJE_NE_PERQINDJE = 0.2;
+ 
+   public function merrShumenEZbritur(): double
+   {
+       $this-&amp;gt;zbritShumen($this-&amp;gt;merrShumen());
+   }
+ 
+   private function zbritShumen(double $shuma): double
+   {
+       return $shuma - ($shuma * self::ZBRITJE_NE_PERQINDJE);
+   }
+ 
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Në vend që ta modifikojm metodën e klasës origjinale, do ta përdorim atë në klasën për studente dhe do të shtojmë metoda në klasën për studente.&lt;/p&gt;
+
+&lt;h3 id=&quot;principi-i-katert---ndarja-e-kontratave&quot;&gt;Principi i katert - Ndarja e kontratave&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Një klasë nuk duhet ta implementoj një metodë që nuk i nëvojitet.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Shembull shtesat e ushqimeve, siq e kemi parë me lartë secila shtesë e ka çmimin e vet, po çka nëse kemi shtesa që nuk kushtojn?
+Shembull:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+interface Shtesa {
+   public function merrShumen(): double;
+}
+ 
+class Sallate implements Shtesa {
+   public const QMIMI = 0.50;
+ 
+   public function merrShumen() {
+       return self::QMIMI;
+   }
+}
+ 
+class BbqSos implements Shtesa {
+   public const QMIMI = 0.20;
+ 
+   public function merrShumen() {
+       return self::QMIMI;
+   }
+}
+ 
+class Ketchup implements Shtesa {
+   public const QMIMI = 0.00;
+ 
+   public function merrShumen() {
+       return self::QMIMI;
+   }
+}
+ 
+class Hamburger implements Ushqim {
+   private const QMIMI = 2.00;
+ 
+   public function merrQmimin():double
+   {
+       return self::QMIMI;
+   }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Siç e shohim në shembullin më lart, shtesa  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ketchup&lt;/code&gt; edhe pse është falas  duhet ta implementoj metodën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;merrShumen&lt;/code&gt; dhe kjo nuk e respekton principin e katërt, një klasë nuk duhet ta implementoj një metodë që nuk i nevojitet.&lt;/p&gt;
+
+&lt;p&gt;Kështu duhet  ta ndryshojm kodin që ta respektojme principin e katërt.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Ushqim {}
+interface Shtesa {
+   public function merrSasine(): int;
+}
+interface ShtesaMePages implements Shtesa {
+   public function merrShumen(): double;
+}
+ 
+class Sallate implements ShtesaMePages {
+   public const QMIMI = 0.50;
+ 
+   public function merrShumen() {
+       return self::QMIMI;
+   }
+}
+ 
+class Ketchup implements Shtesa {
+   private int $sasia = 1;
+ 
+   public function merrSasine(): int
+   {
+       return $this-&amp;gt;sasia;
+   }
+}
+ 
+class Hamburger implements Ushqim {
+   private const QMIMI = 2.00;
+ 
+   public function merrQmimin():double
+   {
+       return self::QMIMI;
+   }
+}
+ 
+class KalkulatoriUshqimit
+{
+   public function merrShumen(Ushqim $ushqim): double
+   {
+       $shuma = $ushqimi-&amp;gt;merrLlojinEMishit()-&amp;gt;merrShumen();
+       foreach($ushqimi-&amp;gt;merrShtesat() as $shtesa) {
+           if ($shtesa instanceof ShtesaMePages) {
+               $shuma += $shtesa-&amp;gt;merrShumen();  
+           }
+       }
+ 
+       return $shuma;
+   }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ky është një shembull ku ndahet kontrata për shtesat me  çmime dhe ato pa  çmime, për arsye që shtesat pa çmime nuk kan nevoj ta implementojnë metodën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;merrQmimin()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;principi-i-pestë---inversioni-i-varësisë&quot;&gt;Principi i pestë - Inversioni i varësisë&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Një klasë që kryen një punë asnjëherë nuk duhet të varet në mjetin që e përdor por në kontratë.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Një shembull do të ishte ta ruajm fakturen në MySQL databazë si në shembullin në vijim.
+E mbani mend si klasa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RuajtjaFaktures&lt;/code&gt; varet direkt në klasën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Databaza&lt;/code&gt; që është edhe implementimi mbrenda.
+Tani klasa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RuajtjaFaktures&lt;/code&gt; e then principin e parë sepse nëse e ndryshojme databazën  atëher duhet ta ndryshojm edhe klasën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RuajtjaFaktures&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;class Databaza
+{
+   public function ruaj(Faktura $faktura): void
+   {
+       $sql = &quot;INSERT into FAKTURAT (val1, val2, val3) VALUES (1,2,3);&quot;
+       $this-&amp;gt;db-&amp;gt;executeSql($sql);
+   }
+}
+ 
+class RuajtjaFaktures
+{
+   public function __constructor(Databaza $databaza){}
+ 
+   public function ruaj(Faktura $faktura): void
+   {
+       $this-&amp;gt;databaza-&amp;gt;ruaj($faktura);
+   }
+}
+ 
+class Faktura
+{
+   public function __constructor(Ushqim $ushqimi, double $shuma)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Një shembull  që do ta respektonte principin e pestë do të ishte si në vijim.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;interface Databaza {
+   public function ruaj(Faktura $faktura): void;
+}
+ 
+class HapsiraRuajtjesSeFakturave implements Databaza
+{
+   public function ruaj(Faktura $faktura): void
+   {
+       $sql = &quot;INSERT into FAKTURAT (val1, val2, val3) VALUES (1,2,3);&quot;
+       $this-&amp;gt;db-&amp;gt;executeSql($sql);
+   }
+}
+ 
+class RuajtjaFaktures
+{
+   public function __constructor(Databaza $databaza){}
+ 
+   public function ruaj(Faktura $faktura): void
+   {
+       $this-&amp;gt;databaza-&amp;gt;ruaj($faktura);
+   }
+}
+ 
+ 
+ 
+class Faktura
+{
+   public function __constructor(Ushqim $ushqimi, double $shuma)
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ne këtë shembull e shohim që tani kemi një kontratë &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Databaza&lt;/code&gt; dhe një klasë ku gjendet implementimi i ruajtjes së fakturave &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HapsiraRuajtjesSeFakturave&lt;/code&gt;, tash nëse vendosim ta ndryshojm databazën në MongoDB, NoSQL ose çkado qoft nuk kemi nevoj ta ndryshojm klasën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RuajtjaFaktures&lt;/code&gt; sepse ajo varet në kontrat e jo në implementim.&lt;/p&gt;
+
+&lt;h3 id=&quot;finalizimi-dhe-hapat-e-tjerë&quot;&gt;Finalizimi dhe hapat e tjerë&lt;/h3&gt;
+&lt;p&gt;Këto janë pra pesë principet në OO të cilat shikohen në secilën intervistë se sa mirë i ke kuptuar dhe a din si ti përdorni ato.
+Hapat e radhës janë: 
+Që të provosh ti aplikosh këto principe duhet startuar një projekt të vogël ose edhe në punën ku punon.
+Kur e shikon një kod në fillim të merr kohe ti shikosh të gjitha principet, por pas ca kohe bëhet më e leht.
+Përserite këtë proces disa here.&lt;/p&gt;
+
+&lt;p&gt;Nëse keni ndonjë koment, kritike ose   vetëm don të kemi një bised rreth OO atëher me kontakto në rrjetet sociale.
+&lt;a href=&quot;https://github.com/diarselimi&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
