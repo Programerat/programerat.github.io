@@ -1,7 +1,7 @@
 [
   
     {
-      "title"    : "Modelet e strukturimit të kodit, modeli komandë (eng. Command Pattern)",
+      "title"    : "MODELET E STRUKTURIMIT TË KODIT, MODELI KOMANDË (ENG. COMMAND PATTERN)",
       "description" : "Modelet e strukturimit të kodit, Modeli Komandë",
       "category" : "",
       "tags"     : "Design, Patterns, Command",
