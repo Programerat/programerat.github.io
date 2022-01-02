@@ -3,8 +3,8 @@
   <channel>
     <title></title>
     <description>Hajde te mesojm sot dicka.</description>
-    <link>https://programeret.github.io</link>
-    <atom:link href="https://programeret.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://programerat.github.io</link>
+    <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>MODELET E STRUKTURIMIT TË KODIT, MODELI KOMANDË (ENG. COMMAND PATTERN)</title>
@@ -16,8 +16,8 @@
 </description>
         
         <pubDate>Fri, 31 Dec 2021 09:15:20 +0100</pubDate>
-        <link>https://programeret.github.io/2021/12/31/command-pattern-modeli-komande</link>
-        <guid isPermaLink="true">https://programeret.github.io/2021/12/31/command-pattern-modeli-komande</guid>
+        <link>https://programerat.github.io/2021/12/31/command-pattern-modeli-komande</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/31/command-pattern-modeli-komande</guid>
       </item>
     
       <item>
@@ -28,8 +28,8 @@
 </description>
         
         <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
-        <link>https://programeret.github.io/2021/12/13/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</link>
-        <guid isPermaLink="true">https://programeret.github.io/2021/12/13/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</guid>
+        <link>https://programerat.github.io/2021/12/13/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/13/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</guid>
       </item>
     
       <item>
@@ -40,8 +40,8 @@
 </description>
         
         <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
-        <link>https://programeret.github.io/2021/12/13/dp-chain-of-responsibility</link>
-        <guid isPermaLink="true">https://programeret.github.io/2021/12/13/dp-chain-of-responsibility</guid>
+        <link>https://programerat.github.io/2021/12/13/dp-chain-of-responsibility</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/13/dp-chain-of-responsibility</guid>
       </item>
     
       <item>
@@ -53,8 +53,8 @@
 </description>
         
         <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
-        <link>https://programeret.github.io/2021/12/13/modelet-e-dizajnimit-strategjia</link>
-        <guid isPermaLink="true">https://programeret.github.io/2021/12/13/modelet-e-dizajnimit-strategjia</guid>
+        <link>https://programerat.github.io/2021/12/13/modelet-e-dizajnimit-strategjia</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/13/modelet-e-dizajnimit-strategjia</guid>
       </item>
     
       <item>
@@ -69,8 +69,8 @@ Ja si përgjigjet ai…&lt;/p&gt;
 </description>
         
         <pubDate>Wed, 17 Nov 2021 09:15:20 +0100</pubDate>
-        <link>https://programeret.github.io/2021/11/17/solid-principet-dhe-si-ti-aplikoni-ne-kod</link>
-        <guid isPermaLink="true">https://programeret.github.io/2021/11/17/solid-principet-dhe-si-ti-aplikoni-ne-kod</guid>
+        <link>https://programerat.github.io/2021/11/17/solid-principet-dhe-si-ti-aplikoni-ne-kod</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/11/17/solid-principet-dhe-si-ti-aplikoni-ne-kod</guid>
       </item>
     
   </channel>
