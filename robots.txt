@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://programeret.github.io/sitemap.xml
+Sitemap: https://programerat.github.io/sitemap.xml
