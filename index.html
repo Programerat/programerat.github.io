@@ -1,6 +1,62 @@
 ---
-profile: false
+layout: default
 ---
+<section id="intro">
+    <div class="flex-row-between">
+        <h1>{{ site.greetings }}</h1>
+        <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
+            <div></div>
+        </button>
+    </div>
+    <div class="bio">
+	    Një mësues i imi më tha.
+        Është një pikë ku video inqizimet dhe StackOverflow nuk të ndihmojnë për të fituar eksperiencë, atëher shkon në dokumentim për të lexuar, artikuj profesional ose libra.
+        <p>
+	    <a href="https://github.com/Programerat/programerat.github.io/discussions/9">Kontribo në ide rreth postimeve ose publiko një post.</a>
+        </p>
+        <blockquote>
+            Frika më e madhe është që të jesh në të njejtën dije që ishe vitin e kaluar.<br>
+            Zhvillohu.
+        </blockquote>
+        <div class="social-buttons">
+            <a href="#" class="social-btn entypo-tumblr" target="_blank"><div class="sr">Tumblr - opens in new tab</div></a>
+        
+                <a href="#" class="social-btn entypo-twitter" target="_blank"><div class="sr">Twitter - opens in new tab</div></a>
+        
+                <a href="#" class="social-btn entypo-facebook" target="_blank"><div class="sr">Facebook - opens in new tab</div></a>
+        
+                <a href="#" class="social-btn entypo-instagrem" target="_blank"><div class="sr">Instagram - opens in new tab</div></a>
+        </div>
+    </div>
 
-{% include post-list.html %}
-{% include footer.html %}
+
+</section>
+
+
+
+<div class="search-article">
+    <label for="search-input" aria-hidden="true">
+        <!-- Magnifier -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="rgba(128,128,128,0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-search">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </label>
+
+    <input type="search" id="search-input" placeholder="Kërko artikujt" aria-label="Search">
+    <ul id="search-results"></ul>
+</div>
+
+<section class="posts" id="Blog">
+    <h2>Artikujt</h2>
+    <ul>
+        {% for post in site.posts %}
+        <li>
+		<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
