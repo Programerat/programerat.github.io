@@ -36,7 +36,8 @@ Në rregull, masi e kem ndërtu produktin tash hajde të flasim për principet.
 > Një klasë duhet të këtë vetëm një përgjegjësi dhe një arsyje të ndryshoj.
 
 Një shembull ku ky princip nuk respektohet
-```PHP
+
+```php
 class Hamburgeri
 {
    private string $kategoria;
@@ -79,7 +80,8 @@ class Hamburgeri
 Nëse e kemi një klasë vetëm për hamburgerin edhe kjo klasë pranon shtesa sikur sallatë, domate etj.
 Gjithashtu e përcaktojmë kategorinë mbrenda klasës, i ruajm të dhënat në databazë dhe e kalkulojmë shumën.
 Atëher kjo klasë do të ndryshoj sa herë që mënyra e ruajtjës në databazë ose mënyra e kalkulimit ose mënyra e përcaktimit të kategorise ndryshojnë.
-```PHP
+
+```php
 interface Ushqim {}
  
 class Hamburgeri implements Ushqim
@@ -135,7 +137,8 @@ Nëse vendosim ta ndrrojmë mënyrën se si i ruajmë të dhënat atëher klasa 
 Ta marrim shembull klasën që i bën kalkulimet `KalkulatoriUshqimit` dhe ta shohim si do të ndryshoj nëse një kërkes e re na vjen, shembull “Po me duhet që për studente çmimi final të dal 20% më lirë”
 
 Tash na si programera pa dijeni për këtë princip “E mbyllur për ndryshime” do ta bëjme një ndryshim si në vijim
-```PHP
+
+```php
 interface Ushqim {}
  
 class KalkulatoriUshqimit
@@ -165,7 +168,8 @@ Tash nëse ndryshon mënyra e kalkulimit të ushqimit ose përqindja për studen
 Nëse e konsiderojm Principin e parë, zbritja duhet të jete në një klas ndamas dhe në bazë të principit të dytë, klasa e re mund ta përdor klasën që kalkulon por nuk duhet ta ndryshoj atë.
 
 Si rezultat kemi bërë një ndryshim si në vijim.
-```PHP
+
+```php
 interface Ushqim {}
  
 class KalkulatoriUshqimit
@@ -205,7 +209,8 @@ Siç edhe pe shihni i kemi ndarë përgjegjsit në klasa të ndryshme, tash nës
 > Ky princip thot që nëse funksioni f(x) punon me objektet e tipit T. Atëher funksioni f(y) duhet të punoj me objektet y të tipit S ku S është nën tip i T.
 
 Ndoshta shembulli që e then këtë princip do ta lehtsoj kuptimin e ketij principi.
-```PHP
+
+```php
 interface Ushqim {}
  
 class KalkulatoriUshqimit
@@ -243,7 +248,8 @@ Kjo pjese e kodit është pjesë e principit të dytë ku e kem zgjatur klasën 
 Nëse i referohemi definicionit i bjen që e njëjta metodë nuk duhet të kthen vlera të ndryshme edhe pse është klasë tjeter.
 
 Do ta rregullojme këtë klasë si në vijim.
-```PHP
+
+```php
 interface Ushqim {}
  
 class KalkulatoriUshqimit
@@ -284,7 +290,8 @@ Në vend që ta modifikojm metodën e klasës origjinale, do ta përdorim atë n
 
 Shembull shtesat e ushqimeve, siq e kemi parë me lartë secila shtesë e ka çmimin e vet, po çka nëse kemi shtesa që nuk kushtojn?
 Shembull: 
-```PHP
+
+```php
 interface Ushqim {}
 interface Shtesa {
    public function merrShumen(): double;
@@ -327,7 +334,8 @@ class Hamburger implements Ushqim {
 Siç e shohim në shembullin më lart, shtesa  `Ketchup` edhe pse është falas  duhet ta implementoj metodën `merrShumen` dhe kjo nuk e respekton principin e katërt, një klasë nuk duhet ta implementoj një metodë që nuk i nevojitet.
 
 Kështu duhet  ta ndryshojm kodin që ta respektojme principin e katërt.
-```PHP
+
+```php
 interface Ushqim {}
 interface Shtesa {
    public function merrSasine(): int;
@@ -386,7 +394,8 @@ Ky është një shembull ku ndahet kontrata për shtesat me  çmime dhe ato pa  
 Një shembull do të ishte ta ruajm fakturen në MySQL databazë si në shembullin në vijim.
 E mbani mend si klasa `RuajtjaFaktures` varet direkt në klasën `Databaza` që është edhe implementimi mbrenda.
 Tani klasa `RuajtjaFaktures` e then principin e parë sepse nëse e ndryshojme databazën  atëher duhet ta ndryshojm edhe klasën `RuajtjaFaktures`.
-```PHP
+
+```php
 class Databaza
 {
    public function ruaj(Faktura $faktura): void
@@ -412,7 +421,8 @@ class Faktura
 }
 ```
 Një shembull  që do ta respektonte principin e pestë do të ishte si në vijim.
-```PHP
+
+```php
 interface Databaza {
    public function ruaj(Faktura $faktura): void;
 }
