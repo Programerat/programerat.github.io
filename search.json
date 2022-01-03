@@ -5,7 +5,7 @@
       "description" : "Modelet e strukturimit të kodit, Modeli Komandë",
       "category" : "",
       "tags"     : "Design, Patterns, Command",
-      "url"      : "//2021/12/31/command-pattern-modeli-komande",
+      "url"      : "//2021/12/command-pattern-modeli-komande",
       "date"     : "2021-12-31 09:15:20 +0100"
     } ,
   
@@ -14,7 +14,7 @@
       "description" : "",
       "category" : "",
       "tags"     : "OO, Design, Patterns, PHP",
-      "url"      : "//2021/12/13/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker",
+      "url"      : "//2021/12/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker",
       "date"     : "2021-12-13 18:35:00 +0100"
     } ,
   
@@ -23,7 +23,7 @@
       "description" : "Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.",
       "category" : "",
       "tags"     : "OO,, Design, Patterns,, PHP",
-      "url"      : "//2021/12/13/dp-chain-of-responsibility",
+      "url"      : "//2021/12/dp-chain-of-responsibility",
       "date"     : "2021-12-13 18:35:00 +0100"
     } ,
   
@@ -32,7 +32,7 @@
       "description" : "Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.",
       "category" : "",
       "tags"     : "OO,, Design, Patterns,, PHP",
-      "url"      : "//2021/12/13/modelet-e-dizajnimit-strategjia",
+      "url"      : "//2021/12/modelet-e-dizajnimit-strategjia",
       "date"     : "2021-12-13 18:35:00 +0100"
     } ,
   
@@ -41,7 +41,7 @@
       "description" : "Krijoni një bazë të fortë në programim duke mësuar SOLID principet.",
       "category" : "",
       "tags"     : "SOLID,, OO,, PHP,, PROGRAMERAT",
-      "url"      : "//2021/11/17/solid-principet-dhe-si-ti-aplikoni-ne-kod",
+      "url"      : "//2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod",
       "date"     : "2021-11-17 09:15:20 +0100"
     } 
   
