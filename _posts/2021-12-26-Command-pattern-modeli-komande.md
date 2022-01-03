@@ -9,7 +9,7 @@ archive: false
 
 > Njihet edhe si Veprim (eng. Action), Transakcion (eng. Transaction)  
 
-Modeli Komandë përmbanë të gjitha parametrat e nevojshme për veprimin i cili do të bëhet në një komandë. Prandaj kjo na lejon që komanda të ekzekutohet  në mënyra të ndryshme.    
+Modeli Komandë përmbanë të gjitha parametrat e nevojshme për veprimin i cili do të bëhet në një komandë. Prandaj, kjo na lejon që komanda të ekzekutohet  në mënyra të ndryshme.    
   
 
 Perparësitë e modelit komandë:
@@ -60,7 +60,6 @@ P.SH: Nëse e dërgon veturën tek miku yt mekanik, ai nuk mund të bëj asgjë 
 ```php
 $mechanic = new Mechanic();
 $mechanic->replaceWheels('type', 'size', 'model');
-
 ```
 
 ### Implementimi i modelit komandë
@@ -151,5 +150,7 @@ Shumë klasa duhet të inkuadrohen në procese që të kryhet një komandë, and
 
 Sugjerohet  në disa libra që edhe komanda prej kërkesës (eng. Query) të jetë e ndarë. Komanda nuk duhet të kthej rezultat ndërsa kërkesa është që të kthej rezultat. Ky term është propozuar nga autori  <a href="https://www.amazon.com/gp/product/0136291554/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0136291554&linkCode=as2&tag=martinfowlerc-20" target="_blank"> Bertrand Meyer në librin e tij</a>.
 
+
+> “Secili mundet me shkru kod që kompjuteri e kupton. Programerat e mirë shkruajnë kod që të tjerët e kutojnë.” – Martin Fowler
 
 
