@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-03T15:47:07+01:00</updated>
+ <updated>2022-01-06T13:22:32+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -62,7 +62,10 @@ Kjo na drejton në një dritare për të mbushur të dhënat bankare dhe të kon
 Gjithashtu nëse dëshirojmë ta shtojmë një mekanizëm për kthimin e ekzekutimit që mos të ruajmë të dhënat të përgjysmuara atëherë duhet ti ndryshojmë të gjithë  kontrollerët.&lt;/p&gt;
 
 &lt;h3 id=&quot;uml-diagrami-i-modelit-komandë&quot;&gt;UML Diagrami i modelit Komandë&lt;/h3&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/diagrams/TheCommandPattern.png&quot; alt=&quot;UML diagrami i modelit komandë&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/diagrams/Design_Command_Design_Pattern_UML.jpeg&quot; alt=&quot;UML diagrami i modelit komandë i huazuar nga wikipedia.&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Klasa që thërret (eng. Invoke) komandat e di  se cilën metodë dhe cilat parametra ti ekzekutojë, por nuk ka dijeni se çka bën ajo metodë.&lt;/p&gt;
 
