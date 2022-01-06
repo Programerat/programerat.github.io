@@ -51,7 +51,10 @@ Gjithashtu nëse dëshirojmë ta shtojmë një mekanizëm për kthimin e ekzekut
       
 
 ### UML Diagrami i modelit Komandë
+
 <img src="{{ "/" | relative_url  }}assets/diagrams/TheCommandPattern.png" alt="UML diagrami i modelit komandë" />
+
+<img src="{{ "/" | relative_url  }}assets/diagrams/Design_Command_Design_Pattern_UML.jpeg" alt="UML diagrami i modelit komandë i huazuar nga wikipedia." />
 
 Klasa që thërret (eng. Invoke) komandat e di  se cilën metodë dhe cilat parametra ti ekzekutojë, por nuk ka dijeni se çka bën ajo metodë.   
 
@@ -148,7 +151,7 @@ Nëse duam  të shtojmë komanda të reja atëherë nuk ka nevojë që ta ndrysh
 Shumë klasa duhet të inkuadrohen në procese që të kryhet një komandë, andaj edhe duhet të punohet me kujdes të shtuar duke menduar mirë se çfarë klasa shtohen. Sygjeroj që nëse përdorni DDD (eng. Domain Driven Design) atëherë ky model do të jetë më natyral në projektin tuaj.    
 
 
-Sugjerohet  në disa libra që edhe komanda prej kërkesës (eng. Query) të jetë e ndarë. Komanda nuk duhet të kthej rezultat ndërsa kërkesa është që të kthej rezultat. Ky term është propozuar nga autori  <a href="https://www.amazon.com/gp/product/0136291554/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0136291554&linkCode=as2&tag=martinfowlerc-20" target="_blank"> Bertrand Meyer në librin e tij</a>.
+Sugjerohet  në disa libra që edhe komanda prej kërkesës (eng. Query) të jetë e ndarë. Komanda nuk duhet të kthej rezultat ndërsa kërkesa është që të kthej rezultat. Ky term është propozuar nga autori  <a href="https://www.amazon.com/gp/product/0136291554/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0136291554&linkCode=as2&tag=martinfowlerc-20" target="_blank"> Bertrand Meyer në librin e tij</a>.  
 
 
 > “Secili mundet me shkru kod që kompjuteri e kupton. Programerat e mirë shkruajnë kod që të tjerët e kutojnë.” – Martin Fowler
