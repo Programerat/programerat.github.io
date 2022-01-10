@@ -3,7 +3,7 @@ title:  "Modelet e strukturimit të kodit, modeli komandë (eng. Command Pattern
 date:   2021-12-31 08:15:20
 description: "Modelet e strukturimit të kodit, Modeli Komandë"
 tags: Design Patterns Command
-author: "diar"
+author: diarselimi
 archive: false
 ---
 
