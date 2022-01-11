@@ -1,6 +1,6 @@
 ---
 title:  "Si të krijoni aplikacionin tuaj të parë me Docker"
-date:   2021-12-13 17:35:00
+date:   2022-01-11 10:12:00
 tags: Docker php
 author: donjetaml
 archive: false
