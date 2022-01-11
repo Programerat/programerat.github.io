@@ -57,7 +57,7 @@ Pasi të instalohet Docker me sukses dhe e startoni në kompjuterin tuaj,  hapen
 ```bash
 docker version
 ```
-![DockerVersion](../assets/images/docker-version.png)
+![DockerVersion]({{ "/" | relative_url  }}assets/images/docker-version.png)
 
 ### Shembull si të paketojmë aplikacionin tuaj në Docker
 
@@ -112,7 +112,7 @@ Hapeni një terminal dhe shkruani komadën më poshtë:
 
 Opsioni `-t` ju mundëson të përcaktoni emrin e imazhit tuaj. Në rastin tonë ne kemi zgjedhur `php-demo` por ju mund të vendosni çfarë do emri që dëshironi si dhe tag është `latest` ose mund te vendosni v1(versioni i parë).
 
-![DockerBuild](../assets/images/docker-build.png)
+![DockerBuild]({{ "/" | relative_url  }}assets/images/docker-build.png)
 
 #### Ekzekutoni imazhin në kontejner
 Për të ekzekutuar imazhin ju mund të përdorni komandën `docker run docker run php-demo:latest`. Nëse dëshirojmë që ti qasemi aplikacionit nga shfletuesi, duhet publikuar portin `9090` në mënyrë që ti qasemi konteinerit që kemi ndërtuar me port `80`. Nëse një kërkesë do të vijë në portin `9090`, në këtë rast do ta ridrejtojë atë kërkesë në konteinerin tonë në portin `80`.    
@@ -121,7 +121,7 @@ Nëse një kërkesë do të vijë në portin 9090, në këtë rast do të ridrej
 
 `docker run --name php-app -p 9090:80 php-demo:latest`
 
-![DockerRun](../assets/images/docker-run.png)
+![DockerRun]({{ "/" | relative_url  }}assets/images/docker-run.png)
 
 Hapeni shfletuesin shkruani [localhost:9090](http://localhost:9090) dhe do të shihni tekstin që keni shkruar më parë ‘Docker është magjik’. Pra index.php është ruajtur brenda koteinerit sepse e kemi ndërtuar imazhin tonë duke përdorur Dockerfile nga lartë.   
 
