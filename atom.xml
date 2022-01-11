@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-11T10:19:06+01:00</updated>
+ <updated>2022-01-11T10:28:49+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -70,7 +70,7 @@ Ky mjedis i izoluar quhet konteiner (eng. Containers).&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker version
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker-version.png&quot; alt=&quot;DockerVersion&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/docker-version.png&quot; alt=&quot;DockerVersion&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;shembull-si-të-paketojmë-aplikacionin-tuaj-në-docker&quot;&gt;Shembull si të paketojmë aplikacionin tuaj në Docker&lt;/h3&gt;
 
@@ -123,7 +123,7 @@ Qëllimi i ketij tutoriali të shkurtër është të paketojmë një Aplikacion 
 
 &lt;p&gt;Opsioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t&lt;/code&gt; ju mundëson të përcaktoni emrin e imazhit tuaj. Në rastin tonë ne kemi zgjedhur &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php-demo&lt;/code&gt; por ju mund të vendosni çfarë do emri që dëshironi si dhe tag është &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;latest&lt;/code&gt; ose mund te vendosni v1(versioni i parë).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker-build.png&quot; alt=&quot;DockerBuild&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/docker-build.png&quot; alt=&quot;DockerBuild&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;ekzekutoni-imazhin-në-kontejner&quot;&gt;Ekzekutoni imazhin në kontejner&lt;/h4&gt;
 &lt;p&gt;Për të ekzekutuar imazhin ju mund të përdorni komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run docker run php-demo:latest&lt;/code&gt;. Nëse dëshirojmë që ti qasemi aplikacionit nga shfletuesi, duhet publikuar portin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9090&lt;/code&gt; në mënyrë që ti qasemi konteinerit që kemi ndërtuar me port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;80&lt;/code&gt;. Nëse një kërkesë do të vijë në portin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9090&lt;/code&gt;, në këtë rast do ta ridrejtojë atë kërkesë në konteinerin tonë në portin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;80&lt;/code&gt;.&lt;/p&gt;
@@ -132,7 +132,7 @@ Qëllimi i ketij tutoriali të shkurtër është të paketojmë një Aplikacion 
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run --name php-app -p 9090:80 php-demo:latest&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker-run.png&quot; alt=&quot;DockerRun&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/docker-run.png&quot; alt=&quot;DockerRun&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hapeni shfletuesin shkruani &lt;a href=&quot;http://localhost:9090&quot;&gt;localhost:9090&lt;/a&gt; dhe do të shihni tekstin që keni shkruar më parë ‘Docker është magjik’. Pra index.php është ruajtur brenda koteinerit sepse e kemi ndërtuar imazhin tonë duke përdorur Dockerfile nga lartë.&lt;/p&gt;
 
