@@ -12,7 +12,7 @@ Së pari do të bëjmë  një prezentim  të shkurtër për të parë se çfarë
 
 Docker është një platformë e hapur për zhvillimin, lansimin dhe ekzekutimin e aplikacioneve.  Nuk është e obligueshme  të instaloni server në makinën tuaj lokale si XAMPP ose Apache Tomcat. Me Docker  gjithashtu mund të menaxhoni infrastrukturën tuaj në të njëjtën mënyrë  siç e menaxhoni aplikacionin tuaj.
 
-![Docker](../assets/images/docker.png)
+![Docker]({{ "/" | relative_url  }}assets/images/docker.png)
 
 Pra Docker i ofron mundësinë përdoruesit për të paketuar dhe ekzekutuar një aplikacion në një mjedis të pavarur.    
 Ky mjedis i izoluar quhet konteiner (eng. Containers).     
