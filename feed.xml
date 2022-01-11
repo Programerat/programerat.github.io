@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title></title>
+    <description>Hajde te mesojm sot dicka.</description>
+    <link>https://programerat.github.io</link>
+    <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Modelet e strukturimit të kodit, modeli komandë (eng. Command Pattern)</title>
+        
+        
+          <description>&lt;blockquote&gt;
+  &lt;p&gt;Njihet edhe si Veprim (eng. Action), Transakcion (eng. Transaction)&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        
+        <pubDate>Fri, 31 Dec 2021 09:15:20 +0100</pubDate>
+        <link>https://programerat.github.io/2021/12/command-pattern-modeli-komande</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/command-pattern-modeli-komande</guid>
+      </item>
+    
+      <item>
+        <title>Si të krijoni aplikacionin tuaj të parë me Docker</title>
+        
+        
+          <description>&lt;p&gt;Së pari do të bëjm një prezantim të shkurtër se çfarë është Docker dhe pse ta përdorni, më pastaj do të marr një shembull si të krijoni aplikacionin tuaj të parë me Docker.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
+        <link>https://programerat.github.io/2021/12/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</guid>
+      </item>
+    
+      <item>
+        <title>Paternet e dizajnimit - Paterni Strategji</title>
+        
+        
+          <description>&lt;h3 id=&quot;chain-of-responsibility&quot;&gt;Chain of Responsibility&lt;/h3&gt;
+</description>
+        
+        <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
+        <link>https://programerat.github.io/2021/12/dp-chain-of-responsibility</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/dp-chain-of-responsibility</guid>
+      </item>
+    
+      <item>
+        <title>Paternet e dizajnimit - Paterni Strategji</title>
+        
+        
+          <description>&lt;p&gt;Paterni strategji mundësonë që ti izolojmë algoritmet në klasa të ndryshme, dhe mundëson zëvendesimin e algoritmeve pa pasur nevojë qe kodi të ndryshohet. Pra paterni strategji na mundësonë që të shtojmë klasa të tjera që implementojnë algoritme të ndryshme por janë të tipit të njëjtë.&lt;br /&gt;
+ &lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
+        <link>https://programerat.github.io/2021/12/modelet-e-dizajnimit-strategjia</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/modelet-e-dizajnimit-strategjia</guid>
+      </item>
+    
+      <item>
+        <title>Principet S.O.L.I.D dhe si të aplikojmë ato në kod</title>
+        
+        
+          <description>&lt;p&gt;E pyeta një të afërm timin pse duhet ti mësojmë SOLID principet?
+Ja si përgjigjet ai…&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Dallimi në mes amaterëve dhe profesinistëve që kërkohen nga cdo kompani, perfshir: Tesla, Google, Apple, SpaceX etj gjendet tek aplikimi i principeve të ndryshme.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        
+        <pubDate>Wed, 17 Nov 2021 09:15:20 +0100</pubDate>
+        <link>https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod</guid>
+      </item>
+    
+  </channel>
+</rss>
