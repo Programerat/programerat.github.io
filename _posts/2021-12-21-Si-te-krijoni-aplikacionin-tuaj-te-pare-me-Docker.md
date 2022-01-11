@@ -1,9 +1,9 @@
 ---
 title:  "Si të krijoni aplikacionin tuaj të parë me Docker"
 date:   2021-12-13 17:35:00
-tags: Docker
+tags: Docker php
 author: donjetaml
-archive: true
+archive: false
 ---
 
 Së pari do të bëjmë  një prezentim  të shkurtër për të parë se çfarë është Docker dhe pse ta përdorim, pastaj do të marr një shembull për të parë se  si mund  të krijoni aplikacionin tuaj të parë me Docker 🚀🚀.   
