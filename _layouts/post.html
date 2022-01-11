@@ -13,7 +13,7 @@ layout: default
   {% assign minute=content | number_of_words | divided_by: 265 | plus: 1 %}
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }} -  
     {% if page.minute %} {{ page.minute }} {% else %} {{ minute }} {% endif %} minuta, koha leximit. </time>
-  <a href="https://github.com/{{ page.author }}" target="_blank" class="author"> <img width="50px" src="https://avatars.githubusercontent.com/{{ page.author }}" /> <label>Autor: {{ page.author }}</label></a>
+  <a href="https://github.com/{{ page.author }}" target="_blank" class="author"> <img width="20px" src="https://avatars.githubusercontent.com/{{ page.author }}" /> <label>Autor {{ page.author }}</label></a>
   <h1 class="title">{{ page.title }}</h1>
   <span class="meta">
     {% for tag in page.tags %}
