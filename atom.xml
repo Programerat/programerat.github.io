@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-11T10:14:17+01:00</updated>
+ <updated>2022-01-11T10:16:27+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -23,7 +23,7 @@
 
 &lt;p&gt;Docker është një platformë e hapur për zhvillimin, lansimin dhe ekzekutimin e aplikacioneve.  Nuk është e obligueshme  të instaloni server në makinën tuaj lokale si XAMPP ose Apache Tomcat. Me Docker  gjithashtu mund të menaxhoni infrastrukturën tuaj në të njëjtën mënyrë  siç e menaxhoni aplikacionin tuaj.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker.png&quot; alt=&quot;Docker&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/docker.png&quot; alt=&quot;Docker&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pra Docker i ofron mundësinë përdoruesit për të paketuar dhe ekzekutuar një aplikacion në një mjedis të pavarur.  &lt;br /&gt;
 Ky mjedis i izoluar quhet konteiner (eng. Containers).&lt;/p&gt;
