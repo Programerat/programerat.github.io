@@ -7,6 +7,18 @@
     <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Si të krijoni aplikacionin tuaj të parë me Docker</title>
+        
+        
+          <description>&lt;p&gt;Së pari do të bëjmë  një prezentim  të shkurtër për të parë se çfarë është Docker dhe pse ta përdorim, pastaj do të marr një shembull për të parë se  si mund  të krijoni aplikacionin tuaj të parë me Docker 🚀🚀.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 11 Jan 2022 11:12:00 +0100</pubDate>
+        <link>https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</link>
+        <guid isPermaLink="true">https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</guid>
+      </item>
+    
+      <item>
         <title>Modelet e strukturimit të kodit, modeli komandë (eng. Command Pattern)</title>
         
         
@@ -18,18 +30,6 @@
         <pubDate>Fri, 31 Dec 2021 09:15:20 +0100</pubDate>
         <link>https://programerat.github.io/2021/12/command-pattern-modeli-komande</link>
         <guid isPermaLink="true">https://programerat.github.io/2021/12/command-pattern-modeli-komande</guid>
-      </item>
-    
-      <item>
-        <title>Si të krijoni aplikacionin tuaj të parë me Docker</title>
-        
-        
-          <description>&lt;p&gt;Së pari do të bëjmë  një prezentim  të shkurtër për të parë se çfarë është Docker dhe pse ta përdorim, pastaj do të marr një shembull për të parë se  si mund  të krijoni aplikacionin tuaj të parë me Docker 🚀🚀.&lt;/p&gt;
-</description>
-        
-        <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
-        <link>https://programerat.github.io/2021/12/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</link>
-        <guid isPermaLink="true">https://programerat.github.io/2021/12/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker</guid>
       </item>
     
       <item>

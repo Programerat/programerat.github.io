@@ -1,21 +1,21 @@
 [
   
     {
+      "title"    : "Si të krijoni aplikacionin tuaj të parë me Docker",
+      "description" : "",
+      "category" : "",
+      "tags"     : "Docker, php",
+      "url"      : "//2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker",
+      "date"     : "2022-01-11 11:12:00 +0100"
+    } ,
+  
+    {
       "title"    : "Modelet e strukturimit të kodit, modeli komandë (eng. Command Pattern)",
       "description" : "Modelet e strukturimit të kodit, Modeli Komandë",
       "category" : "",
       "tags"     : "Design, Patterns, Command",
       "url"      : "//2021/12/command-pattern-modeli-komande",
       "date"     : "2021-12-31 09:15:20 +0100"
-    } ,
-  
-    {
-      "title"    : "Si të krijoni aplikacionin tuaj të parë me Docker",
-      "description" : "",
-      "category" : "",
-      "tags"     : "Docker, php",
-      "url"      : "//2021/12/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker",
-      "date"     : "2021-12-13 18:35:00 +0100"
     } ,
   
     {
