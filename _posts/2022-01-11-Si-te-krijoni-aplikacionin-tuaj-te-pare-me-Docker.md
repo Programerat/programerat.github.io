@@ -21,7 +21,8 @@ Konteinerët  janë të lehtë për tu konfiguruar dhe përmbajnë  gjithçka q�
 
 ### Imazhet
 
-Për t’iu përgjigjur më së miri kësaj pyetje, shih listën më poshtë për përfitimet që mund të gjeni:
+Një imazh Docker përmbanë  gjithçka që nevojitet për të ekzekutuar një aplikacion në një konteiner.
+Kjo përfshinë:
 - kodin
 - kohën e ekzekutimit (eng. runtime)
 - librarit
