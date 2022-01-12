@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-11T10:32:16+01:00</updated>
+ <updated>2022-01-12T13:32:15+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -32,7 +32,8 @@ Ky mjedis i izoluar quhet konteiner (eng. Containers).&lt;/p&gt;
 
 &lt;h3 id=&quot;imazhet&quot;&gt;Imazhet&lt;/h3&gt;
 
-&lt;p&gt;Për t’iu përgjigjur më së miri kësaj pyetje, shih listën më poshtë për përfitimet që mund të gjeni:&lt;/p&gt;
+&lt;p&gt;Një imazh Docker përmbanë  gjithçka që nevojitet për të ekzekutuar një aplikacion në një konteiner.
+Kjo përfshinë:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;kodin&lt;/li&gt;
   &lt;li&gt;kohën e ekzekutimit (eng. runtime)&lt;/li&gt;
