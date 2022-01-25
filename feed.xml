@@ -19,10 +19,11 @@
       </item>
     
       <item>
-        <title>Modelet e strukturimit të kodit, modeli dekorues (eng. Decorator Pattern)</title>
+        <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.</title>
         
         
-          <description>&lt;h3 id=&quot;si-ta-përdorim-modelin-dekorues-eng-decorator-pattern-për-menagjim-më-të-mirë-të-kodit&quot;&gt;Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.&lt;/h3&gt;
+          <description>&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
+Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
 </description>
         
         <pubDate>Fri, 31 Dec 2021 09:15:20 +0100</pubDate>

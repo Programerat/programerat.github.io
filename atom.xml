@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-25T16:29:59+01:00</updated>
+ <updated>2022-01-25T16:59:39+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -194,13 +194,11 @@ Qëllimi i ketij tutoriali të shkurtër është të paketojmë një Aplikacion 
  </entry>
  
  <entry>
-   <title>Modelet e strukturimit të kodit, modeli dekorues (eng. Decorator Pattern)</title>
+   <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.</title>
    <link href="https://programerat.github.io//2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues"/>
    <updated>2021-12-31T09:15:20+01:00</updated>
    <id>https://programerat.github.io/2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues</id>
-   <content type="html">&lt;h3 id=&quot;si-ta-përdorim-modelin-dekorues-eng-decorator-pattern-për-menagjim-më-të-mirë-të-kodit&quot;&gt;Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.&lt;/h3&gt;
-
-&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
+   <content type="html">&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
 Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
 
 &lt;p&gt;Qëllimi i këtij artikulli është që të shpjegoj se si përdoret ky model dhe si të aplikohet në dizajn.
@@ -215,18 +213,11 @@ Ky model bën pjesë në kategorinë e modeleve te strukturimit të kodit.&lt;/p
 Disa nga opcionet ku mund ta përdorim këtë model jan:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Nëse klasa egzistuese ka nevoj të përdoret edhe pse kemi nevoj për ndryshim të logjikës.&lt;/li&gt;
-  &lt;li&gt;Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti behaves.&lt;/li&gt;
+  &lt;li&gt;Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti sillet ose jep rezultat.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;aplikimi&quot;&gt;Aplikimi&lt;/h3&gt;
-&lt;p&gt;Ta marrim shembull qe dojme ta krijojme nje aplikacion ku e shfaq permbajtjen ne formate te ndryshme.&lt;br /&gt;
-P.SH Csv, XML apo HTML.&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextProcessor&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prepare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ta marrim shembull qe dojme ta krijojme një program do të automatizoj shtuarjen e ekstrave në një piza.&lt;/p&gt;
 
 &lt;h3 id=&quot;uml-diagrami&quot;&gt;UML Diagrami&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;../assets/diagrams/decorator_pattern.png&quot; alt=&quot;UML diagrami i modelit strategji&quot; /&gt;&lt;/p&gt;

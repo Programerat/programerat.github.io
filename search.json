@@ -10,7 +10,7 @@
     } ,
   
     {
-      "title"    : "Modelet e strukturimit të kodit, modeli dekorues (eng. Decorator Pattern)",
+      "title"    : "Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.",
       "description" : "Modelet e strukturimit të kodit, Modeli dekorues",
       "category" : "",
       "tags"     : "Design, Patterns, Decorator",
