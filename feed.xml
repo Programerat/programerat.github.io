@@ -19,6 +19,18 @@
       </item>
     
       <item>
+        <title>Modelet e strukturimit të kodit, modeli dekorues (eng. Decorator Pattern)</title>
+        
+        
+          <description>&lt;h3 id=&quot;si-ta-përdorim-modelin-dekorues-eng-decorator-pattern-për-menagjim-më-të-mirë-të-kodit&quot;&gt;Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.&lt;/h3&gt;
+</description>
+        
+        <pubDate>Fri, 31 Dec 2021 09:15:20 +0100</pubDate>
+        <link>https://programerat.github.io/2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues</guid>
+      </item>
+    
+      <item>
         <title>Modelet e strukturimit të kodit, modeli komandë (eng. Command Pattern)</title>
         
         

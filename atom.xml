@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-18T14:34:23+01:00</updated>
+ <updated>2022-01-25T16:29:59+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -190,6 +190,195 @@ Qëllimi i ketij tutoriali të shkurtër është të paketojmë një Aplikacion 
 
 &lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
 &lt;p&gt;Në këtë artikull, ne kemi diskutuar se si të paketojmë një PHP aplikacion bazik. Nëse keni ndonjë pyetje ose feedback ju lutem ndjehuni të lirë të postoni më poshtë. 👇&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Modelet e strukturimit të kodit, modeli dekorues (eng. Decorator Pattern)</title>
+   <link href="https://programerat.github.io//2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues"/>
+   <updated>2021-12-31T09:15:20+01:00</updated>
+   <id>https://programerat.github.io/2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues</id>
+   <content type="html">&lt;h3 id=&quot;si-ta-përdorim-modelin-dekorues-eng-decorator-pattern-për-menagjim-më-të-mirë-të-kodit&quot;&gt;Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.&lt;/h3&gt;
+
+&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
+Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
+
+&lt;p&gt;Qëllimi i këtij artikulli është që të shpjegoj se si përdoret ky model dhe si të aplikohet në dizajn.
+Gjithashtu do të marr disa shembuj se si aplikohet në kod që të kuptohet më lehtë në mënyr që ti ta aplikosh në projektin tënd. Hajde ti hijmë punës.&lt;/p&gt;
+
+&lt;h3 id=&quot;definicioni&quot;&gt;Definicioni&lt;/h3&gt;
+&lt;p&gt;Modeli dekorues është ashtu si edhe tingëllon, është një model ose klasë që e dekoron një objekt pa patur nevojë të bëjmë ndryshime në klasën egzistuese.&lt;br /&gt;
+Ky model bën pjesë në kategorinë e modeleve te strukturimit të kodit.&lt;/p&gt;
+
+&lt;h3 id=&quot;qellimi&quot;&gt;Qellimi&lt;/h3&gt;
+&lt;p&gt;Pse duhet të përdorim këtë model dhe çfar problemi na mundëson që të zgjedhim.
+Disa nga opcionet ku mund ta përdorim këtë model jan:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Nëse klasa egzistuese ka nevoj të përdoret edhe pse kemi nevoj për ndryshim të logjikës.&lt;/li&gt;
+  &lt;li&gt;Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti behaves.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;aplikimi&quot;&gt;Aplikimi&lt;/h3&gt;
+&lt;p&gt;Ta marrim shembull qe dojme ta krijojme nje aplikacion ku e shfaq permbajtjen ne formate te ndryshme.&lt;br /&gt;
+P.SH Csv, XML apo HTML.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextProcessor&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prepare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;uml-diagrami&quot;&gt;UML Diagrami&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/diagrams/decorator_pattern.png&quot; alt=&quot;UML diagrami i modelit strategji&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/diagrams/wikipedia_decorator_pattern.jpg&quot; alt=&quot;Diagrami i huazuar nga wikipedia&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;shembulli&quot;&gt;Shembulli&lt;/h3&gt;
+&lt;p&gt;Ta zëmë që e kemi një pizeri dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në piza.
+P.SH nëse dojmë të shtojmë djathë, këpurdha, sallatë etj.
+Tash varet se cka&lt;/p&gt;
+
+&lt;h3 id=&quot;shembull-se-si-nuk-duhet-aplikuar&quot;&gt;Shembull se si nuk duhet aplikuar&lt;/h3&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Adding Default toppings &amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TomatoTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Tomatoes &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CheeseTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Cheese &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MushroomTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Mushrooms &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CheeseTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MushroomTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;cd&quot;&gt;/**
+---------------- OUTPUT 
+
+Adding Default toppings
+Adding Cheese
+Adding Mushrooms
+
+*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;— english  AI&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-use-decorator-pattern-in-design-patterns-for-better-code-management&quot;&gt;How to Use Decorator Pattern in Design Patterns for Better Code Management.&lt;/h3&gt;
+&lt;p&gt;Design patterns can be a great way to improve code management and reduce the number of bugs and errors. One of the most popular patterns is the decorator pattern, which enables you to add new functionality to an object without changing its original code. This article will introduce you to this pattern and some of its uses in designing coding. It will also provide some examples that give a better understanding on how this pattern might work in your own project. So what are you waiting for? Let’s dive right in!&lt;/p&gt;
+
+&lt;p&gt;What Is the Decorator Pattern?
+The decorator pattern is a software design pattern, which can be applied to objects at runtime. It was first introduced by the “Gang of Four” in their book “Design Patterns: Elements of Reusable Object-Oriented Software.” The intent of this design pattern is to extend existing functionality without modifying the original code. It allows for new functionality to be added without having to change the code or interface of the original object. This way, it’s really easy to create your own customized features without altering any other part of the program.&lt;/p&gt;
+
+&lt;p&gt;When to Use the Decorator Pattern
+The decorator pattern is a powerful tool for code management. It allows you to add new functionality to an object without changing its original code. You can think of it as a way to wrap objects or classes with other objects or classes.&lt;/p&gt;
+
+&lt;p&gt;Decorators are often used in the following cases:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding logging and debugging information to an object&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding validation and error checking&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding specific routing rules for a URL&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Supervising the lifetime of your application&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Decorator Pattern is most useful when you need to wrap objects or classes with other objects or classes that provide different behavior. One such case is when you need to add logging and debugging information to an object like this:&lt;/p&gt;
+
+&lt;p&gt;public class Car { } // This is our basic car class.    // Now imagine we want to use the decorator pattern on this car object, so we can log it’s activity by adding a Decorator public class LoggerCarDecorator extends Car{ public LoggerCarDecorator(Car original){ super(original); } @Override public void stop() { System.out.println(“Stopped”); } @Override public void start() { System.out.println(“Started”); } } // We can now create a new instance of LoggerCarDecorator with the constructor Car newLoggerCar = new LoggerCarDecorator(new Car()); newLoggerCar.start();// “Started” would be&lt;/p&gt;
+
+&lt;p&gt;The Implementation of the Decorator Pattern
+This pattern is often used in cases where you need to add new functionality to an object without changing its code. For example, let’s say you have a function that calculates the area of a triangle. You might want to use this function to calculate the area of other shapes too, but don’t know how to do it.&lt;/p&gt;
+
+&lt;p&gt;One way would be to use inheritance, using a base class for calculating areas and another class inheriting from it for other shapes. Though this is possible, there are cases when you just want to add functionality without modifying the original code. This is where decorators come in handy.&lt;/p&gt;
+
+&lt;p&gt;A decorator derives from the same class as the object being decorated and adds its own functionality by overriding or wrapping other methods. You can then ‘decorate’ any object with this decoration by calling the constructor of your decorator class with the original object as an argument.&lt;/p&gt;
+
+&lt;p&gt;Example of the Decorator Pattern in Code
+The following example demonstrates how the decorator pattern can be used.&lt;/p&gt;
+
+&lt;p&gt;public class Car { public void Drive() { Console.WriteLine(“Car is driving”); } }&lt;/p&gt;
+
+&lt;p&gt;public class SportsCar : Car { public override void Drive() { Console.WriteLine(“Sports car is driving”); } }&lt;/p&gt;
+
+&lt;p&gt;public class Limousine : Car { public override void Drive() { Console.WriteLine(“Limousine is driving”); } }&lt;/p&gt;
+
+&lt;p&gt;public class Van : Car { public override void Drive() { Console.WriteLine(“Van is driving”); } }&lt;/p&gt;
+
+&lt;p&gt;var cars = new List&lt;/p&gt;
+
+&lt;p&gt;Conclusion
+The decorator pattern is a powerful software design pattern that allows you to add functionality to an existing class without having to subclass the original class and create a new instance.&lt;/p&gt;
+
+&lt;p&gt;The power of this pattern lies in the fact that you can extend an existing object and add additional functionality without changing the original code.&lt;/p&gt;
+
+&lt;p&gt;It’s a simple and elegant solution that can save time and effort, while still achieving your desired result.&lt;/p&gt;
+
+&lt;p&gt;So, next time you need to add functionality to an existing object, why not consider the decorator pattern?&lt;/p&gt;
 </content>
  </entry>
  
