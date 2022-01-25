@@ -1,13 +1,11 @@
 ---
-title:  "Modelet e strukturimit të kodit, modeli dekorues (eng. Decorator Pattern)"
+title:  "Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit."
 date:   2021-12-31 08:15:20
 description: "Modelet e strukturimit të kodit, Modeli dekorues"
 tags: Design Patterns Decorator
 author: diarselimi
 archive: true
 ---
-
-### Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.
 
 Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
 Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.
@@ -25,19 +23,11 @@ Ky model bën pjesë në kategorinë e modeleve te strukturimit të kodit.
 Pse duhet të përdorim këtë model dhe çfar problemi na mundëson që të zgjedhim.
 Disa nga opcionet ku mund ta përdorim këtë model jan:
 1. Nëse klasa egzistuese ka nevoj të përdoret edhe pse kemi nevoj për ndryshim të logjikës.
-2. Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti behaves.
+2. Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti sillet ose jep rezultat.
 
 
 ### Aplikimi
-Ta marrim shembull qe dojme ta krijojme nje aplikacion ku e shfaq permbajtjen ne formate te ndryshme.  
-P.SH Csv, XML apo HTML.
-
-```php
-interface TextProcessor
-{
-  public function prepare()
-}
-```
+Ta marrim shembull qe dojme ta krijojme një program do të automatizoj shtuarjen e ekstrave në një piza. 
 
 ### UML Diagrami
 ![UML diagrami i modelit strategji](../assets/diagrams/decorator_pattern.png)
