@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Si të përdorni Docker Compose?",
+      "description" : "",
+      "category" : "",
+      "tags"     : "Docker-compose,, php,, mysql",
+      "url"      : "//2022/01/si-te-perdorim-docker-compose",
+      "date"     : "2022-01-13 11:12:00 +0100"
+    } ,
+  
+    {
       "title"    : "Si të krijoni aplikacionin tuaj të parë me Docker",
       "description" : "",
       "category" : "",

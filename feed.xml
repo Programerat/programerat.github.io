@@ -7,6 +7,19 @@
     <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Si të përdorni Docker Compose?</title>
+        
+        
+          <description>&lt;p&gt;Në &lt;a href=&quot;https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker&quot;&gt;artikullin e parë&lt;/a&gt;, kemi bërë një prezantim të shkurtër qfarë është Docker, si mund të instaloni si dhe si mund të konfiguroni Docker për një aplikacion bazik në PHP.
+Në këtë artikull do të tregojm si mund të përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjesht në PHP që do të komunikojë me MySQL.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 13 Jan 2022 11:12:00 +0100</pubDate>
+        <link>https://programerat.github.io/2022/01/si-te-perdorim-docker-compose</link>
+        <guid isPermaLink="true">https://programerat.github.io/2022/01/si-te-perdorim-docker-compose</guid>
+      </item>
+    
+      <item>
         <title>Si të krijoni aplikacionin tuaj të parë me Docker</title>
         
         
