@@ -7,7 +7,7 @@
     <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.</title>
+        <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern).</title>
         
         
           <description>&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
