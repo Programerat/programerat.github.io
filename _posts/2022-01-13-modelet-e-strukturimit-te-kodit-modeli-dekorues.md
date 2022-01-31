@@ -4,7 +4,7 @@ date:   2022-01-25 08:15:20
 description: "Modelet e strukturimit të kodit, Modeli dekorues, për menagjim më të mirë të kodit."
 tags: Design Patterns Decorator
 author: diarselimi
-archive: false
+archive: true
 ---
 
 Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
