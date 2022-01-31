@@ -1,6 +1,6 @@
 ---
 title:  "Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit."
-date:   2021-12-31 08:15:20
+date:   2022-01-25 08:15:20
 description: "Modelet e strukturimit të kodit, Modeli dekorues"
 tags: Design Patterns Decorator
 author: diarselimi
@@ -11,7 +11,7 @@ Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsu
 Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.
 
 Qëllimi i këtij artikulli është që të shpjegoj se si përdoret ky model dhe si të aplikohet në dizajn.
-Gjithashtu do të marr disa shembuj se si aplikohet në kod që të kuptohet më lehtë në mënyr që ti ta aplikosh në projektin tënd. Hajde ti hijmë punës.
+Gjithashtu do të marr disa shembuj se si aplikohet në kod që të kuptohet më lehtë në mënyr që ti ta aplikosh në projektin tënd.
 
 
 ### Definicioni
@@ -20,14 +20,13 @@ Ky model bën pjesë në kategorinë e modeleve te strukturimit të kodit.
 
 
 ### Qellimi
-Pse duhet të përdorim këtë model dhe çfar problemi na mundëson që të zgjedhim.
+Pse duhet të përdorim këtë model dhe çfar problemi na mundëson që të zgjedhim?  
 Disa nga opcionet ku mund ta përdorim këtë model jan:
 1. Nëse klasa egzistuese ka nevoj të përdoret edhe pse kemi nevoj për ndryshim të logjikës.
-2. Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti sillet ose jep rezultat.
+2. Nëse dëshirojmë të shtojmë validim të inputit ose menaxhim të problemeve.
+3. Nëse kodi i vjetër e përdor logjikën që egziston dhe kemi nevoj që ta ndryshojmë se si objekti sillet ose jep rezultat.
+4. Shtimi i logjikës së regjistrimit ose raportit (eng. Logging)
 
-
-### Aplikimi
-Ta marrim shembull qe dojme ta krijojme një program do të automatizoj shtuarjen e ekstrave në një piza. 
 
 ### UML Diagrami
 ![UML diagrami i modelit strategji](../assets/diagrams/decorator_pattern.png)
@@ -37,7 +36,6 @@ Ta marrim shembull qe dojme ta krijojme një program do të automatizoj shtuarje
 ### Shembulli
 Ta zëmë që e kemi një pizeri dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në piza.
 P.SH nëse dojmë të shtojmë djathë, këpurdha, sallatë etj.
-Tash varet se cka 
 
 ### Shembull se si nuk duhet aplikuar
 
@@ -45,18 +43,21 @@ Tash varet se cka
 
 $userAskedFor = ['cheese', 'mushrooms'];
 
+//tipi
 interface Topping {
   public function add(): void;
 }
 
+//shtesa e parë
 class DefaultTopping implements Topping 
 { 
   public function add(): void 
   {
-    echo "Adding Default toppings <br>";
+    echo "Adding Spices and Ketchup <br>";
   }
 }
 
+//shtesa e dytë
 class TomatoTopping implements Topping
 {
   private Topping $topping;
@@ -71,6 +72,7 @@ class TomatoTopping implements Topping
   }
 }
 
+//shtesa e tretë
 class CheeseTopping implements Topping
 {
   private Topping $topping;
@@ -85,6 +87,7 @@ class CheeseTopping implements Topping
   }
 }
 
+//shtesa e katërt
 class MushroomTopping implements Topping
 {
   private Topping $topping;
@@ -99,6 +102,7 @@ class MushroomTopping implements Topping
   }
 }
 
+//implementimi në klient
 $toppings = new DefaultTopping();
 
 if (in_array('cheese', $userAskedFor)) {
@@ -112,56 +116,18 @@ if (in_array('mushrooms', $userAskedFor)) {
 $toppings->add();
 
 /**
----------------- OUTPUT 
+---------------- REZULTATI
 
-Adding Default toppings
+Adding Spices and Ketchup
 Adding Cheese
 Adding Mushrooms
 
 */
 ```
 
---- english  AI
+Kjo është një shembull tjetër i marrur nga interneti ku implementimi i klasës `Car` është aplikuar, pastaj kan ardhur veturat e tjera si vetur sportive, limozinë etj.
 
-### How to Use Decorator Pattern in Design Patterns for Better Code Management.
-Design patterns can be a great way to improve code management and reduce the number of bugs and errors. One of the most popular patterns is the decorator pattern, which enables you to add new functionality to an object without changing its original code. This article will introduce you to this pattern and some of its uses in designing coding. It will also provide some examples that give a better understanding on how this pattern might work in your own project. So what are you waiting for? Let’s dive right in!
-
-
-What Is the Decorator Pattern?
-The decorator pattern is a software design pattern, which can be applied to objects at runtime. It was first introduced by the “Gang of Four” in their book “Design Patterns: Elements of Reusable Object-Oriented Software.” The intent of this design pattern is to extend existing functionality without modifying the original code. It allows for new functionality to be added without having to change the code or interface of the original object. This way, it’s really easy to create your own customized features without altering any other part of the program.
-
-
-When to Use the Decorator Pattern
-The decorator pattern is a powerful tool for code management. It allows you to add new functionality to an object without changing its original code. You can think of it as a way to wrap objects or classes with other objects or classes.
-
-Decorators are often used in the following cases:
-
-- Adding logging and debugging information to an object
-
-- Adding validation and error checking
-
-- Adding specific routing rules for a URL
-
-- Supervising the lifetime of your application
-
-The Decorator Pattern is most useful when you need to wrap objects or classes with other objects or classes that provide different behavior. One such case is when you need to add logging and debugging information to an object like this:
-
-public class Car { } // This is our basic car class.    // Now imagine we want to use the decorator pattern on this car object, so we can log it's activity by adding a Decorator public class LoggerCarDecorator extends Car{ public LoggerCarDecorator(Car original){ super(original); } @Override public void stop() { System.out.println("Stopped"); } @Override public void start() { System.out.println("Started"); } } // We can now create a new instance of LoggerCarDecorator with the constructor Car newLoggerCar = new LoggerCarDecorator(new Car()); newLoggerCar.start();// "Started" would be
-
-
-The Implementation of the Decorator Pattern
-This pattern is often used in cases where you need to add new functionality to an object without changing its code. For example, let's say you have a function that calculates the area of a triangle. You might want to use this function to calculate the area of other shapes too, but don't know how to do it.
-
-One way would be to use inheritance, using a base class for calculating areas and another class inheriting from it for other shapes. Though this is possible, there are cases when you just want to add functionality without modifying the original code. This is where decorators come in handy.
-
-A decorator derives from the same class as the object being decorated and adds its own functionality by overriding or wrapping other methods. You can then 'decorate' any object with this decoration by calling the constructor of your decorator class with the original object as an argument.
-
-
-Example of the Decorator Pattern in Code
-The following example demonstrates how the decorator pattern can be used.
-
-
-
+```java
 public class Car { public void Drive() { Console.WriteLine("Car is driving"); } }
 
 public class SportsCar : Car { public override void Drive() { Console.WriteLine("Sports car is driving"); } }
@@ -171,13 +137,15 @@ public class Limousine : Car { public override void Drive() { Console.WriteLine(
 public class Van : Car { public override void Drive() { Console.WriteLine("Van is driving"); } }
 
 var cars = new List
+```
 
+### Përmbledhja
+Modeli dekorues të mundëson të shtosh logjik në objektet egzistuese, pa pasur nevojë ta ndryshosh objektin egzistues.
+Është zgjidhje e lehtë dhe elegante, nuk ki me hup kohë me mendu për zgjidhje tjera sepse identifikohet shum lehtë se ku aplikohet.   
 
-Conclusion
-The decorator pattern is a powerful software design pattern that allows you to add functionality to an existing class without having to subclass the original class and create a new instance.
+Pra herën tjetër kur të bjen me shtu logjikë në një klasë, mendo për modelin dekorues edhe shihe se a mund ta aplikosh.   
 
-The power of this pattern lies in the fact that you can extend an existing object and add additional functionality without changing the original code.
+Një nga këshillat për të pasur kod më të organizuar dhe më të kjartë është që, kodi të mbahet i vogël dhe i ndarë në klasa dhe metoda adekuate.
+Emërtimi të jet i thjeshtë dhe me kuptim të plotë. P.SH Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajm `Shumzuesi` sesa `Kalkulatori` sepse kalkulatori përmbanë më shum se një logjik, andaj për ta kuptuar se çka kryen ajo klasë duhet ta hapim kodin dhe të shohim se çka kryen.
 
-It’s a simple and elegant solution that can save time and effort, while still achieving your desired result.
-
-So, next time you need to add functionality to an existing object, why not consider the decorator pattern?
+[Ja një libër shum i mirë ku autori dhe disa nga krijuesit e gjuhëve programuese c# kanë shprehur mendim në këtë libër.](https://www.amazon.de/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?adgrpid=1195169790325301&hvadid=74698212755372&hvbmt=be&hvdev=c&hvlocphy=127338&hvnetw=o&hvqmt=e&hvtargid=kwd-74698309079548%3Aloc-72&hydadcr=3707_1873341&keywords=clean+coding&qid=1643633753&sr=8-1)
