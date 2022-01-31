@@ -1,12 +1,12 @@
 [
   
     {
-      "title"    : "Si të përdorni Docker Compose?",
-      "description" : "",
+      "title"    : "Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.",
+      "description" : "Modelet e strukturimit të kodit, Modeli dekorues",
       "category" : "",
-      "tags"     : "Docker-compose,, php,, mysql",
-      "url"      : "//2022/01/si-te-perdorim-docker-compose",
-      "date"     : "2022-01-13 11:12:00 +0100"
+      "tags"     : "Design, Patterns, Decorator",
+      "url"      : "//2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues",
+      "date"     : "2022-01-25 09:15:20 +0100"
     } ,
   
     {
@@ -16,15 +16,6 @@
       "tags"     : "Docker, php",
       "url"      : "//2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker",
       "date"     : "2022-01-11 11:12:00 +0100"
-    } ,
-  
-    {
-      "title"    : "Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.",
-      "description" : "Modelet e strukturimit të kodit, Modeli dekorues",
-      "category" : "",
-      "tags"     : "Design, Patterns, Decorator",
-      "url"      : "//2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues",
-      "date"     : "2021-12-31 09:15:20 +0100"
     } ,
   
     {

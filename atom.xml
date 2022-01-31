@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-26T22:14:36+01:00</updated>
+ <updated>2022-01-31T14:02:59+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -13,184 +13,149 @@
 
  
  <entry>
-   <title>Si të përdorni Docker Compose?</title>
-   <link href="https://programerat.github.io//2022/01/si-te-perdorim-docker-compose"/>
-   <updated>2022-01-13T11:12:00+01:00</updated>
-   <id>https://programerat.github.io/2022/01/Si-te-perdorim-docker-compose</id>
-   <content type="html">&lt;p&gt;Në &lt;a href=&quot;https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker&quot;&gt;artikullin e parë&lt;/a&gt;, kemi bërë një prezantim të shkurtër qfarë është Docker, si mund të instaloni si dhe si mund të konfiguroni Docker për një aplikacion bazik në PHP.
-Në këtë artikull do të tregojm si mund të përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjesht në PHP që do të komunikojë me MySQL.&lt;/p&gt;
+   <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.</title>
+   <link href="https://programerat.github.io//2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues"/>
+   <updated>2022-01-25T09:15:20+01:00</updated>
+   <id>https://programerat.github.io/2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues</id>
+   <content type="html">&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
+Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
 
-&lt;h3 id=&quot;docker-compose&quot;&gt;Docker Compose&lt;/h3&gt;
-&lt;p&gt;Në arikullin e kaluar mësuam si të krijojm një Dockerfile dhe që përmes komandave &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker build&lt;/code&gt; dhe &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run&lt;/code&gt; mund të ndërtojmë dhe të ekzekutojm një kontejnerë. Mirpo nëse duhet të ekzekutoni më shumë se një kontejnerë? Atëherë të ekzekutojmë këto komanda do të jetë e lodhshme.&lt;/p&gt;
+&lt;p&gt;Qëllimi i këtij artikulli është që të shpjegoj se si përdoret ky model dhe si të aplikohet në dizajn.
+Gjithashtu do të marr disa shembuj se si aplikohet në kod që të kuptohet më lehtë në mënyr që ti ta aplikosh në projektin tënd.&lt;/p&gt;
 
-&lt;p&gt;Për këtë ju mund të kosideroni të përdorni Compose, një skedarë që përmbanë një bashkësi të instruksioneve, komandave për të përformuar një operim/veprim/funksionim.&lt;/p&gt;
+&lt;h3 id=&quot;definicioni&quot;&gt;Definicioni&lt;/h3&gt;
+&lt;p&gt;Modeli dekorues është ashtu si edhe tingëllon, është një model ose klasë që e dekoron një objekt pa patur nevojë të bëjmë ndryshime në klasën egzistuese.&lt;br /&gt;
+Ky model bën pjesë në kategorinë e modeleve te strukturimit të kodit.&lt;/p&gt;
 
-&lt;p&gt;Ashtu siq kemi krijuar Dockerfile për të definuar se si mund të duket një imazh, ne po ashtu mund të krijojm një &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; skedarë ku mund të kemi imazhet që duam të përdorim, si dhe parametrat e komandave të docker ekzekutimit dhe të ndërtimit. Për të kuptuar më mirë do të marim një shembull duke krijuar skedarin tonë të parë &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Së parim hapeni terminalin tuaj dhe shikoni versionin e docker compose në makinën tuaj duke shkruar këtë komand.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose --version&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker-compose-v.png&quot; alt=&quot;dockerComposeVersion&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Do të krijojmë një skedar bazik të docker compose, për shembullin në artikullin e parë.&lt;/p&gt;
-
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3'&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;website&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php-demo&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/src/index.php:/var/www/html/&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#check volumes&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8000:80&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;qellimi&quot;&gt;Qellimi&lt;/h3&gt;
+&lt;p&gt;Pse duhet të përdorim këtë model dhe çfar problemi na mundëson që të zgjedhim?&lt;br /&gt;
+Disa nga opcionet ku mund ta përdorim këtë model jan:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Në reshtin parë &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version&lt;/code&gt; duhet të shkruani versionin e docker compose.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services&lt;/code&gt; përmbanë një list të gjitha veglave/serviset që keni për qëllim të ekzekutoni. Unë e kam emruar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;website&lt;/code&gt; për arsyje se kemi me printu një titull në shfletues, por ju mund të emroni edhe ndryshe, nuk ka rëndsi. Duhet të mbani mend se këtë emer do ta përdorim për të komunikuar me kontejner të tjerë.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;container_name&lt;/code&gt; këtu duhet të emroni emrin e kontejnerit. 4. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image&lt;/code&gt; duhet të vendosni emrin e imazhit.&lt;/li&gt;
-  &lt;li&gt;Nër seksioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build&lt;/code&gt; ju shihni se kemi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;context&lt;/code&gt; që do të thot është duke shikuar për &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;. Pra duhet të shkruani direktoriumin se ku gjendet &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; i juaji.&lt;/li&gt;
+  &lt;li&gt;Nëse klasa egzistuese ka nevoj të përdoret edhe pse kemi nevoj për ndryshim të logjikës.&lt;/li&gt;
+  &lt;li&gt;Nëse dëshirojmë të shtojmë validim të inputit ose menaxhim të problemeve.&lt;/li&gt;
+  &lt;li&gt;Nëse kodi i vjetër e përdor logjikën që egziston dhe kemi nevoj që ta ndryshojmë se si objekti sillet ose jep rezultat.&lt;/li&gt;
+  &lt;li&gt;Shtimi i logjikës së regjistrimit ose raportit (eng. Logging)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Skedari i juaj docker-compose.yml është gati dhe treguam për secilin seksion qka duhet të shkruajm. Përpara se të ekzekutoni është mirë të shikojm nëse konfigurimi në skedarin tonë është në rregull duke ekzekutuar në terminal komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose config&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;uml-diagrami&quot;&gt;UML Diagrami&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/diagrams/decorator_pattern.png&quot; alt=&quot;UML diagrami i modelit strategji&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Take screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/diagrams/wikipedia_decorator_pattern.jpg&quot; alt=&quot;Diagrami i huazuar nga wikipedia&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Siq shihet edhe në foton paraprake pra konfigurimet tona kan qenë në rregull. Tani mund të ekzekutojm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt; për të krijuar imazhin(nëse nuk ekziton) dhe për të krijuar kontejnerat.&lt;/p&gt;
+&lt;h3 id=&quot;shembulli&quot;&gt;Shembulli&lt;/h3&gt;
+&lt;p&gt;Ta zëmë që e kemi një pizeri dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në piza.
+P.SH nëse dojmë të shtojmë djathë, këpurdha, sallatë etj.&lt;/p&gt;
 
-&lt;p&gt;Screnshot.&lt;/p&gt;
+&lt;h3 id=&quot;shembull-se-si-nuk-duhet-aplikuar&quot;&gt;Shembull se si nuk duhet aplikuar&lt;/h3&gt;
 
-&lt;p&gt;Tash ne do të instalojm MySQL. Kam zgjedhur MySQL v8 ju mund të zgjedhni ndonjë version tjeter. Do të editojm  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; dhe do të shtojm konfigurimet për të instaluar MySQL.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3.1'&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql:8.0&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql-server&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;--default-authentication-plugin=mysql_native_password&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#        working_dir: /application&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;.:/application&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;restart&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;always&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_ROOT_PASSWORD=.test.&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_DATABASE=my_db&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_USER=db_user&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_PASSWORD=.mypwd&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8082:3306&quot;&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;website&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php-demo&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/src:/var/www/html&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8000:80&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Në këtë konfigurim ju mund të shihni se kemi shtu një seksion të ri &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;envrionment&lt;/code&gt; i cili përmbanë disa parametra që lidhen me lidhjen me serverin MySQL. 
-Porti i parazgjedhur 3306 është mapuar(eng. mapped) me portin 8082. Seksioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;restart: always&lt;/code&gt; nënkupton kurdo që fillon kontejneri, MyQL do të filloj po ashtu.
-Mund të keni vrejtur se kemi shtuar edhe seksioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;depends_on&lt;/code&gt;, kjo nënkupton për të filluar servisi PHP, duhet të filloj së pari serveri MySQL.&lt;/p&gt;
-
-&lt;p&gt;Duhet të bëjm disa ndryshime në Dockerfile, ku do të shtojm konfigurime për instalimin e MySQL.&lt;/p&gt;
-
-&lt;div class=&quot;language-Dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; php:8.0-apache&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#Install git&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apt-get update &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;docker-php-ext-install pdo pdo_mysql mysqli
-&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; src/ /var/www/html/&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;EXPOSE&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; 80&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Ju duhet të instaloni një paket menagjuse për të ekzekutuar komandat e juaja mbrenda kontejnerit.
-Psh. apt-get është një paket menagjuse që ndihmon në trajtimin e paketave në Linux. Si dhe duhet të instaloni Git.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Për më shumë detaje për paketa menagjuse ju lutem lexoni më shumë. ## shto linkun&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Kemi instaluar PHP extension si dhe MySQL. Në këtë rast docker ofron &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-php-ext-install&lt;/code&gt; për te instaluar shtesat për PHP.
-Nese deshironi mund te instaloni edhe PHP Composer(shto linkun) e dim që është një paket menagjuse për PHP.&lt;/p&gt;
-
-&lt;p&gt;Për të implementuar ndryshimet qe i kemi bërë në Dockerfile ne duhet të ekzekutojm komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up --build&lt;/code&gt;. Nëse nuk e shtojm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--build&lt;/code&gt; docker-compose do të pranoj(access) imazhin i cili është shkarkuar më parë dhe konfigurimet e saj.&lt;/p&gt;
-
-&lt;p&gt;Nëse shkoni në shleftues localhost:8080 mund të shihni se të gjitha shtesat per mysql janë instaluar.&lt;/p&gt;
-
-&lt;p&gt;Ndoshta jeni duke pytur veten se si mund të shohim nëse është instaluar git si dhe nëse është duke ekzekutuar/running mysql?&lt;/p&gt;
-
-&lt;h4 id=&quot;lidhshmëria-në-mes-kontejnerëve-në-docker&quot;&gt;Lidhshmëria në mes kontejnerëve në Docker&lt;/h4&gt;
-&lt;p&gt;Tash do të shohim si është bërë lidhshmëria në mes kontejnerëve në Docker.&lt;/p&gt;
-
-&lt;p&gt;Përmendëm më lart se Docker na lejon me i ekzekutu komadat në kotejnerin që kemi krijuar dhe këtë mund ta bëjm duke ekzekutar komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec&lt;/code&gt;. 
-Vihet pytja si mund të kyqem në MySQL? 
-Së pari ne duhet të dijm emrin e imazhit për MySQL, dhe këtë informat e marin duke ekzekutuar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker ps -a&lt;/code&gt; në terminal.&lt;/p&gt;
-
-&lt;p&gt;Shikoni konfigurimet në docker-compose.yml që kemi bërë dhe e shihni që emrin e kontejnerit kemi vendos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql-server-80&lt;/code&gt;. 
-Dhe përgjigjen e pytjës që bëm mund ta marrim duke ekzekutuar këtë kommand në terminal:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -it mysql-server-80 bash -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-it&lt;/code&gt; –&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;Take screenshot.&lt;/p&gt;
-
-&lt;p&gt;Tash jemi mrena kontejnerit, na lejohet të shkruajm komanda të Linux pasi kemi instaluar paketen menagjuse apt-get.
-Shkruani komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ls&lt;/code&gt; ose qfar do komande tjetër.&lt;/p&gt;
-
-&lt;p&gt;Takse screenshot.
-Për tu kyqyr në databazë duhet të shkruani këtë komand.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql -u root -p&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-u&lt;/code&gt; -&amp;gt; user
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; -&amp;gt; password&lt;/p&gt;
-
-&lt;p&gt;Nëse doni me i pa databazat, duhet të shkruani në terminalin tuaj &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;show databases&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pra ktu treguam se si mund të shohim si është duke ekzekutar MySQL brenda Docker. Por si mund të interakt MySQL jasht docker? Si mund të konektohet MySQL client me MySQL server mbrenda kontejner? Këtë lidhje mund ta bëjm nëse bëjm port forwarding.&lt;/p&gt;
-
-&lt;p&gt;Së pari duhet të dijm id e kontejnerit si dhe portin dhe këto informata mund të gjejm duke ekzekutuar kommanden &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker ps -a&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Take screenshot.
-Mund të shihni se si Porti është percjell si dhe në cilin IP.
-Në rastin ton kemi 0.0.0:8082-&amp;gt;3306/tcp.
-Pra 0.0.0 është host dhe porti është 8082.&lt;/p&gt;
-
-&lt;p&gt;Një komand tjeter se si mund të shihni portin e një kontejnerit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker port 354675757456(containerid)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;interaksioni-në-mes-disa-kontejnerve-në-docker&quot;&gt;Interaksioni në mes disa kontejnerve në Docker&lt;/h4&gt;
-&lt;p&gt;Pra kuptuam se si docker mund të kominikoj jasht, por cfar nëse kontejnerët duhet me interakt mes vete?&lt;/p&gt;
-
-&lt;p&gt;Një mënyr është të lidhemi(konektohemi) nëpermes IP së brendshme. Këtë mund të shihni duke shkruar komandën në terminalin tuaj &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker inspect [container-id]&lt;/code&gt;, ky container-id është ID e kontejnerit për MySQL.&lt;/p&gt;
-
-&lt;p&gt;Tash do të editojm index.php dhe të shkruajm kodin për të bërë lidhjen me databazë.&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;mysqli&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mysql&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my_db&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Check connection&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Connection failed: &quot;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//tipi&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;nv&quot;&gt;$sql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;SELECT name FROM users&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_rows&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;// output data of each row&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch_assoc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0 results&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//shtesa e parë&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Adding Spices and Ketchup &amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//shtesa e dytë&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TomatoTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Tomatoes &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//shtesa e tretë&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CheeseTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Cheese &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//shtesa e katërt&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MushroomTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Mushrooms &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//implementimi në klient&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CheeseTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MushroomTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;cd&quot;&gt;/**
+---------------- REZULTATI
+
+Adding Spices and Ketchup
+Adding Cheese
+Adding Mushrooms
+
+*/&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Nëse doni të ndalni docker-compose, atëher duhet të shkruani këtë komand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose down&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Kjo është një shembull tjetër i marrur nga interneti ku implementimi i klasës &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Car&lt;/code&gt; është aplikuar, pastaj kan ardhur veturat e tjera si vetur sportive, limozinë etj.&lt;/p&gt;
 
-&lt;h2 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h2&gt;
-&lt;p&gt;Në këtë artikull mësuam se si mund të konfigurojm mjesdise të shumëfishta me ndihmën e docker.&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Drive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Car is driving&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SportsCar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Drive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sports car is driving&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Limousine&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Drive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Limousine is driving&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Van&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Drive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Van is driving&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;përmbledhja&quot;&gt;Përmbledhja&lt;/h3&gt;
+&lt;p&gt;Modeli dekorues të mundëson të shtosh logjik në objektet egzistuese, pa pasur nevojë ta ndryshosh objektin egzistues.
+Është zgjidhje e lehtë dhe elegante, nuk ki me hup kohë me mendu për zgjidhje tjera sepse identifikohet shum lehtë se ku aplikohet.&lt;/p&gt;
+
+&lt;p&gt;Pra herën tjetër kur të bjen me shtu logjikë në një klasë, mendo për modelin dekorues edhe shihe se a mund ta aplikosh.&lt;/p&gt;
+
+&lt;p&gt;Një nga këshillat për të pasur kod më të organizuar dhe më të kjartë është që, kodi të mbahet i vogël dhe i ndarë në klasa dhe metoda adekuate.
+Emërtimi të jet i thjeshtë dhe me kuptim të plotë. P.SH Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shumzuesi&lt;/code&gt; sesa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Kalkulatori&lt;/code&gt; sepse kalkulatori përmbanë më shum se një logjik, andaj për ta kuptuar se çka kryen ajo klasë duhet ta hapim kodin dhe të shohim se çka kryen.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.de/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?adgrpid=1195169790325301&amp;amp;hvadid=74698212755372&amp;amp;hvbmt=be&amp;amp;hvdev=c&amp;amp;hvlocphy=127338&amp;amp;hvnetw=o&amp;amp;hvqmt=e&amp;amp;hvtargid=kwd-74698309079548%3Aloc-72&amp;amp;hydadcr=3707_1873341&amp;amp;keywords=clean+coding&amp;amp;qid=1643633753&amp;amp;sr=8-1&quot;&gt;Ja një libër shum i mirë ku autori dhe disa nga krijuesit e gjuhëve programuese c# kanë shprehur mendim në këtë libër.&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -372,186 +337,6 @@ Qëllimi i ketij tutoriali të shkurtër është të paketojmë një Aplikacion 
 
 &lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
 &lt;p&gt;Në këtë artikull, ne kemi diskutuar se si të paketojmë një PHP aplikacion bazik. Nëse keni ndonjë pyetje ose feedback ju lutem ndjehuni të lirë të postoni më poshtë. 👇&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern) për menagjim më të mirë të kodit.</title>
-   <link href="https://programerat.github.io//2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues"/>
-   <updated>2021-12-31T09:15:20+01:00</updated>
-   <id>https://programerat.github.io/2021/12/modelet-e-strukturimit-te-kodit-modeli-dekorues</id>
-   <content type="html">&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
-Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
-
-&lt;p&gt;Qëllimi i këtij artikulli është që të shpjegoj se si përdoret ky model dhe si të aplikohet në dizajn.
-Gjithashtu do të marr disa shembuj se si aplikohet në kod që të kuptohet më lehtë në mënyr që ti ta aplikosh në projektin tënd. Hajde ti hijmë punës.&lt;/p&gt;
-
-&lt;h3 id=&quot;definicioni&quot;&gt;Definicioni&lt;/h3&gt;
-&lt;p&gt;Modeli dekorues është ashtu si edhe tingëllon, është një model ose klasë që e dekoron një objekt pa patur nevojë të bëjmë ndryshime në klasën egzistuese.&lt;br /&gt;
-Ky model bën pjesë në kategorinë e modeleve te strukturimit të kodit.&lt;/p&gt;
-
-&lt;h3 id=&quot;qellimi&quot;&gt;Qellimi&lt;/h3&gt;
-&lt;p&gt;Pse duhet të përdorim këtë model dhe çfar problemi na mundëson që të zgjedhim.
-Disa nga opcionet ku mund ta përdorim këtë model jan:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Nëse klasa egzistuese ka nevoj të përdoret edhe pse kemi nevoj për ndryshim të logjikës.&lt;/li&gt;
-  &lt;li&gt;Nëse kodi i vjetër dhe kemi nevoj që ta ndryshojmë se si objekti sillet ose jep rezultat.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;aplikimi&quot;&gt;Aplikimi&lt;/h3&gt;
-&lt;p&gt;Ta marrim shembull qe dojme ta krijojme një program do të automatizoj shtuarjen e ekstrave në një piza.&lt;/p&gt;
-
-&lt;h3 id=&quot;uml-diagrami&quot;&gt;UML Diagrami&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/diagrams/decorator_pattern.png&quot; alt=&quot;UML diagrami i modelit strategji&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/diagrams/wikipedia_decorator_pattern.jpg&quot; alt=&quot;Diagrami i huazuar nga wikipedia&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;shembulli&quot;&gt;Shembulli&lt;/h3&gt;
-&lt;p&gt;Ta zëmë që e kemi një pizeri dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në piza.
-P.SH nëse dojmë të shtojmë djathë, këpurdha, sallatë etj.
-Tash varet se cka&lt;/p&gt;
-
-&lt;h3 id=&quot;shembull-se-si-nuk-duhet-aplikuar&quot;&gt;Shembull se si nuk duhet aplikuar&lt;/h3&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; 
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Adding Default toppings &amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TomatoTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Tomatoes &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CheeseTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Cheese &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MushroomTopping&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Topping&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Topping&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$topping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' Adding Mushrooms &amp;lt;br&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CheeseTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MushroomTopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$toppings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;cd&quot;&gt;/**
----------------- OUTPUT 
-
-Adding Default toppings
-Adding Cheese
-Adding Mushrooms
-
-*/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;— english  AI&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-use-decorator-pattern-in-design-patterns-for-better-code-management&quot;&gt;How to Use Decorator Pattern in Design Patterns for Better Code Management.&lt;/h3&gt;
-&lt;p&gt;Design patterns can be a great way to improve code management and reduce the number of bugs and errors. One of the most popular patterns is the decorator pattern, which enables you to add new functionality to an object without changing its original code. This article will introduce you to this pattern and some of its uses in designing coding. It will also provide some examples that give a better understanding on how this pattern might work in your own project. So what are you waiting for? Let’s dive right in!&lt;/p&gt;
-
-&lt;p&gt;What Is the Decorator Pattern?
-The decorator pattern is a software design pattern, which can be applied to objects at runtime. It was first introduced by the “Gang of Four” in their book “Design Patterns: Elements of Reusable Object-Oriented Software.” The intent of this design pattern is to extend existing functionality without modifying the original code. It allows for new functionality to be added without having to change the code or interface of the original object. This way, it’s really easy to create your own customized features without altering any other part of the program.&lt;/p&gt;
-
-&lt;p&gt;When to Use the Decorator Pattern
-The decorator pattern is a powerful tool for code management. It allows you to add new functionality to an object without changing its original code. You can think of it as a way to wrap objects or classes with other objects or classes.&lt;/p&gt;
-
-&lt;p&gt;Decorators are often used in the following cases:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding logging and debugging information to an object&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding validation and error checking&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding specific routing rules for a URL&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Supervising the lifetime of your application&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Decorator Pattern is most useful when you need to wrap objects or classes with other objects or classes that provide different behavior. One such case is when you need to add logging and debugging information to an object like this:&lt;/p&gt;
-
-&lt;p&gt;public class Car { } // This is our basic car class.    // Now imagine we want to use the decorator pattern on this car object, so we can log it’s activity by adding a Decorator public class LoggerCarDecorator extends Car{ public LoggerCarDecorator(Car original){ super(original); } @Override public void stop() { System.out.println(“Stopped”); } @Override public void start() { System.out.println(“Started”); } } // We can now create a new instance of LoggerCarDecorator with the constructor Car newLoggerCar = new LoggerCarDecorator(new Car()); newLoggerCar.start();// “Started” would be&lt;/p&gt;
-
-&lt;p&gt;The Implementation of the Decorator Pattern
-This pattern is often used in cases where you need to add new functionality to an object without changing its code. For example, let’s say you have a function that calculates the area of a triangle. You might want to use this function to calculate the area of other shapes too, but don’t know how to do it.&lt;/p&gt;
-
-&lt;p&gt;One way would be to use inheritance, using a base class for calculating areas and another class inheriting from it for other shapes. Though this is possible, there are cases when you just want to add functionality without modifying the original code. This is where decorators come in handy.&lt;/p&gt;
-
-&lt;p&gt;A decorator derives from the same class as the object being decorated and adds its own functionality by overriding or wrapping other methods. You can then ‘decorate’ any object with this decoration by calling the constructor of your decorator class with the original object as an argument.&lt;/p&gt;
-
-&lt;p&gt;Example of the Decorator Pattern in Code
-The following example demonstrates how the decorator pattern can be used.&lt;/p&gt;
-
-&lt;p&gt;public class Car { public void Drive() { Console.WriteLine(“Car is driving”); } }&lt;/p&gt;
-
-&lt;p&gt;public class SportsCar : Car { public override void Drive() { Console.WriteLine(“Sports car is driving”); } }&lt;/p&gt;
-
-&lt;p&gt;public class Limousine : Car { public override void Drive() { Console.WriteLine(“Limousine is driving”); } }&lt;/p&gt;
-
-&lt;p&gt;public class Van : Car { public override void Drive() { Console.WriteLine(“Van is driving”); } }&lt;/p&gt;
-
-&lt;p&gt;var cars = new List&lt;/p&gt;
-
-&lt;p&gt;Conclusion
-The decorator pattern is a powerful software design pattern that allows you to add functionality to an existing class without having to subclass the original class and create a new instance.&lt;/p&gt;
-
-&lt;p&gt;The power of this pattern lies in the fact that you can extend an existing object and add additional functionality without changing the original code.&lt;/p&gt;
-
-&lt;p&gt;It’s a simple and elegant solution that can save time and effort, while still achieving your desired result.&lt;/p&gt;
-
-&lt;p&gt;So, next time you need to add functionality to an existing object, why not consider the decorator pattern?&lt;/p&gt;
 </content>
  </entry>
  
