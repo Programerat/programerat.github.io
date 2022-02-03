@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-01-31T14:12:20+01:00</updated>
+ <updated>2022-02-03T19:16:51+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -156,6 +156,181 @@ Adding Mushrooms
 Emërtimi të jet i thjeshtë dhe me kuptim të plotë. P.SH Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shumzuesi&lt;/code&gt; sesa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Kalkulatori&lt;/code&gt; sepse kalkulatori përmbanë më shum se një logjik, andaj për ta kuptuar se çka kryen ajo klasë duhet ta hapim kodin dhe të shohim se çka kryen.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.amazon.de/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?adgrpid=1195169790325301&amp;amp;hvadid=74698212755372&amp;amp;hvbmt=be&amp;amp;hvdev=c&amp;amp;hvlocphy=127338&amp;amp;hvnetw=o&amp;amp;hvqmt=e&amp;amp;hvtargid=kwd-74698309079548%3Aloc-72&amp;amp;hydadcr=3707_1873341&amp;amp;keywords=clean+coding&amp;amp;qid=1643633753&amp;amp;sr=8-1&quot;&gt;Ja një libër shum i mirë ku autori dhe disa nga krijuesit e gjuhëve programuese c# kanë shprehur mendim në këtë libër.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Si të përdorni Docker Compose?</title>
+   <link href="https://programerat.github.io//2022/01/si-te-perdorim-docker-compose"/>
+   <updated>2022-01-13T11:12:00+01:00</updated>
+   <id>https://programerat.github.io/2022/01/Si-te-perdorim-docker-compose</id>
+   <content type="html">&lt;p&gt;Në &lt;a href=&quot;https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker&quot;&gt;artikullin e parë&lt;/a&gt; kemi bërë një prezentim të shkurtër për të parë se qfarë është Docker, si mund ta instaloni dhe si mund ta konfiguroni Docker për një aplikacion bazik në PHP. Në këtë artikull do të tregojmë si mund ta përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjeshtë në PHP që do të komunikojë me MySQL.&lt;/p&gt;
+
+&lt;h3 id=&quot;docker-compose&quot;&gt;Docker Compose&lt;/h3&gt;
+&lt;p&gt;Në artikullin e kaluar mësuam si të krijojmë  një Dockerfile dhe që përmes komandave docker build dhe docker run mund të ndërtojmë dhe të ekzekutojmë një kontejner. Mirëpo nëse duhet të ekzekutoni më shumë se një kontejner? Atëherë të ekzekutojmë këto komanda do të jetë e lodhshme.&lt;/p&gt;
+
+&lt;p&gt;Për këtë, ju mund të përdorni Compose, një skedar që përmbanë një bashkësi të instruksioneve, komandave për të performuar një operim/veprim/funksionim.&lt;/p&gt;
+
+&lt;p&gt;Ashtu siq kemi krijuar Dockerfile për të definuar se si mund të duket një imazh, ne po ashtu mund të krijojmë një &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; skedar ku mund të kemi imazhet që duam të përdorim, si dhe parametrat e komandave të docker ekzekutimit dhe të ndërtimit. Për të kuptuar më mirë do të marrim një shembull duke krijuar skedarin tonë të parë &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Së pari hapeni terminalin tuaj dhe shikojeni versionin e docker compose në makinën tuaj duke shkruar këtë komand.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose --version&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker-compose-v.png&quot; alt=&quot;dockerComposeVersion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Do të krijojmë një skedar bazik të docker compose, për shembullin në artikullin e parë.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;website&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php-demo&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/src/index.php:/var/www/html/&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#check volumes&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8000:80&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;Në rreshtin parë version duhet të shkruani versionin e docker compose.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services&lt;/code&gt; përmbanë një listë të  të gjitha veglave/serviset që keni për qëllim të ekzekutoni. Unë e kam emëruar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;website&lt;/code&gt; për arsye se do printojmë një titull në shfletues, por ju mund ta emëroni edhe ndryshe, nuk ka rëndësi. Duhet të mbani mend se këtë emer do ta përdorim për të komunikuar me kontejner të tjerë.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;container_name&lt;/code&gt; këtu duhet të vendosni emrin e kontejnerit.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image&lt;/code&gt; duhet të vendosni emrin e imazhit.&lt;/li&gt;
+  &lt;li&gt;Nën seksioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build&lt;/code&gt; ju shihni se kemi (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;context&lt;/code&gt;) që do të thotë është duke kërkuar për Dockerfile. Pra duhet të shkruani direktoriumin se ku gjendet Dockerfile i juaj.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Skedari i juaj &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; është gati dhe – treguam për secilin seksion qka duhet të shkruajm.&lt;br /&gt;
+Përpara se të ekzekutoni është mirë të shikojm nëse konfigurimi në skedarin tonë është në rregull duke ekzekutuar në terminal komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose config&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;– Take screenshot.&lt;/p&gt;
+
+&lt;p&gt;Siq shihet edhe në foton paraprake pra konfigurimet tona kan qenë në rregull. Tani mund të ekzekutojm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt; për të krijuar imazhin(nëse nuk ekziton) dhe për të krijuar kontejnerat.&lt;/p&gt;
+
+&lt;p&gt;Screnshot.&lt;/p&gt;
+
+&lt;p&gt;Tani do të instalojmë  MySQL. Kam zgjedhur MySQL v8 ndërsa ju mund të zgjedhni edhe  ndonjë version tjetër. Do të editojmë &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; dhe do të shtojmë konfigurimet për të instaluar MySQL.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3.1'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql:8.0&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql-server&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;--default-authentication-plugin=mysql_native_password&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#        working_dir: /application&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;.:/application&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;restart&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;always&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_ROOT_PASSWORD=.test.&lt;/span&gt;
+          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_DATABASE=my_db&lt;/span&gt;
+          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_USER=db_user&lt;/span&gt;
+          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MYSQL_PASSWORD=.mypwd&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8082:3306&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;website&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php-demo&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/src:/var/www/html&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8000:80&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Në këtë konfigurim ju mund të shihni se kemi shtuar një seksion të ri &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;envrionment&lt;/code&gt; i cili përmbanë disa parametra që lidhen me serverin MySQL. Porti i parazgjedhur &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3306&lt;/code&gt; është mapuar(eng. mapped) me portin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8082&lt;/code&gt;. Seksioni restart: gjithmonë nënkupton kurdo që fillon kontejneri, MyQL do të fillojë po ashtu. Mund të keni vërejtur  se kemi shtuar edhe seksionin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;depends_on&lt;/code&gt;, kjo nënkupton që për të filluar servisi PHP, duhet sê pari të filloj serveri MySQL.&lt;/p&gt;
+
+&lt;p&gt;Duhet të bëjmë disa ndryshime në Dockerfile, ku do të shtojmë konfigurime për instalimin e MySQL.&lt;/p&gt;
+
+&lt;div class=&quot;language-Dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; php:8.0-apache&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Install git&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apt-get update &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;docker-php-ext-install pdo pdo_mysql mysqli
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; src/ /var/www/html/&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;EXPOSE&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; 80&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ju duhet të instaloni një paket menagjuse për të ekzekutuar komandat e juaja mbrenda kontejnerit. Psh. apt-get është një paket menagjuse që ndihmon në trajtimin e paketave në Linux. Si dhe duhet të instaloni Git.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Për më shumë detaje për paketa menagjuse ju lutem lexoni më shumë.  – shto linkun&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kemi instaluar PHP extension si dhe MySQL. Në këtë rast docker ofron docker-php-ext-install për te instaluar shtesat për PHP. Nese deshironi mund te instaloni edhe PHP Composer(shto linkun) e dim që është një paket menagjuse për PHP.&lt;/p&gt;
+
+&lt;p&gt;Për të implementuar ndryshimet qe i kemi bërë në Dockerfile ne duhet të ekzekutojm komandën docker-compose up –build. Nëse nuk e shtojm –build docker-compose do të pranoj(access) imazhin i cili është shkarkuar më parë dhe konfigurimet e saj.&lt;/p&gt;
+
+&lt;p&gt;Nëse shkoni në shleftues localhost:8080 mund të shihni se të gjitha shtesat per mysql janë instaluar.&lt;/p&gt;
+
+&lt;p&gt;Ndoshta jeni duke pytur veten se si mund të shohim nëse është instaluar git si dhe nëse është duke ekzekutuar/running mysql?&lt;/p&gt;
+
+&lt;h4 id=&quot;lidhshmëria-në-mes-kontejnerëve-në-docker&quot;&gt;Lidhshmëria në mes kontejnerëve në Docker&lt;/h4&gt;
+&lt;p&gt;Tash do të shohim si është bërë lidhshmëria në mes kontejnerëve në Docker.&lt;/p&gt;
+
+&lt;p&gt;Përmendëm më lart se Docker na lejon me i ekzekutu komadat në kotejnerin që kemi krijuar dhe këtë mund ta bëjm duke ekzekutar komandën docker exec. Vihet pytja si mund të kyqem në MySQL? Së pari ne duhet të dijm emrin e imazhit për MySQL, dhe këtë informat e marin duke ekzekutuar docker ps -a në terminal.&lt;/p&gt;
+
+&lt;p&gt;Shikoni konfigurimet në &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; që kemi bërë dhe e shihni që emrin e kontejnerit kemi vendos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql-server-80&lt;/code&gt;. Dhe përgjigjen e pytjës që bëm mund ta marrim duke ekzekutuar këtë kommand në terminal: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec -it mysql-server-80 bash -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;-it –&amp;gt; –&lt;/p&gt;
+
+&lt;p&gt;Take screenshot.&lt;/p&gt;
+
+&lt;p&gt;Tash jemi mrena kontejnerit, na lejohet të shkruajm komanda të Linux pasi kemi instaluar paketen menagjuse apt-get. Shkruani komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ls&lt;/code&gt; ose qfar do komande tjetër.&lt;/p&gt;
+
+&lt;p&gt;Takse screenshot.&lt;/p&gt;
+
+&lt;p&gt;Për tu kyqur në databazë duhet të shkruani këtë komand.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql -u root -p&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-u&lt;/code&gt; -&amp;gt; user
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; -&amp;gt; password&lt;/p&gt;
+
+&lt;p&gt;Nëse doni me i pa databazat, duhet të shkruani në terminalin tuaj &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;show databases&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pra ktu treguam se si mund të shohim si është duke ekzekutar MySQL brenda Docker. Por si mund të interakt MySQL jasht docker? Si mund të konektohet MySQL client me MySQL server mbrenda kontejner? Këtë lidhje mund ta bëjm nëse bëjm port forwarding.&lt;/p&gt;
+
+&lt;p&gt;Së pari duhet të dijm id e kontejnerit si dhe portin dhe këto informata mund të gjejm duke ekzekutuar kommanden docker ps -a.
+Take screenshot. Mund të shihni se si Porti është percjell si dhe në cilin IP.&lt;/p&gt;
+
+&lt;p&gt;Në rastin ton kemi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.0.0.0:8082-&amp;gt;3306/tcp&lt;/code&gt;. Pra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.0.0.0&lt;/code&gt; është host dhe porti është &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8082&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Një komand tjeter se si mund të shihni portin e një kontejnerit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker port 354675757456(containerid)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;interaksioni-në-mes-disa-kontejnerve-në-docker&quot;&gt;Interaksioni në mes disa kontejnerve në Docker&lt;/h4&gt;
+&lt;p&gt;Pra kuptuam se si docker mund të kominikoj jasht, por cfar nëse kontejnerët duhet me interakt mes vete?&lt;/p&gt;
+
+&lt;p&gt;Një mënyr është të lidhemi(konektohemi) nëpermes IP së brendshme. Këtë mund të shihni duke shkruar komandën në terminalin tuaj docker inspect [container-id], ky container-id është ID e kontejnerit për MySQL.&lt;/p&gt;
+
+&lt;p&gt;Tash do të editojm index.php dhe të shkruajm kodin për të bërë lidhjen me databazë.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;mysqli&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mysql&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my_db&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Check connection&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Connection failed: &quot;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$sql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;SELECT name FROM users&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_rows&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// output data of each row&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch_assoc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0 results&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Nëse doni të ndalni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose&lt;/code&gt;, atëher duhet të shkruani këtë komand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose down&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h2&gt;
+&lt;p&gt;Në këtë artikull mësuam se si mund të konfigurojm mjesdise të shumëfishta me ndihmën e docker.&lt;/p&gt;
 </content>
  </entry>
  
