@@ -1,10 +1,10 @@
 ---
 title:  "Si ta përdorim modelin dekorues (eng. Decorator Pattern)."
-date:   2022-01-25 08:15:20
+date:   2022-02-10 17:03:20
 description: "Modelet e strukturimit të kodit, Modeli dekorues, për menagjim më të mirë të kodit."
 tags: Design Patterns Decorator
 author: diarselimi
-archive: true
+archive: false
 ---
 
 Modelet e dizajnimit të kodit janë një mënyrë shumë e mirë për të përmirësuar  menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
@@ -140,10 +140,10 @@ var cars = new List
 
 ### Përmbledhja
 
-Modeli dekorues të mundësonë ta  shtoshë  logjikën  në objektet ekzistuese, pa pasur nevojë ta ndryshosh objektin ekzistues. Është zgjidhje e lehtë dhe elegante, nuk humb  kohë për të menduar  për zgjidhje të  tjera sepse identifikohet shumë lehtë se ku aplikohet.   
+Modeli dekorues të mundësonë ta shtojmë  logjikën  në objektet ekzistuese, pa pasur nevojë ta ndryshosh objektin ekzistues. Është zgjidhje e lehtë dhe elegante, nuk humb  kohë për të menduar  për zgjidhje të  tjera sepse identifikohet shumë lehtë se ku aplikohet.   
 
-Pra herën tjetër kur të shtoshë  logjikë në një klasë, mendo për modelin dekorues edhe shikoje  se a mund ta aplikosh.
-Një nga këshillat për të pasur kod më të organizuar dhe më të qartësuar është që kodi të mbahet i vogël dhe i ndarë në klasa dhe metoda adekuate. Emërtimi të jetë i thjeshtë dhe me kuptim të plotë.  
+Pra herën tjetër kur të shtoshë  logjikë në një klasë, mendo për modelin dekorues edhe shikoje se a mund ta aplikosh.
+Një nga këshillat për të pasur kod më të organizuar dhe më të qartësuar është që kodi të mbahet i vogël dhe i ndarë në klasa dhe metoda adekuate. Emërtimi të jetë i thjeshtë dhe me kuptim të plotë.   
 
 P.SH Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajmë shumëzuesi sesa Kalkulatori sepse kalkulatori përmbanë më shumë se një logjikë, andaj për ta kuptuar se çfarë kryen ajo klasë duhet ta hapim kodin dhe të shohim.
 
