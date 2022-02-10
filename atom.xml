@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-02-10T17:03:45+01:00</updated>
+ <updated>2022-02-10T17:04:31+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern).</title>
-   <link href="https://programerat.github.io//2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues"/>
-   <updated>2022-01-25T09:15:20+01:00</updated>
-   <id>https://programerat.github.io/2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues</id>
+   <link href="https://programerat.github.io//2022/02/modelet-e-strukturimit-te-kodit-modeli-dekorues"/>
+   <updated>2022-02-10T18:03:20+01:00</updated>
+   <id>https://programerat.github.io/2022/02/modelet-e-strukturimit-te-kodit-modeli-dekorues</id>
    <content type="html">&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyrë shumë e mirë për të përmirësuar  menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
 Njëra nga modelet më të përdorura është modeli Dekorues, i cili mundëson që të shtojmë logjikë në një objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
 
@@ -147,9 +147,9 @@ Adding Mushrooms
 
 &lt;h3 id=&quot;përmbledhja&quot;&gt;Përmbledhja&lt;/h3&gt;
 
-&lt;p&gt;Modeli dekorues të mundësonë ta  shtoshë  logjikën  në objektet ekzistuese, pa pasur nevojë ta ndryshosh objektin ekzistues. Është zgjidhje e lehtë dhe elegante, nuk humb  kohë për të menduar  për zgjidhje të  tjera sepse identifikohet shumë lehtë se ku aplikohet.&lt;/p&gt;
+&lt;p&gt;Modeli dekorues të mundësonë ta shtojmë  logjikën  në objektet ekzistuese, pa pasur nevojë ta ndryshosh objektin ekzistues. Është zgjidhje e lehtë dhe elegante, nuk humb  kohë për të menduar  për zgjidhje të  tjera sepse identifikohet shumë lehtë se ku aplikohet.&lt;/p&gt;
 
-&lt;p&gt;Pra herën tjetër kur të shtoshë  logjikë në një klasë, mendo për modelin dekorues edhe shikoje  se a mund ta aplikosh.
+&lt;p&gt;Pra herën tjetër kur të shtoshë  logjikë në një klasë, mendo për modelin dekorues edhe shikoje se a mund ta aplikosh.
 Një nga këshillat për të pasur kod më të organizuar dhe më të qartësuar është që kodi të mbahet i vogël dhe i ndarë në klasa dhe metoda adekuate. Emërtimi të jetë i thjeshtë dhe me kuptim të plotë.&lt;/p&gt;
 
 &lt;p&gt;P.SH Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajmë shumëzuesi sesa Kalkulatori sepse kalkulatori përmbanë më shumë se një logjikë, andaj për ta kuptuar se çfarë kryen ajo klasë duhet ta hapim kodin dhe të shohim.&lt;/p&gt;
