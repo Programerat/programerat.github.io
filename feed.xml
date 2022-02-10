@@ -10,25 +10,13 @@
         <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern).</title>
         
         
-          <description>&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyr shum e mirë për të përmirsuar menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
-Njëra nga modelet më të përdorura është modeli Dekorues, i cili të mundëson që të shtojmë logjikë në në objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
+          <description>&lt;p&gt;Modelet e dizajnimit të kodit janë një mënyrë shumë e mirë për të përmirësuar  menagjimin e kodit dhe për të zvogëluar numrin e gabimeve(eng. bugs).
+Njëra nga modelet më të përdorura është modeli Dekorues, i cili mundëson që të shtojmë logjikë në një objekt pa e ndryshuar implementimin origjinal të objektit.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 25 Jan 2022 09:15:20 +0100</pubDate>
         <link>https://programerat.github.io/2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues</link>
         <guid isPermaLink="true">https://programerat.github.io/2022/01/modelet-e-strukturimit-te-kodit-modeli-dekorues</guid>
-      </item>
-    
-      <item>
-        <title>Si të përdorni Docker Compose?</title>
-        
-        
-          <description>&lt;p&gt;Në &lt;a href=&quot;https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker&quot;&gt;artikullin e parë&lt;/a&gt; kemi bërë një prezentim të shkurtër për të parë se qfarë është Docker, si mund ta instaloni dhe si mund ta konfiguroni Docker për një aplikacion bazik në PHP. Në këtë artikull do të tregojmë si mund ta përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjeshtë në PHP që do të komunikojë me MySQL.&lt;/p&gt;
-</description>
-        
-        <pubDate>Thu, 13 Jan 2022 11:12:00 +0100</pubDate>
-        <link>https://programerat.github.io/2022/01/si-te-perdorim-docker-compose</link>
-        <guid isPermaLink="true">https://programerat.github.io/2022/01/si-te-perdorim-docker-compose</guid>
       </item>
     
       <item>
