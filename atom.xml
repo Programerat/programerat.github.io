@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-02-10T17:22:10+01:00</updated>
+ <updated>2022-02-10T17:22:31+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -26,7 +26,7 @@ Njëra nga modelet më të përdorura është modeli Dekorues, i cili mundëson 
 
 &lt;p&gt;Modeli dekorues është ashtu edhe si tingëllon, është një model ose klasë që e dekoron një objekt pa pasur  nevojë të bëjmë ndryshime në klasën ekzistuese.&lt;/p&gt;
 
-&lt;p&gt;Ky model bën pjesë në kategorinë e modeleve të strukturimit të kodit.&lt;/p&gt;
+&lt;p&gt;Ky model bën pjesë në kategorinë] e modeleve të strukturimit të kodit.&lt;/p&gt;
 
 &lt;h3 id=&quot;qëllimi&quot;&gt;Qëllimi&lt;/h3&gt;
 
