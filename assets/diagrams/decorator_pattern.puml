@@ -1,0 +1,37 @@
+@startuml
+!theme mars
+class Client {
+	...
+}
+
+interface Topping {
+	+ add()
+}
+
+class DefaultTopping {
+	+ add()
+}
+
+class CheeseTopping {
+	- Topping
+	+ add()
+}
+
+class TomatoTopping {
+	- Topping
+	+ add()
+}
+
+class MushroomsTopping {
+	- Topping
+	+ add()
+}
+
+
+Client <-- Topping
+Topping <-- DefaultTopping
+DefaultTopping <|-- TomatoTopping
+DefaultTopping <|-- MushroomsTopping
+DefaultTopping <|-- CheeseTopping
+
+@enduml
