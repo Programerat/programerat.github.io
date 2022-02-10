@@ -16,7 +16,7 @@ Qëllimi i këtij artikulli është të shpjegojë  se si përdoret ky model dhe
 
 Modeli dekorues është ashtu edhe si tingëllon, është një model ose klasë që e dekoron një objekt pa pasur  nevojë të bëjmë ndryshime në klasën ekzistuese. 
 
-Ky model bën pjesë në kategorinë e modeleve të strukturimit të kodit.
+Ky model bën pjesë në kategorinë] e modeleve të strukturimit të kodit.
 
 ### Qëllimi 
 
