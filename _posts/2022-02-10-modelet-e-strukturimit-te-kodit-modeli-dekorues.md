@@ -28,15 +28,15 @@ Nëse kodi i vjetër e përdor logjikën që ekziston dhe kemi nevojë  që ta n
 Shtimi i logjikës së regjistrimit ose raportit (eng. Logging)
 
 ### UML Diagrami
-![UML diagrami i modelit strategji](../assets/diagrams/decorator_pattern.png)
+![UML diagrami i modelit strategji](../../assets/diagrams/decorator_pattern.png)
 
-![Diagrami i huazuar nga wikipedia](../assets/diagrams/wikipedia_decorator_pattern.jpg)
+![Diagrami i huazuar nga wikipedia](../../assets/diagrams/wikipedia_decorator_pattern.jpg)
 
 
 ### Shembulli
 Ta zëmë që e kemi një piceri  dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në pica. P.SH nëse duam të shtojmë djathë, këpurdha, sallatë etj.
 
-### Shembull se si nuk duhet aplikuar
+### Shembull se si duhet aplikuar
 
 ```php
 
