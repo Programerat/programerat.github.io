@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-02-10T18:47:49+01:00</updated>
+ <updated>2022-02-11T09:24:33+01:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -38,14 +38,14 @@ Nëse kodi i vjetër e përdor logjikën që ekziston dhe kemi nevojë  që ta n
 Shtimi i logjikës së regjistrimit ose raportit (eng. Logging)&lt;/p&gt;
 
 &lt;h3 id=&quot;uml-diagrami&quot;&gt;UML Diagrami&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/diagrams/decorator_pattern.png&quot; alt=&quot;UML diagrami i modelit strategji&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/diagrams/decorator_pattern.png&quot; alt=&quot;UML diagrami i modelit strategji&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/diagrams/wikipedia_decorator_pattern.jpg&quot; alt=&quot;Diagrami i huazuar nga wikipedia&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/diagrams/wikipedia_decorator_pattern.jpg&quot; alt=&quot;Diagrami i huazuar nga wikipedia&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;shembulli&quot;&gt;Shembulli&lt;/h3&gt;
 &lt;p&gt;Ta zëmë që e kemi një piceri  dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në pica. P.SH nëse duam të shtojmë djathë, këpurdha, sallatë etj.&lt;/p&gt;
 
-&lt;h3 id=&quot;shembull-se-si-nuk-duhet-aplikuar&quot;&gt;Shembull se si nuk duhet aplikuar&lt;/h3&gt;
+&lt;h3 id=&quot;shembull-se-si-duhet-aplikuar&quot;&gt;Shembull se si duhet aplikuar&lt;/h3&gt;
 
 &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;nv&quot;&gt;$userAskedFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cheese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'mushrooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
