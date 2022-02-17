@@ -16,7 +16,7 @@ Qëllimi i këtij artikulli është të shpjegojë  se si përdoret ky model dhe
 
 Modeli dekorues është ashtu edhe si tingëllon, është një model ose klasë që e dekoron një objekt pa pasur  nevojë të bëjmë ndryshime në klasën ekzistuese. 
 
-Ky model bën pjesë në kategorinë] e modeleve të strukturimit të kodit.
+Ky model bën pjesë në kategorinë e modeleve të strukturimit të kodit.
 
 ### Qëllimi 
 
@@ -30,112 +30,96 @@ Shtimi i logjikës së regjistrimit ose raportit (eng. Logging)
 ### UML Diagrami
 ![UML diagrami i modelit strategji](../../assets/diagrams/decorator_pattern.png)
 
-![Diagrami i huazuar nga wikipedia](../../assets/diagrams/wikipedia_decorator_pattern.jpg)
+![Diagrami i huazuar nga wikipedia](../../assets/diagrams/decorator_pattern_wikipedia.jpeg)
 
 
 ### Shembulli
-Ta zëmë që e kemi një piceri  dhe dëshirojmë ta automatizojmë pjesën ku dëshirojmë të shtojmë ekstra shtesa në pica. P.SH nëse duam të shtojmë djathë, këpurdha, sallatë etj.
+Ta zëmë që jemi duke punuar me vetura, andaj kemi vetura elektrike dhe me benzinë.
+Më implementimin e më poshtëm e kemi implementuar pjesën për vetura elektrike por pas një kohe kërkohet që veturat elektrike të mund të mbushen edhe me super chargers.   
 
-### Shembull se si duhet aplikuar
+Tash për ne kjo nënkupton që duhet të supportojmë veturat që vetëm janë prodhuar por duhet që të shtojmë funksionalitet se si veturat të reja do të mbushen.
+
+### Aplikimi në kod
 
 ```php
 
-$userAskedFor = ['cheese', 'mushrooms'];
-
-//tipi
-interface Topping {
-  public function add(): void;
+interface ElectricCar {
+  function charge(int percentage): void;
+  function start(): bool;
 }
 
-//shtesa e parë
-class DefaultTopping implements Topping 
-{ 
-  public function add(): void 
+class TeslaModelOne implements ElectricCar {
+  
+  private const MIN_BATTERY_PERCENTAGE = 5;
+  private int $chargedPercentage = 0;
+
+  public function charge(int $percentage): void {
+    $this->chargedPercentage += $percentage;
+  }
+
+  public function start(): bool 
   {
-    echo "Adding Spices and Ketchup <br>";
+    return $this->batteryPercentage() > self::MIN_BATTERY_PERCENTAGE;
   }
 }
 
-//shtesa e dytë
-class TomatoTopping implements Topping
-{
-  private Topping $topping;
+// Ta zëjmë që vetëm e kemi të implementuar një dizajn si ky më lartë.
+// nëse kemi raste ku veturat elektrike do të jenë të paisura me mundësi mbushje të shpejtë
+
+class TeslaModelOneDecorator implements ElectricCar {
   
-  public function __construct(Topping $topping) {
-    $this->topping = $topping;  
+  private ElectricCar $car;
+
+  public function __construct(ElectricCar $car) {
+    $this->car = $car;
   }
-  
-  public function add(): void
+
+  public function superCharge(int $percentage): void {
+    $this->car->charge($percentage + $percentage);
+  } 
+
+  public function start(): bool
   {
-    echo $this->topping->add() . ' Adding Tomatoes <br>'; 
+    return $this->car->start();
   }
 }
 
-//shtesa e tretë
-class CheeseTopping implements Topping
-{
-  private Topping $topping;
-  
-  public function __construct(Topping $topping) {
-    $this->topping = $topping;  
-  }
-  
-  public function add(): void
-  {
-    echo $this->topping->add() . ' Adding Cheese <br>'; 
-  }
+// E shohim si e kemi shtuar metoden `superCharge` ku e shton funksionalitetin pa e ndryshuar klasën `TeslaModelOne`
+
+$tesla = new TeslaModelOneDecorator(new TeslaModelOne())
+$tesla->superCharge(20);
+
+if ($tesla->start()) {
+  echo "It is started!";
 }
-
-//shtesa e katërt
-class MushroomTopping implements Topping
-{
-  private Topping $topping;
-  
-  public function __construct(Topping $topping) {
-    $this->topping = $topping;  
-  }
-  
-  public function add(): void
-  {
-    echo $this->topping->add() . ' Adding Mushrooms <br>';  
-  }
-}
-
-//implementimi në klient
-$toppings = new DefaultTopping();
-
-if (in_array('cheese', $userAskedFor)) {
-  $toppings = new CheeseTopping($toppings);
-}
-
-if (in_array('mushrooms', $userAskedFor)) {
-  $toppings = new MushroomTopping($toppings);
-}
-
-$toppings->add();
-
-/**
----------------- REZULTATI
-
-Adding Spices and Ketchup
-Adding Cheese
-Adding Mushrooms
-
-*/
 ```
 
-Ky është një shembull tjetër i marrur nga interneti ku implementimi i klasës Car është aplikuar, pastaj kanë ardhur veturat e tjera si veturë sportive, limuzinë etj.
+Një shembull tjetër mund të jetë nëse dëshirojmë të egzekutojmë një komandë ku është mekanizmi i ri-egzekutimit (eng. Retry Mechanism).   
 
-```java
-public class Car { public void Drive() { Console.WriteLine("Car is driving"); } }
 
-public class SportsCar : Car { public override void Drive() { Console.WriteLine("Sports car is driving"); } }
+```php
+//Ta zëmë që e kemi një komand `CreateOrder`
+class CreateOrder implements Command {
+  public function execute(): void
+  {
+    //egzekuto hapat për të kryer punën
+  }
+}
 
-public class Limousine : Car { public override void Drive() { Console.WriteLine("Limousine is driving"); } }
 
-public class Van : Car { public override void Drive() { Console.WriteLine("Van is driving"); } }
+//Implementimi i dekoruesit do ta ket per detyr ta egzekutoj komanden nese kemi ndonje error 
+class CreateOrderWithRetryDecorator implements Command {
+  
+  public function __cosntruct(Command $command) {}
 
-var cars = new List
+  public function execute(): void {
+    try {
+      $this->command->execute();
+    } catch (Exception $e) {
+      $this->command->execute();
+    }
+  }
+}
 ```
 
 ### Përmbledhja
@@ -145,7 +129,7 @@ Modeli dekorues të mundësonë ta shtojmë  logjikën  në objektet ekzistuese,
 Pra herën tjetër kur të shtoshë  logjikë në një klasë, mendo për modelin dekorues edhe shikoje se a mund ta aplikosh.
 Një nga këshillat për të pasur kod më të organizuar dhe më të qartësuar është që kodi të mbahet i vogël dhe i ndarë në klasa dhe metoda adekuate. Emërtimi të jetë i thjeshtë dhe me kuptim të plotë.   
 
-P.SH Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajmë shumëzuesi sesa Kalkulatori sepse kalkulatori përmbanë më shumë se një logjikë, andaj për ta kuptuar se çfarë kryen ajo klasë duhet ta hapim kodin dhe të shohim.
+P.sh. Nëse një klasë jep si rezultat shumën e dy numrave, është më mirë ta quajmë shumëzuesi sesa Kalkulatori sepse kalkulatori përmbanë më shumë se një logjikë, andaj për ta kuptuar se çfarë kryen ajo klasë duhet ta hapim kodin dhe të shohim.
 
 [Ja një libër shum i mirë ku autori dhe disa nga krijuesit e gjuhëve programuese c# kanë shprehur mendim në këtë libër.](https://www.amazon.de/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?adgrpid=1195169790325301&hvadid=74698212755372&hvbmt=be&hvdev=c&hvlocphy=127338&hvnetw=o&hvqmt=e&hvtargid=kwd-74698309079548%3Aloc-72&hydadcr=3707_1873341&keywords=clean+coding&qid=1643633753&sr=8-1)
 
