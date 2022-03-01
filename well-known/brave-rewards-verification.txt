@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: programerat.github.io
+Token: b30b74fa15a3fc5653feb2f99b674c7666a21d41cfe24eb6b668d7db338e2fe5
