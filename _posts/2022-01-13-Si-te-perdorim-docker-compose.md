@@ -19,7 +19,7 @@ Së pari hapeni terminalin tuaj dhe shikojeni versionin e docker compose në mak
 
 `docker-compose --version`
 
-![dockerComposeVersion](../assets/images/docker-compose-v.png)
+![dockerComposeVersion]({{ "/" | relative_url }}/assets/images/docker-compose-v.png)
 
 Do të krijojmë një skedar bazik të docker compose, për shembullin në artikullin e parë.
 
@@ -45,11 +45,11 @@ Në listën e mëposhtme keni përshkrimin e secilit seksion të `docker-compose
 
 Skedari i juaj `docker-compose.yml` është gati, përpara se të ekzekutoni është mirë të shikojm nëse konfigurimi në skedarin tonë është në rregull duke ekzekutuar në terminal komandën `docker-compose config`.
 
-![dc-config](../assets/images/dc-config.png)
+![dc-config]({{ "/" | relative_url }}/assets/images/dc-config.png)
 
 Siq shihet edhe në foton paraprake pra konfigurimet tona kan qenë në rregull. Tani mund të ekzekutojm `docker compose up` për të krijuar imazhin(nëse nuk ekziton) dhe për të krijuar kontejneret.
 
-![dc-config](../assets/images/dc-up.png)
+![dc-config]({{ "/" | relative_url }}/assets/images/dc-up.png)
 
 Tani do të instalojmë  MySQL. Kam zgjedhur MySQL v8 ndërsa ju mund të zgjedhni edhe  ndonjë version tjetër. Do të editojmë `docker-compose.yml` dhe do të shtojmë konfigurimet për të instaluar MySQL.
 
@@ -115,7 +115,7 @@ Shikoni konfigurimet në `docker-compose.yml` që kemi bërë dhe e shihni që e
 `-it` do të thot një terminal jo aktive
 `bash` Unix shell dhe gjuhe komanduse command language
 
-![dc-config](../assets/images/exec-it.png)
+![dc-config]({{ "/" | relative_url }}/assets/images/exec-it.png)
 
 Tash jemi mrena kontejnerit, na lejohet të shkruajm komanda të Linux pasi kemi instaluar paketen menagjuse `apt-get`. Shkruani komandën `ls` ose çfarë do komande tjetër për të testuar.
 
@@ -124,11 +124,11 @@ Për tu kyqur në databazë duhet të shkruani këtë komand `mysql -u root -p`.
 `-u`është user
 `-p` është password
 
-![dc-config](../assets/images/connectdb.png)
+![dc-config]({{ "/" | relative_url }}/assets/images/connectdb.png)
 
 Nëse dëshironi të shihni të gjitha databazat, duhet të shkruani në terminalin tuaj `show databases;`.
 
-![dc-config](../assets/images/showdb.png)
+![dc-config]({{ "/" | relative_url }}/assets/images/showdb.png)
 
 Pra ktu treguam se a është ekzekutar MySQL brenda Docker. Por si mund të ndërveproj MySQL jasht docker? Si mund të bëje lidhjen MySQL client me MySQL server mbrenda kontejner? Këtë lidhje mund ta bëjm nëse bëjm port forwarding.
 
