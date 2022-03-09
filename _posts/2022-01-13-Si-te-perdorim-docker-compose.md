@@ -1,12 +1,12 @@
 ---
 title:  "Si të përdorni Docker Compose?"
 date:   2022-01-13 10:12:00
-tags: Docker-compose, php, mysql
+tags: Docker-compose,php,mysql
 author: donjetam
 archive: false
 ---
 
-Në [artikullin e parë](https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker) kemi bërë një prezentim të shkurtër për të parë se qfarë është Docker, si mund ta instaloni dhe si mund ta konfiguroni Dockerfile për një aplikacion bazik në PHP. Në këtë artikull do të tregojmë si mund ta përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjeshtë në PHP që do të komunikojë me MySQL.
+Në [artikullin e parë](https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker) kemi bërë një prezentim të shkurtër për të parë se çfarë është Docker, si mund ta instaloni dhe si mund ta konfiguroni Dockerfile për një aplikacion bazik në PHP. Në këtë artikull do të tregojmë si mund ta përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjeshtë në PHP që do të komunikojë me MySQL.
 
 ### Docker Compose
 Në artikullin e kaluar mësuam si të krijojmë  një Dockerfile dhe që përmes komandave `docker build` dhe `docker run` mund të ndërtojmë dhe të ekzekutojmë një kontejner. Mirëpo çfarë nëse duam të ekzekutojm më shumë se një kontejner? Me siguri që do të jetë e shumë lodhshme të ekezkutojm këto komanda më shumë se një herë.
@@ -49,7 +49,7 @@ Skedari i juaj `docker-compose.yml` është gati, përpara se të ekzekutoni ës
 
 Siq shihet edhe në foton paraprake pra konfigurimet tona kan qenë në rregull. Tani mund të ekzekutojm `docker compose up` për të krijuar imazhin(nëse nuk ekziton) dhe për të krijuar kontejneret.
 
-![dc-config]({{ "/" | relative_url }}/assets/images/dc-up.png)
+![dc-up]({{ "/" | relative_url }}/assets/images/dc-up.png)
 
 Tani do të instalojmë  MySQL. Kam zgjedhur MySQL v8 ndërsa ju mund të zgjedhni edhe  ndonjë version tjetër. Do të editojmë `docker-compose.yml` dhe do të shtojmë konfigurimet për të instaluar MySQL.
 
@@ -115,7 +115,7 @@ Shikoni konfigurimet në `docker-compose.yml` që kemi bërë dhe e shihni që e
 `-it` do të thot një terminal jo aktive
 `bash` Unix shell dhe gjuhe komanduse command language
 
-![dc-config]({{ "/" | relative_url }}/assets/images/exec-it.png)
+![dc-exec]({{ "/" | relative_url }}/assets/images/exec-it.png)
 
 Tash jemi mrena kontejnerit, na lejohet të shkruajm komanda të Linux pasi kemi instaluar paketen menagjuse `apt-get`. Shkruani komandën `ls` ose çfarë do komande tjetër për të testuar.
 
@@ -124,11 +124,11 @@ Për tu kyqur në databazë duhet të shkruani këtë komand `mysql -u root -p`.
 `-u`është user
 `-p` është password
 
-![dc-config]({{ "/" | relative_url }}/assets/images/connectdb.png)
+![dc-connectdb]({{ "/" | relative_url }}/assets/images/connectdb.png)
 
 Nëse dëshironi të shihni të gjitha databazat, duhet të shkruani në terminalin tuaj `show databases;`.
 
-![dc-config]({{ "/" | relative_url }}/assets/images/showdb.png)
+![dc-showdb]({{ "/" | relative_url }}/assets/images/showdb.png)
 
 Pra ktu treguam se a është ekzekutar MySQL brenda Docker. Por si mund të ndërveproj MySQL jasht docker? Si mund të bëje lidhjen MySQL client me MySQL server mbrenda kontejner? Këtë lidhje mund ta bëjm nëse bëjm port forwarding.
 
@@ -140,7 +140,7 @@ Në rastin ton kemi `0.0.0.0:8082->3306/tcp`. Pra `0.0.0.0` është host dhe por
 Një komand tjeter se si mund të shihni portin e një kontejnerit `docker port <containerid>`.
 
 #### Ndërveprimi në mes disa kontejnerve në Docker
-Pra kuptuam se si docker mund të kominikoj jasht, por cfar nëse kontejnerët duhet të ndërveproj mes vete?
+Pra kuptuam se si docker mund të kominikoj jasht, por çfarë nëse kontejnerët duhet të ndërveproj mes vete?
 
 Një mënyr është të lidhemi nëpermes IP së brendshme. Këtë mund të shihni duke shkruar komandën në terminalin tuaj `docker inspect <container-id>`, ky container-id është ID e kontejnerit për MySQL.
 
@@ -166,6 +166,9 @@ if ($conn->connect_error) {
 }
 ?>
 ```
+Pasi që keni përfunduar editimin e `index.php` mund te shikoni në shfletues http://localhost:8000 nëse është printuar teksti `Connected to MySQL server successfully!`. 
+
+`curl http://localhost:8000`
 
 Nëse doni të ndalni `docker-compose`, atëher duhet të shkruani këtë komand `docker-compose down`.
 
