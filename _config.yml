@@ -31,7 +31,8 @@ permalink: pretty
 # baseurl: "" # 
 
 
-markdown: kramdown
+markdown: GFM
+highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
