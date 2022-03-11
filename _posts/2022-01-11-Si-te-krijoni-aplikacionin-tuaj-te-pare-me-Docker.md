@@ -95,10 +95,10 @@ Gjëja e parë që duhet të bëni kur dëshironi të krijoni skedarin tuaj Dock
 
 Hapi i parë që duhet të bëni kur krijoni një skedar Dockerfile është të hyni në faqen [DockerHub](https://hub.docker.com/). Kjo faqe përmbanë  shumë imazhe të para-projektuara për të kursyer kohën tuaj (për shembull: të gjitha imazhet për php apache).   
 
-Në rastin tonë, ne do të shkruajmë “PHP Apache” në shiritin e kërkimit, dhe do përzgjedhim imazhin me tag `7.2-apache`. 
+Në rastin tonë, ne do të shkruajmë “PHP Apache” në shiritin e kërkimit, dhe do përzgjedhim imazhin me tag `latest`. 
 
 ```yaml
-FROM php:7.2-apache ## Ky imazh është marr nga dockerhub.
+FROM php:latest ## Ky imazh është marr nga dockerhub.
 COPY index.php /var/www/html/index.php ## Skedari index.php është kopjuar në direktorinë /var/www/html në imazh.
 EXPOSE 80 ## Porti 80 është ekspozuar për apache.
 CMD ["usr/sbin/apache2ctl", "-D", "FOREGROUND"] ## Apache ka filluar në kontenjer.
