@@ -59,9 +59,6 @@ services:
   mysql:
         image: mysql
         container_name: mysql
-        working_dir: /application
-        volumes:
-          - .:/application
         restart: always
         environment:
           - MYSQL_ROOT_PASSWORD=.rootpassword.
