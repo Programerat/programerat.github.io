@@ -1,4 +1,3 @@
-
 ---
 title:  "Mësoni ta paketoni një PHP website me Docker"
 url: "https://youtu.be/jXvRzN2R6LU"
