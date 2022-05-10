@@ -47,7 +47,7 @@ layout: default
     <h2>Video inqizimet</h2>
     <ul>
         {% for post in site.posts %}
-            {% post.is_video === true %}
+            {% post.is_video != nil and post.is_video == true %}
             <li>
                 <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             </li>
@@ -60,7 +60,7 @@ layout: default
     <h2>Artikujt</h2>
     <ul>
         {% for post in site.posts %}
-            {% if post.archive == false %}
+            {% if post.is_video != nil and post.archive == false %}
             <li>
                 <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                 <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
