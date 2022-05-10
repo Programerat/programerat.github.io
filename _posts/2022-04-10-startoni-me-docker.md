@@ -3,6 +3,8 @@
 title:  "Mësoni ta paketoni një PHP website me Docker"
 url: "https://youtu.be/jXvRzN2R6LU"
 code: "jXvRzN2R6LU"
+date:   2021-11-17 08:15:20
+is_video: true
 ---
 
 ### Mësoni ta paketoni një PHP website me Docker

@@ -46,10 +46,12 @@ layout: default
 <section class="videos" id="Blog">
     <h2>Video inqizimet</h2>
     <ul>
-        {% for video in site.videos %}
+        {% for post in site.posts %}
+            {% post.is_video === true %}
             <li>
                 <video src="{{ video.url }}">{{ video.title }}</video>
             </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </section>
