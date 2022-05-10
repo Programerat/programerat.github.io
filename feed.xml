@@ -20,6 +20,18 @@ Njëra nga modelet më të përdorura është modeli Dekorues, i cili mundëson 
       </item>
     
       <item>
+        <title>Si të përdorni Docker Compose?</title>
+        
+        
+          <description>&lt;p&gt;Në &lt;a href=&quot;https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker&quot;&gt;artikullin e parë&lt;/a&gt; kemi bërë një prezentim të shkurtër për të parë se çfarë është Docker, si mund ta instaloni dhe si mund ta konfiguroni Dockerfile për një aplikacion bazik në PHP. Në këtë artikull do të tregojmë si mund ta përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjeshtë në PHP që do të komunikojë me MySQL.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 13 Jan 2022 11:12:00 +0100</pubDate>
+        <link>https://programerat.github.io/2022/01/si-te-perdorim-docker-compose</link>
+        <guid isPermaLink="true">https://programerat.github.io/2022/01/si-te-perdorim-docker-compose</guid>
+      </item>
+    
+      <item>
         <title>Si të krijoni aplikacionin tuaj të parë me Docker</title>
         
         

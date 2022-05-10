@@ -1,37 +1,29 @@
 @startuml
-!theme mars
-class Client {
-	...
+
+interface ElectricCar {
+	
+	+ charge(int percentage): void
+	+ public function start(): bool;
 }
 
-interface Topping {
-	+ add()
+class TeslaModelOne {
+
+	+ charge(int percentage): void
+	+ start(): bool
 }
 
-class DefaultTopping {
-	+ add()
+class TeslaModelOneDecorator {
+	- ElectricCar
+
+	+ charge(int percentage): void
+	+ superCharge(int percentage): void
+	+ start(): bool
 }
 
-class CheeseTopping {
-	- Topping
-	+ add()
-}
-
-class TomatoTopping {
-	- Topping
-	+ add()
-}
-
-class MushroomsTopping {
-	- Topping
-	+ add()
-}
+TeslaModelOneDecorator o--- ElectricCar
+ElectricCar <|--- TeslaModelOne
+ElectricCar <|--- TeslaModelOneDecorator
 
 
-Client <-- Topping
-Topping <-- DefaultTopping
-DefaultTopping <|-- TomatoTopping
-DefaultTopping <|-- MushroomsTopping
-DefaultTopping <|-- CheeseTopping
 
 @enduml
