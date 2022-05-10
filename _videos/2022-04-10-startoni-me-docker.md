@@ -1,4 +1,10 @@
 
+---
+title:  "Mësoni ta paketoni një PHP website me Docker"
+url: "https://youtu.be/jXvRzN2R6LU"
+code: "jXvRzN2R6LU"
+---
+
 ### Mësoni ta paketoni një PHP website me Docker
 Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.
 
