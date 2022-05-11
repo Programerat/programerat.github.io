@@ -83,6 +83,19 @@ Njëra nga modelet më të përdorura është modeli Dekorues, i cili mundëson 
       </item>
     
       <item>
+        <title>Mësoni ta paketoni një PHP website me Docker</title>
+        
+        
+          <description>&lt;h3 id=&quot;mësoni-ta-paketoni-një-php-website-me-docker&quot;&gt;Mësoni ta paketoni një PHP website me Docker&lt;/h3&gt;
+&lt;p&gt;Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 17 Nov 2021 09:15:20 +0100</pubDate>
+        <link>https://programerat.github.io/2021/11/startoni-me-docker</link>
+        <guid isPermaLink="true">https://programerat.github.io/2021/11/startoni-me-docker</guid>
+      </item>
+    
+      <item>
         <title>Principet S.O.L.I.D dhe si të aplikojmë ato në kod</title>
         
         
