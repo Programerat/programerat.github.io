@@ -341,6 +341,14 @@ b {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-weight: bold;
+  width: 100%;
+}
+
+.article-icon {
+    height: 30px;
+    width: 30px;
+    text-align: right;
+    display: inline-block;
 }
 
 .posts li time,
