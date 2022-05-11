@@ -55,10 +55,10 @@
     } ,
   
     {
-      "title"    : "Mësoni ta paketoni një PHP website me Docker",
-      "description" : "Krijoni një bazë të fortë në programim duke mësuar SOLID principet.",
+      "title"    : "Startoni me Docker",
+      "description" : "Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.",
       "category" : "",
-      "tags"     : "SOLID,, OO,, PHP,, PROGRAMERAT",
+      "tags"     : "DOCKER,, OO,, PHP,, PROGRAMERAT",
       "url"      : "//2021/11/startoni-me-docker",
       "date"     : "2021-11-17 09:15:20 +0100"
     } ,

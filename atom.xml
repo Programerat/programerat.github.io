@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-05-11T07:54:55+02:00</updated>
+ <updated>2022-05-11T07:59:32+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -746,13 +746,11 @@ Në vazhdim do të postoj për modele të tjera por edhe për metoda të ndryshm
  </entry>
  
  <entry>
-   <title>Mësoni ta paketoni një PHP website me Docker</title>
+   <title>Startoni me Docker</title>
    <link href="https://programerat.github.io//2021/11/startoni-me-docker"/>
    <updated>2021-11-17T09:15:20+01:00</updated>
    <id>https://programerat.github.io/2021/11/startoni-me-docker</id>
    <content type="html">&lt;h3 id=&quot;mësoni-ta-paketoni-një-php-website-me-docker&quot;&gt;Mësoni ta paketoni një PHP website me Docker&lt;/h3&gt;
-&lt;p&gt;Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.&lt;/p&gt;
-
 &lt;p&gt;Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.&lt;/p&gt;
 
 &lt;p&gt;Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.&lt;/p&gt;
