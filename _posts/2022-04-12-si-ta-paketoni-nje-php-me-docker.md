@@ -1,6 +1,6 @@
 ---
 description: Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP. 
-tags: DOCKER, OO, PHP, PROGRAMERAT
+tags: DOCKER PHP VSCODE
 profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
 author: diarselimi
 author_github: https://github.com/diarselimi
