@@ -66,13 +66,13 @@ collections:
     permalink: /:year/:month/:slug
   videos:
     -
-      title: Filloni me docker
-      code: jigztFnW7Ew
-      url: https://youtu.be/jigztFnW7Ew
+      title: "Filloni me docker"
+      code: "jigztFnW7Ew"
+      url: "https://youtu.be/jigztFnW7Ew"
     -
-      title: Filloni me docker
-      code: jigztFnW7Ew
-      url: https://youtu.be/jigztFnW7Ew
+      title: "Filloni me docker2"
+      code: "jigztFnW7Ew"
+      url: "https://youtu.be/jigztFnW7Ew"
   
 defaults:
   -
