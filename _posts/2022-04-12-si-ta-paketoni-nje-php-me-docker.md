@@ -9,8 +9,8 @@ author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
 archive: false
 title:  "Mësoni ta paketoni një PHP website me Docker"
-url: "https://youtu.be/jigztFnW7Ew"
-code: "jigztFnW7Ew"
+url: "https://youtu.be/ddNvdFzH5Po"
+code: "ddNvdFzH5Po"
 date:   2022-04-12 08:15:20
 video: true
 ---
