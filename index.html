@@ -47,7 +47,7 @@ layout: default
     <h2>Video inqizimet</h2>
     <ul>
         {% for post in site.posts %}
-            {% post.is_video == true %}
+            {% post.is_video %}
             <li>
                 <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             </li>
