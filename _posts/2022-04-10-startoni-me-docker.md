@@ -26,4 +26,3 @@ Referencat në video janë:
 [PHP Web Server](https://www.php.net/manual/en/features.commandline.webserver.php)
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jXvRzN2R6LU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
