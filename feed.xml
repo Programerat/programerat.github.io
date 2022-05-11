@@ -7,6 +7,18 @@
     <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Mësoni ta paketoni një PHP website me Docker</title>
+        
+        
+          <description>&lt;p&gt;Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 12 Apr 2022 10:15:20 +0200</pubDate>
+        <link>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</link>
+        <guid isPermaLink="true">https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</guid>
+      </item>
+    
+      <item>
         <title>Si ta përdorim modelin dekorues (eng. Decorator Pattern).</title>
         
         
@@ -80,19 +92,6 @@ Njëra nga modelet më të përdorura është modeli Dekorues, i cili mundëson 
         <pubDate>Mon, 13 Dec 2021 18:35:00 +0100</pubDate>
         <link>https://programerat.github.io/2021/12/modelet-e-dizajnimit-strategjia</link>
         <guid isPermaLink="true">https://programerat.github.io/2021/12/modelet-e-dizajnimit-strategjia</guid>
-      </item>
-    
-      <item>
-        <title>Startoni me Docker</title>
-        
-        
-          <description>&lt;h3 id=&quot;mësoni-ta-paketoni-një-php-website-me-docker&quot;&gt;Mësoni ta paketoni një PHP website me Docker&lt;/h3&gt;
-&lt;p&gt;Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.&lt;/p&gt;
-</description>
-        
-        <pubDate>Wed, 17 Nov 2021 09:15:20 +0100</pubDate>
-        <link>https://programerat.github.io/2021/11/startoni-me-docker</link>
-        <guid isPermaLink="true">https://programerat.github.io/2021/11/startoni-me-docker</guid>
       </item>
     
       <item>

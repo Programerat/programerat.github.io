@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Mësoni ta paketoni një PHP website me Docker",
+      "description" : "Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.",
+      "category" : "",
+      "tags"     : "DOCKER,, OO,, PHP,, PROGRAMERAT",
+      "url"      : "//2022/04/si-ta-paketoni-nje-php-me-docker",
+      "date"     : "2022-04-12 10:15:20 +0200"
+    } ,
+  
+    {
       "title"    : "Si ta përdorim modelin dekorues (eng. Decorator Pattern).",
       "description" : "Modelet e strukturimit të kodit, Modeli dekorues, për menagjim më të mirë të kodit.",
       "category" : "",
@@ -52,15 +61,6 @@
       "tags"     : "OO, Design, Patterns, PHP",
       "url"      : "//2021/12/modelet-e-dizajnimit-strategjia",
       "date"     : "2021-12-13 18:35:00 +0100"
-    } ,
-  
-    {
-      "title"    : "Startoni me Docker",
-      "description" : "Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.",
-      "category" : "",
-      "tags"     : "DOCKER,, OO,, PHP,, PROGRAMERAT",
-      "url"      : "//2021/11/startoni-me-docker",
-      "date"     : "2021-11-17 09:15:20 +0100"
     } ,
   
     {
