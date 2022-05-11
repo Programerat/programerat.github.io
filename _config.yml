@@ -65,8 +65,14 @@ collections:
     output: true
     permalink: /:year/:month/:slug
   videos:
-    output: true
-    permalink: /:slug
+    -
+      title: Filloni me docker
+      code: jigztFnW7Ew
+      url: https://youtu.be/jigztFnW7Ew
+    -
+      title: Filloni me docker
+      code: jigztFnW7Ew
+      url: https://youtu.be/jigztFnW7Ew
   
 defaults:
   -
