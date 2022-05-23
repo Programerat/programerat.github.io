@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-05-11T19:21:04+02:00</updated>
+ <updated>2022-05-23T12:18:35+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -13,10 +13,73 @@
 
  
  <entry>
-   <title>Mësoni ta paketoni një PHP website me Docker - Video</title>
+   <title>Përgaditu për live me Docker compose - PHP, NGINX, MySql</title>
    <link href="https://programerat.github.io//2022/04/si-ta-paketoni-nje-php-me-docker"/>
-   <updated>2022-04-12T10:15:20+02:00</updated>
+   <updated>2022-04-23T10:15:20+02:00</updated>
    <id>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</id>
+   <content type="html">&lt;p&gt;Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.&lt;/p&gt;
+
+&lt;p&gt;Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.&lt;/p&gt;
+
+&lt;p&gt;Referencat në video janë:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com&quot;&gt;Docker HUB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker&quot;&gt;Artikulli i Docker Compose&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/chronon/95911d21928cff786e306c23e7d1d3f3&quot;&gt;Docker php shtesat&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nginx.com/&quot;&gt;Nginx website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/get-started/08_using_compose/#:~:text=Docker%20Compose%20is%20a%20tool,or%20tear%20it%20all%20down.&quot;&gt;Docker Compose Dokumentimi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fajllat&quot;&gt;Fajllat&lt;/h4&gt;
+
+&lt;p&gt;Fajlli per nginx &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default.config&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {  
+
+     listen 80 default_server;  
+     root /var/www/html;  
+     index index.html index.php;  
+
+     charset utf-8;  
+
+     location / {  
+      try_files $uri $uri/ /index.php?$query_string;  
+     }  
+
+     location = /favicon.ico { access_log off; log_not_found off; }  
+     location = /robots.txt { access_log off; log_not_found off; }  
+
+     access_log off;  
+     error_log /var/log/nginx/error.log error;  
+
+     sendfile off;  
+
+     client_max_body_size 100m;  
+
+     location ~ .php$ {  
+      fastcgi_split_path_info ^(.+.php)(/.+)$;  
+      fastcgi_pass php:9000;  
+      fastcgi_index index.php;  
+      include fastcgi_params;  
+      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
+      fastcgi_intercept_errors off;  
+      fastcgi_buffer_size 16k;  
+      fastcgi_buffers 4 16k;  
+    }  
+
+    location ~ /.ht {  
+      deny all;  
+    }  
+} 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mësoni ta paketoni një PHP website me Docker - Video</title>
+   <link href="https://programerat.github.io//2022/04/si-ta-p%C3%ABrgaditeni-nj%C3%AB-aplikacon-me-docker-compose"/>
+   <updated>2022-04-12T10:15:20+02:00</updated>
+   <id>https://programerat.github.io/2022/04/Si-ta-përgaditeni-një-aplikacon-me-docker-compose</id>
    <content type="html">&lt;p&gt;Në këtë video do të shpjegoj se si ta paketojmë një aplikacion që është i bërë në PHP.&lt;/p&gt;
 
 &lt;p&gt;Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.&lt;/p&gt;

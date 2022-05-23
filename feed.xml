@@ -7,6 +7,18 @@
     <atom:link href="https://programerat.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Përgaditu për live me Docker compose - PHP, NGINX, MySql</title>
+        
+        
+          <description>&lt;p&gt;Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sat, 23 Apr 2022 10:15:20 +0200</pubDate>
+        <link>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</link>
+        <guid isPermaLink="true">https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</guid>
+      </item>
+    
+      <item>
         <title>Mësoni ta paketoni një PHP website me Docker - Video</title>
         
         
@@ -14,8 +26,8 @@
 </description>
         
         <pubDate>Tue, 12 Apr 2022 10:15:20 +0200</pubDate>
-        <link>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</link>
-        <guid isPermaLink="true">https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</guid>
+        <link>https://programerat.github.io/2022/04/si-ta-p%C3%ABrgaditeni-nj%C3%AB-aplikacon-me-docker-compose</link>
+        <guid isPermaLink="true">https://programerat.github.io/2022/04/si-ta-p%C3%ABrgaditeni-nj%C3%AB-aplikacon-me-docker-compose</guid>
       </item>
     
       <item>
