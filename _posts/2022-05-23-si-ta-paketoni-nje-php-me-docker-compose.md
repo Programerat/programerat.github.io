@@ -21,7 +21,7 @@ Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker
 
 Referencat në video janë:
  * [Docker HUB](https://hub.docker.com)
- * [Artikulli i Docker Compose](https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker)
+ * [Artikulli i Docker Compose](https://programerat.github.io/2022/01/si-te-perdorim-docker-compose)
  * [Docker php shtesat](https://gist.github.com/chronon/95911d21928cff786e306c23e7d1d3f3)
  * [Nginx website](https://www.nginx.com/)
  * [Docker Compose Dokumentimi](https://docs.docker.com/get-started/08_using_compose/#:~:text=Docker%20Compose%20is%20a%20tool,or%20tear%20it%20all%20down.)
