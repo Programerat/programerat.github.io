@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-05-23T17:56:22+02:00</updated>
+ <updated>2022-05-23T18:15:07+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Përgaditu për live me Docker compose - PHP, NGINX, MySql</title>
-   <link href="https://programerat.github.io//2022/04/si-ta-paketoni-nje-php-me-docker"/>
+   <link href="https://programerat.github.io//2022/04/si-ta-paketoni-nje-php-me-docker-compose"/>
    <updated>2022-04-23T10:15:20+02:00</updated>
-   <id>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker</id>
+   <id>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose</id>
    <content type="html">&lt;p&gt;Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.&lt;/p&gt;
 
 &lt;p&gt;Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.&lt;/p&gt;
