@@ -1,11 +1,20 @@
 [
   
     {
+      "title"    : "Docker-compose me Laravel dhe Symfony - Video",
+      "description" : "Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.",
+      "category" : "",
+      "tags"     : "docker-compose, PHP, VSCODE",
+      "url"      : "//2022/04/laravel-symfony-me-docker-compose",
+      "date"     : "2022-04-25 10:15:20 +0200"
+    } ,
+  
+    {
       "title"    : "Përgaditu për live me Docker compose - PHP, NGINX, MySql",
       "description" : "Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.",
       "category" : "",
       "tags"     : "docker-compose, PHP, VSCODE",
-      "url"      : "//2022/04/si-ta-paketoni-nje-php-me-docker-compose",
+      "url"      : "//2022/04/si-ta-paketoni-nje-php-me-docker-compose-copy",
       "date"     : "2022-04-23 10:15:20 +0200"
     } ,
   

@@ -17,12 +17,31 @@
 "items": [
     
         {
-            "id": "https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose",
+            "id": "https://programerat.github.io/2022/04/laravel-symfony-me-docker-compose",
+            "title": "Docker-compose me Laravel dhe Symfony - Video",
+            "summary": "Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.",
+            "content_text": "Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.Kjo video është një shtesë e videos së kaluar ku e konfigurojmë xampp me php.Referencat në video janë:  Docker HUB Composer  Artikulli i Docker Compose",
+            "content_html": "<p>Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.</p><p>Kjo video është një shtesë e <a href=\"https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose\">videos së kaluar ku e konfigurojmë xampp me php</a>.</p><p>Referencat në video janë:</p><ul>  <li><a href=\"https://hub.docker.com/_/composer\">Docker HUB Composer</a></li>  <li><a href=\"https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose\">Artikulli i Docker Compose</a></li></ul>",
+            "url": "https://programerat.github.io/2022/04/laravel-symfony-me-docker-compose",
+            
+            
+            
+            "tags": ["docker-compose","PHP","VSCODE"],
+            
+            "date_published": "2022-04-25T10:15:20+02:00",
+            "date_modified": "2022-04-25T10:15:20+02:00",
+            
+                "author": "diarselimi"
+            
+        },
+    
+        {
+            "id": "https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose-copy",
             "title": "Përgaditu për live me Docker compose - PHP, NGINX, MySql",
             "summary": "Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.",
             "content_text": "Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.Referencat në video janë:  Docker HUB  Artikulli i Docker Compose  Docker php shtesat  Nginx website  Docker Compose DokumentimiFajllatFajlli per nginx default.configserver {       listen 80 default_server;       root /var/www/html;       index index.html index.php;       charset utf-8;       location / {        try_files $uri $uri/ /index.php?$query_string;       }       location = /favicon.ico { access_log off; log_not_found off; }       location = /robots.txt { access_log off; log_not_found off; }       access_log off;       error_log /var/log/nginx/error.log error;       sendfile off;       client_max_body_size 100m;       location ~ .php$ {        fastcgi_split_path_info ^(.+.php)(/.+)$;        fastcgi_pass php:9000;        fastcgi_index index.php;        include fastcgi_params;        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;        fastcgi_intercept_errors off;        fastcgi_buffer_size 16k;        fastcgi_buffers 4 16k;      }      location ~ /.ht {        deny all;      }  } ",
             "content_html": "<p>Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.</p><p>Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.</p><p>Referencat në video janë:</p><ul>  <li><a href=\"https://hub.docker.com\">Docker HUB</a></li>  <li><a href=\"https://programerat.github.io/2022/01/si-te-perdorim-docker-compose\">Artikulli i Docker Compose</a></li>  <li><a href=\"https://gist.github.com/chronon/95911d21928cff786e306c23e7d1d3f3\">Docker php shtesat</a></li>  <li><a href=\"https://www.nginx.com/\">Nginx website</a></li>  <li><a href=\"https://docs.docker.com/get-started/08_using_compose/#:~:text=Docker%20Compose%20is%20a%20tool,or%20tear%20it%20all%20down.\">Docker Compose Dokumentimi</a></li></ul><h4 id=\"fajllat\">Fajllat</h4><p>Fajlli per nginx <code class=\"language-plaintext highlighter-rouge\">default.config</code></p><div class=\"language-plaintext highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code>server {       listen 80 default_server;       root /var/www/html;       index index.html index.php;       charset utf-8;       location / {        try_files $uri $uri/ /index.php?$query_string;       }       location = /favicon.ico { access_log off; log_not_found off; }       location = /robots.txt { access_log off; log_not_found off; }       access_log off;       error_log /var/log/nginx/error.log error;       sendfile off;       client_max_body_size 100m;       location ~ .php$ {        fastcgi_split_path_info ^(.+.php)(/.+)$;        fastcgi_pass php:9000;        fastcgi_index index.php;        include fastcgi_params;        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;        fastcgi_intercept_errors off;        fastcgi_buffer_size 16k;        fastcgi_buffers 4 16k;      }      location ~ /.ht {        deny all;      }  } </code></pre></div></div>",
-            "url": "https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose",
+            "url": "https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose-copy",
             
             
             

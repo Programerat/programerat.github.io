@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-05-23T20:27:12+02:00</updated>
+ <updated>2022-05-25T10:58:45+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -13,10 +13,28 @@
 
  
  <entry>
+   <title>Docker-compose me Laravel dhe Symfony - Video</title>
+   <link href="https://programerat.github.io//2022/04/laravel-symfony-me-docker-compose"/>
+   <updated>2022-04-25T10:15:20+02:00</updated>
+   <id>https://programerat.github.io/2022/04/laravel-symfony-me-docker-compose</id>
+   <content type="html">&lt;p&gt;Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.&lt;/p&gt;
+
+&lt;p&gt;Kjo video është një shtesë e &lt;a href=&quot;https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose&quot;&gt;videos së kaluar ku e konfigurojmë xampp me php&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Referencat në video janë:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/composer&quot;&gt;Docker HUB Composer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose&quot;&gt;Artikulli i Docker Compose&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Përgaditu për live me Docker compose - PHP, NGINX, MySql</title>
-   <link href="https://programerat.github.io//2022/04/si-ta-paketoni-nje-php-me-docker-compose"/>
+   <link href="https://programerat.github.io//2022/04/si-ta-paketoni-nje-php-me-docker-compose-copy"/>
    <updated>2022-04-23T10:15:20+02:00</updated>
-   <id>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose</id>
+   <id>https://programerat.github.io/2022/04/si-ta-paketoni-nje-php-me-docker-compose copy</id>
    <content type="html">&lt;p&gt;Në këtë video do të mësoni se çka është docker-compose dhe si mund ta paketojmë një aplikacion që të tjerët mund ta përdorin.&lt;/p&gt;
 
 &lt;p&gt;Nuk keni nevoj të instaloni Xampp, apache ose PHP thjesht duhet të keni Docker të instaluar.&lt;/p&gt;
