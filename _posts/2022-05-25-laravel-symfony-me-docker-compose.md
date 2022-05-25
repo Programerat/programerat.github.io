@@ -8,6 +8,7 @@ author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
 archive: false
+cover_image: laravel-front-page.png
 title:  Docker-compose me Laravel dhe Symfony - Video
 url: "https://youtu.be/Nh62rs5JiQw"
 code: "Nh62rs5JiQw"
