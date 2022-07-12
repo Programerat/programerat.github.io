@@ -37,6 +37,7 @@ p code {
     column-gap: 0px;
   }
   .layout-article ul.box-article li {
+    background-color: #4A6269;
     display: inline-block;
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
@@ -56,7 +57,7 @@ p code {
     font-size: 24px;
     line-height: 31px;
     font-weight: 600;
-    color: #191919;
+    color: #fff;
     margin-bottom: 15px;
   }
   .layout-article ul.box-article li article figure {
@@ -70,7 +71,7 @@ p code {
     font-size: 16px;
     line-height: 26px;
     font-weight: 500;
-    color: #5E5E5E;
+    color: #fff;
   }
   .layout-article ul.box-article li article span {
     width: 100%;
