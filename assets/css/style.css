@@ -18,3 +18,102 @@ p code {
     margin: 5px;
     width: 35px;
   }
+
+  /* variabel */
+/* mixin */
+html, body {
+    background: #f1f1f1;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .layout-article {
+    max-width: 1027px;
+    margin: 0 auto;
+    padding: 40px 0px;
+  }
+  .layout-article ul.box-article {
+    list-style: none;
+    -moz-column-count: 3;
+    column-count: 3;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+  }
+  .layout-article ul.box-article li {
+    display: inline-block;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    padding: 25px;
+    background: #ffffff;
+    height: auto;
+    overflow: hidden;
+    margin: 15px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .layout-article ul.box-article li article {
+    width: 100%;
+  }
+  .layout-article ul.box-article li article h1 {
+    transition: ease 0.3s;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 600;
+    color: #191919;
+    margin-bottom: 15px;
+  }
+  .layout-article ul.box-article li article figure {
+    width: 100%;
+  }
+  .layout-article ul.box-article li article figure img {
+    width: 100%;
+  }
+  .layout-article ul.box-article li article p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #5E5E5E;
+  }
+  .layout-article ul.box-article li article span {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background: #24cf5f;
+    margin-left: -15px;
+    color: #ffffff;
+    transform: translateY(15px);
+    transition: ease 0.3s;
+  }
+  .layout-article ul.box-article li:hover article h1 {
+    color: #24cf5f;
+  }
+  .layout-article ul.box-article li:hover article span {
+    /* @include translateY(0px); */
+  }
+  @media only screen and (max-width: 480px) {
+    .layout-article ul.box-article {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .layout-article ul.box-article {
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+  
+  .credit {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 150px;
+    height: 100px;
+    background: url(http://tlab.co.id/images/logo.png) no-repeat center center;
+  }
+  
