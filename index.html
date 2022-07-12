@@ -43,17 +43,19 @@ layout: default
     <ul id="search-results"></ul>
 </div>
 
-<section class="posts" id="Blog">
-    <h2>Artikujt</h2>
-    <ul>
-        {% for post in site.posts %}
-            {% if post.is_video == nil and post.archive == false %}
-            <li>
-                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                <div class="article-icon"><img src="{{ "/" | relative_url  }}assets/images/{% if post.video != nil %}youtube{% else %}blog{% endif %}.svg" alt="Tipi i postimit" width="30px"></div>
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
-            </li>
-            {% endif %}
-        {% endfor %}
+<section class="layout-article">
+    <ul class="box-article">
+    {% for post in site.posts %}
+        {% if post.is_video == nil and post.archive == false %}
+        <li class="list-article wow flipInY">
+            <article class="box-article">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.description }}</p></a>
+            </article>
+        </li>
+        {% endif %}
+    {% endfor %}
+      
     </ul>
-</section>
+  </section>
