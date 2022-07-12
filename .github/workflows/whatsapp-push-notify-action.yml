@@ -1,0 +1,2 @@
+- name: Push notification on Whatsapp
+  uses: ishween/whatsapp-push-notify-action@1.2
