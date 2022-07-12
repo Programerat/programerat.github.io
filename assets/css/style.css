@@ -28,12 +28,8 @@ p code {
     max-width: 1027px;
     margin: 0 auto;
     padding: 40px 0px;
-    border-radius: 6px;
-    color: rgba(0,0,0, 0.87);
-    background: #fff;
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
   }
-  
+
   .layout-article ul.box-article {
     list-style: none;
     -moz-column-count: 3;
@@ -42,7 +38,7 @@ p code {
     column-gap: 0px;
   }
   .layout-article ul.box-article li {
-    background-color: #4A6269;
+    background-color: rgb(74, 98, 105);
     display: inline-block;
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
@@ -52,7 +48,10 @@ p code {
     overflow: hidden;
     margin: 15px;
     position: relative;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
   }
   .layout-article ul.box-article li article {
     width: 100%;
