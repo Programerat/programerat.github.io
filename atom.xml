@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T19:49:28+02:00</updated>
+ <updated>2022-07-13T19:51:27+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -68,7 +68,7 @@ Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast pr
 
 &lt;p&gt;Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.&lt;/p&gt;
 
-&lt;h3 id=&quot;si-punon-një-kompjuter&quot;&gt;Si punon një kompjuter?&lt;/h3&gt;
+&lt;h3 id=&quot;kompjuteri-dhe-numrat-binarë&quot;&gt;Kompjuteri dhe numrat binarë&lt;/h3&gt;
 
 &lt;p&gt;Kompjuteri përbëhet prej pjesëve harduerike, ku ato pjesë komunikojnë në mes vete për ta kryer një punë.
 Gjuhën që kompjuteri e përdor për të komunikur me pjesët harduerike është përmes numrave binarë.&lt;/p&gt;

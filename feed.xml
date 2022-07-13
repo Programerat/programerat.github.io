@@ -82,7 +82,7 @@ Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast pr
 
 <p>Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.</p>
 
-<h3 id="si-punon-një-kompjuter">Si punon një kompjuter?</h3>
+<h3 id="kompjuteri-dhe-numrat-binarë">Kompjuteri dhe numrat binarë</h3>
 
 <p>Kompjuteri përbëhet prej pjesëve harduerike, ku ato pjesë komunikojnë në mes vete për ta kryer një punë.
 Gjuhën që kompjuteri e përdor për të komunikur me pjesët harduerike është përmes numrave binarë.</p>
