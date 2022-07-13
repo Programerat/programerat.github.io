@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T18:49:53+02:00</updated>
+ <updated>2022-07-13T18:51:55+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -78,7 +78,7 @@ Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gju
 
 &lt;p&gt;Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.&lt;/p&gt;
 
-&lt;h4 id=&quot;shembull-se-si-programimi-funksionon&quot;&gt;Shembull se si programimi funksionon.&lt;/h4&gt;
+&lt;h3 id=&quot;shembull-se-si-programimi-funksionon&quot;&gt;Shembull se si programimi funksionon.&lt;/h3&gt;
 &lt;p&gt;Në vijim do të shihni një vizualizim se si funksionon programimi. &lt;br /&gt;
 Mendoni për personazhin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.&lt;/p&gt;
 
