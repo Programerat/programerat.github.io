@@ -92,7 +92,7 @@ html[data-theme="light"] {
 }
 
 #intro {
-  color: #fff;
+  color: var(--main-text-color);
 }
 
 html[data-theme="dark"] {
