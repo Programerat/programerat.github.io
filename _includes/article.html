@@ -1,0 +1,29 @@
+<div class="card card-blog fill-light" style="background-color: rgb(250, 251, 251);">
+    {% if post.cover_url != nil %}
+    <div class="card-image fill-highlight1" style="background-color: rgb(167, 181, 180);">
+        <div id="pattern"></div>
+    </div>
+    {% endif %}
+
+    <div class="content">
+        <h6 class="category text-primary" style="color: rgb(193, 165, 139);">Backgrounds</h6>
+
+        <h4 class="card-title text-dark" style="color: rgb(74, 98, 105);">
+            {{ post.title }}
+        </h4>
+        <p class="card-description text-dark-secondary" style="color: rgb(55, 69, 72);">
+            {{ post.description }}
+        </p>
+        <div class="footer">
+            <div class="author text-dark" style="color: rgb(74, 98, 105);">
+               <img src="https://source.unsplash.com/collection/474205/60x60" alt="author avatar" class="avatar img-raised">
+               <span>{{ post.author }}</span>
+            </div>
+           <div class="stats text-light-secondary" style="color: rgb(179, 194, 194);">
+                <i class="material-icons">{{ post.date | date_to_long_string }}</i>
+            </div>
+        </div>
+
+    </div>
+
+</div>

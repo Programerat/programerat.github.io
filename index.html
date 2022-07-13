@@ -43,27 +43,10 @@ layout: default
     <ul id="search-results"></ul>
 </div>
 
-<section class="layout-article">
-    <ul class="box-article">
+<div class="row">
     {% for post in site.posts %}
         {% if post.is_video == nil and post.archive == false %}
-        <li class="list-article wow flipInY">
-            <article class="box-article">
-                <h6>
-                    {% if post.video == true %}
-                        <i class="fa fa-video"></i>
-                    {% else %}
-                        <i class="fa fa-newspaper"></i>
-                    {% endif %}
-                    {{ post.date | date_to_long_string }}
-                </h6>
-              <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-                <h1>{{ post.title }}</h1>
-                <p>{{ post.description }}</p></a>
-            </article>
-        </li>
+            {% include article.html %}
         {% endif %}
     {% endfor %}
-      
-    </ul>
-  </section>
+</div>
