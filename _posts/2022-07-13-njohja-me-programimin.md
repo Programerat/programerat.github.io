@@ -48,7 +48,7 @@ echo "Programi i pare";
 Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.
 
 ### Çka më duhet për të filluar?
-Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në [https://www.programiz.com/c-programming/online-compiler/](online në faqen e internetit) dhe atje mund të shkruani diçka në thonjëza rreth ata ndryshuan tekstin.  
+Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në [online në faqen e internetit](https://www.programiz.com/c-programming/online-compiler/) dhe atje mund të shkruani diçka në thonjëza rreth ata ndryshuan tekstin.  
    
 Dhe klikoni RUN në butonin kaltër për të parë rezultatin.   
 Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printojë tekstin.   
@@ -94,9 +94,19 @@ Për t'u bërë programues mund të zgjidhni karriera të ndryshme në programim
 	- Full stack <- Mundesi per karrier
 	- Infrastructure Dev <- Mundesi per karrier
 2. Mobile developer
-	- Android 
-	- iOS (Apple)
-3. Game Development   
+	- Android <- Mundesi per karrier
+	- iOS (Apple) <- Mundesi per karrier
+    - Fluttr Dev <- Mundesi per karrier
+    - React native <- Mundesi per karrier
+3. Game Development 
+    - Unity developer <- Mundesi per karrier
+    - Unreal Engine Developer <- Mundesi per karrier
+    - Cry Engine Developer <- Mundesi per karrier
+    - Game Tester <- Mundesi per karrier
+4. Robotics
+    - Testing Developer <- Mundesi per karrier
+    - Automation Developer <- Mundesi per karrier
+    - RPA Developer <- Mundesi per karrier
 
 Pastaj pozicioni që mund të merrni pas disa viteve përvojë, secila prej tyre ndahet në degët e veta.   
 
