@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T18:22:05+02:00</updated>
+ <updated>2022-07-13T18:26:49+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -50,7 +50,7 @@ Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej ty
 &lt;p&gt;Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.&lt;/p&gt;
 
 &lt;h3 id=&quot;çka-më-duhet-për-të-filluar&quot;&gt;Çka më duhet për të filluar?&lt;/h3&gt;
-&lt;p&gt;Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në (online në faqen e internetit) [https://www.programiz.com/c-programming/online-compiler/] dhe atje mund të shkruani diçka në thonjëza rreth ata ndryshuan tekstin.&lt;/p&gt;
+&lt;p&gt;Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në &lt;a href=&quot;online në faqen e internetit&quot;&gt;https://www.programiz.com/c-programming/online-compiler/&lt;/a&gt; dhe atje mund të shkruani diçka në thonjëza rreth ata ndryshuan tekstin.&lt;/p&gt;
 
 &lt;p&gt;Dhe klikoni RUN në butonin kaltër për të parë rezultatin. &lt;br /&gt;
 Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printojë tekstin.&lt;/p&gt;
@@ -67,6 +67,54 @@ Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast pr
 &lt;/ol&gt;
 
 &lt;p&gt;Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.&lt;/p&gt;
+
+&lt;h3 id=&quot;si-punon-një-kompjuter&quot;&gt;Si punon një kompjuter?&lt;/h3&gt;
+
+&lt;p&gt;Kompjuteri përbëhet prej pjesëve harduerike, ku ato pjesë komunikojnë në mes vete për ta kryer një punë.
+Gjuhën që kompjuteri e përdor për të komunikur me pjesët harduerike është përmes numrave binarë.&lt;/p&gt;
+
+&lt;p&gt;Sistemi i numrave binar përbëhet nga zero 0 dhe njësitë 1, për kompjuterin ka energji elektrike është 1 dhe nuk ka 0.
+Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gjuhën binare.&lt;/p&gt;
+
+&lt;p&gt;Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.&lt;/p&gt;
+
+&lt;h4 id=&quot;shembull-se-si-programimi-funksionon&quot;&gt;Shembull se si programimi funksionon.&lt;/h4&gt;
+&lt;p&gt;Në vijim do të shihni një vizualizim se si funksionon programimi. &lt;br /&gt;
+Mendoni për personazhin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Video permbajtja&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Mund ta provoni kete ne &lt;a href=&quot;https://apps.apple.com/de/app/id1496833156&quot;&gt;ipad ose mac permes ketij linku&lt;/a&gt; ose permes &lt;a href=&quot;https://scratch.mit.edu/projects/editor/?tutorial=getStarted&quot;&gt;online platformes se MIT&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cilat-janë-hapat-e-radhës&quot;&gt;Cilat janë hapat e radhës?&lt;/h3&gt;
+&lt;p&gt;Për t’u bërë programues mund të zgjidhni karriera të ndryshme në programim.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Web developer
+    &lt;ul&gt;
+      &lt;li&gt;Front end () &amp;lt;- mundesi per karriere&lt;/li&gt;
+      &lt;li&gt;Back end &amp;lt;- Mundesi per karriere&lt;/li&gt;
+      &lt;li&gt;Full stack &amp;lt;- Mundesi per karrier&lt;/li&gt;
+      &lt;li&gt;Infrastructure Dev &amp;lt;- Mundesi per karrier&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mobile developer
+    &lt;ul&gt;
+      &lt;li&gt;Android&lt;/li&gt;
+      &lt;li&gt;iOS (Apple)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Game Development&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pastaj pozicioni që mund të merrni pas disa viteve përvojë, secila prej tyre ndahet në degët e veta.&lt;/p&gt;
+
+&lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
+&lt;p&gt;Pra, një karrierë si programues mund të jetë shumë e frytshme si intelektualisht ashtu edhe financiarisht. &lt;br /&gt;
+Kjo ju jep përvojë dhe mundësi për të punuar me njerëz në mbarë botën, e cila është një përvojë unike. &lt;br /&gt;
+Të mundëson të arrish shumë në jetë edhe pse nuk ke kryer asnjë shkollë.&lt;/p&gt;
 </content>
  </entry>
  
