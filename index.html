@@ -49,7 +49,11 @@ layout: default
         {% if post.is_video == nil and post.archive == false %}
         <li class="list-article wow flipInY">
             <article class="box-article">
-                <h5><i class="fa fa-newspaper"></i></h5>
+                {% if post.code == nil %}
+                    <h5><i class="fa fa-newspaper"></i></h5>
+                {% else %}
+                    <h5><i class="fa fa-newspaper"></i></h5>
+                {% endif %}
               <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
                 <h1>{{ post.title }}</h1>
                 <p>{{ post.description }}</p></a>

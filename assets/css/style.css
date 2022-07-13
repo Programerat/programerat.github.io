@@ -58,11 +58,12 @@ p code {
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
   }
   .layout-article ul.box-article li article {
+    color: #fff;
     width: 100%;
   }
   .layout-article ul.box-article li article h1 {
     transition: ease 0.3s;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 31px;
     font-weight: 600;
     color: #fff;
@@ -76,8 +77,8 @@ p code {
   }
   .layout-article ul.box-article li article p {
     margin-top: 15px;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 22px;
     font-weight: 500;
     color: #fff;
   }
