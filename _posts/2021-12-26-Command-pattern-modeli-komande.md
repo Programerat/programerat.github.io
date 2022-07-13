@@ -4,6 +4,7 @@ date:   2021-12-31 08:15:20
 description: "Modelet e strukturimit të kodit, Modeli Komandë"
 tags: Design Patterns Command
 author: diarselimi
+profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
 archive: false
 ---
 
