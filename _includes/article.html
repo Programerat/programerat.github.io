@@ -14,9 +14,11 @@
             {% endif %}
         </h6>
 
-        <h4 class="card-title text-dark" style="color: rgb(74, 98, 105);">
-            {{ post.title }}
-        </h4>
+        <a href="{{ post.url | absolute_url }}">
+            <h4 class="card-title text-dark" style="color: rgb(74, 98, 105);">
+                {{ post.title }}
+            </h4>
+        </a>
         <p class="card-description text-dark-secondary" style="color: rgb(55, 69, 72);">
             {{ post.description }}
         </p>
