@@ -95,12 +95,10 @@ function sync() {
       pathStart = Math.min( item.pathStart, pathStart );
       pathEnd = Math.max( item.pathEnd, pathEnd );
       
+      item.listItem.classList.remove( 'visible' );//removes previous active one 
       visibleItems += 1;
       
       item.listItem.classList.add( 'visible' );
-    }
-    else {
-      item.listItem.classList.remove( 'visible' );
     }
     
   } );
