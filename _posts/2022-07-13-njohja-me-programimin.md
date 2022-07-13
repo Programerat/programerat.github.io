@@ -76,6 +76,8 @@ Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gju
 
 Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
 
+[binar](../assets/images/binar_0.png)
+
 ### Shembull se si programimi funksionon.
 Në vijim do të shihni një vizualizim se si funksionon programimi.   
 Mendoni për personazhin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.
