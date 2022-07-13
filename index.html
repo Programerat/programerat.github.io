@@ -47,7 +47,7 @@ layout: default
     <ul class="box-article">
     {% for post in site.posts %}
         {% if post.is_video == nil and post.archive == false %}
-        <li class="">
+        <li>
             {% include article.html %}
         </li>
         {% endif %}
