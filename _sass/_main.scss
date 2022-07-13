@@ -173,8 +173,10 @@ a {
 
 .post {
   color: var(--main-text-color);
-  width: min-content;
-  margin: 0 auto;
+  min-width: min-content;
+  max-width: max-content;
+  width: 60%;
+  margin: 20px auto;
 }
 
 .post p {
