@@ -1,7 +1,7 @@
 <div class="card card-blog fill-light" style="background-color: rgba(0,0,0, 0.87);">
-    {% if post.cover_url != nil %}
+    {% if post.cover_img != nil %}
     <div class="card-image">
-        <div class="fill-primary" style="width: 100%; height: 0px; padding-top: 100%; background-image: url(&quot;typewriter/layer0.png&quot;), url(&quot;typewriter/layer1.png&quot;); background-size: 100%; background-color: rgb(193, 165, 139); background-blend-mode: multiply, normal;"></div>
+        <div class="fill-primary" style="width: 100%; height: 0px; padding-top: 100%; background-image: url({{ post.cover_img }}); background-size: 100%; background-color: rgb(193, 165, 139); background-blend-mode: multiply, normal;"></div>
     </div>
     {% endif %}
 
