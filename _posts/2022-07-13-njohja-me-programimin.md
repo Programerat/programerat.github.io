@@ -66,7 +66,7 @@ Disa platforma:
 Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.
 
 
-### Si punon një kompjuter?
+### Kompjuteri dhe numrat binarë
 
 Kompjuteri përbëhet prej pjesëve harduerike, ku ato pjesë komunikojnë në mes vete për ta kryer një punë.
 Gjuhën që kompjuteri e përdor për të komunikur me pjesët harduerike është përmes numrave binarë.
