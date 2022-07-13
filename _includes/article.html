@@ -28,7 +28,8 @@
                <span>{{ post.author }}</span>
             </div>
            <div class="stats text-light-secondary" style="color: rgb(179, 194, 194);">
-                <i class="material-icons">{{ post.date | date_to_long_string }}</i>
+                <i class="fa fa-calendar"></i>
+                {{ post.date | date_to_long_string }}
             </div>
         </div>
 
