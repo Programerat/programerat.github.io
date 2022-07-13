@@ -36,26 +36,17 @@ p code {
 
   .layout-article ul.box-article {
     list-style: none;
-    -moz-column-count: 3;
-    column-count: 3;
+    -moz-column-count: 2;
+    column-count: 2;
     -moz-column-gap: 0px;
     column-gap: 0px;
   }
 
   .layout-article ul.box-article li {
     display: inline-block;
-    -moz-column-break-inside: avoid;
-    column-break-inside: avoid;
-    padding: 25px;
-    background: #ffffff;
-    height: auto;
     overflow: hidden;
-    margin: 15px;
+    margin: 0px 15px;
     position: relative;
-    border-radius: 6px;
-    background-color: rgb(74, 98, 105);
-    color: rgba(0,0,0, 0.87);
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
   }
   
 .layout-article ul.box-article li article {
