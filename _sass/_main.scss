@@ -95,6 +95,8 @@ html[data-theme="light"] {
   color: var(--main-text-color);
 }
 
+
+
 html[data-theme="dark"] {
 	--text-font: Play;
 	--source-code-font: Source Code Pro;
@@ -165,6 +167,10 @@ body {
 a {
 	color: var(--link-color);
 	text-decoration: none;
+}
+
+.post {
+  color: var(--main-text-color);
 }
 
 .post p {
