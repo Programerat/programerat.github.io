@@ -60,7 +60,7 @@ svg:not(:root) {
     z-index: -1;
 }
 
-.toc-marker path {
+.toc-marker path, .toc {
     transition: all 0.3s ease;
   }
   
