@@ -105,6 +105,10 @@ p code {
         width: 100%;
     }
 
+    .toc {
+        display: none;
+    }
+
     main {
         max-width: 100%;
         width: 100%;

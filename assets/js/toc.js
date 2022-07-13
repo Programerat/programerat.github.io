@@ -86,12 +86,6 @@ function sync() {
       pathEnd = 0;
   
   var visibleItems = 0;
-
-  //show and hide toc
-  toc.setAttribute('class', 'toc scrolling');
-  setTimeout(() => {
-    toc.setAttribute('class', 'toc');
-  }, 1000);
   
   tocItems.forEach( function( item ) {
 
