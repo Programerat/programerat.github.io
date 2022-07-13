@@ -49,8 +49,8 @@ layout: default
         {% if post.is_video == nil and post.archive == false %}
         <li class="list-article wow flipInY">
             <article class="box-article">
-                {% if post.code == nil %}
-                    <h5><i class="fa fa-newspaper"></i></h5>
+                {% if post.video == true %}
+                    <h5><i class="fa fa-video"></i></h5>
                 {% else %}
                     <h5><i class="fa fa-newspaper"></i></h5>
                 {% endif %}
