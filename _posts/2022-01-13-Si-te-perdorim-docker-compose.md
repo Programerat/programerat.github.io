@@ -3,6 +3,7 @@ title:  "Si të përdorni Docker Compose?"
 date:   2022-01-13 10:12:00
 tags: Docker-compose,php,mysql
 author: donjetam
+profile_image: https://avatars.githubusercontent.com/u/36443198?v=4
 archive: false
 ---
 
