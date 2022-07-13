@@ -173,6 +173,8 @@ a {
 
 .post {
   color: var(--main-text-color);
+  width: min-content;
+  margin: 0 auto;
 }
 
 .post p {
