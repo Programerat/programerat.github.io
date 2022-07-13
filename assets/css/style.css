@@ -57,11 +57,17 @@ p code {
     color: rgba(0,0,0, 0.87);
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
   }
-  .layout-article ul.box-article li article {
+  
+.layout-article ul.box-article li article {
     color: #fff;
     width: 100%;
-  }
-  .layout-article ul.box-article li article h1 {
+}
+
+.layout-article ul.box-article li article h6 {
+    color: #A7B5B4;
+}
+
+.layout-article ul.box-article li article h1 {
     transition: ease 0.3s;
     font-size: 20px;
     line-height: 31px;
