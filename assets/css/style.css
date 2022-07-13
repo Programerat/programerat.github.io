@@ -44,7 +44,6 @@ p code {
 
   .layout-article ul.box-article li {
     display: inline-block;
-    overflow: hidden;
     margin: 0px 15px;
     position: relative;
   }
