@@ -3,6 +3,7 @@ title:  "Si ta përdorim modelin dekorues (eng. Decorator Pattern)."
 date:   2022-02-10 17:03:20
 description: "Modelet e strukturimit të kodit, Modeli dekorues, për menagjim më të mirë të kodit."
 tags: Design Patterns Decorator
+profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
 author: diarselimi
 archive: false
 ---
