@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T10:36:27+02:00</updated>
+ <updated>2022-07-13T10:39:39+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -344,7 +344,7 @@ Një nga këshillat për të pasur kod më të organizuar dhe më të qartësuar
 
 &lt;p&gt;Ndoshta jeni duke pytur veten se si mund të shohim nëse është instaluar paketa menagjuse ose a është duke ekzekutuar/running MySQL?&lt;/p&gt;
 
-&lt;h4 id=&quot;lidhshmëria-në-mes-kontejnerëve-në-docker&quot;&gt;Lidhshmëria në mes kontejnerëve në Docker&lt;/h4&gt;
+&lt;h3 id=&quot;lidhshmëria-në-mes-kontejnerëve-në-docker&quot;&gt;Lidhshmëria në mes kontejnerëve në Docker&lt;/h3&gt;
 &lt;p&gt;Tash do të shohim si është bërë lidhshmëria në mes kontejnerëve në Docker.&lt;/p&gt;
 
 &lt;p&gt;Përmendëm më lart se Docker na lejon me i ekzekutu komadat në kotejnerin që kemi krijuar dhe këtë mund ta bëjm duke ekzekutar komandën &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker exec&lt;/code&gt;. Vihet pytja si mund të kyqem në MySQL? Së pari ne duhet të dijm emrin e imazhit për MySQL, dhe këtë informat e marin duke ekzekutuar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker ps -a&lt;/code&gt; në terminal.&lt;/p&gt;
@@ -378,7 +378,7 @@ Take screenshot. Mund të shihni se si Porti është percjell si dhe në cilin I
 
 &lt;p&gt;Një komand tjeter se si mund të shihni portin e një kontejnerit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker port &amp;lt;containerid&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h4 id=&quot;ndërveprimi-në-mes-disa-kontejnerve-në-docker&quot;&gt;Ndërveprimi në mes disa kontejnerve në Docker&lt;/h4&gt;
+&lt;h3 id=&quot;ndërveprimi-në-mes-disa-kontejnerve-në-docker&quot;&gt;Ndërveprimi në mes disa kontejnerve në Docker&lt;/h3&gt;
 &lt;p&gt;Pra kuptuam se si docker mund të kominikoj jasht, por çfarë nëse kontejnerët duhet të ndërveproj mes vete?&lt;/p&gt;
 
 &lt;p&gt;Një mënyr është të lidhemi nëpermes IP së brendshme. Këtë mund të shihni duke shkruar komandën në terminalin tuaj &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker inspect &amp;lt;container-id&amp;gt;&lt;/code&gt;, ky container-id është ID e kontejnerit për MySQL.&lt;/p&gt;
@@ -410,7 +410,7 @@ Take screenshot. Mund të shihni se si Porti është percjell si dhe në cilin I
 
 &lt;p&gt;Nëse doni të ndalni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose&lt;/code&gt;, atëher duhet të shkruani këtë komand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose down&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h2&gt;
+&lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
 &lt;p&gt;Në këtë artikull mësuam se si mund të konfigurojm mjesdise të shumëfishta me ndihmën e docker-compose, si dhe shembullin për docker-compose mund të gjeni ne &lt;a href=&quot;https://github.com/Programerat/docker-compose-demo&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Nëse keni ndonjë pyetje ose feedback ju lutem ndjehuni të lirë të postoni më poshtë.&lt;/p&gt;

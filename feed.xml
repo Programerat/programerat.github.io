@@ -440,7 +440,7 @@ Një nga këshillat për të pasur kod më të organizuar dhe më të qartësuar
 
 <p>Ndoshta jeni duke pytur veten se si mund të shohim nëse është instaluar paketa menagjuse ose a është duke ekzekutuar/running MySQL?</p>
 
-<h4 id="lidhshmëria-në-mes-kontejnerëve-në-docker">Lidhshmëria në mes kontejnerëve në Docker</h4>
+<h3 id="lidhshmëria-në-mes-kontejnerëve-në-docker">Lidhshmëria në mes kontejnerëve në Docker</h3>
 <p>Tash do të shohim si është bërë lidhshmëria në mes kontejnerëve në Docker.</p>
 
 <p>Përmendëm më lart se Docker na lejon me i ekzekutu komadat në kotejnerin që kemi krijuar dhe këtë mund ta bëjm duke ekzekutar komandën <code class="language-plaintext highlighter-rouge">docker exec</code>. Vihet pytja si mund të kyqem në MySQL? Së pari ne duhet të dijm emrin e imazhit për MySQL, dhe këtë informat e marin duke ekzekutuar <code class="language-plaintext highlighter-rouge">docker ps -a</code> në terminal.</p>
@@ -474,7 +474,7 @@ Take screenshot. Mund të shihni se si Porti është percjell si dhe në cilin I
 
 <p>Një komand tjeter se si mund të shihni portin e një kontejnerit <code class="language-plaintext highlighter-rouge">docker port &lt;containerid&gt;</code>.</p>
 
-<h4 id="ndërveprimi-në-mes-disa-kontejnerve-në-docker">Ndërveprimi në mes disa kontejnerve në Docker</h4>
+<h3 id="ndërveprimi-në-mes-disa-kontejnerve-në-docker">Ndërveprimi në mes disa kontejnerve në Docker</h3>
 <p>Pra kuptuam se si docker mund të kominikoj jasht, por çfarë nëse kontejnerët duhet të ndërveproj mes vete?</p>
 
 <p>Një mënyr është të lidhemi nëpermes IP së brendshme. Këtë mund të shihni duke shkruar komandën në terminalin tuaj <code class="language-plaintext highlighter-rouge">docker inspect &lt;container-id&gt;</code>, ky container-id është ID e kontejnerit për MySQL.</p>
@@ -506,7 +506,7 @@ Take screenshot. Mund të shihni se si Porti është percjell si dhe në cilin I
 
 <p>Nëse doni të ndalni <code class="language-plaintext highlighter-rouge">docker-compose</code>, atëher duhet të shkruani këtë komand <code class="language-plaintext highlighter-rouge">docker-compose down</code>.</p>
 
-<h2 id="konkluzioni">Konkluzioni</h2>
+<h3 id="konkluzioni">Konkluzioni</h3>
 <p>Në këtë artikull mësuam se si mund të konfigurojm mjesdise të shumëfishta me ndihmën e docker-compose, si dhe shembullin për docker-compose mund të gjeni ne <a href="https://github.com/Programerat/docker-compose-demo">Github</a>.</p>
 
 <p>Nëse keni ndonjë pyetje ose feedback ju lutem ndjehuni të lirë të postoni më poshtë.</p>
