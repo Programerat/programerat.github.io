@@ -6,7 +6,13 @@
     {% endif %}
 
     <div class="content">
-        <h6 class="category text-primary" style="color: rgb(193, 165, 139);">Backgrounds</h6>
+        <h6 class="category text-primary" style="color: rgb(193, 165, 139);">
+            {% if post.video == true %}
+                <i class="fa fa-video"></i>
+            {% else %}
+                <i class="fa fa-newspaper"></i>
+            {% endif %}
+        </h6>
 
         <h4 class="card-title text-dark" style="color: rgb(74, 98, 105);">
             {{ post.title }}
