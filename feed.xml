@@ -14,7 +14,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
           <description>&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
 &lt;p&gt;Para se të flas për programim, së pari do të flas përse ekziston programimi.&lt;/p&gt;
 
-&lt;p&gt;Mbajeni në mend se programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, nuk ka nevojë për pauzë, dhe e kryen më shpejtë se një përson.&lt;/p&gt;
+&lt;p&gt;Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.&lt;/p&gt;
 </description>
         
         <pubDate>Wed, 13 Jul 2022 10:15:20 +0200</pubDate>
@@ -34,11 +34,11 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
               <h3 id="hyrje">Hyrje</h3>
 <p>Para se të flas për programim, së pari do të flas përse ekziston programimi.</p>
 
-<p>Mbajeni në mend se programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, nuk ka nevojë për pauzë, dhe e kryen më shpejtë se një përson.</p>
+<p>Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.</p>
 
-<p>Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bëj analiza dhe të zbuloj se cilat procese mund të automatizohet për ta bërë prodhimin më produktiv.</p>
+<p>Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.</p>
 
-<p>p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë ndërtoni një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.</p>
+<p>p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë e ndërton një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.</p>
 
 <p>Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëjë diçka me saktesi the shpejtsi.</p>
 
@@ -64,14 +64,12 @@ Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej ty
 <p>Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.</p>
 
 <h3 id="çka-më-duhet-për-të-filluar">Çka më duhet për të filluar?</h3>
-<p>Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në <a href="https://www.programiz.com/c-programming/online-compiler/">online në faqen e internetit</a> dhe atje mund të shkruani diçka në thonjëza rreth ata ndryshuan tekstin.</p>
+<p>Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në <a href="https://www.programiz.com/c-programming/online-compiler/">online në faqen e internetit</a> dhe atje mund të shkruani diçka në thonjëza për ta ndryshuar tekstin.</p>
 
-<p>Dhe klikoni RUN në butonin kaltër për të parë rezultatin. <br />
-Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printojë tekstin.</p>
+<p>Dhe klikoni <strong>RUN</strong> në butonin kaltër për të parë rezultatin. <br />
+Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printoj një tekst.</p>
 
-<p>Për shkak se tani ka shumë platforma online ku mund të ekzekutoni kodin, nuk keni nevojë të shkarkoni asgjë, përveçse të zgjidhni një nga platformat online që ju lejon të provoni falas.</p>
-
-<p>Disa platforma:</p>
+<p>Disa platforma të tjera online:</p>
 <ol>
   <li><a href="https://www.ideone.com/">https://www.ideone.com/</a></li>
   <li><a href="https://replit.com/">https://replit.com/</a></li>
@@ -82,6 +80,10 @@ Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast pr
 
 <p>Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.</p>
 
+<blockquote>
+  <p>Në artikujt e radhes do të shihni se si ta përgadisni kompjuterin tuaj për të filluar me PHP.</p>
+</blockquote>
+
 <h3 id="kompjuteri-dhe-numrat-binarë">Kompjuteri dhe numrat binarë</h3>
 
 <p>Kompjuteri përbëhet prej pjesëve harduerike, ku ato pjesë komunikojnë në mes vete për ta kryer një punë.
@@ -90,7 +92,8 @@ Gjuhën që kompjuteri e përdor për të komunikur me pjesët harduerike ësht�
 <p>Sistemi i numrave binar përbëhet nga zero 0 dhe njësitë 1, për kompjuterin ka energji elektrike është 1 dhe nuk ka 0.
 Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gjuhën binare.</p>
 
-<p>Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.</p>
+<p>Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
+Në vijim do ta shihni dy shembuj të numrave binarë në decimal.</p>
 
 <p><img src="/assets/images/binar_0.png" alt="binar" />
 Imazhi më lartë e reprezenton numrin zero.</p>
