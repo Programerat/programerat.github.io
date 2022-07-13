@@ -6,13 +6,6 @@
     {% endif %}
 
     <div class="content">
-        <h6 class="category text-primary">
-            {% if post.video == true %}
-                <i class="fa fa-video"></i>
-            {% else %}
-                <i class="fa fa-newspaper"></i>
-            {% endif %}
-        </h6>
 
         <a href="{{ post.url | absolute_url }}">
             <h4 class="card-title text-dark">

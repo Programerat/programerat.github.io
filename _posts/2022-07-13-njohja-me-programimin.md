@@ -11,7 +11,6 @@ archive: false
 cover_img: https://programerat.github.io/assets/images/coder.jpg
 title:  Prezantimi i programimit
 date:   2022-07-13 08:15:20
-video: false
 ---
 
 ### Hyrje
