@@ -18,10 +18,7 @@ window.addEventListener( 'scroll', sync, false );
 drawPath();
 
 function drawPath() {
-  toc.setAttribute('class', 'toc scrolling');
-  setTimeout(() => {
-    toc.setAttribute('class', 'toc');
-  }, 1000);
+  
   tocItems = [].slice.call( toc.querySelectorAll( 'li' ) );
 
   // Cache element references and measurements
@@ -89,6 +86,12 @@ function sync() {
       pathEnd = 0;
   
   var visibleItems = 0;
+
+  //show and hide toc
+  toc.setAttribute('class', 'toc scrolling');
+  setTimeout(() => {
+    toc.setAttribute('class', 'toc');
+  }, 1000);
   
   tocItems.forEach( function( item ) {
 
