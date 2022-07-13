@@ -102,7 +102,7 @@ Për të implementuar ndryshimet që i kemi bërë në Dockerfile ne duhet të e
 
 Ndoshta jeni duke pytur veten se si mund të shohim nëse është instaluar paketa menagjuse ose a është duke ekzekutuar/running MySQL?
 
-#### Lidhshmëria në mes kontejnerëve në Docker
+### Lidhshmëria në mes kontejnerëve në Docker
 Tash do të shohim si është bërë lidhshmëria në mes kontejnerëve në Docker.   
 
 Përmendëm më lart se Docker na lejon me i ekzekutu komadat në kotejnerin që kemi krijuar dhe këtë mund ta bëjm duke ekzekutar komandën `docker exec`. Vihet pytja si mund të kyqem në MySQL? Së pari ne duhet të dijm emrin e imazhit për MySQL, dhe këtë informat e marin duke ekzekutuar `docker ps -a` në terminal.   
@@ -136,7 +136,7 @@ Në rastin ton kemi `0.0.0.0:8082->3306/tcp`. Pra `0.0.0.0` është host dhe por
 
 Një komand tjeter se si mund të shihni portin e një kontejnerit `docker port <containerid>`.
 
-#### Ndërveprimi në mes disa kontejnerve në Docker
+### Ndërveprimi në mes disa kontejnerve në Docker
 Pra kuptuam se si docker mund të kominikoj jasht, por çfarë nëse kontejnerët duhet të ndërveproj mes vete?
 
 Një mënyr është të lidhemi nëpermes IP së brendshme. Këtë mund të shihni duke shkruar komandën në terminalin tuaj `docker inspect <container-id>`, ky container-id është ID e kontejnerit për MySQL.
@@ -169,7 +169,7 @@ Pasi që keni përfunduar editimin e `index.php` mund te shikoni në shfletues h
 
 Nëse doni të ndalni `docker-compose`, atëher duhet të shkruani këtë komand `docker-compose down`.
 
-## Konkluzioni
+### Konkluzioni
 Në këtë artikull mësuam se si mund të konfigurojm mjesdise të shumëfishta me ndihmën e docker-compose, si dhe shembullin për docker-compose mund të gjeni ne [Github](https://github.com/Programerat/docker-compose-demo).
 
 Nëse keni ndonjë pyetje ose feedback ju lutem ndjehuni të lirë të postoni më poshtë. 
