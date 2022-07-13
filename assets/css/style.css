@@ -104,6 +104,13 @@ p code {
     .post {
         width: 100%;
     }
+
+    main {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
   }
   
   .credit {
