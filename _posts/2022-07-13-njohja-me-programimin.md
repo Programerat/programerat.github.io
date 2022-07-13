@@ -85,30 +85,31 @@ Mendoni për personazhin si kompjuterin tuaj, kështu që ai nuk e ka idenë se 
 Mund ta provoni kete ne [ipad ose mac permes ketij linku](https://apps.apple.com/de/app/id1496833156) ose permes [online platformes se MIT](https://scratch.mit.edu/projects/editor/?tutorial=getStarted)
 
 
-### Cilat janë hapat e radhës?
+### Cilat janë karrierat që mund ti ndjeki?
 Për t'u bërë programues mund të zgjidhni karriera të ndryshme në programim.
 
-1. Web developer
-	- Front end () <- mundesi per karriere
+1. Zhvillues i Ueb
+	- Front end <- mundesi per karriere
 	- Back end <- Mundesi per karriere
 	- Full stack <- Mundesi per karrier
 	- Infrastructure Dev <- Mundesi per karrier
-2. Mobile developer
+2. Zhvillues i Telefonave
 	- Android <- Mundesi per karrier
 	- iOS (Apple) <- Mundesi per karrier
     - Fluttr Dev <- Mundesi per karrier
     - React native <- Mundesi per karrier
-3. Game Development 
+    - Tester <- Mundesi per karrier
+3. Industria Lojrave 
     - Unity developer <- Mundesi per karrier
     - Unreal Engine Developer <- Mundesi per karrier
     - Cry Engine Developer <- Mundesi per karrier
-    - Game Tester <- Mundesi per karrier
-4. Robotics
-    - Testing Developer <- Mundesi per karrier
+    - Tester <- Mundesi per karrier
+4. Robotika
+    - Tester <- Mundesi per karrier
     - Automation Developer <- Mundesi per karrier
     - RPA Developer <- Mundesi per karrier
 
-Pastaj pozicioni që mund të merrni pas disa viteve përvojë, secila prej tyre ndahet në degët e veta.   
+Pastaj pozicioni që mund të merrni pas disa viteve përvojë, secila prej tyre vazhdon në nivele të ndryshme prej fillestar deri në udhëheqës i ekipit ose menaxher.   
 
 ### Konkluzioni
 Pra, një karrierë si programues mund të jetë shumë e frytshme si intelektualisht ashtu edhe financiarisht.   
