@@ -76,7 +76,7 @@ Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gju
 
 Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
 
-[binar](../assets/images/binar_0.png)
+![binar]({{ "/" | relative_url  }}assets/images/binar_0.png)
 
 ### Shembull se si programimi funksionon.
 Në vijim do të shihni një vizualizim se si funksionon programimi.   
