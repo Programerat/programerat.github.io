@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "https://programerat.github.io/2022/07/njohja-me-programimin",
+            "title": "Prezantimi i programimit",
+            "summary": "Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.",
+            "content_text": "HyrjePara se të flas për programim, së pari do të flas përse ekziston programimi.Mbajeni në mend se programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, nuk ka nevojë për pauzë, dhe e kryen më shpejtë se një përson.Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bëj analiza dhe të zbuloj se cilat procese mund të automatizohet për ta bërë prodhimin më produktiv.p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë ndërtoni një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëjë diçka me saktesi the shpejtsi.",
+            "content_html": "<h3 id=\"hyrje\">Hyrje</h3><p>Para se të flas për programim, së pari do të flas përse ekziston programimi.</p><p>Mbajeni në mend se programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, nuk ka nevojë për pauzë, dhe e kryen më shpejtë se një përson.</p><p>Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bëj analiza dhe të zbuloj se cilat procese mund të automatizohet për ta bërë prodhimin më produktiv.</p><p>p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë ndërtoni një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.</p><p>Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëjë diçka me saktesi the shpejtsi.</p>",
+            "url": "https://programerat.github.io/2022/07/njohja-me-programimin",
+            
+            
+            
+            "tags": ["karriera","programim","mesime"],
+            
+            "date_published": "2022-07-13T10:15:20+02:00",
+            "date_modified": "2022-07-13T10:15:20+02:00",
+            
+                "author": "diarselimi"
+            
+        },
+    
+        {
             "id": "https://programerat.github.io/2022/04/laravel-symfony-me-docker-compose",
             "title": "Docker-compose me Laravel dhe Symfony - Video",
             "summary": "Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.",

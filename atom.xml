@@ -4,13 +4,31 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T15:20:27+02:00</updated>
+ <updated>2022-07-13T16:29:32+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
    <email>your-email@email.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Prezantimi i programimit</title>
+   <link href="https://programerat.github.io//2022/07/njohja-me-programimin"/>
+   <updated>2022-07-13T10:15:20+02:00</updated>
+   <id>https://programerat.github.io/2022/07/njohja-me-programimin</id>
+   <content type="html">&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
+&lt;p&gt;Para se të flas për programim, së pari do të flas përse ekziston programimi.&lt;/p&gt;
+
+&lt;p&gt;Mbajeni në mend se programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, nuk ka nevojë për pauzë, dhe e kryen më shpejtë se një përson.&lt;/p&gt;
+
+&lt;p&gt;Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bëj analiza dhe të zbuloj se cilat procese mund të automatizohet për ta bërë prodhimin më produktiv.&lt;/p&gt;
+
+&lt;p&gt;p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë ndërtoni një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.&lt;/p&gt;
+
+&lt;p&gt;Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëjë diçka me saktesi the shpejtsi.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Docker-compose me Laravel dhe Symfony - Video</title>

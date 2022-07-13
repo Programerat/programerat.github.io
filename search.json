@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Prezantimi i programimit",
+      "description" : "Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.",
+      "category" : "",
+      "tags"     : "karriera, programim, mesime",
+      "url"      : "//2022/07/njohja-me-programimin",
+      "date"     : "2022-07-13 10:15:20 +0200"
+    } ,
+  
+    {
       "title"    : "Docker-compose me Laravel dhe Symfony - Video",
       "description" : "Në këtë video do të flas për Laravel dhe Symfony si mund ta kontejnerizojmë një projekt që është i bërë nga njëra nga këto dy framework.",
       "category" : "",
