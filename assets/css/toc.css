@@ -6,15 +6,15 @@ svg:not(:root) {
   .toc {
     background-color: #eee;
     position: fixed;
-    left: 1em;
-    top: 5em;
+    left: 1px;
+    top: 1px;
     padding: 0;
     width: 5px;
     overflow: hidden;
     line-height: 2;
   }
 
-  .toc:hover {
+  .scrolling {
     width: 14em;
     padding: 1em;
   }
