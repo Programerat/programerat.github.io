@@ -11,10 +11,7 @@
 /* ANIMATION */
 /* SHADOWS */
 /* Shadows (from mdl http://www.getmdl.io/) */
-body {
-    background-color: #E5E5E5;
-    color: #3C4858;
-  }
+
   body.inverse {
     background: #333333;
   }
