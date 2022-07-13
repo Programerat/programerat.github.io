@@ -114,9 +114,6 @@ function sync() {
       tocPath.setAttribute( 'opacity', 1 );
     }
   }
-  else {
-    tocPath.setAttribute( 'opacity', 0 );
-  }
   
   lastPathStart = pathStart;
   lastPathEnd = pathEnd;
