@@ -13,6 +13,11 @@ svg:not(:root) {
     overflow: hidden;
     line-height: 2;
   }
+
+  .toc:hover {
+    width: 14em;
+    padding: 1em;
+  }
 }
 
 @media only screen and (min-width: 680px) {
