@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T18:15:58+02:00</updated>
+ <updated>2022-07-13T18:20:23+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -27,6 +27,46 @@
 &lt;p&gt;p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë ndërtoni një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.&lt;/p&gt;
 
 &lt;p&gt;Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëjë diçka me saktesi the shpejtsi.&lt;/p&gt;
+
+&lt;h3 id=&quot;çka-është-programimi&quot;&gt;Çka është programimi?&lt;/h3&gt;
+
+&lt;p&gt;Programimi përbëhet thjesht nga një ose më shumë algoritme ose komanda, të cilat komunikojnë me njëri-tjetrin për të kryer një detyrë, të cilën programuesi e programon.
+Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej tyre për të programuar një program të thjeshtë.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Programi i pare&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ky është një program i thjeshtë i shkruan në gjuhën &lt;strong&gt;c&lt;/strong&gt; që shfaq në ekran “Programi i parë”.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Programi i pare&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.&lt;/p&gt;
+
+&lt;h3 id=&quot;çka-më-duhet-për-të-filluar&quot;&gt;Çka më duhet për të filluar?&lt;/h3&gt;
+&lt;p&gt;Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në (online në faqen e internetit) [https://www.programiz.com/c-programming/online-compiler/] dhe atje mund të shkruani diçka në thonjëza rreth ata ndryshuan tekstin.&lt;/p&gt;
+
+&lt;p&gt;Dhe klikoni RUN në butonin kaltër për të parë rezultatin. &lt;br /&gt;
+Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printojë tekstin.&lt;/p&gt;
+
+&lt;p&gt;Për shkak se tani ka shumë platforma online ku mund të ekzekutoni kodin, nuk keni nevojë të shkarkoni asgjë, përveçse të zgjidhni një nga platformat online që ju lejon të provoni falas.&lt;/p&gt;
+
+&lt;p&gt;Disa platforma:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ideone.com/&quot;&gt;https://www.ideone.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://replit.com/&quot;&gt;https://replit.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.onlinegdb.com/&quot;&gt;https://www.onlinegdb.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jdoodle.com/&quot;&gt;https://www.jdoodle.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.programiz.com/c-programming/online-compiler/&quot;&gt;https://www.programiz.com/c-programming/online-compiler/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.&lt;/p&gt;
 </content>
  </entry>
  
