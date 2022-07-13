@@ -3,6 +3,7 @@ title:  "Si të krijoni aplikacionin tuaj të parë me Docker"
 date:   2022-01-11 10:12:00
 tags: Docker php
 author: donjetam
+profile_image: https://avatars.githubusercontent.com/u/36443198?v=4
 archive: false
 ---
 
