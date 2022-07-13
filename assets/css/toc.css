@@ -2,8 +2,9 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-@media all and (max-width: 568px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
   .toc {
+    background-color: #eee;
     position: fixed;
     left: 1em;
     top: 5em;
@@ -14,9 +15,10 @@ svg:not(:root) {
   }
 }
 
-@media all and (min-width: 568px) {
+@media only screen and (min-width: 680px) {
   .toc {
     position: fixed;
+    background-color: #eee;
     left: 1em;
     top: 5em;
     padding: 1em;
