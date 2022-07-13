@@ -77,6 +77,10 @@ Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gju
 Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
 
 ![binar]({{ "/" | relative_url  }}assets/images/binar_0.png)
+Imazhi më lartë e reprezenton numrin zero.
+
+![binar]({{ "/" | relative_url  }}assets/images/binar_6.png)
+Imazhi më lartë e reprezenton numrin gjashtë.
 
 ### Shembull se si programimi funksionon.
 Në vijim do të shihni një vizualizim se si funksionon programimi.   
