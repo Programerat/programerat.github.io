@@ -43,10 +43,15 @@ layout: default
     <ul id="search-results"></ul>
 </div>
 
-<div class="row">
+<section class="layout-article">
+    <ul class="box-article">
     {% for post in site.posts %}
         {% if post.is_video == nil and post.archive == false %}
+        <li class="list-article wow flipInY">
             {% include article.html %}
+        </li>
         {% endif %}
     {% endfor %}
-</div>
+      
+    </ul>
+  </section>
