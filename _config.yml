@@ -66,7 +66,7 @@ collections:
     permalink: /:year/:month/:slug
   courses:
     output: true
-    permalink: /course/:year/:slug
+    permalink: /:year/:slug
   
 defaults:
   -
