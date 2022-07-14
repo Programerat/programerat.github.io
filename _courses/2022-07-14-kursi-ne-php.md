@@ -6,6 +6,13 @@ tags: karriera programim mesime
 profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
 author: diarselimi
 date:   2022-07-14 08:15:20
+curriculum:
+  -
+    title: text-dark-secondary
+    desc: asdasqweqweqwe
+  -
+    title: wwwwwww
+    desc: wqweqweqweqw
 ---
 
 Permbajtja
