@@ -1,8 +1,8 @@
 source "https://rubygems.org"
-gem 'videotag.rb'
 gem 'jekyll'
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
+gem 'octopress-video-tag'
 gem 'jekyll-relative-links'
 gem "tzinfo-data", "~> 1.2021"
 
