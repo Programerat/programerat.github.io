@@ -18,7 +18,8 @@ Para se të flas për programim, së pari do të flas përse ekziston programimi
   
 Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.
 
-Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse je pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.
+Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse je pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.       
+
 ![automation]({{ "/" | relative_url  }}assets/images/automation.webp)
 
 p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë e ndërton një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.
