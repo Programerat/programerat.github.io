@@ -64,9 +64,9 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:slug
-  videos:
+  courses:
     output: true
-    permalink: /:slug
+    permalink: /course/:year/:slug
   
 defaults:
   -

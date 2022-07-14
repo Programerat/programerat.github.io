@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h1>Kurset</h1>
+
+{% for course in site.courses %}
+    {{ course.title }}
+    {{ course }}
+{% endfor %}
