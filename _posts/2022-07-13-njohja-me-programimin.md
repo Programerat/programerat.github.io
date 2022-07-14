@@ -7,7 +7,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
-archive: false
+type: artikull
 cover_img: https://programerat.github.io/assets/images/coder.jpg
 title:  Prezantimi i programimit
 date:   2022-07-13 08:15:20
