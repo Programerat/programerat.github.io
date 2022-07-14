@@ -4,14 +4,22 @@ layout: default
 
 <br />
 <div class="container">
+    {% assign newRow = true %}
     {% for post in site.posts %}
-    <div class="row mb-2">
-        <div class="col-md-6">
-          {% include new_article.html %}
-        </div>
-        <div class="col-md-6">
-          {% include new_article.html %}
-        </div>
-      </div>
+        {% if newRow == true %}
+            <div class="row mb-2">
+        {% endif %}
+            <div class="col-md-6">
+            {% include new_article.html %}
+            </div>
+        {% if newRow == true %}
+            </div>
+        {% endif %}
+
+        {% if newRow == true %} 
+            {% assign newRow = false %}
+        {% else %}
+            {% assign newRow = true %}
+        {% endif %}
     {% endfor %}
 </div>
