@@ -13,6 +13,11 @@ layout: compress
         <img src="{{ site.url }}{{ site.baseurl }}/assets/images/programeret.png" alt="" width="20" height="20" class="d-inline-block align-text-top">
         Programerat
       </a>
+      {% if post != nil %}
+        <div class="flex-row-between">
+          <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
+        </div>
+      {% endif %}
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" id="search-input" placeholder="Kërko artikujt" aria-label="Search">
       </form>

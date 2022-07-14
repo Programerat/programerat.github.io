@@ -3,9 +3,6 @@ layout: default
 ---
 
 <section class="post">
-  <div class="flex-row-between">
-	  <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
-  </div>
   {% assign minute=content | number_of_words | divided_by: 265 | plus: 1 %}
   <time datetime="{{ page.date | date_to_xmlschema }}">  
     {% if page.minute %} {{ page.minute }} {% else %} {{ minute }} {% endif %} min </time>
