@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-13T20:49:32+02:00</updated>
+ <updated>2022-07-14T08:31:35+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -22,7 +22,8 @@
 
 &lt;p&gt;Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.&lt;/p&gt;
 
-&lt;p&gt;Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.&lt;/p&gt;
+&lt;p&gt;Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse je pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.
+&lt;img src=&quot;/assets/images/automation.webp&quot; alt=&quot;automation&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë e ndërton një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.&lt;/p&gt;
 
@@ -30,7 +31,7 @@
 
 &lt;h3 id=&quot;çka-është-programimi&quot;&gt;Çka është programimi?&lt;/h3&gt;
 
-&lt;p&gt;Programimi përbëhet thjesht nga një ose më shumë algoritme ose komanda, të cilat komunikojnë me njëri-tjetrin për të kryer një detyrë, të cilën programuesi e programon.
+&lt;p&gt;Programimi përbëhet thjesht nga një ose më shumë algoritme ose komanda, të cilat komunikojnë me njëri-tjetrin për të kryer një detyrë, të cilën, programuesi e programon.
 Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej tyre për të programuar një program të thjeshtë.&lt;/p&gt;
 
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
@@ -50,7 +51,7 @@ Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej ty
 &lt;p&gt;Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.&lt;/p&gt;
 
 &lt;h3 id=&quot;çka-më-duhet-për-të-filluar&quot;&gt;Çka më duhet për të filluar?&lt;/h3&gt;
-&lt;p&gt;Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në &lt;a href=&quot;https://www.programiz.com/c-programming/online-compiler/&quot;&gt;online në faqen e internetit&lt;/a&gt; dhe atje mund të shkruani diçka në thonjëza për ta ndryshuar tekstin.&lt;/p&gt;
+&lt;p&gt;Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në &lt;a href=&quot;https://www.programiz.com/c-programming/online-compiler/&quot;&gt;këtë faqen të internetit&lt;/a&gt; dhe atje mund të shkruani diçka në thonjëza për ta ndryshuar përmbajtjen.&lt;/p&gt;
 
 &lt;p&gt;Dhe klikoni &lt;strong&gt;RUN&lt;/strong&gt; në butonin kaltër për të parë rezultatin. &lt;br /&gt;
 Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printoj një tekst.&lt;/p&gt;
@@ -81,19 +82,18 @@ Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gju
 &lt;p&gt;Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
 Në vijim do ta shihni dy shembuj të numrave binarë në decimal.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/binar_0.png&quot; alt=&quot;binar&quot; /&gt;
+&lt;p&gt;Shembull se si reprezentohen dy numra binarë respektivisht.
+&lt;img src=&quot;/assets/images/binar_0.png&quot; alt=&quot;binar&quot; /&gt;
 Imazhi më lartë e reprezenton numrin zero.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/binar_6.png&quot; alt=&quot;binar&quot; /&gt;
 Imazhi më lartë e reprezenton numrin gjashtë.&lt;/p&gt;
 
-&lt;h3 id=&quot;shembull-se-si-programimi-funksionon&quot;&gt;Shembull se si programimi funksionon.&lt;/h3&gt;
+&lt;h3 id=&quot;si-funksionon-programimi&quot;&gt;Si funksionon programimi&lt;/h3&gt;
 &lt;p&gt;Në vijim do të shihni një vizualizim se si funksionon programimi. &lt;br /&gt;
-Mendoni për personazhin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.&lt;/p&gt;
+Mendoni për karakterin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Video permbajtja&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;video width=&quot;720&quot; height=&quot;480&quot; preload=&quot;metadata&quot; controls=&quot;&quot;&gt;&lt;source src=&quot;/videos/scratch.webm&quot; type=&quot;video/webm; codecs=vp8, vorbis&quot; /&gt;&lt;/video&gt;
 
 &lt;p&gt;Mund ta provoni kete ne &lt;a href=&quot;https://apps.apple.com/de/app/id1496833156&quot;&gt;ipad ose mac permes ketij linku&lt;/a&gt; ose permes &lt;a href=&quot;https://scratch.mit.edu/projects/editor/?tutorial=getStarted&quot;&gt;online platformes se MIT&lt;/a&gt;&lt;/p&gt;
 
