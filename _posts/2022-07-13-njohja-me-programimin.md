@@ -98,25 +98,25 @@ Mund ta provoni kete ne [ipad ose mac permes ketij linku](https://apps.apple.com
 Për t'u bërë programues mund të zgjidhni karriera të ndryshme në programim.
 
 1. Zhvillues i Ueb
-	- Front end <- mundesi per karriere
-	- Back end <- Mundesi per karriere
-	- Full stack <- Mundesi per karrier
-	- Infrastructure Dev <- Mundesi per karrier
+	- Front end 
+	- Back end 
+	- Full stack 
+	- Infrastructure Dev 
 2. Zhvillues i Telefonave
-	- Android <- Mundesi per karrier
-	- iOS (Apple) <- Mundesi per karrier
-    - Fluttr Dev <- Mundesi per karrier
-    - React native <- Mundesi per karrier
-    - Tester <- Mundesi per karrier
+	- Android 
+	- iOS (Apple) 
+    - Fluttr Dev 
+    - React native 
+    - Tester 
 3. Industria Lojrave 
-    - Unity developer <- Mundesi per karrier
-    - Unreal Engine Developer <- Mundesi per karrier
-    - Cry Engine Developer <- Mundesi per karrier
-    - Tester <- Mundesi per karrier
+    - Unity developer 
+    - Unreal Engine Developer 
+    - Cry Engine Developer 
+    - Tester 
 4. Robotika
-    - Tester <- Mundesi per karrier
-    - Automation Developer <- Mundesi per karrier
-    - RPA Developer <- Mundesi per karrier
+    - Tester 
+    - Automation Developer 
+    - RPA Developer 
 
 Pastaj pozicioni që mund të merrni pas disa viteve përvojë, secila prej tyre vazhdon në nivele të ndryshme prej fillestar deri në udhëheqës i ekipit ose menaxher.   
 
