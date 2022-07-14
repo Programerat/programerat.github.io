@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-get './_plugins/videotag.rb'
+get 'videotag.rb'
 gem 'jekyll'
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
