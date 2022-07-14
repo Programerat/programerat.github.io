@@ -89,9 +89,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "videos"
+      type: "courses"
     values:
-      layout: "video"
+      layout: "course"
 
 relative_links:
   enabled:     true
