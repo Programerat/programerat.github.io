@@ -89,7 +89,7 @@ Imazhi më lartë e reprezenton numrin gjashtë.
 Në vijim do të shihni një vizualizim se si funksionon programimi.   
 Mendoni për karakterin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.
 
-> Video
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6dT9zajXhF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Mund ta provoni kete ne [ipad ose mac permes ketij linku](https://apps.apple.com/de/app/id1496833156) ose permes [online platformes se MIT](https://scratch.mit.edu/projects/editor/?tutorial=getStarted)
 
