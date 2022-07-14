@@ -2,35 +2,15 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
-  .toc {
-    background-color: #eee;
-    position: fixed;
-    left: 1px;
-    top: 1px;
-    padding: 0;
-    width: 5px;
-    overflow: hidden;
-    line-height: 2;
-  }
 
-  .scrolling {
-    width: 14em;
-    padding: 1em;
-  }
-}
-
-@media only screen and (min-width: 680px) {
   .toc {
     position: fixed;
     background-color: #eee;
-    left: 1em;
-    top: 5em;
     padding: 1em;
     width: 14em;
     line-height: 2;
   }
-}
+  
   .toc ul {
     list-style: none;
     padding: 0;
