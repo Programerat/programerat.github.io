@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
+
 <br />
 <div class="container">
-    {% article in site.posts %}
+    {% post in site.posts %}
+    {% assign article = {{ post }} %}
     <div class="row mb-2">
         <div class="col-md-6">
           {% include new_article.html %}
