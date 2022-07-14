@@ -18,7 +18,8 @@ Para se të flas për programim, së pari do të flas përse ekziston programimi
   
 Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.
 
-Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse jam pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.
+Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse je pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.
+![automation]({{ "/" | relative_url  }}assets/images/automation.webp)
 
 p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë e ndërton një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.
 
@@ -26,7 +27,7 @@ Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëj�
 
 ### Çka është programimi?
 
-Programimi përbëhet thjesht nga një ose më shumë algoritme ose komanda, të cilat komunikojnë me njëri-tjetrin për të kryer një detyrë, të cilën programuesi e programon.
+Programimi përbëhet thjesht nga një ose më shumë algoritme ose komanda, të cilat komunikojnë me njëri-tjetrin për të kryer një detyrë, të cilën, programuesi e programon.
 Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej tyre për të programuar një program të thjeshtë.    
 
 ```c
@@ -48,7 +49,7 @@ echo "Programi i pare";
 Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.
 
 ### Çka më duhet për të filluar?
-Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në [online në faqen e internetit](https://www.programiz.com/c-programming/online-compiler/) dhe atje mund të shkruani diçka në thonjëza për ta ndryshuar tekstin.  
+Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në [këtë faqen të internetit](https://www.programiz.com/c-programming/online-compiler/) dhe atje mund të shkruani diçka në thonjëza për ta ndryshuar përmbajtjen. 
    
 Dhe klikoni **RUN** në butonin kaltër për të parë rezultatin.   
 Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printoj një tekst.  
@@ -76,17 +77,18 @@ Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gju
 Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
 Në vijim do ta shihni dy shembuj të numrave binarë në decimal.
 
+Shembull se si reprezentohen dy numra binarë respektivisht.
 ![binar]({{ "/" | relative_url  }}assets/images/binar_0.png)
 Imazhi më lartë e reprezenton numrin zero.
 
 ![binar]({{ "/" | relative_url  }}assets/images/binar_6.png)
 Imazhi më lartë e reprezenton numrin gjashtë.
 
-### Shembull se si programimi funksionon.
+### Si funksionon programimi
 Në vijim do të shihni një vizualizim se si funksionon programimi.   
-Mendoni për personazhin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.
+Mendoni për karakterin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.
 
-> Video permbajtja
+{% video {{ "/" | relative_url  }}assets/videos/scratch.webm 720 480 %}
 
 Mund ta provoni kete ne [ipad ose mac permes ketij linku](https://apps.apple.com/de/app/id1496833156) ose permes [online platformes se MIT](https://scratch.mit.edu/projects/editor/?tutorial=getStarted)
 
