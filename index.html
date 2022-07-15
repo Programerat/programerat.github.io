@@ -1,41 +1,17 @@
 ---
 layout: default
 ---
-<section id="intro">
-    <div class="flex-row-between">
-        <h1>{{ site.greetings }}</h1>
-    </div>
-    <div class="bio">
-	    Një mentor i imi më tha.
-        Është një pikë ku video inqizimet dhe StackOverflow nuk të ndihmojnë për të fituar eksperiencë, atëher shkon në dokumentim për të lexuar, artikuj profesional ose libra.
-        <p>
-	    <a href="https://github.com/Programerat/programerat.github.io/discussions/9">Kontribo në ide rreth postimeve ose publiko një post.</a>
-        </p>
-        <blockquote>
-            Frika më e madhe është që të jesh në të njejtën dije që ishe vitin e kaluar.<br>
-            Zhvillohu.
-        </blockquote>
-        <div>
-            
-        </div>
-    </div>
 
-
-</section>
-
-<div class="search-article">
-    <ul id="search-results"></ul>
+<div class="content">
+    <section class="layout-article">
+        <ul class="box-article">
+        {% for post in site.courses %}
+            <li>
+                {% include article.html %}
+            </li>
+        {% endfor %}
+        
+        </ul>
+    </section>
 </div>
 
-<section class="layout-article">
-    <ul class="box-article">
-    {% for post in site.posts %}
-        {% if post.is_video == nil and post.archive == false %}
-        <li>
-            {% include article.html %}
-        </li>
-        {% endif %}
-    {% endfor %}
-      
-    </ul>
-  </section>
