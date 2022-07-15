@@ -2,16 +2,24 @@
 layout: default
 ---
 
-<div class="content">
-    <section class="layout-article">
-        <ul class="box-article">
-        {% for post in site.courses %}
-            <li>
-                {% include article.html %}
-            </li>
-        {% endfor %}
-        
-        </ul>
-    </section>
-</div>
+<br />
+<div class="container">
+    {% assign newRow = true %}
+    {% for post in site.posts %}
+        {% if newRow == true %}
+            <div class="row mb-2">
+        {% endif %}
+            <div class="col-md-6">
+            {% include new_article.html %}
+            </div>
+        {% if newRow == false %}
+            </div>
+        {% endif %}
 
+        {% if newRow == true %} 
+            {% assign newRow = false %}
+        {% else %}
+            {% assign newRow = true %}
+        {% endif %}
+    {% endfor %}
+</div>

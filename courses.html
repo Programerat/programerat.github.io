@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="content">
+    <section class="layout-article">
+        <ul class="box-article">
+        {% for post in site.courses %}
+            <li>
+                {% include article.html %}
+            </li>
+        {% endfor %}
+        
+        </ul>
+    </section>
+</div>
+
