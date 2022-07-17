@@ -169,25 +169,6 @@
         },
     
         {
-            "id": "https://programerat.github.io/2021/12/dp-chain-of-responsibility",
-            "title": "Paternet e dizajnimit - Paterni Strategji",
-            "summary": "Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.",
-            "content_text": "Chain of ResponsibilityGjithashtu njihet si: CoR, Chain of CommandPErshkrimi ShembulliPrincipet qe supportonNje tip rreth programmmingShembull konkret nga jeta realeNjë veçori e reNjë shembull se si nuk duhet të zbatohet.UML Modeli i strategjiseImplementimi korrent i dizajnitMbyllja",
-            "content_html": "<h3 id=\"chain-of-responsibility\">Chain of Responsibility</h3><p>Gjithashtu njihet si: CoR, Chain of Command</p><p>PErshkrimi Shembulli</p><p>Principet qe supporton</p><p>Nje tip rreth programmming</p><h3 id=\"shembull-konkret-nga-jeta-reale\">Shembull konkret nga jeta reale</h3><h3 id=\"një-veçori-e-re\">Një veçori e re</h3><h3 id=\"një-shembull-se-si-nuk-duhet-të-zbatohet\">Një shembull se si nuk duhet të zbatohet.</h3><h3 id=\"uml-modeli-i-strategjise\">UML Modeli i strategjise</h3><h3 id=\"implementimi-korrent-i-dizajnit\">Implementimi korrent i dizajnit</h3><h3 id=\"mbyllja\">Mbyllja</h3>",
-            "url": "https://programerat.github.io/2021/12/dp-chain-of-responsibility",
-            
-            
-            
-            "tags": ["OO,","Design","Patterns,","PHP"],
-            
-            "date_published": "2021-12-13T18:35:00+01:00",
-            "date_modified": "2021-12-13T18:35:00+01:00",
-            
-                "author": "Diar Selimi"
-            
-        },
-    
-        {
             "id": "https://programerat.github.io/2021/12/modelet-e-dizajnimit-strategjia",
             "title": "Paternet e dizajnimit - Paterni Strategji",
             "summary": "Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.",

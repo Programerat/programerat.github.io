@@ -76,15 +76,6 @@
       "title"    : "Paternet e dizajnimit - Paterni Strategji",
       "description" : "Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.",
       "category" : "",
-      "tags"     : "OO,, Design, Patterns,, PHP",
-      "url"      : "//2021/12/dp-chain-of-responsibility",
-      "date"     : "2021-12-13 18:35:00 +0100"
-    } ,
-  
-    {
-      "title"    : "Paternet e dizajnimit - Paterni Strategji",
-      "description" : "Paterni strategji bën pjesë në kategorinë e kontrollit të sjelljes së objekteve duke mundësuar më shumë fleksibilitet në komunikimin në mes objekteve.",
-      "category" : "",
       "tags"     : "OO, Design, Patterns, PHP",
       "url"      : "//2021/12/modelet-e-dizajnimit-strategjia",
       "date"     : "2021-12-13 18:35:00 +0100"

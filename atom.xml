@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-17T13:31:59+02:00</updated>
+ <updated>2022-07-17T13:39:03+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -882,36 +882,6 @@ Gjithashtu nëse dëshirojmë ta shtojmë një mekanizëm për kthimin e ekzekut
   &lt;p&gt;“Secili mundet me shkru kod që kompjuteri e kupton. Programerat e mirë shkruajnë kod që të tjerët e kutojnë.” – Martin Fowler&lt;/p&gt;
 &lt;/blockquote&gt;
 
-</content>
- </entry>
- 
- <entry>
-   <title>Paternet e dizajnimit - Paterni Strategji</title>
-   <link href="https://programerat.github.io//2021/12/dp-chain-of-responsibility"/>
-   <updated>2021-12-13T18:35:00+01:00</updated>
-   <id>https://programerat.github.io/2021/12/DP-Chain of Responsibility</id>
-   <content type="html">&lt;h3 id=&quot;chain-of-responsibility&quot;&gt;Chain of Responsibility&lt;/h3&gt;
-
-&lt;p&gt;Gjithashtu njihet si: CoR, Chain of Command&lt;/p&gt;
-
-&lt;p&gt;PErshkrimi 
-Shembulli&lt;/p&gt;
-
-&lt;p&gt;Principet qe supporton&lt;/p&gt;
-
-&lt;p&gt;Nje tip rreth programmming&lt;/p&gt;
-
-&lt;h3 id=&quot;shembull-konkret-nga-jeta-reale&quot;&gt;Shembull konkret nga jeta reale&lt;/h3&gt;
-
-&lt;h3 id=&quot;një-veçori-e-re&quot;&gt;Një veçori e re&lt;/h3&gt;
-
-&lt;h3 id=&quot;një-shembull-se-si-nuk-duhet-të-zbatohet&quot;&gt;Një shembull se si nuk duhet të zbatohet.&lt;/h3&gt;
-
-&lt;h3 id=&quot;uml-modeli-i-strategjise&quot;&gt;UML Modeli i strategjise&lt;/h3&gt;
-
-&lt;h3 id=&quot;implementimi-korrent-i-dizajnit&quot;&gt;Implementimi korrent i dizajnit&lt;/h3&gt;
-
-&lt;h3 id=&quot;mbyllja&quot;&gt;Mbyllja&lt;/h3&gt;
 </content>
  </entry>
  
