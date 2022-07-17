@@ -7,10 +7,9 @@ svg:not(:root) {
     position: fixed;
     background-color: #eee;
     padding: 1em;
-    width: 14em;
     line-height: 2;
   }
-  
+
   .toc ul {
     list-style: none;
     padding: 0;
