@@ -1,16 +1,8 @@
 ---
-description: Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.
-tags: karriera programim mesime
-profile_image: https://avatars.githubusercontent.com/u/8136247?v=4
+title: Kodi i pastër
+description: Çka është kodi i pastër dhe si të efekton karrieren tënde si një programer profesional.
+cover_img: 
 author: diarselimi
-author_github: https://github.com/diarselimi
-author_linkedin: diarselimi
-author_description: "Coding is an art, if you know what you're doing."
-author_title: Senior Backend Engineer
-type: artikull
-cover_img: https://programerat.github.io/assets/images/coder.jpg
-title:  Prezantimi i programimit
-date:   2022-07-21 08:15:20
 archive: true
 ---
 
@@ -25,107 +17,42 @@ Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar k
 
 Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.
 
-p.sh Ai e din që variabla **r** në klasën **Processor** e përmban vlerën e **url path**, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur.
+p.sh Ai e din që variabla **r** në klasën **Processor** e përmban vlerën e url path, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur.
 
 Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.
 
 > Bëhu profesional.
-
-
-
-### Rregullat me shembull
+### Rregullat 
 
 Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.
 
 Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundsia për tu pranuar në një punë është më e madhe nëse i mëson ato rregulla.
 
-Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.
+Disa nga rregullat bazike të kodit janë si në vijim:
 
-p.sh Jeni duke bërë një kërkesë në api dhe doni të ktheni të gjitha blerjet të listuara.
+* Variablat nuk duhet të përmbajnë emra të shkurtë që nuk kuptohen
+* Emrat e funksioneve duhet të jenë të gjatë dhe të kuptueshëm
+* Emrat e klasave duhet ta shpjegojnë vetëveten se çfar pune po kryejnë
+* Komentet nuk duhet të egzistojnë që ta shpjegojnë se çfar detyre po kryen rreshti x
+* Emrat duhet me qene te kerkueshem
+* Emrat duhet me qene te perafert me ato se qka flitet ne ekip.
+* Klasat duhet te permbajne emra ose emer me pershkrim p.sh `AddressParser` ose `Lokacion`
+* Metodat duhet te permbajn folje ne emertimin e tyre p.sh `fshijeFaqen`, `ruaje` ose `save`.
+* Nese i emertoni konceptet e peraferta perafersisht njejte ateher ajo eshte informacion, nese e beni te kunderten ateher eshte dezinformim; qelësi është te konsistenca.
+* Gjithmon fokusohu ne emertim ne baze te emrave te zgjidhjeve, paterne te ndryshme ose standarde.
+* Metodat duhet te permbajne 20 rreshta maksimum
+* Metodat nuk duhet te jen te nestuara me shum se nje ose 2 here.
+* Te gjitha rregullat mbrenda nje metoda duhet te jane ne te njejtin nivel te abstraktimit
+* Parametrat në një metodë duhet të jenë zero idealisht 3 parametra duhet të kesh arsyje shum të fort.
+* Testimi i metodave rritet kombinimi me numrin e parametrave.
+* Mos kthe kode nga funksionet por gjuaj error.
 
-```php
-//Emri i klasës duhet të jetë i përshkueshëm në nivelin ku
-//programeri i radhës kur e sheh klasën e kupton se çfar pune bën pa e hapur atë.
-//GetOrdersWithFiltersController do të ishte më e përshkrueshme
-class OrdersController {
-	//...
-	public function get(Request $request) : Response {
-        
-        //Në këtë rast thehet rregulli ku metoda ka njohuri 
-        //se çka përmban getUser()
-        //idealisht duhet të duket
-        //$this->auth->isUserAuthenticated()
-        if (!$this->auth->getUser()->isAuthenticated()) { 
-            //..
-            return new UnauthorizedResponse();
-        }
-        
-        //konstruktimi i filterave mbrenda controllerit nuk është ideale
-        //metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave
-        //pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim
-        //RequestFiltersFactoryIml::create($request->getParams())
-        $filters = [
-            'order_by' => $request->get('order_by'),
-            'order_direction' => $request->get('order_direction'),
-            'search' => $request->get('search'),
-            ...
-        ];
-        
-        //asc dhe desc duhesh ti deklarosh si konstante 
-        //apo ti fusesh mbrenda objektit / DTO objektit qe e kemi përmendur më lartë
-        if (!in_array($filters['order_direction'], ['asc', 'desc'])) {
-            throw new SortingIsNotSupported();
-        }
-        
-        //Emertimi i variablës në këtë rast nuk është aq i vetë shpjegueshëm
-        //$filteredOrders do të ishte më e përshkrueshme
-		$list = $this->orders->findAll($filters);
-        
-        //Në këtë rresht kjo metodë po qaset në path për ta gjetur nëse 
-        //egziston /count në url
-        //por kjo është një shtresë më e thellë e aplikacionit prandaj 
-        //edhe kjo e then rregullin që metoda duhet të qaset gjithmonë në të njejtën shtresë
-        //$request->isPaginated() ose $request->
-        $isPagination = str_contains('/count', $request->getUri()->getPath());
-        
-        if ($isPagination) {
-            return new PaginatedResponse($list);
-        }
-        
-        return new Response($list);
-	}
-}
-```
-
-I njejti funksionalitet por me rregulla të konsideruara dhe me funksionalitet të fshehur në objekte.
-
-```php
-class GetOrdersWithFiltersController {
-    
-    public function get(Request $request): Response
-    {
-        if ($this->authorization->isAuthorized()) {
-            throw new NotAuthorized();
-        }
-        
-        $getOrdersRequest = $this->prepareQuery($request->getParams());
-        
-        $orders = $this->query->execute($query);
-        return $this->buildResponse($orders);
-    }
-}
-```
-
-Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan.
-
-[Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
-
-
+[Një përmbledhje e librit Clean Code - R. Martin](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
 
 
 ### Një kalkulim
 
-
+![Permirsimi 1% ne dite](../assets/images/content/something.jpg)
 Nëse projekti ku punon ti i përmban 8000 rreshta kod.
 
 Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 dite pune.
@@ -136,36 +63,30 @@ Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.
 
 Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.
 
-
-
 ### Efekti mbrenda ekipit
 
-Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.
+Nëse shkruan kod të pastër, janë shum benefite edhe pse të tjerët ne ekip nuk shkruajnë.
+
+Secili do ta shikoj kodin tënd me knaqsi dhe do te approvohet me lehte.
+
+Secili do të referohet ty si ekspert nëse ti je ai që shkruan kod të pastër prandaj edhe do te fitosh eksperience me shum duke ju ndihmuar te tjerve.
 
 Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.
 
 Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.
 
-> Sigurohu që ta lexosh Mbaj mend në fund të artikullit.
+### Efekti afatgjate
 
+Në profesion një programer nuk duhet të jetë vetëm programer por edhe shitës i ideve të tijë.
 
+Nëse një shef të thot krijo një projekt dhe të pyet sa kohë të duhet.
 
-### Efekti afatgjatë
+Ti fillon të ja shpjegosh se sa koh të merr nëse shkruan kod të pa pastër me teste, dhe nuk mund ta bindësh pse duhet të shkruash kod të pastër, edhe pse ja ke prezentuar te gjitha faktet.
 
-Nëse shefi të pyet se për sa kohë mund ta përfundosh një projekt me x kërkesa.
-
-Ti ja prezenton një diagram si në vijim:
-
-![Diagrami i kohes dhe kompleksitetit](/home/diarselimi/Downloads/code-quality.png)
-
-Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas. 
-
-Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:
+Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer, për dy arsyje:
 
 1. Fuqia e shprehisë
 2. Madhësia e projektit
-
-
 
 
 #### Fuqia e shprehisë 
@@ -180,19 +101,13 @@ Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqi
 * Injorimi i formateve 
 * Injorimi i shkrimit të testeve.
 
-dhe në i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.   
-
-
-
 Duke punuar në këtë mënyr për një vit ju do ti mbjellni ato shprehi në karakterin ose eksperiencen tuaj.
 
-Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë atëher ju duhet ti harroni shprehit të kqija dhe të mësoni shprehit e mira.
+Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë atëher ju duhet të i harroni shprehit të kqija dhe të mësoni shprehit e mira.
 
 Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.
 
-Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.
-
-
+Dikush edhe zgjedh të sakrifikoj standartet për një pjes të kompanisë, shembul bëhesh pronar i kompanisë nëse e përfundon projektin mbrenda një muaji, atëherë duhet ta krijosh produktin më shpejt duke i injoruar disa gjëra që ju i shihni jo shumë me rëndësi.
 
 
 #### Madhësia e projektit
@@ -217,9 +132,9 @@ Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai
 
 ### Aplikimi i rregullave
 
-Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.
+Për të i aplikuar të gjitha rregullave një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.
 
-p.sh : Do ta provoj ta bëj të njejtën në vijim.
+p.sh : Do ta provoj ta bëj të njejtën në kodin në vijim.
 
 E shkruani kodin që të funksionoj
 E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
@@ -261,6 +176,10 @@ Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke 
 
 Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.
 
-#### Mbaje në mend
-Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.
+Por gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund ju jeni një ekip dhe një ekip për të funksionuar komunikimi duhet të jetë i rëndësishëm.
+
+
+
+
+
 
