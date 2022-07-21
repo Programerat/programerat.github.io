@@ -30,7 +30,7 @@ layout: default
 <section class="layout-article">
     <ul class="box-article">
     {% for post in site.posts %}
-        {% if post.is_video == nil and post.archive == false %}
+        {% if post.archive == true %}
         <li>
             {% include article.html %}
         </li>
