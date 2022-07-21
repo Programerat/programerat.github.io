@@ -12,12 +12,9 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
         
         
           <description>&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
-&lt;p&gt;Para se të flas për programim, së pari do të flas përse ekziston programimi.&lt;/p&gt;
-
-&lt;p&gt;Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.&lt;/p&gt;
 </description>
         
-        <pubDate>Wed, 13 Jul 2022 10:15:20 +0200</pubDate>
+        <pubDate>Thu, 21 Jul 2022 10:15:20 +0200</pubDate>
         <guid isPermaLink="true">https://programerat.github.io/2022/07/njohja-me-programimin</guid>
       <link>https://programerat.github.io/2022/07/njohja-me-programimin</link>
       <content:encoded>
@@ -32,130 +29,437 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
           <body>
             <article>
               <h3 id="hyrje">Hyrje</h3>
-<p>Para se të flas për programim, së pari do të flas përse ekziston programimi.</p>
 
-<p>Programimi është i popullarizuar për një arsye, ai bën një punë siç i keni thënë, pa patur nevojë për pauzë, dhe e kryen më shpejtë se një përson.</p>
+<p>Në fushën e programimit gjithmonë është një gjë me rëndësi <Kodi i="" pastër="">, por çka domethënë kodi i pastër?</Kodi></p>
 
-<p>Të gjithë po përpiqen të zëvendësojnë punën manuale të njeriut me automatizim ose programimin te proceseve të ndryshme, kështu që nëse je pronar i një kompanie të madhe, atëherë mund të bësh analiza dhe të zbulosh se cilat procese mund të automatizohen për ta bërë prodhimin më produktiv.</p>
+<p>Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një bllok, një klasë ose një metodë.</p>
 
-<p><img src="/assets/images/automation.webp" alt="automation" /></p>
+<p>Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.</p>
 
-<p>p.sh. Nëse një mjekut i kushton shumë për të thirrur klientët në telefon për të konfirmuar ardhjen, atëherë e ndërton një platformë ku ata mund të rezervojnë dhe konfirmojnë ardhjen.</p>
+<p>Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.</p>
 
-<p>Pra, programimi ekziston për të ndihmuar një biznes apo ndërmarrje të bëjë diçka me saktesi the shpejtsi.</p>
+<p>p.sh Ai e din që variabla <strong>r</strong> në klasën <strong>Processor</strong> e përmban vlerën e <strong>url path</strong>, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur.</p>
 
-<h3 id="çka-është-programimi">Çka është programimi?</h3>
-
-<p>Programimi përbëhet thjesht nga një ose më shumë algoritme ose komanda, të cilat komunikojnë me njëri-tjetrin për të kryer një detyrë, të cilën, programuesi e programon.
-Ka disa gjuhë që kompjuteri i kupton dhe ju mund të zgjidhni njërën prej tyre për të programuar një program të thjeshtë.</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
-</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"Programi i pare"</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>Ky është një program i thjeshtë i shkruan në gjuhën <strong>c</strong> që shfaq në ekran “Programi i parë”.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
-
-<span class="k">echo</span> <span class="s2">"Programi i pare"</span><span class="p">;</span>
-
-</code></pre></div></div>
-<p>Ky është një program i thjeshtë i shkruar në PHP që shfaqë në shfletues “Programi i parë”.</p>
-
-<h3 id="çka-më-duhet-për-të-filluar">Çka më duhet për të filluar?</h3>
-<p>Vetëm për të provuar pa instaluar asgjë, mund ta provoni edhe nga telefoni në <a href="https://www.programiz.com/c-programming/online-compiler/">këtë faqen të internetit</a> dhe atje mund të shkruani diçka në thonjëza për ta ndryshuar përmbajtjen.</p>
-
-<p>Dhe klikoni <strong>RUN</strong> në butonin kaltër për të parë rezultatin. <br />
-Këta hapa i tregojnë këtij programi se çfarë të bëjë, në këtë rast programi i parë do të printoj një tekst.</p>
-
-<p>Disa platforma të tjera online:</p>
-<ol>
-  <li><a href="https://www.ideone.com/">https://www.ideone.com/</a></li>
-  <li><a href="https://replit.com/">https://replit.com/</a></li>
-  <li><a href="https://www.onlinegdb.com/">https://www.onlinegdb.com/</a></li>
-  <li><a href="https://www.jdoodle.com/">https://www.jdoodle.com/</a></li>
-  <li><a href="https://www.programiz.com/c-programming/online-compiler/">https://www.programiz.com/c-programming/online-compiler/</a></li>
-</ol>
-
-<p>Mund ta gjeni edhe në videot e kaluara se si mund ta përgadisni kompjuterin tuaj, për ta egzekutuar PHP kodin duke përdorur Docker.</p>
+<p>Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.</p>
 
 <blockquote>
-  <p>Në artikujt e radhes do të shihni se si ta përgadisni kompjuterin tuaj për të filluar me PHP.</p>
+  <p>Bëhu profesional.</p>
 </blockquote>
 
-<h3 id="kompjuteri-dhe-numrat-binarë">Kompjuteri dhe numrat binarë</h3>
+<h3 id="rregullat-me-shembull">Rregullat me shembull</h3>
 
-<p>Kompjuteri përbëhet prej pjesëve harduerike, ku ato pjesë komunikojnë në mes vete për ta kryer një punë.
-Gjuhën që kompjuteri e përdor për të komunikur me pjesët harduerike është përmes numrave binarë.</p>
+<p>Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.</p>
 
-<p>Sistemi i numrave binar përbëhet nga zero 0 dhe njësitë 1, për kompjuterin ka energji elektrike është 1 dhe nuk ka 0.
-Në këtë mënyrë kompjuteri mund të komunikoj përmes elektricitetit në gjuhën binare.</p>
+<p>Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundsia për tu pranuar në një punë është më e madhe nëse i mëson ato rregulla.</p>
 
-<p>Pra, çdo program që shkruhet, gjithashtu përkthehet në numër binar nga një përpilues dhe më pas kompjuteri e kupton atë gjuhë.
-Në vijim do ta shihni dy shembuj të numrave binarë në decimal.</p>
+<p>Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.</p>
 
-<p>Shembull se si reprezentohen dy numra binarë respektivisht.
-<img src="/assets/images/binar_0.png" alt="binar" />
-Imazhi më lartë e reprezenton numrin zero.</p>
+<p>p.sh Jeni duke bërë një kërkesë në api dhe doni të ktheni të gjitha blerjet të listuara.</p>
 
-<p><img src="/assets/images/binar_6.png" alt="binar" />
-Imazhi më lartë e reprezenton numrin gjashtë.</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Emri i klasës duhet të jetë i përshkueshëm në nivelin ku</span>
+<span class="c1">//programeri i radhës kur e sheh klasën e kupton se çfar pune bën pa e hapur atë.</span>
+<span class="c1">//GetOrdersWithFiltersController do të ishte më e përshkrueshme</span>
+<span class="kd">class</span> <span class="nc">OrdersController</span> <span class="p">{</span>
+	<span class="c1">//...</span>
+	<span class="k">public</span> <span class="k">function</span> <span class="n">get</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">)</span> <span class="p">:</span> <span class="kt">Response</span> <span class="p">{</span>
+        
+        <span class="c1">//Në këtë rast thehet rregulli ku metoda ka njohuri </span>
+        <span class="c1">//se çka përmban getUser()</span>
+        <span class="c1">//idealisht duhet të duket</span>
+        <span class="c1">//$this-&gt;auth-&gt;isUserAuthenticated()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">auth</span><span class="o">-&gt;</span><span class="nf">getUser</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">isAuthenticated</span><span class="p">())</span> <span class="p">{</span> 
+            <span class="c1">//..</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nc">UnauthorizedResponse</span><span class="p">();</span>
+        <span class="p">}</span>
+        
+        <span class="c1">//konstruktimi i filterave mbrenda controllerit nuk është ideale</span>
+        <span class="c1">//metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave</span>
+        <span class="c1">//pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim</span>
+        <span class="c1">//RequestFiltersFactoryIml::create($request-&gt;getParams())</span>
+        <span class="nv">$filters</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">'order_by'</span> <span class="o">=&gt;</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'order_by'</span><span class="p">),</span>
+            <span class="s1">'order_direction'</span> <span class="o">=&gt;</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'order_direction'</span><span class="p">),</span>
+            <span class="s1">'search'</span> <span class="o">=&gt;</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'search'</span><span class="p">),</span>
+            <span class="mf">...</span>
+        <span class="p">];</span>
+        
+        <span class="c1">//asc dhe desc duhesh ti deklarosh si konstante </span>
+        <span class="c1">//apo ti fusesh mbrenda objektit / DTO objektit qe e kemi përmendur më lartë</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$filters</span><span class="p">[</span><span class="s1">'order_direction'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'asc'</span><span class="p">,</span> <span class="s1">'desc'</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nc">SortingIsNotSupported</span><span class="p">();</span>
+        <span class="p">}</span>
+        
+        <span class="c1">//Emertimi i variablës në këtë rast nuk është aq i vetë shpjegueshëm</span>
+        <span class="c1">//$filteredOrders do të ishte më e përshkrueshme</span>
+		<span class="nv">$list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">orders</span><span class="o">-&gt;</span><span class="nf">findAll</span><span class="p">(</span><span class="nv">$filters</span><span class="p">);</span>
+        
+        <span class="c1">//Në këtë rresht kjo metodë po qaset në path për ta gjetur nëse </span>
+        <span class="c1">//egziston /count në url</span>
+        <span class="c1">//por kjo është një shtresë më e thellë e aplikacionit prandaj </span>
+        <span class="c1">//edhe kjo e then rregullin që metoda duhet të qaset gjithmonë në të njejtën shtresë</span>
+        <span class="c1">//$request-&gt;isPaginated() ose $request-&gt;</span>
+        <span class="nv">$isPagination</span> <span class="o">=</span> <span class="nf">str_contains</span><span class="p">(</span><span class="s1">'/count'</span><span class="p">,</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">getUri</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getPath</span><span class="p">());</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$isPagination</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nc">PaginatedResponse</span><span class="p">(</span><span class="nv">$list</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">Response</span><span class="p">(</span><span class="nv">$list</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<h3 id="si-funksionon-programimi">Si funksionon programimi</h3>
-<p>Në vijim do të shihni një vizualizim se si funksionon programimi. <br />
-Mendoni për karakterin si kompjuterin tuaj, kështu që ai nuk e ka idenë se çfarë pune do të bëjë dhe jeni ju ai që do ta urdhëroni të kryejë detyra të thjeshta.</p>
+<p>I njejti funksionalitet por me rregulla të konsideruara dhe me funksionalitet të fshehur në objekte.</p>
 
-<iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/6dT9zajXhF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">GetOrdersWithFiltersController</span> <span class="p">{</span>
+    
+    <span class="k">public</span> <span class="k">function</span> <span class="n">get</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">):</span> <span class="kt">Response</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">authorization</span><span class="o">-&gt;</span><span class="nf">isAuthorized</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nc">NotAuthorized</span><span class="p">();</span>
+        <span class="p">}</span>
+        
+        <span class="nv">$getOrdersRequest</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">prepareQuery</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">getParams</span><span class="p">());</span>
+        
+        <span class="nv">$orders</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">query</span><span class="o">-&gt;</span><span class="nf">execute</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">buildResponse</span><span class="p">(</span><span class="nv">$orders</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<p>Mund ta provoni kete ne <a href="https://apps.apple.com/de/app/id1496833156">ipad ose mac permes ketij linku</a> ose permes <a href="https://scratch.mit.edu/projects/editor/?tutorial=getStarted">online platformes se MIT</a></p>
+<p>Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan.</p>
 
-<h3 id="cilat-janë-karrierat-që-mund-ti-ndjeki">Cilat janë karrierat që mund ti ndjeki?</h3>
-<p>Për t’u bërë programues mund të zgjidhni karriera të ndryshme në programim.</p>
+<p><a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29">Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.</a></p>
+
+<h3 id="një-kalkulim">Një kalkulim</h3>
+
+<p>Nëse projekti ku punon ti i përmban 8000 rreshta kod.</p>
+
+<p>Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 dite pune.</p>
+
+<p>Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe i bjen 34.7 rreshta ne ditë.</p>
+
+<p>Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.</p>
+
+<p>Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.</p>
+
+<h3 id="efekti-mbrenda-ekipit">Efekti mbrenda ekipit</h3>
+
+<p>Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.</p>
+
+<p>Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.</p>
+
+<p>Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.</p>
+
+<blockquote>
+  <p>Sigurohu që ta lexosh Mbaj mend në fund të artikullit.</p>
+</blockquote>
+
+<h3 id="efekti-afatgjatë">Efekti afatgjatë</h3>
+
+<p>Nëse shefi të pyet se për sa kohë mund ta përfundosh një projekt me x kërkesa.</p>
+
+<p>Ti ja prezenton një diagram si në vijim:</p>
+
+<p><img src="/home/diarselimi/Downloads/code-quality.png" alt="Diagrami i kohes dhe kompleksitetit" /></p>
+
+<p>Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas.</p>
+
+<p>Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:</p>
 
 <ol>
-  <li>Zhvillues i Ueb
-    <ul>
-      <li>Front end</li>
-      <li>Back end</li>
-      <li>Full stack</li>
-      <li>Infrastructure Dev</li>
-    </ul>
-  </li>
-  <li>Zhvillues i Telefonave
-    <ul>
-      <li>Android</li>
-      <li>iOS (Apple)</li>
-      <li>Fluttr Dev</li>
-      <li>React native</li>
-      <li>Tester</li>
-    </ul>
-  </li>
-  <li>Industria Lojrave
-    <ul>
-      <li>Unity developer</li>
-      <li>Unreal Engine Developer</li>
-      <li>Cry Engine Developer</li>
-      <li>Tester</li>
-    </ul>
-  </li>
-  <li>Robotika
-    <ul>
-      <li>Tester</li>
-      <li>Automation Developer</li>
-      <li>RPA Developer</li>
-    </ul>
-  </li>
+  <li>Fuqia e shprehisë</li>
+  <li>Madhësia e projektit</li>
 </ol>
 
-<p>Pastaj pozicioni që mund të merrni pas disa viteve përvojë, secila prej tyre vazhdon në nivele të ndryshme prej fillestar deri në udhëheqës i ekipit ose menaxher.</p>
+<h4 id="fuqia-e-shprehisë">Fuqia e shprehisë</h4>
+
+<p>Ti je programer që je për shkak të shprehive që i ke adaptuar me kohë.</p>
+
+<p>Prandaj duhet të jesh shum i kujdesshëm se çka dhe si punon në fillim të karrieres.</p>
+
+<p>Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqija sikur</p>
+
+<ul>
+  <li>Shkimi i kodit duke i thyer rregullat e përmendura në artikull më lartë</li>
+  <li>Injorimi i formateve</li>
+  <li>Injorimi i shkrimit të testeve.</li>
+</ul>
+
+<p>dhe në i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.</p>
+
+<p>Duke punuar në këtë mënyr për një vit ju do ti mbjellni ato shprehi në karakterin ose eksperiencen tuaj.</p>
+
+<p>Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë atëher ju duhet ti harroni shprehit të kqija dhe të mësoni shprehit e mira.</p>
+
+<p>Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.</p>
+
+<p>Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.</p>
+
+<h4 id="madhësia-e-projektit">Madhësia e projektit</h4>
+
+<p>Nëse vendosni të mos adaptoni formatet dhe rregullat e përmendura në projekt, atëher pas një viti projekti që ti je duke punuar do të bëhet aq i madh sa që nuk mund ta përballoni të punoni i vetëm në të.</p>
+
+<p>Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.</p>
+
+<p>Prandaj koha jote tash ndahet në dy pjesë,</p>
+
+<ul>
+  <li>Vazhdimi i punës në implementimin e gjërave të reja në projekt</li>
+  <li>Ndihma e programerit të ri që ta kuptoj se çka po bëhet në kod ku ai është duke punuar.</li>
+</ul>
+
+<p>Pas kësaj ti i tregon shefit që të duhet edhe një programer me më shum eksperience sepse ky nuk po kryen shumë punë.</p>
+
+<p>Dhe kështu përfundon deri te dështimi i projektit.</p>
+
+<p>Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.</p>
+
+<h3 id="aplikimi-i-rregullave">Aplikimi i rregullave</h3>
+
+<p>Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.</p>
+
+<p>p.sh : Do ta provoj ta bëj të njejtën në vijim.</p>
+
+<p>E shkruani kodin që të funksionoj
+E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
+Fillon ri emerimin e metodave dhe klasave 
+Fillon ndarjen e klasave ne klasa të veçanta 
+I zvoglon metodat që të jetë më i lexueshëm kodi.
+E lexon disa herë
+kthehesh tek hapi 3. 
+Nëse mendon që gjithqka është në rregull atëher vazhdon.</p>
+
+<h3 id="automatizimi-i-rregullave">Automatizimi i rregullave</h3>
+
+<p>Janë disa vegla që të ndihmojnë dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.</p>
+
+<p>Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.</p>
+
+<p>Veglat:</p>
+<ol>
+  <li>https://phpstan.org/try</li>
+  <li>https://www.npmjs.com/package/phplint</li>
+  <li><a href="https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&amp;utm_source=google&amp;utm_campaign=nb_lg_snyk-code&amp;utm_content=code_analysis&amp;utm_term=code%20analysis%20tools&amp;gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE">snyk.io</a></li>
+  <li><a href="https://www.sonarqube.org/">https://www.sonarqube.org/</a></li>
+</ol>
 
 <h3 id="konkluzioni">Konkluzioni</h3>
-<p>Pra, një karrierë si programues mund të jetë shumë e frytshme si intelektualisht ashtu edhe financiarisht. <br />
-Kjo ju jep përvojë dhe mundësi për të punuar me njerëz në mbarë botën, e cila është një përvojë unike. <br />
-Të mundëson të arrish shumë në jetë edhe pse nuk ke kryer asnjë shkollë.</p>
+
+<p>Në librin e “Clean Code - R. Martin” është një rregull interesante që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.</p>
+
+<p>Pra përmbledhja e gjithë tekstit në këtë artikull flet për kodin e pastër.
+Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti ai që përfiton shprehi të mira që të shtyjnë përpara në karrierë.</p>
+
+<p>Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.</p>
+
+<p>Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.</p>
+
+<p>Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.</p>
+
+<h4 id="mbaje-në-mend">Mbaje në mend</h4>
+<p>Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.</p>
+
+
+            </article>
+          </body>
+        </html>
+        ]]>
+      </content:encoded>
+    </item>
+    
+      <item>
+        <title>Kodi i pastër</title>
+        
+        
+          <description>&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
+</description>
+        
+        <pubDate>Sun, 17 Jul 2022 00:00:00 +0200</pubDate>
+        <guid isPermaLink="true">https://programerat.github.io/2022/07/kodi-i-paster</guid>
+      <link>https://programerat.github.io/2022/07/kodi-i-paster</link>
+      <content:encoded>
+        <![CDATA[
+        <!doctype html>
+        <html lang="en" prefix="op: http://media.facebook.com/op#">
+          <head>
+            <meta charset="utf-8">
+            <link rel="canonical" href="https://programerat.github.io/2022/07/kodi-i-paster">
+            <meta property="op:markup_version" content="v1.0">
+          </head>
+          <body>
+            <article>
+              <h3 id="hyrje">Hyrje</h3>
+
+<p>Në fushën e programimit gjithmonë është një gjë me rëndësi <Kodi i="" pastër="">, por çka domethënë kodi i pastër?</Kodi></p>
+
+<p>Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një bllok, një klasë ose një metodë.</p>
+
+<p>Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.</p>
+
+<p>Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.</p>
+
+<p>p.sh Ai e din që variabla <strong>r</strong> në klasën <strong>Processor</strong> e përmban vlerën e url path, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur.</p>
+
+<p>Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.</p>
+
+<blockquote>
+  <p>Bëhu profesional.</p>
+  <h3 id="rregullat">Rregullat</h3>
+</blockquote>
+
+<p>Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.</p>
+
+<p>Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundsia për tu pranuar në një punë është më e madhe nëse i mëson ato rregulla.</p>
+
+<p>Disa nga rregullat bazike të kodit janë si në vijim:</p>
+
+<ul>
+  <li>Variablat nuk duhet të përmbajnë emra të shkurtë që nuk kuptohen</li>
+  <li>Emrat e funksioneve duhet të jenë të gjatë dhe të kuptueshëm</li>
+  <li>Emrat e klasave duhet ta shpjegojnë vetëveten se çfar pune po kryejnë</li>
+  <li>Komentet nuk duhet të egzistojnë që ta shpjegojnë se çfar detyre po kryen rreshti x</li>
+  <li>Emrat duhet me qene te kerkueshem</li>
+  <li>Emrat duhet me qene te perafert me ato se qka flitet ne ekip.</li>
+  <li>Klasat duhet te permbajne emra ose emer me pershkrim p.sh <code class="language-plaintext highlighter-rouge">AddressParser</code> ose <code class="language-plaintext highlighter-rouge">Lokacion</code></li>
+  <li>Metodat duhet te permbajn folje ne emertimin e tyre p.sh <code class="language-plaintext highlighter-rouge">fshijeFaqen</code>, <code class="language-plaintext highlighter-rouge">ruaje</code> ose <code class="language-plaintext highlighter-rouge">save</code>.</li>
+  <li>Nese i emertoni konceptet e peraferta perafersisht njejte ateher ajo eshte informacion, nese e beni te kunderten ateher eshte dezinformim; qelësi është te konsistenca.</li>
+  <li>Gjithmon fokusohu ne emertim ne baze te emrave te zgjidhjeve, paterne te ndryshme ose standarde.</li>
+  <li>Metodat duhet te permbajne 20 rreshta maksimum</li>
+  <li>Metodat nuk duhet te jen te nestuara me shum se nje ose 2 here.</li>
+  <li>Te gjitha rregullat mbrenda nje metoda duhet te jane ne te njejtin nivel te abstraktimit</li>
+  <li>Parametrat në një metodë duhet të jenë zero idealisht 3 parametra duhet të kesh arsyje shum të fort.</li>
+  <li>Testimi i metodave rritet kombinimi me numrin e parametrave.</li>
+  <li>Mos kthe kode nga funksionet por gjuaj error.</li>
+</ul>
+
+<p><a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29">Një përmbledhje e librit Clean Code - R. Martin</a></p>
+
+<h3 id="një-kalkulim">Një kalkulim</h3>
+
+<p><img src="../assets/images/content/something.jpg" alt="Permirsimi 1% ne dite" />
+Nëse projekti ku punon ti i përmban 8000 rreshta kod.</p>
+
+<p>Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 dite pune.</p>
+
+<p>Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe i bjen 34.7 rreshta ne ditë.</p>
+
+<p>Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.</p>
+
+<p>Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.</p>
+
+<h3 id="efekti-mbrenda-ekipit">Efekti mbrenda ekipit</h3>
+
+<p>Nëse shkruan kod të pastër, janë shum benefite edhe pse të tjerët ne ekip nuk shkruajnë.</p>
+
+<p>Secili do ta shikoj kodin tënd me knaqsi dhe do te approvohet me lehte.</p>
+
+<p>Secili do të referohet ty si ekspert nëse ti je ai që shkruan kod të pastër prandaj edhe do te fitosh eksperience me shum duke ju ndihmuar te tjerve.</p>
+
+<p>Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.</p>
+
+<p>Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.</p>
+
+<h3 id="efekti-afatgjate">Efekti afatgjate</h3>
+
+<p>Në profesion një programer nuk duhet të jetë vetëm programer por edhe shitës i ideve të tijë.</p>
+
+<p>Nëse një shef të thot krijo një projekt dhe të pyet sa kohë të duhet.</p>
+
+<p>Ti fillon të ja shpjegosh se sa koh të merr nëse shkruan kod të pa pastër me teste, dhe nuk mund ta bindësh pse duhet të shkruash kod të pastër, edhe pse ja ke prezentuar te gjitha faktet.</p>
+
+<p>Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer, për dy arsyje:</p>
+
+<ol>
+  <li>Fuqia e shprehisë</li>
+  <li>Madhësia e projektit</li>
+</ol>
+
+<h4 id="fuqia-e-shprehisë">Fuqia e shprehisë</h4>
+
+<p>Ti je programer që je për shkak të shprehive që i ke adaptuar me kohë.</p>
+
+<p>Prandaj duhet të jesh shum i kujdesshëm se çka dhe si punon në fillim të karrieres.</p>
+
+<p>Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqija sikur</p>
+
+<ul>
+  <li>Shkimi i kodit duke i thyer rregullat e përmendura në artikull më lartë</li>
+  <li>Injorimi i formateve</li>
+  <li>Injorimi i shkrimit të testeve.</li>
+</ul>
+
+<p>Duke punuar në këtë mënyr për një vit ju do ti mbjellni ato shprehi në karakterin ose eksperiencen tuaj.</p>
+
+<p>Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë atëher ju duhet të i harroni shprehit të kqija dhe të mësoni shprehit e mira.</p>
+
+<p>Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.</p>
+
+<p>Dikush edhe zgjedh të sakrifikoj standartet për një pjes të kompanisë, shembul bëhesh pronar i kompanisë nëse e përfundon projektin mbrenda një muaji, atëherë duhet ta krijosh produktin më shpejt duke i injoruar disa gjëra që ju i shihni jo shumë me rëndësi.</p>
+
+<h4 id="madhësia-e-projektit">Madhësia e projektit</h4>
+
+<p>Nëse vendosni të mos adaptoni formatet dhe rregullat e përmendura në projekt, atëher pas një viti projekti që ti je duke punuar do të bëhet aq i madh sa që nuk mund ta përballoni të punoni i vetëm në të.</p>
+
+<p>Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.</p>
+
+<p>Prandaj koha jote tash ndahet në dy pjesë,</p>
+
+<ul>
+  <li>Vazhdimi i punës në implementimin e gjërave të reja në projekt</li>
+  <li>Ndihma e programerit të ri që ta kuptoj se çka po bëhet në kod ku ai është duke punuar.</li>
+</ul>
+
+<p>Pas kësaj ti i tregon shefit që të duhet edhe një programer me më shum eksperience sepse ky nuk po kryen shumë punë.</p>
+
+<p>Dhe kështu përfundon deri te dështimi i projektit.</p>
+
+<p>Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.</p>
+
+<h3 id="aplikimi-i-rregullave">Aplikimi i rregullave</h3>
+
+<p>Për të i aplikuar të gjitha rregullave një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.</p>
+
+<p>p.sh : Do ta provoj ta bëj të njejtën në kodin në vijim.</p>
+
+<p>E shkruani kodin që të funksionoj
+E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
+Fillon ri emerimin e metodave dhe klasave 
+Fillon ndarjen e klasave ne klasa të veçanta 
+I zvoglon metodat që të jetë më i lexueshëm kodi.
+E lexon disa herë
+kthehesh tek hapi 3. 
+Nëse mendon që gjithqka është në rregull atëher vazhdon.</p>
+
+<h3 id="automatizimi-i-rregullave">Automatizimi i rregullave</h3>
+
+<p>Janë disa vegla që të ndihmojnë dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.</p>
+
+<p>Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.</p>
+
+<p>Veglat:</p>
+<ol>
+  <li>https://phpstan.org/try</li>
+  <li>https://www.npmjs.com/package/phplint</li>
+  <li><a href="https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&amp;utm_source=google&amp;utm_campaign=nb_lg_snyk-code&amp;utm_content=code_analysis&amp;utm_term=code%20analysis%20tools&amp;gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE">snyk.io</a></li>
+  <li><a href="https://www.sonarqube.org/">https://www.sonarqube.org/</a></li>
+</ol>
+
+<h3 id="konkluzioni">Konkluzioni</h3>
+
+<p>Në librin e “Clean Code - R. Martin” është një rregull interesante që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.</p>
+
+<p>Pra përmbledhja e gjithë tekstit në këtë artikull flet për kodin e pastër.
+Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti ai që përfiton shprehi të mira që të shtyjnë përpara në karrierë.</p>
+
+<p>Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.</p>
+
+<p>Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.</p>
+
+<p>Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.</p>
+
+<p>Por gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund ju jeni një ekip dhe një ekip për të funksionuar komunikimi duhet të jetë i rëndësishëm.</p>
+
 
             </article>
           </body>
@@ -1130,495 +1434,6 @@ Në vazhdim do të postoj për modele të tjera por edhe për metoda të ndryshm
  </p>
 
 <p>Kodim të këndshëm. <code class="language-plaintext highlighter-rouge">&lt;3 &lt;/&gt;</code></p>
-
-
-            </article>
-          </body>
-        </html>
-        ]]>
-      </content:encoded>
-    </item>
-    
-      <item>
-        <title>Principet S.O.L.I.D dhe si të aplikojmë ato në kod</title>
-        
-        
-          <description>&lt;p&gt;E pyeta një të afërm timin pse duhet ti mësojmë SOLID principet?
-Ja si përgjigjet ai…&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Dallimi në mes amaterëve dhe profesinistëve që kërkohen nga cdo kompani, perfshir: Tesla, Google, Apple, SpaceX etj gjendet tek aplikimi i principeve të ndryshme.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        
-        <pubDate>Wed, 17 Nov 2021 09:15:20 +0100</pubDate>
-        <guid isPermaLink="true">https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod</guid>
-      <link>https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod</link>
-      <content:encoded>
-        <![CDATA[
-        <!doctype html>
-        <html lang="en" prefix="op: http://media.facebook.com/op#">
-          <head>
-            <meta charset="utf-8">
-            <link rel="canonical" href="https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod">
-            <meta property="op:markup_version" content="v1.0">
-          </head>
-          <body>
-            <article>
-              <p>E pyeta një të afërm timin pse duhet ti mësojmë SOLID principet?
-Ja si përgjigjet ai…</p>
-<blockquote>
-  <p>Dallimi në mes amaterëve dhe profesinistëve që kërkohen nga cdo kompani, perfshir: Tesla, Google, Apple, SpaceX etj gjendet tek aplikimi i principeve të ndryshme.</p>
-</blockquote>
-
-<p>Pasi të lexoni këtë artikull, si dhe të analizoni shembujt që janë në këtë artikull, ju do të kuptoni principet SOLID dhe do të jeni të gatshëm ti aplikoni ato.</p>
-
-<p>Çdo kompani në Gjermani që do të aplikoni si zhvillues softveri, do të ju parashtrojn pytje në intervistë në lidhje me principet SOLID.</p>
-
-<p>Principet SOLID në OO programim do të ndihmojnë shumë në karrierën tuaj si programer.
-Do të kesh një bazë stabile për të ecur përpara, pa pasur parasysh produktin që ti e ndërton.</p>
-
-<h3 id="prezantimi-i-problemit">Prezantimi i problemit</h3>
-<p>Para se të fillojm, do ta prezantoj problemin që do të punoj gjatë të gjithë shembujve që i marr.</p>
-
-<h3 id="problemi">Problemi</h3>
-<p>Të marrim shembull një klient i juaj do të ju kërkoj me zhvillu një aplikacion. Ky aplikacion do ti digjitalizoj porosit në restaurantin e tij <em>Villa Natyra</em> që vetëm bën piza dhe hamburgera.
-Ne si programera të mirë që jem ja ndërtojm aplikacionin, tash ai po e përdor dhe është i kënaqur.</p>
-
-<p>Në rregull, masi e kem ndërtu produktin tash hajde të flasim për principet.</p>
-
-<h3 id="principi-i-parë---një-klasë-një-përgjegjësi">Principi i parë - Një klasë, një përgjegjësi</h3>
-<blockquote>
-  <p>Një klasë duhet të këtë vetëm një përgjegjësi dhe një arsyje të ndryshoj.</p>
-</blockquote>
-
-<p>Një shembull ku ky princip nuk respektohet</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Hamburgeri</span>
-<span class="p">{</span>
-   <span class="k">private</span> <span class="kt">string</span> <span class="nv">$kategoria</span><span class="p">;</span>
-   <span class="k">private</span> <span class="kt">array</span> <span class="nv">$shtesat</span><span class="p">;</span>
-   <span class="k">private</span> <span class="kt">string</span> <span class="nv">$llojiIMishit</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">string</span> <span class="nv">$llojiIMishit</span><span class="p">,</span> <span class="kt">array</span> <span class="nv">$shtesat</span><span class="p">)</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">kategoria</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">percaktoKategorine</span><span class="p">(</span><span class="nv">$llojiIMishit</span><span class="p">);</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">shtesat</span> <span class="o">=</span> <span class="nv">$shtesat</span><span class="p">;</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">llojiIMishit</span> <span class="o">=</span> <span class="nv">$llojiIMishit</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-   <span class="k">private</span> <span class="k">function</span> <span class="n">përcaktoKategorine</span><span class="p">(</span><span class="kt">string</span> <span class="nv">$llojiIMishit</span><span class="p">):</span> <span class="kt">string</span>
-   <span class="p">{</span>
-       <span class="k">if</span> <span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$llojiIMishit</span><span class="p">,</span> <span class="p">[</span><span class="s1">'file_pule'</span><span class="p">,</span> <span class="s1">'mish_lope'</span><span class="p">]))</span> <span class="p">{</span>
-           <span class="k">return</span> <span class="s1">'zgare'</span><span class="p">;</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="s1">'furre'</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">llogaritShumen</span><span class="p">():</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="n">double</span> <span class="nv">$shuma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-       <span class="k">foreach</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">shtesat</span> <span class="k">as</span> <span class="nv">$shtesa</span><span class="p">)</span> <span class="p">{</span>
-           <span class="nv">$shuma</span> <span class="o">+=</span> <span class="nv">$shtesa</span><span class="o">-&gt;</span><span class="nf">merrQmimin</span><span class="p">();</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">llojiIMishit</span> <span class="o">+</span> <span class="nv">$shuma</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruajFakturen</span><span class="p">():</span> <span class="kt">void</span>
-   <span class="p">{</span>
-       <span class="c1">//ktu ruhet faktura në databazë</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Nëse e kemi një klasë vetëm për hamburgerin edhe kjo klasë pranon shtesa sikur sallatë, domate etj.
-Gjithashtu e përcaktojmë kategorinë mbrenda klasës, i ruajm të dhënat në databazë dhe e kalkulojmë shumën.
-Atëher kjo klasë do të ndryshoj sa herë që mënyra e ruajtjës në databazë ose mënyra e kalkulimit ose mënyra e përcaktimit të kategorise ndryshojnë.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
- 
-<span class="kd">class</span> <span class="nc">Hamburgeri</span> <span class="kd">implements</span> <span class="nc">Ushqim</span>
-<span class="p">{</span>
-   <span class="k">private</span> <span class="k">const</span> <span class="no">KATEGORIA</span> <span class="o">=</span> <span class="s1">'furre'</span><span class="p">;</span>
-   <span class="k">public</span> <span class="kt">array</span> <span class="nv">$shtesat</span><span class="p">;</span>
-   <span class="k">public</span> <span class="kt">string</span> <span class="nv">$llojiIMishit</span><span class="p">;</span>
-   <span class="k">public</span> <span class="kt">double</span> <span class="nv">$shuma</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">string</span> <span class="nv">$llojiIMishit</span><span class="p">,</span> <span class="kt">array</span> <span class="nv">$shtesat</span><span class="p">)</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">kategoria</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">percaktoKategorine</span><span class="p">(</span><span class="nv">$llojiIMishit</span><span class="p">);</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">shtesat</span> <span class="o">=</span> <span class="nv">$shtesat</span><span class="p">;</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">llojiIMishit</span> <span class="o">=</span> <span class="nv">$llojiIMishit</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrKategorine</span><span class="p">():</span> <span class="kt">string</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">KATEGORIA</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqimi</span><span class="p">){}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">():</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span> <span class="c1">//ktu  kalkulohet shuma.</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">RuajtjaFaktures</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruaj</span><span class="p">(</span><span class="kt">Faktura</span> <span class="nv">$faktura</span><span class="p">):</span> <span class="kt">void</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">save</span><span class="p">(</span><span class="nv">$faktura</span><span class="p">);</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Faktura</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqimi</span><span class="p">,</span> <span class="kt">double</span> <span class="nv">$shuma</span><span class="p">)</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
-<p>Kurse këtu siç edhe shihet që i kemi ndarë klasat me përgjegjësi të ndryshme, sa herë që kalkulimi i çmimit ndryshon atëher klasa <code class="language-plaintext highlighter-rouge">KalkulatoriUshqimit</code> po ashtu ndryshon. 
-Nëse vendosim ta ndrrojmë mënyrën se si i ruajmë të dhënat atëher klasa <code class="language-plaintext highlighter-rouge">RuajtjaFaktures</code> ndryshon.</p>
-
-<h3 id="principi-i-dytë---e-hapur-për-zgjatje-e-mbyllur-për-ndryshime">Principi i dytë - E hapur për zgjatje, e mbyllur për ndryshime.</h3>
-<blockquote>
-  <p>Një klasë duhet të jete e mbyllur për ndryshime ndërsa e hapur për zgjatje.</p>
-</blockquote>
-
-<p>Ta marrim shembull klasën që i bën kalkulimet <code class="language-plaintext highlighter-rouge">KalkulatoriUshqimit</code> dhe ta shohim si do të ndryshoj nëse një kërkes e re na vjen, shembull “Po me duhet që për studente çmimi final të dal 20% më lirë”</p>
-
-<p>Tash na si programera pa dijeni për këtë princip “E mbyllur për ndryshime” do ta bëjme një ndryshim si në vijim</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqim</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$shuma</span> <span class="o">=</span> <span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrLlojinEMishit</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="k">foreach</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrShtesat</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$shtesa</span><span class="p">)</span> <span class="p">{</span>
-           <span class="nv">$shuma</span> <span class="o">+=</span> <span class="nv">$shtesa</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="nv">$shuma</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumenPerStudente</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqim</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$shuma</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">(</span><span class="nv">$ushqim</span><span class="p">);</span>
- 
-       <span class="k">return</span> <span class="nv">$shuma</span> <span class="o">-</span> <span class="p">(</span><span class="nv">$shuma</span> <span class="o">*</span> <span class="mf">0.2</span><span class="p">);</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
-</code></pre></div></div>
-<p>Nëse bëjme diçka si kjo atëher së pari klasa ka jo një arsye por dy për të ndryshuar, që e then edhe principin e parë, shohim që po e kalkulon shumën e ushqimit dhe zbritjen për studenta. 
-Tash nëse ndryshon mënyra e kalkulimit të ushqimit ose përqindja për studenta, atëher kjo klasë duhet të modifikohet.</p>
-
-<p>Nëse e konsiderojm Principin e parë, zbritja duhet të jete në një klas ndamas dhe në bazë të principit të dytë, klasa e re mund ta përdor klasën që kalkulon por nuk duhet ta ndryshoj atë.</p>
-
-<p>Si rezultat kemi bërë një ndryshim si në vijim.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqim</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$shuma</span> <span class="o">=</span> <span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrLlojinEMishit</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="k">foreach</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrShtesat</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$shtesa</span><span class="p">)</span> <span class="p">{</span>
-           <span class="nv">$shuma</span> <span class="o">+=</span> <span class="nv">$shtesa</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="nv">$shuma</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimitPerStudente</span> <span class="kd">extends</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">private</span> <span class="k">const</span> <span class="no">ZBRITJE_NE_PERQINDJE</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqimi</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">zbritShumen</span><span class="p">(</span><span class="k">parent</span><span class="o">::</span><span class="nf">merrShumen</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="p">));</span>
-   <span class="p">}</span>
- 
-   <span class="k">private</span> <span class="k">function</span> <span class="n">zbritShumen</span><span class="p">(</span><span class="kt">double</span> <span class="nv">$shuma</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$shuma</span> <span class="o">-</span> <span class="p">(</span><span class="nv">$shuma</span> <span class="o">*</span> <span class="k">self</span><span class="o">::</span><span class="no">ZBRITJE_NE_PERQINDJE</span><span class="p">);</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
-
-</code></pre></div></div>
-<p>Siç edhe pe shihni i kemi ndarë përgjegjsit në klasa të ndryshme, tash nëse mënyra e kalkulimit të ushqimit ndryshon atëher do të ndryshoj vetem <code class="language-plaintext highlighter-rouge">KalkulatoriUshqimit</code> dhe nëse zbritja për student ndryshon atëher do të ndryshoj vetëm klasa <code class="language-plaintext highlighter-rouge">KalkulatoriUshqimitPerStudente</code>.</p>
-
-<h3 id="principi-i-tretë---zëvendesimi-liskov">Principi i tretë - Zëvendesimi Liskov</h3>
-<blockquote>
-  <p>Ky princip thot që nëse funksioni f(x) punon me objektet e tipit T. Atëher funksioni f(y) duhet të punoj me objektet y të tipit S ku S është nën tip i T.</p>
-</blockquote>
-
-<p>Ndoshta shembulli që e then këtë princip do ta lehtsoj kuptimin e ketij principi.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqim</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$shuma</span> <span class="o">=</span> <span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrLlojinEMishit</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="k">foreach</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrShtesat</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$shtesa</span><span class="p">)</span> <span class="p">{</span>
-           <span class="nv">$shuma</span> <span class="o">+=</span> <span class="nv">$shtesa</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="nv">$shuma</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimitPerStudente</span> <span class="kd">extends</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">private</span> <span class="k">const</span> <span class="no">ZBRITJE_NE_PERQINDJE</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqimi</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">zbritShumen</span><span class="p">(</span><span class="k">parent</span><span class="o">::</span><span class="nf">merrShumen</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="p">));</span>
-   <span class="p">}</span>
- 
-   <span class="k">private</span> <span class="k">function</span> <span class="n">zbritShumen</span><span class="p">(</span><span class="kt">double</span> <span class="nv">$shuma</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$shuma</span> <span class="o">-</span> <span class="p">(</span><span class="nv">$shuma</span> <span class="o">*</span> <span class="k">self</span><span class="o">::</span><span class="no">ZBRITJE_NE_PERQINDJE</span><span class="p">);</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
-
-</code></pre></div></div>
-<p>Kjo pjese e kodit është pjesë e principit të dytë ku e kem zgjatur klasën <code class="language-plaintext highlighter-rouge">KalkulatoriUshqimit</code>, me këtë ndryshim të metodës <code class="language-plaintext highlighter-rouge">merrShumen</code> e kemi thyer rregullin e principit të tretë.
-Nëse i referohemi definicionit i bjen që e njëjta metodë nuk duhet të kthen vlera të ndryshme edhe pse është klasë tjeter.</p>
-
-<p>Do ta rregullojme këtë klasë si në vijim.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqim</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$shuma</span> <span class="o">=</span> <span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrLlojinEMishit</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="k">foreach</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrShtesat</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$shtesa</span><span class="p">)</span> <span class="p">{</span>
-           <span class="nv">$shuma</span> <span class="o">+=</span> <span class="nv">$shtesa</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="nv">$shuma</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimitPerStudente</span> <span class="kd">extends</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">private</span> <span class="k">const</span> <span class="no">ZBRITJE_NE_PERQINDJE</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumenEZbritur</span><span class="p">():</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">zbritShumen</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">());</span>
-   <span class="p">}</span>
- 
-   <span class="k">private</span> <span class="k">function</span> <span class="n">zbritShumen</span><span class="p">(</span><span class="kt">double</span> <span class="nv">$shuma</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$shuma</span> <span class="o">-</span> <span class="p">(</span><span class="nv">$shuma</span> <span class="o">*</span> <span class="k">self</span><span class="o">::</span><span class="no">ZBRITJE_NE_PERQINDJE</span><span class="p">);</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
-
-</code></pre></div></div>
-<p>Në vend që ta modifikojm metodën e klasës origjinale, do ta përdorim atë në klasën për studente dhe do të shtojmë metoda në klasën për studente.</p>
-
-<h3 id="principi-i-katert---ndarja-e-kontratave">Principi i katert - Ndarja e kontratave</h3>
-<blockquote>
-  <p>Një klasë nuk duhet ta implementoj një metodë që nuk i nëvojitet.</p>
-</blockquote>
-
-<p>Shembull shtesat e ushqimeve, siq e kemi parë me lartë secila shtesë e ka çmimin e vet, po çka nëse kemi shtesa që nuk kushtojn?
-Shembull:</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
-<span class="kd">interface</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">():</span> <span class="kt">double</span><span class="p">;</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Sallate</span> <span class="kd">implements</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">const</span> <span class="no">QMIMI</span> <span class="o">=</span> <span class="mf">0.50</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">()</span> <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">QMIMI</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">BbqSos</span> <span class="kd">implements</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">const</span> <span class="no">QMIMI</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">()</span> <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">QMIMI</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Ketchup</span> <span class="kd">implements</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">const</span> <span class="no">QMIMI</span> <span class="o">=</span> <span class="mf">0.00</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">()</span> <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">QMIMI</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Hamburger</span> <span class="kd">implements</span> <span class="nc">Ushqim</span> <span class="p">{</span>
-   <span class="k">private</span> <span class="k">const</span> <span class="no">QMIMI</span> <span class="o">=</span> <span class="mf">2.00</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrQmimin</span><span class="p">():</span><span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">QMIMI</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
-<p>Siç e shohim në shembullin më lart, shtesa  <code class="language-plaintext highlighter-rouge">Ketchup</code> edhe pse është falas  duhet ta implementoj metodën <code class="language-plaintext highlighter-rouge">merrShumen</code> dhe kjo nuk e respekton principin e katërt, një klasë nuk duhet ta implementoj një metodë që nuk i nevojitet.</p>
-
-<p>Kështu duhet  ta ndryshojm kodin që ta respektojme principin e katërt.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Ushqim</span> <span class="p">{}</span>
-<span class="kd">interface</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrSasine</span><span class="p">():</span> <span class="kt">int</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kd">interface</span> <span class="nc">ShtesaMePages</span> <span class="kd">implements</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">():</span> <span class="kt">double</span><span class="p">;</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Sallate</span> <span class="kd">implements</span> <span class="nc">ShtesaMePages</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">const</span> <span class="no">QMIMI</span> <span class="o">=</span> <span class="mf">0.50</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">()</span> <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">QMIMI</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Ketchup</span> <span class="kd">implements</span> <span class="nc">Shtesa</span> <span class="p">{</span>
-   <span class="k">private</span> <span class="kt">int</span> <span class="nv">$sasia</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrSasine</span><span class="p">():</span> <span class="kt">int</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">sasia</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Hamburger</span> <span class="kd">implements</span> <span class="nc">Ushqim</span> <span class="p">{</span>
-   <span class="k">private</span> <span class="k">const</span> <span class="no">QMIMI</span> <span class="o">=</span> <span class="mf">2.00</span><span class="p">;</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrQmimin</span><span class="p">():</span><span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="k">return</span> <span class="k">self</span><span class="o">::</span><span class="no">QMIMI</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">KalkulatoriUshqimit</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">merrShumen</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqim</span><span class="p">):</span> <span class="kt">double</span>
-   <span class="p">{</span>
-       <span class="nv">$shuma</span> <span class="o">=</span> <span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrLlojinEMishit</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>
-       <span class="k">foreach</span><span class="p">(</span><span class="nv">$ushqimi</span><span class="o">-&gt;</span><span class="nf">merrShtesat</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$shtesa</span><span class="p">)</span> <span class="p">{</span>
-           <span class="k">if</span> <span class="p">(</span><span class="nv">$shtesa</span> <span class="k">instanceof</span> <span class="nc">ShtesaMePages</span><span class="p">)</span> <span class="p">{</span>
-               <span class="nv">$shuma</span> <span class="o">+=</span> <span class="nv">$shtesa</span><span class="o">-&gt;</span><span class="nf">merrShumen</span><span class="p">();</span>  
-           <span class="p">}</span>
-       <span class="p">}</span>
- 
-       <span class="k">return</span> <span class="nv">$shuma</span><span class="p">;</span>
-   <span class="p">}</span>
- 
-<span class="p">}</span>
-</code></pre></div></div>
-<p>Ky është një shembull ku ndahet kontrata për shtesat me  çmime dhe ato pa  çmime, për arsye që shtesat pa çmime nuk kan nevoj ta implementojnë metodën <code class="language-plaintext highlighter-rouge">merrQmimin()</code>.</p>
-
-<h3 id="principi-i-pestë---inversioni-i-varësisë">Principi i pestë - Inversioni i varësisë</h3>
-<blockquote>
-  <p>Një klasë që kryen një punë asnjëherë nuk duhet të varet në mjetin që e përdor por në kontratë.</p>
-</blockquote>
-
-<p>Një shembull do të ishte ta ruajm fakturen në MySQL databazë si në shembullin në vijim.
-E mbani mend si klasa <code class="language-plaintext highlighter-rouge">RuajtjaFaktures</code> varet direkt në klasën <code class="language-plaintext highlighter-rouge">Databaza</code> që është edhe implementimi mbrenda.
-Tani klasa <code class="language-plaintext highlighter-rouge">RuajtjaFaktures</code> e then principin e parë sepse nëse e ndryshojme databazën  atëher duhet ta ndryshojm edhe klasën <code class="language-plaintext highlighter-rouge">RuajtjaFaktures</code>.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Databaza</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruaj</span><span class="p">(</span><span class="kt">Faktura</span> <span class="nv">$faktura</span><span class="p">):</span> <span class="kt">void</span>
-   <span class="p">{</span>
-       <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"INSERT into FAKTURAT (val1, val2, val3) VALUES (1,2,3);"</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">db</span><span class="o">-&gt;</span><span class="nf">executeSql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">RuajtjaFaktures</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">Databaza</span> <span class="nv">$databaza</span><span class="p">){}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruaj</span><span class="p">(</span><span class="kt">Faktura</span> <span class="nv">$faktura</span><span class="p">):</span> <span class="kt">void</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">databaza</span><span class="o">-&gt;</span><span class="nf">ruaj</span><span class="p">(</span><span class="nv">$faktura</span><span class="p">);</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Faktura</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqimi</span><span class="p">,</span> <span class="kt">double</span> <span class="nv">$shuma</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>Një shembull  që do ta respektonte principin e pestë do të ishte si në vijim.</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Databaza</span> <span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruaj</span><span class="p">(</span><span class="kt">Faktura</span> <span class="nv">$faktura</span><span class="p">):</span> <span class="kt">void</span><span class="p">;</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">HapsiraRuajtjesSeFakturave</span> <span class="kd">implements</span> <span class="nc">Databaza</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruaj</span><span class="p">(</span><span class="kt">Faktura</span> <span class="nv">$faktura</span><span class="p">):</span> <span class="kt">void</span>
-   <span class="p">{</span>
-       <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">"INSERT into FAKTURAT (val1, val2, val3) VALUES (1,2,3);"</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">db</span><span class="o">-&gt;</span><span class="nf">executeSql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">RuajtjaFaktures</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">Databaza</span> <span class="nv">$databaza</span><span class="p">){}</span>
- 
-   <span class="k">public</span> <span class="k">function</span> <span class="n">ruaj</span><span class="p">(</span><span class="kt">Faktura</span> <span class="nv">$faktura</span><span class="p">):</span> <span class="kt">void</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">databaza</span><span class="o">-&gt;</span><span class="nf">ruaj</span><span class="p">(</span><span class="nv">$faktura</span><span class="p">);</span>
-   <span class="p">}</span>
-<span class="p">}</span>
- 
- 
- 
-<span class="kd">class</span> <span class="nc">Faktura</span>
-<span class="p">{</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="n">__constructor</span><span class="p">(</span><span class="kt">Ushqim</span> <span class="nv">$ushqimi</span><span class="p">,</span> <span class="kt">double</span> <span class="nv">$shuma</span><span class="p">)</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
-<p>Ne këtë shembull e shohim që tani kemi një kontratë <code class="language-plaintext highlighter-rouge">Databaza</code> dhe një klasë ku gjendet implementimi i ruajtjes së fakturave <code class="language-plaintext highlighter-rouge">HapsiraRuajtjesSeFakturave</code>, tash nëse vendosim ta ndryshojm databazën në MongoDB, NoSQL ose çkado qoft nuk kemi nevoj ta ndryshojm klasën <code class="language-plaintext highlighter-rouge">RuajtjaFaktures</code> sepse ajo varet në kontrat e jo në implementim.</p>
-
-<h3 id="finalizimi-dhe-hapat-e-tjerë">Finalizimi dhe hapat e tjerë</h3>
-<p>Këto janë pra pesë principet në OO të cilat shikohen në secilën intervistë se sa mirë i ke kuptuar dhe a din si ti përdorni ato.
-Hapat e radhës janë: 
-Që të provosh ti aplikosh këto principe duhet startuar një projekt të vogël ose edhe në punën ku punon.
-Kur e shikon një kod në fillim të merr kohe ti shikosh të gjitha principet, por pas ca kohe bëhet më e leht.
-Përserite këtë proces disa here.</p>
-
-<p>Nëse keni ndonjë koment, kritike ose   vetëm don të kemi një bised rreth OO atëher me kontakto në rrjetet sociale.
-<a href="https://github.com/diarselimi">Github</a></p>
 
 
             </article>
