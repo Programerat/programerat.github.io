@@ -28,11 +28,11 @@ p.sh Ai e din që variabla **r** në klasën **Processor** e përmban vlerën e 
 
 Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.
 
-> Bëhu profesional.
+> Bëhu profesional.   
 
 
 
-### Rregullat me shembull
+### Rregullat me shembull 💻
 
 Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.
 
@@ -117,8 +117,9 @@ class GetOrdersWithFiltersController {
 
 Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan.
 
-[Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
+[Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)   
 
+     
 
 
 
@@ -133,7 +134,8 @@ Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe 
 
 Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.
 
-Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.
+Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.    
+     
 
 
 
@@ -145,9 +147,9 @@ Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson pun
 
 Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.
 
-> Sigurohu që ta lexosh Mbaj mend në fund të artikullit.
+> Sigurohu që ta lexosh Mbaj mend në fund të artikullit.   
 
-
+     
 
 ### Efekti afatgjatë
 
@@ -162,7 +164,8 @@ Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të j
 Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:
 
 1. Fuqia e shprehisë
-2. Madhësia e projektit
+2. Madhësia e projektit     
+      
 
 
 
@@ -189,7 +192,8 @@ Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë at�
 
 Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.
 
-Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.
+Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.     
+      
 
 
 
@@ -210,11 +214,12 @@ Pas kësaj ti i tregon shefit që të duhet edhe një programer me më shum eksp
 Dhe kështu përfundon deri te dështimi i projektit.
 
 
-Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.
+Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.     
+      
 
 
 
-### Aplikimi i rregullave
+### Aplikimi i rregullave 📜 
 
 Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.
 
@@ -227,12 +232,12 @@ Fillon ndarjen e klasave ne klasa të veçanta
 I zvoglon metodat që të jetë më i lexueshëm kodi.
 E lexon disa herë
 kthehesh tek hapi 3. 
-Nëse mendon që gjithqka është në rregull atëher vazhdon.
+Nëse mendon që gjithqka është në rregull atëher vazhdon.        
+       
 
 
 
-
-### Automatizimi i rregullave 
+### Automatizimi i rregullave 🤖
 
 Janë disa vegla që të ndihmojnë dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.
 
@@ -242,8 +247,8 @@ Veglat:
 1. https://phpstan.org/try
 2. https://www.npmjs.com/package/phplint
 3. [snyk.io](https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&utm_source=google&utm_campaign=nb_lg_snyk-code&utm_content=code_analysis&utm_term=code%20analysis%20tools&gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE)
-4. [https://www.sonarqube.org/](https://www.sonarqube.org/)
-
+4. [https://www.sonarqube.org/](https://www.sonarqube.org/)       
+         
 
 
 ### Konkluzioni
@@ -255,11 +260,12 @@ Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti a
 
 Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.
 
-Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.
+Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.      
 
 
-Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.
+Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.        
+       
 
-#### Mbaje në mend
-Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.
+#### Mbaje në mend 🧠
+Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.      
 
