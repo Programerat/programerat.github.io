@@ -127,12 +127,14 @@ Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe 
 
 Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.
 
-Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.     
+Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.         
 
 
-
-
+ 
 ### Efekti mbrenda ekipit
+
+Ti dhe ekipi ytë 70% të kohës do të shpenzojnë duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.
+Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.
 
 Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.
 

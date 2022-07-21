@@ -66,19 +66,7 @@ layout: compress
 
 </body>
 
-<footer class="social-footer">
-  <div class="social-footer-icons">
-    <a href="https://github.com/programerat" title="Github profile, nothing much there, yet" target="_blank"
-      rel="noopener noreferrer"><i class="fa fa-github social-button-custom " aria-hidden="true"></i></a>
-    <a href="{{site.url}}{{ site.baseurl }}/atom.xml" title="Feed RSS" target="_blank" rel="noopener noreferrer"><i
-        class="fa fa-rss social-button-custom" aria-hidden="true"></i></a>
-    <a href="https://github.com/programerat/programerat.github.io" title="Browse the code" target="_blank" rel="noopener noreferrer"><i
-        class="fa fa-code social-button-custom " aria-hidden="true"></i></a>
-    <a href="https://facebook.com/programerat" title="Facebook page" target="_blank"><i class="fa fa-facebook social-button-custom " aria-hidden="true"></i></a>
-    <a href="https://www.youtube.com/channel/UCi5M70eXEbQkAV4fyfrbOuQ" title="youtube channel" target="_blank"><i class="fa fa-youtube social-button-custom " aria-hidden="true"></i></a>
-    <a href="https://discord.gg/XbfP9quv" title="Discord Chat" target="_blank"><img src="{{ "/" | relative_url  }}assets/images/discord.svg" width="20px" alt="discord chat" ></a>
-  </div>
-</footer>
+{% include footer.html %}
 
 
 {% if page.url == '/' %}
