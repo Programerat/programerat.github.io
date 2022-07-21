@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-21T15:36:12+02:00</updated>
+ <updated>2022-07-21T16:37:56+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -133,6 +133,9 @@
 &lt;p&gt;Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.&lt;/p&gt;
 
 &lt;h3 id=&quot;efekti-mbrenda-ekipit&quot;&gt;Efekti mbrenda ekipit&lt;/h3&gt;
+
+&lt;p&gt;Ti dhe ekipi ytë 70% të kohës do të shpenzojnë duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.
+Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.&lt;/p&gt;
 
 &lt;p&gt;Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.&lt;/p&gt;
 
