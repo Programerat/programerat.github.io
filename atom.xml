@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-21T14:16:06+02:00</updated>
+ <updated>2022-07-21T14:18:25+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -150,7 +150,7 @@
 
 &lt;p&gt;Ti ja prezenton një diagram si në vijim:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/home/diarselimi/Downloads/code-quality.png&quot; alt=&quot;Diagrami i kohes dhe kompleksitetit&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/code-quality.png&quot; alt=&quot;Diagrami i kohes dhe kompleksitetit&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas.&lt;/p&gt;
 

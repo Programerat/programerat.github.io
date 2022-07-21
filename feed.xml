@@ -161,7 +161,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <p>Ti ja prezenton një diagram si në vijim:</p>
 
-<p><img src="/home/diarselimi/Downloads/code-quality.png" alt="Diagrami i kohes dhe kompleksitetit" /></p>
+<p><img src="/assets/images/code-quality.png" alt="Diagrami i kohes dhe kompleksitetit" /></p>
 
 <p>Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas.</p>
 
