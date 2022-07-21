@@ -1,21 +1,21 @@
 [
   
     {
-      "title"    : "Prezantimi i programimit",
-      "description" : "Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.",
-      "category" : "",
-      "tags"     : "karriera, programim, mesime",
-      "url"      : "//2022/07/njohja-me-programimin",
-      "date"     : "2022-07-21 10:15:20 +0200"
-    } ,
-  
-    {
       "title"    : "Kodi i pastër",
       "description" : "Çka është kodi i pastër dhe si të efekton karrieren tënde si një programer profesional.",
       "category" : "",
       "tags"     : "",
       "url"      : "//2022/07/kodi-i-paster",
       "date"     : "2022-07-17 00:00:00 +0200"
+    } ,
+  
+    {
+      "title"    : "Prezantimi i programimit",
+      "description" : "Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.",
+      "category" : "",
+      "tags"     : "karriera, programim, mesime",
+      "url"      : "//2022/07/njohja-me-programimin",
+      "date"     : "2022-07-13 10:15:20 +0200"
     } ,
   
     {
