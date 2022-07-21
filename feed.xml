@@ -219,16 +219,18 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <p>Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.</p>
 
-<p>p.sh : Do ta provoj ta bëj të njejtën në vijim.</p>
+<p>Provoni ta adaptoni këtë mentalitet</p>
 
-<p>E shkruani kodin që të funksionoj
-E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
-Fillon ri emerimin e metodave dhe klasave 
-Fillon ndarjen e klasave ne klasa të veçanta 
-I zvoglon metodat që të jetë më i lexueshëm kodi.
-E lexon disa herë
-kthehesh tek hapi 3. 
-Nëse mendon që gjithqka është në rregull atëher vazhdon.</p>
+<ol>
+  <li>E shkruani kodin që të funksionoj</li>
+  <li>E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin</li>
+  <li>Fillon ri emerimin e metodave dhe klasave</li>
+  <li>Fillon ndarjen e klasave ne klasa të veçanta</li>
+  <li>I zvoglon metodat që të jetë më i lexueshëm kodi.</li>
+  <li>E lexon disa herë</li>
+  <li>kthehesh tek hapi 3.</li>
+  <li>Nëse mendon që gjithqka është në rregull atëher vazhdon.</li>
+</ol>
 
 <h3 id="automatizimi-i-rregullave">Automatizimi i rregullave</h3>
 

@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-21T14:24:41+02:00</updated>
+ <updated>2022-07-21T15:36:12+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -208,16 +208,18 @@
 
 &lt;p&gt;Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.&lt;/p&gt;
 
-&lt;p&gt;p.sh : Do ta provoj ta bëj të njejtën në vijim.&lt;/p&gt;
+&lt;p&gt;Provoni ta adaptoni këtë mentalitet&lt;/p&gt;
 
-&lt;p&gt;E shkruani kodin që të funksionoj
-E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
-Fillon ri emerimin e metodave dhe klasave 
-Fillon ndarjen e klasave ne klasa të veçanta 
-I zvoglon metodat që të jetë më i lexueshëm kodi.
-E lexon disa herë
-kthehesh tek hapi 3. 
-Nëse mendon që gjithqka është në rregull atëher vazhdon.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;E shkruani kodin që të funksionoj&lt;/li&gt;
+  &lt;li&gt;E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin&lt;/li&gt;
+  &lt;li&gt;Fillon ri emerimin e metodave dhe klasave&lt;/li&gt;
+  &lt;li&gt;Fillon ndarjen e klasave ne klasa të veçanta&lt;/li&gt;
+  &lt;li&gt;I zvoglon metodat që të jetë më i lexueshëm kodi.&lt;/li&gt;
+  &lt;li&gt;E lexon disa herë&lt;/li&gt;
+  &lt;li&gt;kthehesh tek hapi 3.&lt;/li&gt;
+  &lt;li&gt;Nëse mendon që gjithqka është në rregull atëher vazhdon.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3 id=&quot;automatizimi-i-rregullave&quot;&gt;Automatizimi i rregullave&lt;/h3&gt;
 
