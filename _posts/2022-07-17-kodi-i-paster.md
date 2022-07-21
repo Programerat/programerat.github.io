@@ -20,7 +20,8 @@ p.sh Ai e din që variabla **r** në klasën **Processor** e përmban vlerën e 
 
 Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.
 
-> Bëhu profesional.
+> Bëhu profesional.    
+
 
 
 
@@ -88,7 +89,8 @@ class OrdersController {
 }
 ```
 
-I njejti funksionalitet por me rregulla të konsideruara dhe me funksionalitet të fshehur në objekte.
+I njejti funksionalitet por me rregulla të konsideruara dhe me funksionalitet të fshehur në objekte.    
+
 
 ```php
 class GetOrdersWithFiltersController {
@@ -109,8 +111,8 @@ class GetOrdersWithFiltersController {
 
 Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan.
 
-[Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
-
+[Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)     
+      
 
 
 
@@ -125,7 +127,8 @@ Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe 
 
 Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.
 
-Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.
+Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.     
+
 
 
 
@@ -147,16 +150,18 @@ Nëse shefi të pyet se për sa kohë mund ta përfundosh një projekt me x kër
 
 Ti ja prezenton një diagram si në vijim:
 
-![Diagrami i kohes dhe kompleksitetit](/home/diarselimi/Downloads/code-quality.png)
+![Diagrami i kohes dhe kompleksitetit]({{ "/" | relative_url  }}assets/images/code-quality.png)    
+
+
 
 Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas. 
 
 Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:
 
 1. Fuqia e shprehisë
-2. Madhësia e projektit
+2. Madhësia e projektit   
 
-
+     
 
 
 #### Fuqia e shprehisë 
@@ -171,7 +176,7 @@ Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqi
 * Injorimi i formateve 
 * Injorimi i shkrimit të testeve.
 
-dhe në i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.   
+dhe në i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.       
 
 
 
@@ -181,10 +186,10 @@ Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë at�
 
 Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.
 
-Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.
+Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.      
 
 
-
+      
 
 #### Madhësia e projektit
 
@@ -202,9 +207,9 @@ Pas kësaj ti i tregon shefit që të duhet edhe një programer me më shum eksp
 Dhe kështu përfundon deri te dështimi i projektit.
 
 
-Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.
+Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.      
 
-
+      
 
 ### Aplikimi i rregullave
 
@@ -219,7 +224,7 @@ Fillon ndarjen e klasave ne klasa të veçanta
 I zvoglon metodat që të jetë më i lexueshëm kodi.
 E lexon disa herë
 kthehesh tek hapi 3. 
-Nëse mendon që gjithqka është në rregull atëher vazhdon.
+Nëse mendon që gjithqka është në rregull atëher vazhdon.      
 
 
 ### Automatizimi i rregullave 
@@ -232,10 +237,10 @@ Veglat:
 1. https://phpstan.org/try
 2. https://www.npmjs.com/package/phplint
 3. [snyk.io](https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&utm_source=google&utm_campaign=nb_lg_snyk-code&utm_content=code_analysis&utm_term=code%20analysis%20tools&gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE)
-4. [https://www.sonarqube.org/](https://www.sonarqube.org/)
+4. [https://www.sonarqube.org/](https://www.sonarqube.org/)    
 
 
-
+       
 ### Konkluzioni
 
 Në librin e “Clean Code - R. Martin” është një rregull interesante që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.
@@ -248,9 +253,9 @@ Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe
 Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.
 
 
-Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike. 
+Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.      
 
 
-#### Mbaje në mend
+#### Mbaje në mend 
 Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.
 
