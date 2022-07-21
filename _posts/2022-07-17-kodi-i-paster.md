@@ -256,6 +256,6 @@ Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke 
 Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.      
 
 
-#### Mbaje në mend 
+#### Mbaje në mend 🧠
 Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.
 
