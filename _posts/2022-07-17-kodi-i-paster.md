@@ -215,16 +215,16 @@ Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai
 
 Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.
 
-p.sh : Do ta provoj ta bëj të njejtën në vijim.
+Provoni ta adaptoni këtë mentalitet
 
-E shkruani kodin që të funksionoj
-E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
-Fillon ri emerimin e metodave dhe klasave 
-Fillon ndarjen e klasave ne klasa të veçanta 
-I zvoglon metodat që të jetë më i lexueshëm kodi.
-E lexon disa herë
-kthehesh tek hapi 3. 
-Nëse mendon që gjithqka është në rregull atëher vazhdon.      
+1. E shkruani kodin që të funksionoj
+2. E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
+3. Fillon ri emerimin e metodave dhe klasave 
+4. Fillon ndarjen e klasave ne klasa të veçanta 
+5. I zvoglon metodat që të jetë më i lexueshëm kodi.
+6. E lexon disa herë
+7. kthehesh tek hapi 3. 
+8. Nëse mendon që gjithqka është në rregull atëher vazhdon.      
 
 
 ### Automatizimi i rregullave 
