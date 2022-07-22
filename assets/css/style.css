@@ -95,7 +95,7 @@ p code {
   .pull-content {
     margin-top: -18rem;
   }
-  
+
   @media only screen and (max-width: 480px) {
     .layout-article ul.box-article {
       -moz-column-count: 1;
@@ -157,7 +157,7 @@ p code {
     
   }
   
-  @media all and (min-width:0px) and (max-width: 800px) {
+  @media all and (min-width:0px) and (max-width: 900px) {
     .header-content {
       width: 80%;
     }
