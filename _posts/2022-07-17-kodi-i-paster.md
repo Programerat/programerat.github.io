@@ -1,5 +1,5 @@
 ---
-title: Kodi i pastër
+title: Kodi i pastër dhe çka duhet të konsideroni
 description: Çka është kodi i pastër dhe si të efekton karrieren tënde si një programer profesional.
 cover_img: https://programerat.github.io/assets/images/clean_code-cover.jpg
 author: diarselimi
@@ -8,9 +8,9 @@ archive: true
 
 ### Hyrje
 
-Në fushën e programimit gjithmonë është një gjë me rëndësi <Kodi i pastër>, por çka domethënë kodi i pastër?   
+Në fushën e programimit gjithmonë është një gjë me rëndësi Kodi i pastër, por çka domethënë kodi i pastër?   
 
-Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një bllok, një klasë ose një metodë.
+Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë ose një metodë.
 
 Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.
 
@@ -22,63 +22,66 @@ Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit q�
 
 > Bëhu profesional.    
 
-
-
+      
 
 ### Rregullat me shembull
 
 Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.
 
-Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundsia për tu pranuar në një punë është më e madhe nëse i mëson ato rregulla.
+Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson ato rregulla.
 
 Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.
 
-p.sh Jeni duke bërë një kërkesë në api dhe doni të ktheni të gjitha blerjet të listuara.
+p.sh Jeni duke bërë një kërkesë në API dhe doni të ktheni të gjitha blerjet të listuara.
 
 ```php
+
+class OrdersController {
 //Emri i klasës duhet të jetë i përshkueshëm në nivelin ku
 //programeri i radhës kur e sheh klasën e kupton se çfar pune bën pa e hapur atë.
 //GetOrdersWithFiltersController do të ishte më e përshkrueshme
-class OrdersController {
-	//...
+	
+
 	public function get(Request $request) : Response {
         
-        //Në këtë rast thehet rregulli ku metoda ka njohuri 
-        //se çka përmban getUser()
-        //idealisht duhet të duket
-        //$this->auth->isUserAuthenticated()
-        if (!$this->auth->getUser()->isAuthenticated()) { 
+        if (!$this->auth->getUser()->isAuthenticated()) {
+            //Në këtë rast thehet rregulli ku metoda ka njohuri 
+            //se çka përmban getUser()
+            //idealisht duhet të duket
+            //$this->auth->isUserAuthenticated() 
             //..
             return new UnauthorizedResponse();
         }
         
-        //konstruktimi i filterave mbrenda controllerit nuk është ideale
-        //metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave
-        //pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim
-        //RequestFiltersFactoryIml::create($request->getParams())
         $filters = [
             'order_by' => $request->get('order_by'),
             'order_direction' => $request->get('order_direction'),
             'search' => $request->get('search'),
             ...
         ];
+        //konstruktimi i filterave mbrenda controllerit nuk është ideale
+        //metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave
+        //pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim
+        //RequestFiltersFactoryIml::create($request->getParams())
         
+        
+        if (!in_array($filters['order_direction'], ['asc', 'desc'])) {
         //asc dhe desc duhesh ti deklarosh si konstante 
         //apo ti fusesh mbrenda objektit / DTO objektit qe e kemi përmendur më lartë
-        if (!in_array($filters['order_direction'], ['asc', 'desc'])) {
+        
             throw new SortingIsNotSupported();
         }
         
+        $list = $this->orders->findAll($filters);
         //Emertimi i variablës në këtë rast nuk është aq i vetë shpjegueshëm
         //$filteredOrders do të ishte më e përshkrueshme
-		$list = $this->orders->findAll($filters);
-        
+		
+        $isPagination = str_contains('/count', $request->getUri()->getPath());
         //Në këtë rresht kjo metodë po qaset në path për ta gjetur nëse 
         //egziston /count në url
         //por kjo është një shtresë më e thellë e aplikacionit prandaj 
         //edhe kjo e then rregullin që metoda duhet të qaset gjithmonë në të njejtën shtresë
         //$request->isPaginated() ose $request->
-        $isPagination = str_contains('/count', $request->getUri()->getPath());
         
         if ($isPagination) {
             return new PaginatedResponse($list);
@@ -109,7 +112,7 @@ class GetOrdersWithFiltersController {
 }
 ```
 
-Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan.
+Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan dhe e kupton se çfar pune po kryen.
 
 [Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)     
       
@@ -121,11 +124,11 @@ Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të le
 
 Nëse projekti ku punon ti i përmban 8000 rreshta kod.
 
-Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 dite pune.
+Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 ditë pune.
 
-Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe i bjen 34.7 rreshta ne ditë.
+Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% në ditë që i bjen 34 rreshta ne ditë.
 
-Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.
+Ne fund te vitit ti do ta ndryshosh komplet kodin në atë projekt.
 
 Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.         
 
@@ -133,17 +136,14 @@ Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do 
  
 ### Efekti mbrenda ekipit
 
-Ti dhe ekipi ytë 70% të kohës do të shpenzojnë duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.
-Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.
-
-Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.
-
-Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.
+* Ti dhe ekipi ytë 70% të kohës do të shpenzoni duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.
+* Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.
+* Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.
+* Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.
 
 Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.
 
-> Sigurohu që ta lexosh Mbaj mend në fund të artikullit.
-
+> Sigurohu që ta lexosh **Mbaje në mend** në fund të artikullit.
 
 
 ### Efekti afatgjatë
@@ -156,7 +156,7 @@ Ti ja prezenton një diagram si në vijim:
 
 
 
-Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas. 
+Ja shpjegon që nëse dëshiron rezultat të shpejt, pasojat do të jenë më vonë, dhe anasjelltas. 
 
 Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:
 
@@ -170,7 +170,7 @@ Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si program
 
 Ti je programer që je për shkak të shprehive që i ke adaptuar me kohë.
 
-Prandaj duhet të jesh shum i kujdesshëm se çka dhe si punon në fillim të karrieres.
+Prandaj duhet të jesh shumë i kujdesshëm se çka dhe si punon në fillim të karrierës.
 
 Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqija sikur
 
@@ -178,7 +178,7 @@ Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqi
 * Injorimi i formateve 
 * Injorimi i shkrimit të testeve.
 
-dhe në i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.       
+dhe i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.       
 
 
 
@@ -197,7 +197,7 @@ Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i
 
 Nëse vendosni të mos adaptoni formatet dhe rregullat e përmendura në projekt, atëher pas një viti projekti që ti je duke punuar do të bëhet aq i madh sa që nuk mund ta përballoni të punoni i vetëm në të.
 
-Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.
+Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me e bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.
 
 Prandaj koha jote tash ndahet në dy pjesë, 
 
@@ -211,6 +211,7 @@ Dhe kështu përfundon deri te dështimi i projektit.
 
 Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.      
 
+I vetmi benefit që ke marrur nga ai vend pune është eksperienca se si një projekt të dështon.
       
 
 ### Aplikimi i rregullave
@@ -220,8 +221,8 @@ Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke
 Provoni ta adaptoni këtë mentalitet
 
 1. E shkruani kodin që të funksionoj
-2. E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
-3. Fillon ri emerimin e metodave dhe klasave 
+2. I shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin
+3. Fillon me riemertimin e metodave dhe klasave 
 4. Fillon ndarjen e klasave ne klasa të veçanta 
 5. I zvoglon metodat që të jetë më i lexueshëm kodi.
 6. E lexon disa herë
@@ -231,7 +232,7 @@ Provoni ta adaptoni këtë mentalitet
 
 ### Automatizimi i rregullave 
 
-Janë disa vegla që të ndihmojnë dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.
+Janë disa vegla që të ndihmoj në dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.
 
 Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.
 
@@ -245,16 +246,15 @@ Veglat:
        
 ### Konkluzioni
 
-Në librin e “Clean Code - R. Martin” është një rregull interesante që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.
+Në librin e “Clean Code - R. Martin” është një rregull interesant që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.
 
 Pra përmbledhja e gjithë tekstit në këtë artikull flet për kodin e pastër.
 Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti ai që përfiton shprehi të mira që të shtyjnë përpara në karrierë.
 
 Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.
 
-Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.
-
-
+Nëse dikush tjetër do ta lexoj atë klasë apo funksion që ti e ke shkruar, do të është falenderues sepse e ke kursyer kohën e tij.
+     
 Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.      
 
 
