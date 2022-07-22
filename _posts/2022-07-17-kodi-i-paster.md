@@ -3,6 +3,7 @@ title: Kodi i pastër dhe çka duhet të konsideroni
 description: Çka është kodi i pastër dhe si të efekton karrieren tënde si një programer profesional.
 cover_img: https://programerat.github.io/assets/images/clean_code-cover.jpg
 author: diarselimi
+tags: karriera programim mesime
 archive: true
 ---
 
@@ -237,10 +238,11 @@ Janë disa vegla që të ndihmoj në dhe të tregojnë nëse ki probleme me stan
 Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.
 
 Veglat:
-1. https://phpstan.org/try
-2. https://www.npmjs.com/package/phplint
+1. [https://phpstan.org/try](https://phpstan.org/try)
+2. [https://www.npmjs.com/package/phplint](https://www.npmjs.com/package/phplint)
 3. [snyk.io](https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&utm_source=google&utm_campaign=nb_lg_snyk-code&utm_content=code_analysis&utm_term=code%20analysis%20tools&gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE)
 4. [https://www.sonarqube.org/](https://www.sonarqube.org/)    
+5. [https://phpinsights.com/](https://phpinsights.com/)
 
 
        
