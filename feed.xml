@@ -249,10 +249,11 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <p>Veglat:</p>
 <ol>
-  <li>https://phpstan.org/try</li>
-  <li>https://www.npmjs.com/package/phplint</li>
+  <li><a href="https://phpstan.org/try">https://phpstan.org/try</a></li>
+  <li><a href="https://www.npmjs.com/package/phplint">https://www.npmjs.com/package/phplint</a></li>
   <li><a href="https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&amp;utm_source=google&amp;utm_campaign=nb_lg_snyk-code&amp;utm_content=code_analysis&amp;utm_term=code%20analysis%20tools&amp;gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE">snyk.io</a></li>
   <li><a href="https://www.sonarqube.org/">https://www.sonarqube.org/</a></li>
+  <li><a href="https://phpinsights.com/">https://phpinsights.com/</a></li>
 </ol>
 
 <h3 id="konkluzioni">Konkluzioni</h3>

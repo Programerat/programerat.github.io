@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-22T11:44:48+02:00</updated>
+ <updated>2022-07-22T11:50:50+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -238,10 +238,11 @@
 
 &lt;p&gt;Veglat:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;https://phpstan.org/try&lt;/li&gt;
-  &lt;li&gt;https://www.npmjs.com/package/phplint&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://phpstan.org/try&quot;&gt;https://phpstan.org/try&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/phplint&quot;&gt;https://www.npmjs.com/package/phplint&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://snyk.io/lp/snyk-code-checker/?utm_medium=Paid-Search&amp;amp;utm_source=google&amp;amp;utm_campaign=nb_lg_snyk-code&amp;amp;utm_content=code_analysis&amp;amp;utm_term=code%20analysis%20tools&amp;amp;gclid=CjwKCAjw5s6WBhA4EiwACGncZWBRlgUwVS6fGws6nsb3dD1yQZ0iCzuN5neSZZEiM3UhbXxzl7SeJBoCf5AQAvD_BwE&quot;&gt;snyk.io&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.sonarqube.org/&quot;&gt;https://www.sonarqube.org/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://phpinsights.com/&quot;&gt;https://phpinsights.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
