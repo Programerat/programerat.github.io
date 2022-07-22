@@ -4,8 +4,6 @@ svg:not(:root) {
 
 
   .toc {
-    position: fixed;
-    background-color: #eee;
     padding: 1em;
     line-height: 2;
   }
