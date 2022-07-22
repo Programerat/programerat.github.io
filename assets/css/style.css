@@ -149,11 +149,11 @@ p code {
   }
   
 
-  @media all and (min-width:1200px) and (max-width: 3000px) {
+  @media all and (min-width:2000px) and (max-width: 3000px) {
+   
     .header-content {
       width: 80%;
     }
-
     
   }
   
