@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-22T11:02:10+02:00</updated>
+ <updated>2022-07-22T11:44:48+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -13,15 +13,15 @@
 
  
  <entry>
-   <title>Kodi i pastër</title>
+   <title>Kodi i pastër dhe çka duhet të konsideroni</title>
    <link href="https://programerat.github.io//2022/07/kodi-i-paster"/>
    <updated>2022-07-17T00:00:00+02:00</updated>
    <id>https://programerat.github.io/2022/07/kodi-i-paster</id>
    <content type="html">&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
 
-&lt;p&gt;Në fushën e programimit gjithmonë është një gjë me rëndësi &lt;Kodi i=&quot;&quot; pastër=&quot;&quot;&gt;, por çka domethënë kodi i pastër?&lt;/Kodi&gt;&lt;/p&gt;
+&lt;p&gt;Në fushën e programimit gjithmonë është një gjë me rëndësi Kodi i pastër, por çka domethënë kodi i pastër?&lt;/p&gt;
 
-&lt;p&gt;Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një bllok, një klasë ose një metodë.&lt;/p&gt;
+&lt;p&gt;Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë ose një metodë.&lt;/p&gt;
 
 &lt;p&gt;Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.&lt;/p&gt;
 
@@ -39,55 +39,59 @@
 
 &lt;p&gt;Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.&lt;/p&gt;
 
-&lt;p&gt;Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundsia për tu pranuar në një punë është më e madhe nëse i mëson ato rregulla.&lt;/p&gt;
+&lt;p&gt;Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson ato rregulla.&lt;/p&gt;
 
 &lt;p&gt;Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.&lt;/p&gt;
 
-&lt;p&gt;p.sh Jeni duke bërë një kërkesë në api dhe doni të ktheni të gjitha blerjet të listuara.&lt;/p&gt;
+&lt;p&gt;p.sh Jeni duke bërë një kërkesë në API dhe doni të ktheni të gjitha blerjet të listuara.&lt;/p&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//Emri i klasës duhet të jetë i përshkueshëm në nivelin ku&lt;/span&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrdersController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//Emri i klasës duhet të jetë i përshkueshëm në nivelin ku&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//programeri i radhës kur e sheh klasën e kupton se çfar pune bën pa e hapur atë.&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//GetOrdersWithFiltersController do të ishte më e përshkrueshme&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrdersController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+	
+
 	&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         
-        &lt;span class=&quot;c1&quot;&gt;//Në këtë rast thehet rregulli ku metoda ka njohuri &lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//se çka përmban getUser()&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//idealisht duhet të duket&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//$this-&amp;gt;auth-&amp;gt;isUserAuthenticated()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isAuthenticated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isAuthenticated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//Në këtë rast thehet rregulli ku metoda ka njohuri &lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//se çka përmban getUser()&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//idealisht duhet të duket&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//$this-&amp;gt;auth-&amp;gt;isUserAuthenticated() &lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;//..&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UnauthorizedResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         
-        &lt;span class=&quot;c1&quot;&gt;//konstruktimi i filterave mbrenda controllerit nuk është ideale&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//RequestFiltersFactoryIml::create($request-&amp;gt;getParams())&lt;/span&gt;
         &lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
             &lt;span class=&quot;s1&quot;&gt;&apos;order_by&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;order_by&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
             &lt;span class=&quot;s1&quot;&gt;&apos;order_direction&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;order_direction&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
             &lt;span class=&quot;s1&quot;&gt;&apos;search&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;search&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
             &lt;span class=&quot;mf&quot;&gt;...&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//konstruktimi i filterave mbrenda controllerit nuk është ideale&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//RequestFiltersFactoryIml::create($request-&amp;gt;getParams())&lt;/span&gt;
         
+        
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;order_direction&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;asc&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;desc&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//asc dhe desc duhesh ti deklarosh si konstante &lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//apo ti fusesh mbrenda objektit / DTO objektit qe e kemi përmendur më lartë&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;order_direction&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;asc&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;desc&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        
             &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SortingIsNotSupported&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         
+        &lt;span class=&quot;nv&quot;&gt;$list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//Emertimi i variablës në këtë rast nuk është aq i vetë shpjegueshëm&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//$filteredOrders do të ishte më e përshkrueshme&lt;/span&gt;
-		&lt;span class=&quot;nv&quot;&gt;$list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        
+		
+        &lt;span class=&quot;nv&quot;&gt;$isPagination&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;str_contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;/count&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//Në këtë rresht kjo metodë po qaset në path për ta gjetur nëse &lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//egziston /count në url&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//por kjo është një shtresë më e thellë e aplikacionit prandaj &lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//edhe kjo e then rregullin që metoda duhet të qaset gjithmonë në të njejtën shtresë&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//$request-&amp;gt;isPaginated() ose $request-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;$isPagination&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;str_contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;/count&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isPagination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PaginatedResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -116,7 +120,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan.&lt;/p&gt;
+&lt;p&gt;Pra siç e shihni në këtë shembull, kodi i pastër do të thotë duhet të lexohet lehtë, që nëse dikush përpos teje e lexon këtë metodë dhe e sheh se çka po shkruan dhe e kupton se çfar pune po kryen.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29&quot;&gt;Një përmbledhje e rregullave të librit Clean Code - R. Martin mund ti gjeni në këtë link.&lt;/a&gt;&lt;/p&gt;
 
@@ -124,27 +128,27 @@
 
 &lt;p&gt;Nëse projekti ku punon ti i përmban 8000 rreshta kod.&lt;/p&gt;
 
-&lt;p&gt;Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 dite pune.&lt;/p&gt;
+&lt;p&gt;Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 ditë pune.&lt;/p&gt;
 
-&lt;p&gt;Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% ne dite qe i bjen 34.7 rreshta ne ditë.&lt;/p&gt;
+&lt;p&gt;Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% në ditë që i bjen 34 rreshta ne ditë.&lt;/p&gt;
 
-&lt;p&gt;Ne fund te vitit ti do ta ndryshosh komplet kodin ne atë projekt.&lt;/p&gt;
+&lt;p&gt;Ne fund te vitit ti do ta ndryshosh komplet kodin në atë projekt.&lt;/p&gt;
 
 &lt;p&gt;Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.&lt;/p&gt;
 
 &lt;h3 id=&quot;efekti-mbrenda-ekipit&quot;&gt;Efekti mbrenda ekipit&lt;/h3&gt;
 
-&lt;p&gt;Ti dhe ekipi ytë 70% të kohës do të shpenzojnë duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.
-Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.&lt;/p&gt;
-
-&lt;p&gt;Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.&lt;/p&gt;
-
-&lt;p&gt;Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ti dhe ekipi ytë 70% të kohës do të shpenzoni duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.&lt;/li&gt;
+  &lt;li&gt;Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.&lt;/li&gt;
+  &lt;li&gt;Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.&lt;/li&gt;
+  &lt;li&gt;Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Sigurohu që ta lexosh Mbaj mend në fund të artikullit.&lt;/p&gt;
+  &lt;p&gt;Sigurohu që ta lexosh &lt;strong&gt;Mbaje në mend&lt;/strong&gt; në fund të artikullit.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;efekti-afatgjatë&quot;&gt;Efekti afatgjatë&lt;/h3&gt;
@@ -155,7 +159,7 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/code-quality.png&quot; alt=&quot;Diagrami i kohes dhe kompleksitetit&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ja shpjegon që nëse dëshiron rezultat të shpejt në fillim, pasojat do të jenë më vonë, dhe anasjelltas.&lt;/p&gt;
+&lt;p&gt;Ja shpjegon që nëse dëshiron rezultat të shpejt, pasojat do të jenë më vonë, dhe anasjelltas.&lt;/p&gt;
 
 &lt;p&gt;Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:&lt;/p&gt;
 
@@ -168,7 +172,7 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;p&gt;Ti je programer që je për shkak të shprehive që i ke adaptuar me kohë.&lt;/p&gt;
 
-&lt;p&gt;Prandaj duhet të jesh shum i kujdesshëm se çka dhe si punon në fillim të karrieres.&lt;/p&gt;
+&lt;p&gt;Prandaj duhet të jesh shumë i kujdesshëm se çka dhe si punon në fillim të karrierës.&lt;/p&gt;
 
 &lt;p&gt;Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqija sikur&lt;/p&gt;
 
@@ -178,7 +182,7 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
   &lt;li&gt;Injorimi i shkrimit të testeve.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;dhe në i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.&lt;/p&gt;
+&lt;p&gt;dhe i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.&lt;/p&gt;
 
 &lt;p&gt;Duke punuar në këtë mënyr për një vit ju do ti mbjellni ato shprehi në karakterin ose eksperiencen tuaj.&lt;/p&gt;
 
@@ -192,7 +196,7 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;p&gt;Nëse vendosni të mos adaptoni formatet dhe rregullat e përmendura në projekt, atëher pas një viti projekti që ti je duke punuar do të bëhet aq i madh sa që nuk mund ta përballoni të punoni i vetëm në të.&lt;/p&gt;
 
-&lt;p&gt;Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.&lt;/p&gt;
+&lt;p&gt;Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me e bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.&lt;/p&gt;
 
 &lt;p&gt;Prandaj koha jote tash ndahet në dy pjesë,&lt;/p&gt;
 
@@ -207,6 +211,8 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;p&gt;Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.&lt;/p&gt;
 
+&lt;p&gt;I vetmi benefit që ke marrur nga ai vend pune është eksperienca se si një projekt të dështon.&lt;/p&gt;
+
 &lt;h3 id=&quot;aplikimi-i-rregullave&quot;&gt;Aplikimi i rregullave&lt;/h3&gt;
 
 &lt;p&gt;Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.&lt;/p&gt;
@@ -215,8 +221,8 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;ol&gt;
   &lt;li&gt;E shkruani kodin që të funksionoj&lt;/li&gt;
-  &lt;li&gt;E shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin&lt;/li&gt;
-  &lt;li&gt;Fillon ri emerimin e metodave dhe klasave&lt;/li&gt;
+  &lt;li&gt;I shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin&lt;/li&gt;
+  &lt;li&gt;Fillon me riemertimin e metodave dhe klasave&lt;/li&gt;
   &lt;li&gt;Fillon ndarjen e klasave ne klasa të veçanta&lt;/li&gt;
   &lt;li&gt;I zvoglon metodat që të jetë më i lexueshëm kodi.&lt;/li&gt;
   &lt;li&gt;E lexon disa herë&lt;/li&gt;
@@ -226,7 +232,7 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;h3 id=&quot;automatizimi-i-rregullave&quot;&gt;Automatizimi i rregullave&lt;/h3&gt;
 
-&lt;p&gt;Janë disa vegla që të ndihmojnë dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.&lt;/p&gt;
+&lt;p&gt;Janë disa vegla që të ndihmoj në dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.&lt;/p&gt;
 
 &lt;p&gt;Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.&lt;/p&gt;
 
@@ -240,14 +246,14 @@ Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplik
 
 &lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
 
-&lt;p&gt;Në librin e “Clean Code - R. Martin” është një rregull interesante që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.&lt;/p&gt;
+&lt;p&gt;Në librin e “Clean Code - R. Martin” është një rregull interesant që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.&lt;/p&gt;
 
 &lt;p&gt;Pra përmbledhja e gjithë tekstit në këtë artikull flet për kodin e pastër.
 Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti ai që përfiton shprehi të mira që të shtyjnë përpara në karrierë.&lt;/p&gt;
 
 &lt;p&gt;Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.&lt;/p&gt;
 
-&lt;p&gt;Mbaje në mendje që dikush do ta lexoj atë klasë apo funksion që ti je duke e shkruar, dhe konsideroje vetën si një autor a jo vetëm një programer.&lt;/p&gt;
+&lt;p&gt;Nëse dikush tjetër do ta lexoj atë klasë apo funksion që ti e ke shkruar, do të është falenderues sepse e ke kursyer kohën e tij.&lt;/p&gt;
 
 &lt;p&gt;Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.&lt;/p&gt;
 
