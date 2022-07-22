@@ -118,6 +118,10 @@ p code {
       display: none;
     }
 
+    article {
+      margin-top: 0;
+    }
+
     main {
         max-width: 100%;
         width: 100%;
