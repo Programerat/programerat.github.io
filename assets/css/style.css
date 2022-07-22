@@ -80,7 +80,7 @@ p code {
     padding: 15px;
     text-align: center;
     background: #24cf5f;
-    margin-left: -15px;
+    margin-left:  5px;
     color: #ffffff;
     transform: translateY(15px);
     transition: ease 0.3s;
@@ -146,3 +146,15 @@ p code {
     background: url(http://tlab.co.id/images/logo.png) no-repeat center center;
   }
   
+
+  @media all and (min-width:1200px) and (max-width: 3000px) {
+    .header-content {
+      width: 80%;
+    }
+  }
+  
+  @media all and (min-width:0px) and (max-width: 800px) {
+    .header-content {
+      width: 80%;
+    }
+  }
