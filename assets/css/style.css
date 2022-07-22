@@ -91,15 +91,17 @@ p code {
   .layout-article ul.box-article li:hover article span {
     /* @include translateY(0px); */
   }
+
+  .pull-content {
+    margin-top: -18rem;
+  }
+  
   @media only screen and (max-width: 480px) {
     .layout-article ul.box-article {
       -moz-column-count: 1;
       column-count: 1;
     }
 
-    .hide-phone {
-      display: none;
-    }
   }
   @media only screen and (min-width: 481px) and (max-width: 1023px) {
     .layout-article ul.box-article {
@@ -151,10 +153,21 @@ p code {
     .header-content {
       width: 80%;
     }
+
+    
   }
   
   @media all and (min-width:0px) and (max-width: 800px) {
     .header-content {
       width: 80%;
     }
+
+    .pull-content {
+      margin-top: 0;
+    }
+
+    .hide-phone {
+      display: none;
+    }
+
   }
