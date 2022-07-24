@@ -1,7 +1,7 @@
 ---
 title: Kodi i pastër dhe çka duhet të konsideroni
 description: Çka është kodi i pastër dhe si të efekton karrieren tënde si një programer profesional.
-cover_img: https://programerat.github.io/assets/images/clean_code-cover.jpg
+cover_img: https://programerat.github.io/assets/images/show-love.jpg
 author: diarselimi
 tags: karriera programim mesime
 archive: true
