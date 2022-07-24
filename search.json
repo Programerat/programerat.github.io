@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Zhvillimi i udhhequer nga testet.",
+      "description" : "Pse eshte mire qe te zhvillojme ne programim duke implementuar testet se pari dhe si na ndihmojne ato.",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "//2022/07/zhvillimi-i-udhehequr-nga-testet",
+      "date"     : "2022-07-24 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "Kodi i pastër dhe çka duhet të konsideroni",
       "description" : "Çka është kodi i pastër dhe si të efekton karrieren tënde si një programer profesional.",
       "category" : "",

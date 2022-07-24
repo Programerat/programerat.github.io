@@ -4,13 +4,22 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-22T15:22:31+02:00</updated>
+ <updated>2022-07-24T16:34:06+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
    <email>your-email@email.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Zhvillimi i udhhequer nga testet.</title>
+   <link href="https://programerat.github.io//2022/07/zhvillimi-i-udhehequr-nga-testet"/>
+   <updated>2022-07-24T00:00:00+02:00</updated>
+   <id>https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</id>
+   <content type="html">
+</content>
+ </entry>
  
  <entry>
    <title>Kodi i pastër dhe çka duhet të konsideroni</title>
