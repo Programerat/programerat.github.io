@@ -13,11 +13,6 @@ layout: compress
         <img src="{{ site.url }}{{ site.baseurl }}/assets/images/programeret.png" alt="" width="20" height="20" class="d-inline-block align-text-top">
         Programerat
       </a>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()" class="moon"><div></div></button>
-        </li>
-      </ul>
       {% if post != nil %}
         <div class="flex-row-between">
           <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
@@ -25,9 +20,10 @@ layout: compress
       {% endif %}
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <button class="btn btn-primary" onclick="sendNewLike()" aria-current="page"> 
-            Pëlqeje 🎉
-            <span class="badge bg-success" id="like_counter">0</span>
+          <button class="btn btn-outline-primary" onclick="sendNewLike()" aria-current="page"> 
+            Pëlqeje 
+            <span class="badge bg-dark" id="like_counter">0</span>
+            🎉
           </button>
         </li>
       </ul>
