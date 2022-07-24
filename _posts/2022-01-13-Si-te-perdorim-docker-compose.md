@@ -4,7 +4,7 @@ date:   2022-01-13 10:12:00
 tags: Docker-compose,php,mysql
 author: donjetam
 profile_image: https://avatars.githubusercontent.com/u/36443198?v=4
-archive: false
+type: artikull
 ---
 
 Në [artikullin e parë](https://programerat.github.io/2022/01/si-te-krijoni-aplikacionin-tuaj-te-pare-me-docker) kemi bërë një prezentim të shkurtër për të parë se çfarë është Docker, si mund ta instaloni dhe si mund ta konfiguroni Dockerfile për një aplikacion bazik në PHP. Në këtë artikull do të tregojmë si mund ta përdorim Docker Compose si dhe do të ndërtojmë një aplikacion të thjeshtë në PHP që do të komunikojë me MySQL.

@@ -7,7 +7,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
-archive: false
+type: video
 cover_img: https://programerat.github.io/assets/images/laravel-symfony.jpg
 title:  Docker-compose me Laravel dhe Symfony - Video
 url: "https://youtu.be/Nh62rs5JiQw"

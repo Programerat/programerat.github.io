@@ -4,7 +4,7 @@ date:   2022-01-11 10:12:00
 tags: Docker php
 author: donjetam
 profile_image: https://avatars.githubusercontent.com/u/36443198?v=4
-archive: false
+type: artikull
 ---
 
 Së pari do të bëjmë  një prezentim  të shkurtër për të parë se çfarë është Docker dhe pse ta përdorim, pastaj do të marr një shembull për të parë se  si mund  të krijoni aplikacionin tuaj të parë me Docker 🚀🚀.   

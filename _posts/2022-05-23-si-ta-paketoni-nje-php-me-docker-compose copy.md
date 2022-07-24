@@ -7,7 +7,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
-archive: false
+type: video
 title:  Përgaditu për live me Docker compose - PHP, NGINX, MySql
 url: "https://youtu.be/7QcL3vF4dkc"
 code: "7QcL3vF4dkc"

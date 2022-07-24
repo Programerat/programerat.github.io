@@ -7,7 +7,7 @@ author_github: https://github.com/diarselimi
 author_linkedin: diarselimi
 author_description: "Coding is an art, if you know what you're doing."
 author_title: Senior Backend Engineer
-archive: false
+type: video
 title:  "Mësoni ta paketoni një PHP website me Docker - Video"
 url: "https://youtu.be/ddNvdFzH5Po"
 code: "ddNvdFzH5Po"

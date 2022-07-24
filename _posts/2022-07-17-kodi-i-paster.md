@@ -5,6 +5,7 @@ cover_img: https://programerat.github.io/assets/images/clean_code-cover.jpg
 author: diarselimi
 tags: karriera programim mesime
 archive: true
+type: artikull
 ---
 
 ### Hyrje
