@@ -13,12 +13,24 @@ layout: compress
         <img src="{{ site.url }}{{ site.baseurl }}/assets/images/programeret.png" alt="" width="20" height="20" class="d-inline-block align-text-top">
         Programerat
       </a>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()" class="moon"><div></div></button>
+        </li>
+      </ul>
       {% if post != nil %}
         <div class="flex-row-between">
           <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
         </div>
       {% endif %}
-      <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()" class="moon"><div></div></button>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <button class="btn-sm btn btn-dark" onclick="sendNewLike()" aria-current="page">
+            <i class="fa fa-heart"></i>
+          </button>
+          <span class="badge bg-success" id="like_counter">0</span>
+        </li>
+      </ul>
     </div>
   </nav>
   <main>
@@ -68,6 +80,7 @@ layout: compress
 
 {% if page.url == '/' %}
   <script src="{{ site.url }}{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
+  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/like_storage.js"></script>
   <script>
     var sjs = SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
