@@ -46,9 +46,6 @@ async function parseResponseData(response) {
 async function fetchText() {
     let response = await fetch('https://getpantry.cloud/apiv1/pantry/15efcf15-d11d-4d34-9f7f-f0bd2c8a8680/basket/1');
 
-    console.log(response.status); // 200
-    console.log(response.statusText); // OK
-
     if (response.status === 200) {
        parseResponseData(response);
     }
