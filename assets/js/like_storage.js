@@ -13,7 +13,7 @@ var requestOptions = {
 
 function updateLikeNumbers(likes) {
     let element = document.getElementById('like_counter');
-    element.text = likes;
+    element.innerHTML = likes;
     totalLikes = likes;
 }
 
