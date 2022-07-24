@@ -62,13 +62,13 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <p>Në fushën e programimit gjithmonë është një gjë me rëndësi Kodi i pastër, por çka domethënë kodi i pastër?</p>
 
-<p>Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë ose një metodë.</p>
+<p>Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë apo një metodë.</p>
 
 <p>Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.</p>
 
 <p>Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.</p>
 
-<p>p.sh Ai e din që variabla <strong>r</strong> në klasën <strong>Processor</strong> e përmban vlerën e <strong>url path</strong>, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur.</p>
+<p>p.sh Ai e din që variabla <strong>r</strong> në klasën <strong>Processor</strong> e përmban vlerën e <strong>url path</strong>, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur (do e lexoni më poshtë artikullit se pse kjo nuk është mirë).</p>
 
 <p>Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.</p>
 
@@ -76,21 +76,24 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <p>Bëhu profesional.</p>
 </blockquote>
 
+<p><img src="/assets/images/coding-pro.gif" alt="Pro coder" /></p>
+
 <h3 id="rregullat-me-shembull">Rregullat me shembull</h3>
 
 <p>Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.</p>
 
-<p>Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson ato rregulla.</p>
+<p>Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson këto rregulla.</p>
 
 <p>Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.</p>
 
-<p>p.sh Jeni duke bërë një kërkesë në API dhe doni të ktheni të gjitha blerjet të listuara.</p>
+<p>p.sh Jeni duke punuar në një API dhe doni të ktheni të gjitha blerjet të listuara.</p>
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kd">class</span> <span class="nc">OrdersController</span> <span class="p">{</span>
 <span class="c1">//Emri i klasës duhet të jetë i përshkueshëm në nivelin ku</span>
 <span class="c1">//programeri i radhës kur e sheh klasën e kupton se çfar pune bën pa e hapur atë.</span>
 <span class="c1">//GetOrdersWithFiltersController do të ishte më e përshkrueshme</span>
+<span class="c1">// ose GetFilteredOrdersController</span>
 	
 
 	<span class="k">public</span> <span class="k">function</span> <span class="n">get</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">)</span> <span class="p">:</span> <span class="kt">Response</span> <span class="p">{</span>
@@ -98,7 +101,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">auth</span><span class="o">-&gt;</span><span class="nf">getUser</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">isAuthenticated</span><span class="p">())</span> <span class="p">{</span>
             <span class="c1">//Në këtë rast thehet rregulli ku metoda ka njohuri </span>
             <span class="c1">//se çka përmban getUser()</span>
-            <span class="c1">//idealisht duhet të duket</span>
+            <span class="c1">//idealisht duhet të duket si në vijim</span>
             <span class="c1">//$this-&gt;auth-&gt;isUserAuthenticated() </span>
             <span class="c1">//..</span>
             <span class="k">return</span> <span class="k">new</span> <span class="nc">UnauthorizedResponse</span><span class="p">();</span>
@@ -113,7 +116,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
         <span class="c1">//konstruktimi i filterave mbrenda controllerit nuk është ideale</span>
         <span class="c1">//metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave</span>
         <span class="c1">//pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim</span>
-        <span class="c1">//RequestFiltersFactoryIml::create($request-&gt;getParams())</span>
+        <span class="c1">//RequestFiltersFactory::create($request-&gt;getParams())</span>
         
         
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$filters</span><span class="p">[</span><span class="s1">'order_direction'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'asc'</span><span class="p">,</span> <span class="s1">'desc'</span><span class="p">]))</span> <span class="p">{</span>
@@ -125,14 +128,15 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
         
         <span class="nv">$list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">orders</span><span class="o">-&gt;</span><span class="nf">findAll</span><span class="p">(</span><span class="nv">$filters</span><span class="p">);</span>
         <span class="c1">//Emertimi i variablës në këtë rast nuk është aq i vetë shpjegueshëm</span>
-        <span class="c1">//$filteredOrders do të ishte më e përshkrueshme</span>
+        <span class="c1">//$filteredOrders do të ishte më e përshkrueshme ose</span>
+        <span class="c1">//$orders është e mjaftueshme</span>
 		
         <span class="nv">$isPagination</span> <span class="o">=</span> <span class="nf">str_contains</span><span class="p">(</span><span class="s1">'/count'</span><span class="p">,</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">getUri</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getPath</span><span class="p">());</span>
         <span class="c1">//Në këtë rresht kjo metodë po qaset në path për ta gjetur nëse </span>
         <span class="c1">//egziston /count në url</span>
         <span class="c1">//por kjo është një shtresë më e thellë e aplikacionit prandaj </span>
         <span class="c1">//edhe kjo e then rregullin që metoda duhet të qaset gjithmonë në të njejtën shtresë</span>
-        <span class="c1">//$request-&gt;isPaginated() ose $request-&gt;</span>
+        <span class="c1">//$request-&gt;isPaginated()</span>
         
         <span class="k">if</span> <span class="p">(</span><span class="nv">$isPagination</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="k">new</span> <span class="nc">PaginatedResponse</span><span class="p">(</span><span class="nv">$list</span><span class="p">);</span>
@@ -167,42 +171,42 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <h3 id="një-kalkulim">Një kalkulim</h3>
 
-<p>Nëse projekti ku punon ti i përmban 8000 rreshta kod.</p>
+<p>Nëse projekti me të cilin po punoni përmban 8000 rreshta kodi.</p>
 
-<p>Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 ditë pune.</p>
+<p>Le të supozojmë se ju do të punoni në atë kompani për 1 vit = 230 ditë pune.</p>
 
-<p>Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% në ditë që i bjen 34 rreshta ne ditë.</p>
+<p>Nëse çdo ditë përpiqeni të përmirësoni projektin për vetëm 0.43% në ditë, kjo bën 34 rreshta në ditë.</p>
 
-<p>Ne fund te vitit ti do ta ndryshosh komplet kodin në atë projekt.</p>
+<p>Në fund të vitit ju do të ndryshoni plotësisht kodin në atë projekt.</p>
 
-<p>Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.</p>
+<p>Në fillim kur të vendosni të zbatoni rregullat në kodin që po shkruani do të jetë më e vështirë sepse po mbillni shprehi të reja, por kjo do të ndryshojë në mënyrë lineare, pas disa muajsh nuk do të duhet të mendoni aq shumë.</p>
 
-<h3 id="efekti-mbrenda-ekipit">Efekti mbrenda ekipit</h3>
+<h3 id="efekti-brenda-ekipit">Efekti brenda ekipit</h3>
 
 <ul>
-  <li>Ti dhe ekipi ytë 70% të kohës do të shpenzoni duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.</li>
-  <li>Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.</li>
-  <li>Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.</li>
-  <li>Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.</li>
+  <li>Ju dhe ekipi juaj do të shpenzoni 70% të kohës tuaj duke lexuar kodin dhe jo duke shkruar, për të shkruar kod duhet të lexoni.</li>
+  <li>Puna e të gjithë ekipit do të lehtësohet nëse dakordoheni të aplikoni rregullat.</li>
+  <li>Ju do të jeni pika qendrore që të gjithë do të referohen për pyetje ose këshilla.</li>
+  <li>Çdo ekip do të dëshirojë që ju të jeni pjesë e ekipit sepse kjo e bën punën e ekipit më të lehtë kur ata lexojnë lehtësisht kodin tuaj.</li>
 </ul>
 
-<p>Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.</p>
+<p>Një efekt negativ është se në fillim ndoshta do të hasni në rezistencë nga anëtarët e ekipit, por nëse i paraqisni faktet dhe referencat në libra dhe artikuj, atëherë argumentet mbarojnë.</p>
 
 <blockquote>
-  <p>Sigurohu që ta lexosh <strong>Mbaje në mend</strong> në fund të artikullit.</p>
+  <p>Sigurohu që ta lexosh <strong>Mbani mend</strong> në fund të artikullit.</p>
 </blockquote>
 
-<h3 id="efekti-afatgjatë">Efekti afatgjatë</h3>
+<h3 id="efekt-afatgjatë">Efekt afatgjatë</h3>
 
-<p>Nëse shefi të pyet se për sa kohë mund ta përfundosh një projekt me x kërkesa.</p>
+<p>Nëse shefi juaj pyet për sa kohë mund të përfundoni një projekt me x kërkesa.</p>
 
-<p>Ti ja prezenton një diagram si në vijim:</p>
+<p>Ju paraqisni një diagram si më poshtë:</p>
 
 <p><img src="/assets/images/code-quality.png" alt="Diagrami i kohes dhe kompleksitetit" /></p>
 
-<p>Ja shpjegon që nëse dëshiron rezultat të shpejt, pasojat do të jenë më vonë, dhe anasjelltas.</p>
+<p>I shpjegon se nëse doni rezultate të shpejta, pasojat do të jenë më vonë, dhe anasjelltas.</p>
 
-<p>Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:</p>
+<p>Kjo, përveçse ndikon në të ardhmen e projektit, ndikon edhe ju si programues në dy mënyra:</p>
 
 <ol>
   <li>Fuqia e shprehisë</li>
@@ -211,71 +215,71 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <h4 id="fuqia-e-shprehisë">Fuqia e shprehisë</h4>
 
-<p>Ti je programer që je për shkak të shprehive që i ke adaptuar me kohë.</p>
+<p>Ju jeni programuesi që jeni për shkak të shprehive që keni adaptuar me kalimin e kohës.</p>
 
-<p>Prandaj duhet të jesh shumë i kujdesshëm se çka dhe si punon në fillim të karrierës.</p>
+<p>Prandaj, duhet të jeni shumë të kujdesshëm se çfarë dhe si punoni në fillim të karrierës suaj.</p>
 
-<p>Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqija sikur</p>
+<p>Nëse punoni në projekte ku ju shtyjnë të adaptosh shprehi të kqija sikur</p>
 
 <ul>
-  <li>Shkimi i kodit duke i thyer rregullat e përmendura në artikull më lartë</li>
+  <li>Thyerja e kodit duke thyer rregullat e përmendura në artikullin e mësipërm</li>
   <li>Injorimi i formateve</li>
-  <li>Injorimi i shkrimit të testeve.</li>
+  <li>Injorimi i shkrimit të testeve</li>
 </ul>
 
-<p>dhe i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.</p>
+<p>dhe i bën të gjitha këto pa asnjë përfitim për ty, atëherë duhet të mendoni mirë për atë vend pune.</p>
 
-<p>Duke punuar në këtë mënyr për një vit ju do ti mbjellni ato shprehi në karakterin ose eksperiencen tuaj.</p>
+<p>Duke punuar në këtë mënyrë për një vit, ju do t’i mbillni ato shprehi në memorien ose përvojën tuaj.</p>
 
-<p>Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë atëher ju duhet ti harroni shprehit të kqija dhe të mësoni shprehit e mira.</p>
+<p>Në të ardhmen, nëse doni të aplikoni në një kompani më të mirë, atëherë duhet të harroni shprehitë e këqija dhe të mësoni shprehi të mira.</p>
 
-<p>Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.</p>
+<p>Pra, siç mund ta shihni që nuk ka asnjë përfitim për ju si programues nga ajo kompani, duhet të mendoni gjithmonë në të ardhmen se çfarë përfitimesh do të mbeten për ju si programues.</p>
 
-<p>Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.</p>
+<p>Dikush zgjedh të sakrifikojë standardet për një përfitim që është më i vlefshëm se cilësia e kodit dhe kjo nuk është një zgjedhje e gabuar.</p>
 
 <h4 id="madhësia-e-projektit">Madhësia e projektit</h4>
 
-<p>Nëse vendosni të mos adaptoni formatet dhe rregullat e përmendura në projekt, atëher pas një viti projekti që ti je duke punuar do të bëhet aq i madh sa që nuk mund ta përballoni të punoni i vetëm në të.</p>
+<p>Nëse vendosni të mos përshtatni formatet dhe rregullat e përmendura në projekt, atëherë pas një viti projekti për të cilin po punoni do të bëhet aq i madh sa nuk mund të përballoni të punoni vetëm me të.</p>
 
-<p>Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me e bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.</p>
+<p>Shefi vendos të punësojë një programues të ri në projekt, por për shkak se nuk arritët ta bindni shefin për kodin e pastër, vendosët të mos ndiqni standardet dhe pa teste, programuesi i ri e ka shumë të vështirë të mësojë dhe të kontribuojë në projekt.</p>
 
-<p>Prandaj koha jote tash ndahet në dy pjesë,</p>
+<p>Prandaj koha juaj tani është e ndarë në dy pjesë,</p>
 
 <ul>
-  <li>Vazhdimi i punës në implementimin e gjërave të reja në projekt</li>
-  <li>Ndihma e programerit të ri që ta kuptoj se çka po bëhet në kod ku ai është duke punuar.</li>
+  <li>Vazhdimi i punës për aplikimin e gjërave të reja në projekt</li>
+  <li>Ndihmon programuesin e ri për të kuptuar se çfarë po bëhet në kodin me të cilin po punon.</li>
 </ul>
 
-<p>Pas kësaj ti i tregon shefit që të duhet edhe një programer me më shum eksperience sepse ky nuk po kryen shumë punë.</p>
+<p>Pas kësaj i thoni shefit se keni nevojë për një programues me më shumë përvojë, sepse ai nuk po bën shumë punë.</p>
 
-<p>Dhe kështu përfundon deri te dështimi i projektit.</p>
+<p>Dhe kështu përfundon deri në dështimin e projektit.</p>
 
-<p>Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.</p>
+<p>Në fund, ju do të jeni ai që e bëri projektin të dështojë, sepse jeni ai që shkroi kodin, dhe shefi juaj ju pushon nga puna dhe ia jep punën një programuesi më me përvojë.</p>
 
-<p>I vetmi benefit që ke marrur nga ai vend pune është eksperienca se si një projekt të dështon.</p>
+<p>Përfitimi i vetëm që keni marrë nga ai vend pune është përvoja se si një projekt dështon.</p>
 
 <h3 id="aplikimi-i-rregullave">Aplikimi i rregullave</h3>
 
-<p>Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.</p>
+<p>Për të aplikuar të gjitha rregullat, një shprehi e mirë është kur jeni duke shkruar kod, përpiquni t’i shpjegoni vetes me fjalë se çfarë po bën ky kod.</p>
 
-<p>Provoni ta adaptoni këtë mentalitet</p>
+<p>Mundohuni ta adaptoni këtë mentalitet</p>
 
 <ol>
-  <li>E shkruani kodin që të funksionoj</li>
-  <li>I shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin</li>
-  <li>Fillon me riemertimin e metodave dhe klasave</li>
-  <li>Fillon ndarjen e klasave ne klasa të veçanta</li>
-  <li>I zvoglon metodat që të jetë më i lexueshëm kodi.</li>
+  <li>Shkruani kodin për ta bërë atë të funksionojë</li>
+  <li>Shkruani disa teste që ju lejojnë të ndryshoni kodin pa prishur funksionalitetin</li>
+  <li>Fillon me riemërtimin e metodave dhe klasave</li>
+  <li>Fillon ndarjen e klasave në klasa të veçanta</li>
+  <li>Ndarja e metodave që përmbajtja të është më e lexueshme.</li>
   <li>E lexon disa herë</li>
-  <li>kthehesh tek hapi 3.</li>
-  <li>Nëse mendon që gjithqka është në rregull atëher vazhdon.</li>
+  <li>kthehuni në hapin 3.</li>
+  <li>Nëse mendoni se gjithçka është në rregull, atëherë vazhdoni.</li>
 </ol>
 
 <h3 id="automatizimi-i-rregullave">Automatizimi i rregullave</h3>
 
-<p>Janë disa vegla që të ndihmoj në dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.</p>
+<p>Ka disa vegla që ju ndihmojnë dhe ju tregojnë nëse keni probleme me standarde të ndryshme në kod.</p>
 
-<p>Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.</p>
+<p>Por në një pikë veglat nuk mund ta rishkruajnë kodin për ty.</p>
 
 <p>Veglat:</p>
 <ol>
@@ -286,22 +290,26 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <li><a href="https://phpinsights.com/">https://phpinsights.com/</a></li>
 </ol>
 
-<h3 id="konkluzioni">Konkluzioni</h3>
+<h3 id="përfundim">Përfundim</h3>
 
-<p>Në librin e “Clean Code - R. Martin” është një rregull interesant që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.</p>
+<p>Në librin “Clean Code – R. Martin” ka një rregull interesant që më ka mbetur në mendje dhe është si më poshtë, “Lëre kodin ku po punon pak më mirë se sa e gjete”.</p>
 
-<p>Pra përmbledhja e gjithë tekstit në këtë artikull flet për kodin e pastër.
-Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti ai që përfiton shprehi të mira që të shtyjnë përpara në karrierë.</p>
+<p>Pra, përmbledhja e të gjithë tekstit në këtë artikull flet për kodin e pastër.
+Nëse shkruani kod të pastër, je ti që përfiton nga përvoja dhe je ai që përfiton nga zakonet e mira që do t’ju shtyjnë përpara në karrierën tuaj.</p>
 
-<p>Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.</p>
+<p>Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas ca kohësh do të bëhet intuitive.</p>
 
-<p>Nëse dikush tjetër do ta lexoj atë klasë apo funksion që ti e ke shkruar, do të është falenderues sepse e ke kursyer kohën e tij.</p>
+<p>Nëse dikush tjetër do ta lexojë atë klasë ose funksion që keni shkruar, ai do të jetë mirënjohës sepse ju keni kursyer kohën e tyre.</p>
 
-<p>Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.</p>
+<p>Mos e merrni kodin e pastër si rregull dhe ndiqni atë pa u menduar, përdorni intuitën tuaj dhe konsiderojeni atë si një rrugë që ju bën të mendoni për atë që shkruani në një këndvështrim unik.</p>
 
-<h4 id="mbaje-në-mend-">Mbaje në mend 🧠</h4>
-<p>Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.</p>
+<h4 id="mbani-mend-">Mbani mend 🧠</h4>
+<p>Duhet të komunikoni gjithmonë me ekipin dhe kolegët, të arrini në një përfundim së bashku, në fund të fundit, ju jeni një ekip dhe që një ekip të funksionojë, komunikimi duhet të jetë i rëndësishëm.</p>
 
+<h3 id="surpriza">Surpriza</h3>
+<p>Kjo është një vegël që të kujton në editor rreth rregullave të ndryshme (KISS, YAGNI) etj.
+<img src="https://github.com/chriswingler/clean-code-tips/raw/master/images/tips.gif" alt="Shtojca" />
+<a href="https://marketplace.visualstudio.com/items?itemName=chriswingler.clean-code-tips">VS code shtojca</a></p>
 
             </article>
           </body>

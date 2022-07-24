@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-24T16:34:06+02:00</updated>
+ <updated>2022-07-24T18:00:41+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -30,13 +30,13 @@
 
 &lt;p&gt;Në fushën e programimit gjithmonë është një gjë me rëndësi Kodi i pastër, por çka domethënë kodi i pastër?&lt;/p&gt;
 
-&lt;p&gt;Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë ose një metodë.&lt;/p&gt;
+&lt;p&gt;Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë apo një metodë.&lt;/p&gt;
 
 &lt;p&gt;Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.&lt;/p&gt;
 
 &lt;p&gt;Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.&lt;/p&gt;
 
-&lt;p&gt;p.sh Ai e din që variabla &lt;strong&gt;r&lt;/strong&gt; në klasën &lt;strong&gt;Processor&lt;/strong&gt; e përmban vlerën e &lt;strong&gt;url path&lt;/strong&gt;, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur.&lt;/p&gt;
+&lt;p&gt;p.sh Ai e din që variabla &lt;strong&gt;r&lt;/strong&gt; në klasën &lt;strong&gt;Processor&lt;/strong&gt; e përmban vlerën e &lt;strong&gt;url path&lt;/strong&gt;, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur (do e lexoni më poshtë artikullit se pse kjo nuk është mirë).&lt;/p&gt;
 
 &lt;p&gt;Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit që të tjerët ta kenë më të lehtë ta kuptojnë dhe të bëjnë ndryshime.&lt;/p&gt;
 
@@ -44,21 +44,24 @@
   &lt;p&gt;Bëhu profesional.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/images/coding-pro.gif&quot; alt=&quot;Pro coder&quot; /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;rregullat-me-shembull&quot;&gt;Rregullat me shembull&lt;/h3&gt;
 
 &lt;p&gt;Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.&lt;/p&gt;
 
-&lt;p&gt;Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson ato rregulla.&lt;/p&gt;
+&lt;p&gt;Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson këto rregulla.&lt;/p&gt;
 
 &lt;p&gt;Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.&lt;/p&gt;
 
-&lt;p&gt;p.sh Jeni duke bërë një kërkesë në API dhe doni të ktheni të gjitha blerjet të listuara.&lt;/p&gt;
+&lt;p&gt;p.sh Jeni duke punuar në një API dhe doni të ktheni të gjitha blerjet të listuara.&lt;/p&gt;
 
 &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrdersController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//Emri i klasës duhet të jetë i përshkueshëm në nivelin ku&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//programeri i radhës kur e sheh klasën e kupton se çfar pune bën pa e hapur atë.&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//GetOrdersWithFiltersController do të ishte më e përshkrueshme&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ose GetFilteredOrdersController&lt;/span&gt;
 	
 
 	&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -66,7 +69,7 @@
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isAuthenticated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;//Në këtë rast thehet rregulli ku metoda ka njohuri &lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;//se çka përmban getUser()&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;//idealisht duhet të duket&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//idealisht duhet të duket si në vijim&lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;//$this-&amp;gt;auth-&amp;gt;isUserAuthenticated() &lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;//..&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UnauthorizedResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -81,7 +84,7 @@
         &lt;span class=&quot;c1&quot;&gt;//konstruktimi i filterave mbrenda controllerit nuk është ideale&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//metoda duhet të lexohet pastër dhe jo të shohim strukturen e filterave&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//pra kjo mund të bartet në një Factory ose DTO objekt ku do të duket si në vijim&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//RequestFiltersFactoryIml::create($request-&amp;gt;getParams())&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//RequestFiltersFactory::create($request-&amp;gt;getParams())&lt;/span&gt;
         
         
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;in_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;order_direction&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;asc&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;desc&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -93,14 +96,15 @@
         
         &lt;span class=&quot;nv&quot;&gt;$list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//Emertimi i variablës në këtë rast nuk është aq i vetë shpjegueshëm&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//$filteredOrders do të ishte më e përshkrueshme&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//$filteredOrders do të ishte më e përshkrueshme ose&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//$orders është e mjaftueshme&lt;/span&gt;
 		
         &lt;span class=&quot;nv&quot;&gt;$isPagination&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;str_contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;/count&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//Në këtë rresht kjo metodë po qaset në path për ta gjetur nëse &lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//egziston /count në url&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//por kjo është një shtresë më e thellë e aplikacionit prandaj &lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;//edhe kjo e then rregullin që metoda duhet të qaset gjithmonë në të njejtën shtresë&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//$request-&amp;gt;isPaginated() ose $request-&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//$request-&amp;gt;isPaginated()&lt;/span&gt;
         
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isPagination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PaginatedResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -135,42 +139,42 @@
 
 &lt;h3 id=&quot;një-kalkulim&quot;&gt;Një kalkulim&lt;/h3&gt;
 
-&lt;p&gt;Nëse projekti ku punon ti i përmban 8000 rreshta kod.&lt;/p&gt;
+&lt;p&gt;Nëse projekti me të cilin po punoni përmban 8000 rreshta kodi.&lt;/p&gt;
 
-&lt;p&gt;Ta zëmë që ti do të punosh në atë kompani për 1 vit = 230 ditë pune.&lt;/p&gt;
+&lt;p&gt;Le të supozojmë se ju do të punoni në atë kompani për 1 vit = 230 ditë pune.&lt;/p&gt;
 
-&lt;p&gt;Nëse çdo ditë mundohesh ta përmirsosh projektin për vetem 0.43% në ditë që i bjen 34 rreshta ne ditë.&lt;/p&gt;
+&lt;p&gt;Nëse çdo ditë përpiqeni të përmirësoni projektin për vetëm 0.43% në ditë, kjo bën 34 rreshta në ditë.&lt;/p&gt;
 
-&lt;p&gt;Ne fund te vitit ti do ta ndryshosh komplet kodin në atë projekt.&lt;/p&gt;
+&lt;p&gt;Në fund të vitit ju do të ndryshoni plotësisht kodin në atë projekt.&lt;/p&gt;
 
-&lt;p&gt;Në fillim kur ti vendos ti aplikosh rregullat në kodin që je duke shkruar do të jetë më e vështirë sepse je duke mbjellur shprehi të reja, por kjo do të ndryshoj në mënyrë lineare, pas disa muajsh ju nuk do të keni nevoj të mendoni aq shumë.&lt;/p&gt;
+&lt;p&gt;Në fillim kur të vendosni të zbatoni rregullat në kodin që po shkruani do të jetë më e vështirë sepse po mbillni shprehi të reja, por kjo do të ndryshojë në mënyrë lineare, pas disa muajsh nuk do të duhet të mendoni aq shumë.&lt;/p&gt;
 
-&lt;h3 id=&quot;efekti-mbrenda-ekipit&quot;&gt;Efekti mbrenda ekipit&lt;/h3&gt;
+&lt;h3 id=&quot;efekti-brenda-ekipit&quot;&gt;Efekti brenda ekipit&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Ti dhe ekipi ytë 70% të kohës do të shpenzoni duke lexuar kod dhe jo duke shkruar, për të shkruar kod duhet të lexosh.&lt;/li&gt;
-  &lt;li&gt;Puna e të gjith ekipit do të lehtësohet nëse bini në dakordim që të aplikoni rregulla.&lt;/li&gt;
-  &lt;li&gt;Ti do të jesh pika kyqe ku të gjithë do të referohen për pyetje apo këshilla.&lt;/li&gt;
-  &lt;li&gt;Secili ekip do të dëshiroj që ti të jesh pjes e ekipit sepse e lehtëson punen e ekipit kur ata me lehtësi e lexojnë kodin tënd.&lt;/li&gt;
+  &lt;li&gt;Ju dhe ekipi juaj do të shpenzoni 70% të kohës tuaj duke lexuar kodin dhe jo duke shkruar, për të shkruar kod duhet të lexoni.&lt;/li&gt;
+  &lt;li&gt;Puna e të gjithë ekipit do të lehtësohet nëse dakordoheni të aplikoni rregullat.&lt;/li&gt;
+  &lt;li&gt;Ju do të jeni pika qendrore që të gjithë do të referohen për pyetje ose këshilla.&lt;/li&gt;
+  &lt;li&gt;Çdo ekip do të dëshirojë që ju të jeni pjesë e ekipit sepse kjo e bën punën e ekipit më të lehtë kur ata lexojnë lehtësisht kodin tuaj.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Një efekt negativ është që në fillim ndoshta do të hasësh rezistencë nga antarët e ekipit, por nëse ja prezenton faktet dhe referencat në libra dhe artikuj atëher argumentet përfundojnë.&lt;/p&gt;
+&lt;p&gt;Një efekt negativ është se në fillim ndoshta do të hasni në rezistencë nga anëtarët e ekipit, por nëse i paraqisni faktet dhe referencat në libra dhe artikuj, atëherë argumentet mbarojnë.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Sigurohu që ta lexosh &lt;strong&gt;Mbaje në mend&lt;/strong&gt; në fund të artikullit.&lt;/p&gt;
+  &lt;p&gt;Sigurohu që ta lexosh &lt;strong&gt;Mbani mend&lt;/strong&gt; në fund të artikullit.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;efekti-afatgjatë&quot;&gt;Efekti afatgjatë&lt;/h3&gt;
+&lt;h3 id=&quot;efekt-afatgjatë&quot;&gt;Efekt afatgjatë&lt;/h3&gt;
 
-&lt;p&gt;Nëse shefi të pyet se për sa kohë mund ta përfundosh një projekt me x kërkesa.&lt;/p&gt;
+&lt;p&gt;Nëse shefi juaj pyet për sa kohë mund të përfundoni një projekt me x kërkesa.&lt;/p&gt;
 
-&lt;p&gt;Ti ja prezenton një diagram si në vijim:&lt;/p&gt;
+&lt;p&gt;Ju paraqisni një diagram si më poshtë:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/code-quality.png&quot; alt=&quot;Diagrami i kohes dhe kompleksitetit&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ja shpjegon që nëse dëshiron rezultat të shpejt, pasojat do të jenë më vonë, dhe anasjelltas.&lt;/p&gt;
+&lt;p&gt;I shpjegon se nëse doni rezultate të shpejta, pasojat do të jenë më vonë, dhe anasjelltas.&lt;/p&gt;
 
-&lt;p&gt;Kjo përveq që e efekton të ardhmen e projektit të efekton edhe ty si programer në dy mënyra:&lt;/p&gt;
+&lt;p&gt;Kjo, përveçse ndikon në të ardhmen e projektit, ndikon edhe ju si programues në dy mënyra:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Fuqia e shprehisë&lt;/li&gt;
@@ -179,71 +183,71 @@
 
 &lt;h4 id=&quot;fuqia-e-shprehisë&quot;&gt;Fuqia e shprehisë&lt;/h4&gt;
 
-&lt;p&gt;Ti je programer që je për shkak të shprehive që i ke adaptuar me kohë.&lt;/p&gt;
+&lt;p&gt;Ju jeni programuesi që jeni për shkak të shprehive që keni adaptuar me kalimin e kohës.&lt;/p&gt;
 
-&lt;p&gt;Prandaj duhet të jesh shumë i kujdesshëm se çka dhe si punon në fillim të karrierës.&lt;/p&gt;
+&lt;p&gt;Prandaj, duhet të jeni shumë të kujdesshëm se çfarë dhe si punoni në fillim të karrierës suaj.&lt;/p&gt;
 
-&lt;p&gt;Nëse punon në projekte ku ata mbi ty të shtyjnë të adaptosh shprehi të kqija sikur&lt;/p&gt;
+&lt;p&gt;Nëse punoni në projekte ku ju shtyjnë të adaptosh shprehi të kqija sikur&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Shkimi i kodit duke i thyer rregullat e përmendura në artikull më lartë&lt;/li&gt;
+  &lt;li&gt;Thyerja e kodit duke thyer rregullat e përmendura në artikullin e mësipërm&lt;/li&gt;
   &lt;li&gt;Injorimi i formateve&lt;/li&gt;
-  &lt;li&gt;Injorimi i shkrimit të testeve.&lt;/li&gt;
+  &lt;li&gt;Injorimi i shkrimit të testeve&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;dhe i bën të gjitha këto pa asnjë benefit për ty atëher duhet ta mendosh edhe njëher atë vend pune.&lt;/p&gt;
+&lt;p&gt;dhe i bën të gjitha këto pa asnjë përfitim për ty, atëherë duhet të mendoni mirë për atë vend pune.&lt;/p&gt;
 
-&lt;p&gt;Duke punuar në këtë mënyr për një vit ju do ti mbjellni ato shprehi në karakterin ose eksperiencen tuaj.&lt;/p&gt;
+&lt;p&gt;Duke punuar në këtë mënyrë për një vit, ju do t’i mbillni ato shprehi në memorien ose përvojën tuaj.&lt;/p&gt;
 
-&lt;p&gt;Në të ardhmen nëse dëshironi të aplikoni në një kompani më të mirë atëher ju duhet ti harroni shprehit të kqija dhe të mësoni shprehit e mira.&lt;/p&gt;
+&lt;p&gt;Në të ardhmen, nëse doni të aplikoni në një kompani më të mirë, atëherë duhet të harroni shprehitë e këqija dhe të mësoni shprehi të mira.&lt;/p&gt;
 
-&lt;p&gt;Pra siç e shihni që nuk ka asnjë benefit për ty si programer prej asaj kompanisë, gjithmon duhet të mendosh në të ardhmen çfar benefite do të mbesin ty si programer.&lt;/p&gt;
+&lt;p&gt;Pra, siç mund ta shihni që nuk ka asnjë përfitim për ju si programues nga ajo kompani, duhet të mendoni gjithmonë në të ardhmen se çfarë përfitimesh do të mbeten për ju si programues.&lt;/p&gt;
 
-&lt;p&gt;Dikush edhe zgjedh të sakrifikoj standartet për një benefit që është më i vlefshëm se vet kualiteti i kodit, dhe ajo nuk është një zgjedhje e gabuar.&lt;/p&gt;
+&lt;p&gt;Dikush zgjedh të sakrifikojë standardet për një përfitim që është më i vlefshëm se cilësia e kodit dhe kjo nuk është një zgjedhje e gabuar.&lt;/p&gt;
 
 &lt;h4 id=&quot;madhësia-e-projektit&quot;&gt;Madhësia e projektit&lt;/h4&gt;
 
-&lt;p&gt;Nëse vendosni të mos adaptoni formatet dhe rregullat e përmendura në projekt, atëher pas një viti projekti që ti je duke punuar do të bëhet aq i madh sa që nuk mund ta përballoni të punoni i vetëm në të.&lt;/p&gt;
+&lt;p&gt;Nëse vendosni të mos përshtatni formatet dhe rregullat e përmendura në projekt, atëherë pas një viti projekti për të cilin po punoni do të bëhet aq i madh sa nuk mund të përballoni të punoni vetëm me të.&lt;/p&gt;
 
-&lt;p&gt;Shefi vendos që ta punsoj një programer të ri në projekt, por për shkak që ti ke dështuar me e bindë shefin për kod të pastër, keni vendosur që mos ti ndjekni standarde dhe mos të shkuani teste, programeri i ri e ka shumë të vështirë ta mësoj dhe kontriboj në projekt.&lt;/p&gt;
+&lt;p&gt;Shefi vendos të punësojë një programues të ri në projekt, por për shkak se nuk arritët ta bindni shefin për kodin e pastër, vendosët të mos ndiqni standardet dhe pa teste, programuesi i ri e ka shumë të vështirë të mësojë dhe të kontribuojë në projekt.&lt;/p&gt;
 
-&lt;p&gt;Prandaj koha jote tash ndahet në dy pjesë,&lt;/p&gt;
+&lt;p&gt;Prandaj koha juaj tani është e ndarë në dy pjesë,&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Vazhdimi i punës në implementimin e gjërave të reja në projekt&lt;/li&gt;
-  &lt;li&gt;Ndihma e programerit të ri që ta kuptoj se çka po bëhet në kod ku ai është duke punuar.&lt;/li&gt;
+  &lt;li&gt;Vazhdimi i punës për aplikimin e gjërave të reja në projekt&lt;/li&gt;
+  &lt;li&gt;Ndihmon programuesin e ri për të kuptuar se çfarë po bëhet në kodin me të cilin po punon.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Pas kësaj ti i tregon shefit që të duhet edhe një programer me më shum eksperience sepse ky nuk po kryen shumë punë.&lt;/p&gt;
+&lt;p&gt;Pas kësaj i thoni shefit se keni nevojë për një programues me më shumë përvojë, sepse ai nuk po bën shumë punë.&lt;/p&gt;
 
-&lt;p&gt;Dhe kështu përfundon deri te dështimi i projektit.&lt;/p&gt;
+&lt;p&gt;Dhe kështu përfundon deri në dështimin e projektit.&lt;/p&gt;
 
-&lt;p&gt;Në fund ti do të jesh ai që e ke bërë projektin të dështoj sepse ti je ai që e ke shkruar kodin e pa pastër, dhe shefi të qet prej pune dhe ja jep punën tënde një programeri me më eksperiencë.&lt;/p&gt;
+&lt;p&gt;Në fund, ju do të jeni ai që e bëri projektin të dështojë, sepse jeni ai që shkroi kodin, dhe shefi juaj ju pushon nga puna dhe ia jep punën një programuesi më me përvojë.&lt;/p&gt;
 
-&lt;p&gt;I vetmi benefit që ke marrur nga ai vend pune është eksperienca se si një projekt të dështon.&lt;/p&gt;
+&lt;p&gt;Përfitimi i vetëm që keni marrë nga ai vend pune është përvoja se si një projekt dështon.&lt;/p&gt;
 
 &lt;h3 id=&quot;aplikimi-i-rregullave&quot;&gt;Aplikimi i rregullave&lt;/h3&gt;
 
-&lt;p&gt;Për ti aplikuar të gjitha rregullat një shprehi e mirë është kur jeni duke shkruar kod, provoni të ja shpjegoni vetës me fjalë se çka po bën ky kodi.&lt;/p&gt;
+&lt;p&gt;Për të aplikuar të gjitha rregullat, një shprehi e mirë është kur jeni duke shkruar kod, përpiquni t’i shpjegoni vetes me fjalë se çfarë po bën ky kod.&lt;/p&gt;
 
-&lt;p&gt;Provoni ta adaptoni këtë mentalitet&lt;/p&gt;
+&lt;p&gt;Mundohuni ta adaptoni këtë mentalitet&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;E shkruani kodin që të funksionoj&lt;/li&gt;
-  &lt;li&gt;I shkruani disa teste që ta mundsojnë ty për ta ndryshuar kodin pa e prishur funksionalitetin&lt;/li&gt;
-  &lt;li&gt;Fillon me riemertimin e metodave dhe klasave&lt;/li&gt;
-  &lt;li&gt;Fillon ndarjen e klasave ne klasa të veçanta&lt;/li&gt;
-  &lt;li&gt;I zvoglon metodat që të jetë më i lexueshëm kodi.&lt;/li&gt;
+  &lt;li&gt;Shkruani kodin për ta bërë atë të funksionojë&lt;/li&gt;
+  &lt;li&gt;Shkruani disa teste që ju lejojnë të ndryshoni kodin pa prishur funksionalitetin&lt;/li&gt;
+  &lt;li&gt;Fillon me riemërtimin e metodave dhe klasave&lt;/li&gt;
+  &lt;li&gt;Fillon ndarjen e klasave në klasa të veçanta&lt;/li&gt;
+  &lt;li&gt;Ndarja e metodave që përmbajtja të është më e lexueshme.&lt;/li&gt;
   &lt;li&gt;E lexon disa herë&lt;/li&gt;
-  &lt;li&gt;kthehesh tek hapi 3.&lt;/li&gt;
-  &lt;li&gt;Nëse mendon që gjithqka është në rregull atëher vazhdon.&lt;/li&gt;
+  &lt;li&gt;kthehuni në hapin 3.&lt;/li&gt;
+  &lt;li&gt;Nëse mendoni se gjithçka është në rregull, atëherë vazhdoni.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;automatizimi-i-rregullave&quot;&gt;Automatizimi i rregullave&lt;/h3&gt;
 
-&lt;p&gt;Janë disa vegla që të ndihmoj në dhe të tregojnë nëse ki probleme me standarte të ndryshme të kodit.&lt;/p&gt;
+&lt;p&gt;Ka disa vegla që ju ndihmojnë dhe ju tregojnë nëse keni probleme me standarde të ndryshme në kod.&lt;/p&gt;
 
-&lt;p&gt;Por në një pikë veglat nuk mund ta ri shkruajnë kodin për ty.&lt;/p&gt;
+&lt;p&gt;Por në një pikë veglat nuk mund ta rishkruajnë kodin për ty.&lt;/p&gt;
 
 &lt;p&gt;Veglat:&lt;/p&gt;
 &lt;ol&gt;
@@ -254,22 +258,26 @@
   &lt;li&gt;&lt;a href=&quot;https://phpinsights.com/&quot;&gt;https://phpinsights.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;konkluzioni&quot;&gt;Konkluzioni&lt;/h3&gt;
+&lt;h3 id=&quot;përfundim&quot;&gt;Përfundim&lt;/h3&gt;
 
-&lt;p&gt;Në librin e “Clean Code - R. Martin” është një rregull interesant që më ka mbetur në mendje dhe ai është si në vijim, “Leje kodin ku je duke punuar pak më mirë se që e ke gjetur”.&lt;/p&gt;
+&lt;p&gt;Në librin “Clean Code – R. Martin” ka një rregull interesant që më ka mbetur në mendje dhe është si më poshtë, “Lëre kodin ku po punon pak më mirë se sa e gjete”.&lt;/p&gt;
 
-&lt;p&gt;Pra përmbledhja e gjithë tekstit në këtë artikull flet për kodin e pastër.
-Nëse shkruan kod të pastër je ti ai që përfiton nga eksperienca dhe je ti ai që përfiton shprehi të mira që të shtyjnë përpara në karrierë.&lt;/p&gt;
+&lt;p&gt;Pra, përmbledhja e të gjithë tekstit në këtë artikull flet për kodin e pastër.
+Nëse shkruani kod të pastër, je ti që përfiton nga përvoja dhe je ai që përfiton nga zakonet e mira që do t’ju shtyjnë përpara në karrierën tuaj.&lt;/p&gt;
 
-&lt;p&gt;Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas disa kohe do të bëhet intuitive.&lt;/p&gt;
+&lt;p&gt;Fillimi nuk është i lehtë për të shkruar kod të pastër, por pas ca kohësh do të bëhet intuitive.&lt;/p&gt;
 
-&lt;p&gt;Nëse dikush tjetër do ta lexoj atë klasë apo funksion që ti e ke shkruar, do të është falenderues sepse e ke kursyer kohën e tij.&lt;/p&gt;
+&lt;p&gt;Nëse dikush tjetër do ta lexojë atë klasë ose funksion që keni shkruar, ai do të jetë mirënjohës sepse ju keni kursyer kohën e tyre.&lt;/p&gt;
 
-&lt;p&gt;Mos e merrni kodin e pastër sikur një rregull dhe ta ndjekni atë pa menduar fare, përdoreni intuitën dhe  konsiderojeni si një rrugë që ju shtyn të mendoni për atë që shkruani në një perspektive unike.&lt;/p&gt;
+&lt;p&gt;Mos e merrni kodin e pastër si rregull dhe ndiqni atë pa u menduar, përdorni intuitën tuaj dhe konsiderojeni atë si një rrugë që ju bën të mendoni për atë që shkruani në një këndvështrim unik.&lt;/p&gt;
 
-&lt;h4 id=&quot;mbaje-në-mend-&quot;&gt;Mbaje në mend 🧠&lt;/h4&gt;
-&lt;p&gt;Gjithmon duhet të komunikoni me ekipin dhe kolegët, të bini në një konkluzion së bashku, në fund, ju jeni një ekip, dhe një ekip për të funksionuar, komunikimi duhet të jetë i rëndësishëm.&lt;/p&gt;
+&lt;h4 id=&quot;mbani-mend-&quot;&gt;Mbani mend 🧠&lt;/h4&gt;
+&lt;p&gt;Duhet të komunikoni gjithmonë me ekipin dhe kolegët, të arrini në një përfundim së bashku, në fund të fundit, ju jeni një ekip dhe që një ekip të funksionojë, komunikimi duhet të jetë i rëndësishëm.&lt;/p&gt;
 
+&lt;h3 id=&quot;surpriza&quot;&gt;Surpriza&lt;/h3&gt;
+&lt;p&gt;Kjo është një vegël që të kujton në editor rreth rregullave të ndryshme (KISS, YAGNI) etj.
+&lt;img src=&quot;https://github.com/chriswingler/clean-code-tips/raw/master/images/tips.gif&quot; alt=&quot;Shtojca&quot; /&gt;
+&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=chriswingler.clean-code-tips&quot;&gt;VS code shtojca&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
