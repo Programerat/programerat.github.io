@@ -66,7 +66,7 @@ collections:
     permalink: /:year/:month/:slug
   detyrat:
     output: true
-    permalink: /ch/:year/:slug
+    permalink: /:collection/:slug
   authors:
     output: true
     permalink: /autori/:slug
@@ -91,7 +91,7 @@ defaults:
       layout: "author"
   -
     scope:
-      path: "/ch"
+      path: ""
       type: "detyrat"
     values:
       layout: "challange"
