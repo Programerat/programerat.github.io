@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-25T10:18:55+02:00</updated>
+ <updated>2022-07-25T18:50:20+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -30,11 +30,11 @@
 
 &lt;p&gt;Në fushën e programimit gjithmonë është një gjë me rëndësi Kodi i pastër, por çka domethënë kodi i pastër?&lt;/p&gt;
 
-&lt;p&gt;Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë apo një metodë.&lt;/p&gt;
+&lt;p&gt;Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa pasur nevojë të pyes ty se çfar pune bën një program një klasë apo një metodë.&lt;/p&gt;
 
 &lt;p&gt;Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.&lt;/p&gt;
 
-&lt;p&gt;Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.&lt;/p&gt;
+&lt;p&gt;Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shumë gjëra.&lt;/p&gt;
 
 &lt;p&gt;p.sh Ai e din që variabla &lt;strong&gt;r&lt;/strong&gt; në klasën &lt;strong&gt;Processor&lt;/strong&gt; e përmban vlerën e &lt;strong&gt;url path&lt;/strong&gt;, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur (do e lexoni më poshtë artikullit se pse kjo nuk është mirë).&lt;/p&gt;
 
@@ -46,13 +46,13 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/coding-pro.gif&quot; alt=&quot;Pro coder&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;rregullat-me-shembull&quot;&gt;Rregullat me shembull&lt;/h3&gt;
+&lt;h3 id=&quot;rregullat-me-shembuj&quot;&gt;Rregullat me shembuj&lt;/h3&gt;
 
 &lt;p&gt;Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.&lt;/p&gt;
 
 &lt;p&gt;Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson këto rregulla.&lt;/p&gt;
 
-&lt;p&gt;Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.&lt;/p&gt;
+&lt;p&gt;Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë të kodit.&lt;/p&gt;
 
 &lt;p&gt;p.sh Jeni duke punuar në një API dhe doni të ktheni të gjitha blerjet të listuara.&lt;/p&gt;
 
@@ -207,7 +207,7 @@
 
 &lt;h4 id=&quot;madhësia-e-projektit&quot;&gt;Madhësia e projektit&lt;/h4&gt;
 
-&lt;p&gt;Nëse vendosni të mos përshtatni formatet dhe rregullat e përmendura në projekt, atëherë pas një viti projekti për të cilin po punoni do të bëhet aq i madh sa nuk mund të përballoni të punoni vetëm me të.&lt;/p&gt;
+&lt;p&gt;Nëse vendosni për të mos i aplikuar formatet dhe rregullat e përmendura në projekt, atëherë pas një viti projekti për të cilin po punoni do të bëhet aq i madh sa nuk mund të përballoni të punoni vetëm me të.&lt;/p&gt;
 
 &lt;p&gt;Shefi vendos të punësojë një programues të ri në projekt, por për shkak se nuk arritët ta bindni shefin për kodin e pastër, vendosët të mos ndiqni standardet dhe pa teste, programuesi i ri e ka shumë të vështirë të mësojë dhe të kontribuojë në projekt.&lt;/p&gt;
 
@@ -239,7 +239,7 @@
   &lt;li&gt;Fillon ndarjen e klasave në klasa të veçanta&lt;/li&gt;
   &lt;li&gt;Ndarja e metodave që përmbajtja të është më e lexueshme.&lt;/li&gt;
   &lt;li&gt;E lexon disa herë&lt;/li&gt;
-  &lt;li&gt;kthehuni në hapin 3.&lt;/li&gt;
+  &lt;li&gt;Kthehuni në hapin 3.&lt;/li&gt;
   &lt;li&gt;Nëse mendoni se gjithçka është në rregull, atëherë vazhdoni.&lt;/li&gt;
 &lt;/ol&gt;
 

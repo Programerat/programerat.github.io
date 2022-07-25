@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://programerat.github.io/autori/diar-selimi</loc>
+<lastmod>2022-07-25T18:50:20+02:00</lastmod>
+</url>
+<url>
 <loc>https://programerat.github.io/course/2022/kursi-ne-php</loc>
 <lastmod>2022-07-14T10:15:20+02:00</lastmod>
 </url>
@@ -56,6 +60,9 @@
 <loc>https://programerat.github.io/articles/</loc>
 </url>
 <url>
+<loc>https://programerat.github.io/autoret/</loc>
+</url>
+<url>
 <loc>https://programerat.github.io/courses/</loc>
 </url>
 <url>
@@ -87,10 +94,10 @@
 </url>
 <url>
 <loc>https://programerat.github.io/assets/images/Ecovis%20Personnel%20Questionnaire%20EN.pdf</loc>
-<lastmod>2022-07-25T10:17:56+02:00</lastmod>
+<lastmod>2022-07-25T18:49:34+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/googlec420d363e881ef1e.html</loc>
-<lastmod>2022-07-25T10:17:56+02:00</lastmod>
+<lastmod>2022-07-25T18:49:34+02:00</lastmod>
 </url>
 </urlset>
