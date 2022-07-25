@@ -26,7 +26,7 @@ layout: default
     {% if newRow == 3 %} 
         {% assign newRow = 1 %}
     {% else %}
-        {% assign newRow = newRow + 1 %}
+        {% assign newRow = newRow | plus:1 %}
     {% endif %}
 
 {% endfor %}
