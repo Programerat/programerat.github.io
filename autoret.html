@@ -2,16 +2,31 @@
 layout: default
 ---
 <div class="container">
+{% assign newRow = 1 %}
 {% for author in site.authors %}
-<div class="col">
-    <div class="card" style="width: 18rem;">
-        <img src="{{ author.profile }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{ author.name }}</h5>
-            <p class="card-text">{{ author.bio }}</p>
-            <a href="{{ author.website }}" class="btn btn-primary">Profili</a>
+
+    {% if newRow == 1 %}
+    <div class="row">
+    {% endif %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ author.profile }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ author.name }}</h5>
+                    <p class="card-text">{{ author.bio }}</p>
+                    <a href="{{ author.website }}" class="btn btn-primary">Profili</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    {% if newRow == 3 %}
+        </div>
+    {% endif %}
+
+    {% if newRow == 3 %} 
+        {% assign newRow = 1 %}
+    {% else %}
+        {% assign newRow = newRow + 1 %}
+    {% endif %}
+
 {% endfor %}
 </div>
