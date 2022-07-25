@@ -67,9 +67,6 @@ collections:
   detyrat:
     output: true
     permalink: /detyrat/:slug
-  classes:
-    output: true
-    permalink: /course/class/:year/:slug
   authors:
     output: true
     permalink: /autori/:slug
@@ -80,12 +77,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
   -
     scope:
       path: ""
@@ -103,7 +94,7 @@ defaults:
       path: ""
       type: "detyrat"
     values:
-      layout: "detyra"
+      layout: "challange"
 
 relative_links:
   enabled:     true
