@@ -1,13 +1,13 @@
 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
-      <strong class="d-inline-block mb-2 text-success">{{ detyra.dificulty }}</strong>
+      <strong class="d-inline-block mb-2 text-success">{{ detyra.level }}</strong>
       <h3 class="mb-0">{{ detyra.title }}</h3>
       <div class="mb-1 text-muted">{{ detyra.date | date_to_string }}</div>
       <a href="{{ detyra.url | absolute_url }}" class="stretched-link">Hape detyrën</a>
     </div>
-    {% if detyra.cover != nil %}
+    {% if detyra.cover_img != nil %}
         <div class="col-auto d-none d-lg-block">
-            <div class="fill-primary" style="width: 200px; height: 100%; background-image: url({{ detyra.cover }}); background-size: 100%; background-blend-mode: multiply, normal; background-color: #ced4da; background-size: cover; background-position: center;"></div>    
+            <div class="fill-primary" style="width: 200px; height: 100%; background-image: url({{ detyra.cover_img }}); background-size: 100%; background-blend-mode: multiply, normal; background-color: #ced4da; background-size: cover; background-position: center;"></div>    
         </div>
     {% endif %}
   </div>

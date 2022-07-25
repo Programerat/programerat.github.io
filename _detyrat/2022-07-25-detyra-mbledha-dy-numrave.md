@@ -1,8 +1,9 @@
 ---
 title: Mbledhja e dy numrave
-description: Zgjidh problemin me mbledhje ne metoden qe eshte deklaruar.
-cover_img: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
-level: Lehtë
+dificulty: Thjeshtë
+cover: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
+dificulty: Lehtë
+date: 2022-07-25 20:15:00
 ---
 
 Zgjidh detyren në vijim.
