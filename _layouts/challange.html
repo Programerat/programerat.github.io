@@ -1,2 +1,63 @@
+---
+layout: default
+---
+<!-- Heading -->
+<div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+  <div class="my-3 py-3">
+    <h2 class="display-5">{{ page.title }}</h2>
+    <p>
+      {% assign minute=content | number_of_words | divided_by: 265 | plus: 1 %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">  
+        {% if page.minute %} {{ page.minute }} {% else %} {{ minute }} {% endif %} min 
+      </time>
+    </p>
+    <p class="lead">
+      {% for tag in page.tags %}
+      <a href="{{ site.url }}{{ site.baseurl }}/tag/{{tag}}">#{{tag}}</a> 
+      {% endfor %}
+    </p>
+  </div>
+  <div class="hide-phone bg-body shadow-sm mx-auto header-content" style="height: 300px; border-radius: 21px 21px 0 0;"></div>
+</div>
+<!-- Content -->
+<article class="container pull-content">
+  <div class="row">
+   <div class="col-md-9 blog-main">
+      {% if page.video != nil %}
+        <h3>Video</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ page.code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
+      <br>
+      {{ content }}
+    </div>
+    <aside class="col-md-3 blog-sidebar">
+    <section class="toc sticky-top">
+      {% include toc.html html=content %}
+      <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+      </svg>
+    </section>
+    </aside>
+  </div>
+</article>
 
-{{ content }}
+<section class="container">
+
+  <nav class="post-nav">
+    {% if page.previous %}
+    <a class="post-nav-item post-nav-prev" href="{{ page.previous | relative_url }}">
+      <div class="nav-arrow">Tjetra</div>
+      <span class="post-title">{{ page.previous.title }}</span>
+    </a>
+    {% endif %} {% if page.next %}
+    <a class="post-nav-item post-nav-next" href="{{ page.next | relative_url }}">
+      <div class="nav-arrow">Tjetra</div>
+      <span class="post-title">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+
+  </nav>
+</section>
+{% include disqus.html %}
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/toc.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/like_storage.js"></script>
