@@ -9,22 +9,22 @@ layout: default
 </div>
 <br />
 <div class="container">
-    {% assign newRow = true %}
+    {% assign newRow = 1 %}
     {% for detyra in site.detyrat %}
-        {% if newRow == true %}
-            <div class="row mb-2">
+        {% if newRow == 1 %}
+         <div class="row">
         {% endif %}
-            <div class="col-md-6">
+            <div class="col-md-4">
             {% include challange_view.html %}
             </div>
-        {% if newRow == false %}
+        {% if newRow == 3 %}
             </div>
         {% endif %}
 
-        {% if newRow == true %} 
-            {% assign newRow = false %}
+        {% if newRow == 3 %} 
+            {% assign newRow = 1 %}
         {% else %}
-            {% assign newRow = true %}
+            {% assign newRow = newRow | plus:1 %}
         {% endif %}
     {% endfor %}
 </div>
