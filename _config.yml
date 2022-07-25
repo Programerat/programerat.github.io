@@ -64,9 +64,9 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:slug
-  courses:
+  detyrat:
     output: true
-    permalink: /course/:year/:slug
+    permalink: /detyra/:slug
   classes:
     output: true
     permalink: /course/class/:year/:slug
@@ -92,12 +92,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
-      path: ""
-      type: "courses"
-    values:
-      layout: "course"
   -
     scope:
       path: ""
