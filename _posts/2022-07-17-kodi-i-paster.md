@@ -29,7 +29,7 @@ Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit q�
 
 ### Rregullat me shembuj
 
-Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.
+Sikur në gjuhën që e flasim dhe komunikojmë, ekzistojnë rregulla që të gjithë i mësojmë në shkollë.
 
 Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson këto rregulla.
 
