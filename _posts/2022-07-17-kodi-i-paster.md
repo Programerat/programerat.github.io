@@ -261,8 +261,3 @@ Mos e merrni kodin e pastër si rregull dhe ndiqni atë pa u menduar, përdorni 
 #### Mbani mend 🧠
 Duhet të komunikoni gjithmonë me ekipin dhe kolegët, të arrini në një përfundim së bashku, në fund të fundit, ju jeni një ekip dhe që një ekip të funksionojë, komunikimi duhet të jetë i rëndësishëm.
 
-
-### Surpriza
-Kjo është një vegël që të kujton në editor rreth rregullave të ndryshme (KISS, YAGNI) etj.
-![Shtojca](https://github.com/chriswingler/clean-code-tips/raw/master/images/tips.gif)
-[VS code shtojca](https://marketplace.visualstudio.com/items?itemName=chriswingler.clean-code-tips)
