@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<br />
+<div class="container">
+    <div class="row">
+        <h1>Detyrat</h1>
+    </div>
+</div>
+<br />
+<div class="container">
+    {% assign newRow = true %}
+    {% for detyra in site.detyrat %}
+        {% if newRow == true %}
+            <div class="row mb-2">
+        {% endif %}
+            <div class="col-md-6">
+            {% include challange_view.html %}
+            </div>
+        {% if newRow == false %}
+            </div>
+        {% endif %}
+
+        {% if newRow == true %} 
+            {% assign newRow = false %}
+        {% else %}
+            {% assign newRow = true %}
+        {% endif %}
+    {% endfor %}
+</div>

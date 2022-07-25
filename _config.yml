@@ -104,6 +104,12 @@ defaults:
       type: "autoret"
     values:
       layout: "author"
+  -
+    scope:
+      path: ""
+      type: "detyrat"
+    values:
+      layout: "detyra"
 
 relative_links:
   enabled:     true
