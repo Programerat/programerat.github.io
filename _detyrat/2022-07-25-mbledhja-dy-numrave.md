@@ -1,6 +1,5 @@
 ---
 title: Mbledhja e dy numrave
-dificulty: Thjeshtë
 cover: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
 dificulty: Lehtë
 date: 2022-07-25 20:15:00
