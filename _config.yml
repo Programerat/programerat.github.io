@@ -70,6 +70,9 @@ collections:
   classes:
     output: true
     permalink: /course/class/:year/:slug
+  authors:
+    output: true
+    permalink: /autori/:slug
   
 defaults:
   -
@@ -95,6 +98,12 @@ defaults:
       type: "courses"
     values:
       layout: "course"
+  -
+    scope:
+      path: ""
+      type: "autoret"
+    values:
+      layout: "author"
 
 relative_links:
   enabled:     true

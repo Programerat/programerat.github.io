@@ -12,11 +12,11 @@ type: artikull
 
 Në fushën e programimit gjithmonë është një gjë me rëndësi Kodi i pastër, por çka domethënë kodi i pastër?   
 
-Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa patur nevojë të pyes ty se çfar pune bën një një program një klasë apo një metodë.
+Kodi i pastër do të thotë kur një person përpos teje e lexon atë që ti e ke shkruar dhe e kupton pa pasur nevojë të pyes ty se çfar pune bën një program një klasë apo një metodë.
 
 Një programer profesional shpenzon më shumë kohë duke analizuar ose lexuar kodin që të tjerët e shkruajnë.
 
-Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shum gjëra.
+Diferenca në mes të një programeri të menqur dhe ati profesional është që, i menquri mund të mbaj në mend shumë gjëra.
 
 p.sh Ai e din që variabla **r** në klasën **Processor** e përmban vlerën e **url path**, por nëse një programer tjetër dëshiron të punoj në atë klasë atëher ai duhet ta pyes programerin e menqur (do e lexoni më poshtë artikullit se pse kjo nuk është mirë).
 
@@ -27,13 +27,13 @@ Ndërsa ai profesionali shpenzon kohë në emërtimin dhe organizimin e kodit q�
 ![Pro coder]({{ "/" | relative_url  }}assets/images/coding-pro.gif)    
     
 
-### Rregullat me shembull
+### Rregullat me shembuj
 
 Sikur në gjuhën që e flasim dhe komunikojmë, egzistojnë rregulla që të gjithë i mësojmë në shkollë.
 
 Në programim këto rregulla askush nuk të shtynë ti mësosh, por mundësia për të u pranuar në një punë është më e madhe nëse i mëson këto rregulla.
 
-Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë kodi.
+Nuk do ti listoj të gjitha rregullat por disa më të thjeshta do të mundohem ti shpjegoj me disa pjesë të kodit.
 
 p.sh Jeni duke punuar në një API dhe doni të ktheni të gjitha blerjet të listuara.
 
@@ -196,7 +196,7 @@ Dikush zgjedh të sakrifikojë standardet për një përfitim që është më i 
 
 #### Madhësia e projektit
 
-Nëse vendosni të mos përshtatni formatet dhe rregullat e përmendura në projekt, atëherë pas një viti projekti për të cilin po punoni do të bëhet aq i madh sa nuk mund të përballoni të punoni vetëm me të.
+Nëse vendosni për të mos i aplikuar formatet dhe rregullat e përmendura në projekt, atëherë pas një viti projekti për të cilin po punoni do të bëhet aq i madh sa nuk mund të përballoni të punoni vetëm me të.
 
 Shefi vendos të punësojë një programues të ri në projekt, por për shkak se nuk arritët ta bindni shefin për kodin e pastër, vendosët të mos ndiqni standardet dhe pa teste, programuesi i ri e ka shumë të vështirë të mësojë dhe të kontribuojë në projekt.
 
@@ -226,7 +226,7 @@ Mundohuni ta adaptoni këtë mentalitet
 4. Fillon ndarjen e klasave në klasa të veçanta
 5. Ndarja e metodave që përmbajtja të është më e lexueshme.
 6. E lexon disa herë
-7. kthehuni në hapin 3.
+7. Kthehuni në hapin 3.
 8. Nëse mendoni se gjithçka është në rregull, atëherë vazhdoni.      
 
 
