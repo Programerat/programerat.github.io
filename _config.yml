@@ -91,7 +91,7 @@ defaults:
       layout: "author"
   -
     scope:
-      path: ""
+      path: "/ch"
       type: "detyrat"
     values:
       layout: "challange"
