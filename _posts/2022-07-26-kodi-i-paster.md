@@ -4,7 +4,6 @@ description: Çka është kodi i pastër dhe si të efekton karrieren tënde si 
 cover_img: https://programerat.github.io/assets/images/show-love.jpg
 author: diarselimi
 tags: karriera programim mesime
-archive: true
 type: artikull
 ---
 
