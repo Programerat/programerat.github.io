@@ -8,43 +8,13 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <language>en-us</language>
     
       <item>
-        <title>Zhvillimi i udhhequer nga testet.</title>
-        
-        
-          <description>
-</description>
-        
-        <pubDate>Sun, 24 Jul 2022 00:00:00 +0200</pubDate>
-        <guid isPermaLink="true">https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</guid>
-      <link>https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</link>
-      <content:encoded>
-        <![CDATA[
-        <!doctype html>
-        <html lang="en" prefix="op: http://media.facebook.com/op#">
-          <head>
-            <meta charset="utf-8">
-            <link rel="canonical" href="https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet">
-            <meta property="op:markup_version" content="v1.0">
-          </head>
-          <body>
-            <article>
-              
-
-            </article>
-          </body>
-        </html>
-        ]]>
-      </content:encoded>
-    </item>
-    
-      <item>
         <title>Kodi i pastër dhe çka duhet të konsideroni</title>
         
         
           <description>&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
 </description>
         
-        <pubDate>Sun, 17 Jul 2022 00:00:00 +0200</pubDate>
+        <pubDate>Tue, 26 Jul 2022 00:00:00 +0200</pubDate>
         <guid isPermaLink="true">https://programerat.github.io/2022/07/kodi-i-paster</guid>
       <link>https://programerat.github.io/2022/07/kodi-i-paster</link>
       <content:encoded>
@@ -306,6 +276,36 @@ Nëse shkruani kod të pastër, je ti që përfiton nga përvoja dhe je ai që p
 <h4 id="mbani-mend-">Mbani mend 🧠</h4>
 <p>Duhet të komunikoni gjithmonë me ekipin dhe kolegët, të arrini në një përfundim së bashku, në fund të fundit, ju jeni një ekip dhe që një ekip të funksionojë, komunikimi duhet të jetë i rëndësishëm.</p>
 
+
+            </article>
+          </body>
+        </html>
+        ]]>
+      </content:encoded>
+    </item>
+    
+      <item>
+        <title>Zhvillimi i udhhequer nga testet.</title>
+        
+        
+          <description>
+</description>
+        
+        <pubDate>Sun, 24 Jul 2022 00:00:00 +0200</pubDate>
+        <guid isPermaLink="true">https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</guid>
+      <link>https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</link>
+      <content:encoded>
+        <![CDATA[
+        <!doctype html>
+        <html lang="en" prefix="op: http://media.facebook.com/op#">
+          <head>
+            <meta charset="utf-8">
+            <link rel="canonical" href="https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet">
+            <meta property="op:markup_version" content="v1.0">
+          </head>
+          <body>
+            <article>
+              
 
             </article>
           </body>

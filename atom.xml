@@ -4,7 +4,7 @@
  <title>Programerat</title>
  <link href="https://programerat.github.io//atom.xml" rel="self"/>
  <link href="https://programerat.github.io//"/>
- <updated>2022-07-26T08:54:25+02:00</updated>
+ <updated>2022-07-26T08:58:37+02:00</updated>
  <id>https://programerat.github.io</id>
  <author>
    <name>programerat</name>
@@ -13,18 +13,9 @@
 
  
  <entry>
-   <title>Zhvillimi i udhhequer nga testet.</title>
-   <link href="https://programerat.github.io//2022/07/zhvillimi-i-udhehequr-nga-testet"/>
-   <updated>2022-07-24T00:00:00+02:00</updated>
-   <id>https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</id>
-   <content type="html">
-</content>
- </entry>
- 
- <entry>
    <title>Kodi i pastër dhe çka duhet të konsideroni</title>
    <link href="https://programerat.github.io//2022/07/kodi-i-paster"/>
-   <updated>2022-07-17T00:00:00+02:00</updated>
+   <updated>2022-07-26T00:00:00+02:00</updated>
    <id>https://programerat.github.io/2022/07/kodi-i-paster</id>
    <content type="html">&lt;h3 id=&quot;hyrje&quot;&gt;Hyrje&lt;/h3&gt;
 
@@ -274,6 +265,15 @@ Nëse shkruani kod të pastër, je ti që përfiton nga përvoja dhe je ai që p
 &lt;h4 id=&quot;mbani-mend-&quot;&gt;Mbani mend 🧠&lt;/h4&gt;
 &lt;p&gt;Duhet të komunikoni gjithmonë me ekipin dhe kolegët, të arrini në një përfundim së bashku, në fund të fundit, ju jeni një ekip dhe që një ekip të funksionojë, komunikimi duhet të jetë i rëndësishëm.&lt;/p&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Zhvillimi i udhhequer nga testet.</title>
+   <link href="https://programerat.github.io//2022/07/zhvillimi-i-udhehequr-nga-testet"/>
+   <updated>2022-07-24T00:00:00+02:00</updated>
+   <id>https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet</id>
+   <content type="html">
 </content>
  </entry>
  
