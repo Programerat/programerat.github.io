@@ -10,15 +10,6 @@
     } ,
   
     {
-      "title"    : "Zhvillimi i udhhequer nga testet.",
-      "description" : "Pse eshte mire qe te zhvillojme ne programim duke implementuar testet se pari dhe si na ndihmojne ato.",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "//2022/07/zhvillimi-i-udhehequr-nga-testet",
-      "date"     : "2022-07-24 00:00:00 +0200"
-    } ,
-  
-    {
       "title"    : "Prezantimi i programimit",
       "description" : "Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.",
       "category" : "",

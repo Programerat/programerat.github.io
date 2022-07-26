@@ -36,30 +36,6 @@
         },
     
         {
-            "id": "https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet",
-            "title": "Zhvillimi i udhhequer nga testet.",
-            "summary": "Pse eshte mire qe te zhvillojme ne programim duke implementuar testet se pari dhe si na ndihmojne ato.",
-            "content_text": "",
-            "content_html": "",
-            "url": "https://programerat.github.io/2022/07/zhvillimi-i-udhehequr-nga-testet",
-            
-            
-            
-            
-            
-            "date_published": "2022-07-24T00:00:00+02:00",
-            "date_modified": "2022-07-24T00:00:00+02:00",
-            
-                "author":  {
-                "name": "programerat",
-                "url": null,
-                "avatar": null
-                }
-                
-            
-        },
-    
-        {
             "id": "https://programerat.github.io/2022/07/njohja-me-programimin",
             "title": "Prezantimi i programimit",
             "summary": "Çka është programimi dhe pse është kaq i popullarizuar, dhe çfar rruge duhet të marrim për tu bërë një programer.",
