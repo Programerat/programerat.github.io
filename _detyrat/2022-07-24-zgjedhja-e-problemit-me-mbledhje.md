@@ -18,7 +18,8 @@ function zgjidhja($a, $b): int
 {
     //shkruaj logjiken
 }
-```
+```   
+        
 
 ### Zgjidhja
 
