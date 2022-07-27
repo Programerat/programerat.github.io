@@ -6,7 +6,12 @@
       <a href="{{ detyra.url | absolute_url }}" class="stretched-link">Hape detyrën</a>
     </div>
     {% if detyra.cover_img != nil %}
-        <div class="col-auto d-none d-lg-block">
+        <div class="col-auto d-none d-lg-block position-relative">
+            {% detyra.done_by != nil %}
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                    <i class="fa fa-check"></i>
+                </span>
+            {% endif %}
             <div class="fill-primary" style="width: 200px; height: 100%; background-image: url({{ detyra.cover_img }}); background-size: 100%; background-blend-mode: multiply, normal; background-color: #ced4da; background-size: cover; background-position: center;"></div>    
         </div>
     {% endif %}
