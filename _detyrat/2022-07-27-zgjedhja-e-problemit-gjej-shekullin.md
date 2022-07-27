@@ -11,7 +11,7 @@ Nëse jepet viti si input, gjeje shekullin se cili është.
 
 Shekulli i parë fillon nga viti 1 deri 100, shekulli i dytë 101 deri 200 e kështu me radhë.    
 
-```
+```php
 function zgjidhja($viti): int
 {
     //shkruaj logjiken
