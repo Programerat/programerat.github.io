@@ -1,5 +1,8 @@
 <div class="row g-0 border rounded flex-md-row mb-4 shadow-sm h-md-250 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
+        {% if detyra.solved_by != nil %}
+            <span class="badge bg-success">Zgjidhur <i class="fa fa-check"></i></span>
+        {% endif %}
       <strong class="d-inline-block mb-2 text-success">{{ detyra.level }}</strong>
       <h3 class="mb-0">{{ detyra.title }}</h3>
       <div class="mb-1 text-muted">{{ detyra.date | date_to_string }}</div>
@@ -7,11 +10,6 @@
     </div>
     {% if detyra.cover_img != nil %}
         <div class="col-auto d-none d-lg-block position-relative">
-            {% if detyra.solved_by != nil %}
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                    <i class="fa fa-check"></i>
-                </span>
-            {% endif %}
             <div class="fill-primary" style="width: 200px; height: 100%; background-image: url({{ detyra.cover_img }}); background-size: 100%; background-blend-mode: multiply, normal; background-color: #ced4da; background-size: cover; background-position: center;"></div>    
         </div>
     {% endif %}
