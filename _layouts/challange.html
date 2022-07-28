@@ -22,11 +22,10 @@ layout: default
 <!-- Content -->
 <article class="container pull-content">
   <div class="row">
-   <div class="col-md-9 blog-main">
-      {% if page.video != nil %}
-        <h3>Video</h3>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ page.code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      {% endif %}
+    {% if page.solved_by != nil %}
+      <div class="alert alert-success" role="alert">E zgjidhur, por mund të postoni zgjidhjet tuaja ato më kreative do të referohen në detyrë.</div>
+    {% endif %}
+    <div class="col-md-9 blog-main">
       <br>
       {{ content }}
     </div>
