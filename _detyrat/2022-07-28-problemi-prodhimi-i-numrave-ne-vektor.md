@@ -16,6 +16,7 @@ p.sh.
 * Nëse jepet `vektori = [1, 2, 3, 0]  			` atëherë metoda kthen `zgjidhja(vektori) = 6 `.
 
           
+Shkruani logjikën mbrenda metodës zgjidhja.      
 ```php
 function zgjidhja(array $vektori): int {
     // shkruaj Logjikën                        
