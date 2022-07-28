@@ -3,6 +3,7 @@ title: Gjej shekullin
 description: Zgjidh problemin ku nëse ju jepet një vit atëher ju duhet ta gjeni se cili shekull është.
 cover_img: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
 level: Lehtë
+solved_by: arlinndi9
 ---
 
 ### Problemi
