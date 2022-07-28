@@ -1,5 +1,5 @@
 ---
-title: A është palindrome
+title: A është palindromë?
 description: Gjeje nëse një tekst ose fjalë është një palindrom.
 cover_img: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
 level: Lehtë    
