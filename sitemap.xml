@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://programerat.github.io/autori/diar-selimi</loc>
-<lastmod>2022-07-28T07:40:40+02:00</lastmod>
+<lastmod>2022-07-28T08:38:51+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/autori/donjeta</loc>
-<lastmod>2022-07-28T07:40:40+02:00</lastmod>
+<lastmod>2022-07-28T08:38:51+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/detyrat/zgjedhja-e-problemit-me-mbledhje</loc>
@@ -15,6 +15,10 @@
 <url>
 <loc>https://programerat.github.io/detyrat/problemi-gjej-shekullin</loc>
 <lastmod>2022-07-27T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://programerat.github.io/detyrat/problemi-palindrome</loc>
+<lastmod>2022-07-28T00:00:00+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod</loc>
@@ -77,10 +81,10 @@
 </url>
 <url>
 <loc>https://programerat.github.io/assets/images/Ecovis%20Personnel%20Questionnaire%20EN.pdf</loc>
-<lastmod>2022-07-28T07:39:58+02:00</lastmod>
+<lastmod>2022-07-28T08:37:58+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/googlec420d363e881ef1e.html</loc>
-<lastmod>2022-07-28T07:39:58+02:00</lastmod>
+<lastmod>2022-07-28T08:37:59+02:00</lastmod>
 </url>
 </urlset>
