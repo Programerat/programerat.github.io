@@ -5,7 +5,7 @@ cover_img: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
 level: Lehtë
 ---
 
-### Zgjidh problemin 
+### Problemi
 
 Nëse jepet viti si input, gjeje shekullin se cili është.    
 
@@ -18,4 +18,25 @@ function zgjidhja($viti): int
 }
 ```
 
+        
+### Zgjidhja
+
+Problemi është zgjidhur nga [arlinndi9](https://github.com/arlinndi9) në seksionin e komenteve në gjuhën python.
+
+```python
+def zgjidhja(viti):
+    if int(viti) <= 0:
+        return 0
+    elif int(viti) <= 100:
+        return 1
+    elif int(viti) % 100 == 0:
+        shekulli=int(viti)//100
+        return shekulli
+    else:
+        shekulli=(int(viti)//100+1)
+        return shekulli
+
+```
+
+      
 Postojeni zgjidhjen në koment 👇
