@@ -78,10 +78,9 @@ layout: compress
 
 {% include footer.html %}
 
-
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/like_storage.js"></script>
 {% if page.url == '/' %}
   <script src="{{ site.url }}{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
-  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/like_storage.js"></script>
   <script>
     var sjs = SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
