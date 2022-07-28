@@ -44,6 +44,8 @@ function assertEquals($ex, $res) {
 	echo "Kaloj\n";
 }
 ```
-   
+
+Një vegël për të shkruar kodin online: [http://phptester.net/](http://phptester.net/).
+       
 
 Postojeni zgjidhjen në koment 👇
