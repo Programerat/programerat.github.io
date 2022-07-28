@@ -1,6 +1,7 @@
 ---
 title: A është palindromë?
 description: Gjeje nëse një tekst ose fjalë është një palindrom.
+date: 2022-07-28 08:08:08
 cover_img: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ambigram_palindrome_%CE%9D%CE%99%CE%A8%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%9C%CE%97%CE%9C%CE%91%CE%A4%CE%91%CE%9C%CE%97%CE%9C%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%A8%CE%99%CE%9D_%28Wash_your_sins%2C_not_only_your_face%2C_in_Greek%29.jpg/800px-Ambigram_palindrome_%CE%9D%CE%99%CE%A8%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%9C%CE%97%CE%9C%CE%91%CE%A4%CE%91%CE%9C%CE%97%CE%9C%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%A8%CE%99%CE%9D_%28Wash_your_sins%2C_not_only_your_face%2C_in_Greek%29.jpg
 level: Lehtë    
 ---

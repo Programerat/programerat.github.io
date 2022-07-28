@@ -1,6 +1,7 @@
 ---
 title: Mbledhja e dy numrave
 description: Zgjidh problemin me mbledhje ne metoden qe eshte deklaruar.
+date: 2022-07-24 12:12:12
 cover_img: https://programerat.github.io/assets/detyra/mbledhja-dy-numrave.png
 level: Lehtë
 solved_by: arlinndi9

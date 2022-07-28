@@ -67,6 +67,7 @@ collections:
   detyrat:
     output: true
     permalink: /:collection/:slug
+    sort: date
   authors:
     output: true
     permalink: /autori/:slug
