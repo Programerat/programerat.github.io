@@ -3,6 +3,7 @@ title: Gjej prodhimin e dy numrave.
 description: Do të jepet një vektor me n numra të plot dhe ti duhet ta gjesh se cili qift i numrave jep vektorin më të madh.
 cover_img: https://programerat.github.io/assets/detyra/prodhimi_i_dy_numrave.png
 level: Lehtë    
+solved_by: gurillaz
 ---
 
 ### Problemi
@@ -44,6 +45,32 @@ function assertEquals($ex, $res) {
 	echo "Kaloj\n";
 }
 ```
+
+### Zgjidhja
+
+Problemi është zgjidhur nga [gurillaz](https://github.com/gurillaz) në seksionin e komenteve në gjuhën PHP.
+
+```php
+function zgjidhja(array $vektori): int
+{
+
+	$result = null;
+
+	for ($i = 0; $i < count($vektori) - 1; $i++) {
+
+		$temp_prod = $vektori[$i] * $vektori[$i + 1];
+
+		if (is_null($result) || $temp_prod > $result) {
+			$result = $temp_prod;
+		}
+	}
+
+	return $result;
+}
+
+```
+     
+
 
 Një vegël për të shkruar kodin online: [http://phptester.net/](http://phptester.net/).
        

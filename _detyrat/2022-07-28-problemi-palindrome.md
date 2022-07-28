@@ -3,6 +3,7 @@ title: A është palindromë?
 description: Gjeje nëse një tekst ose fjalë është një palindrom.
 cover_img: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ambigram_palindrome_%CE%9D%CE%99%CE%A8%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%9C%CE%97%CE%9C%CE%91%CE%A4%CE%91%CE%9C%CE%97%CE%9C%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%A8%CE%99%CE%9D_%28Wash_your_sins%2C_not_only_your_face%2C_in_Greek%29.jpg/800px-Ambigram_palindrome_%CE%9D%CE%99%CE%A8%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%9C%CE%97%CE%9C%CE%91%CE%A4%CE%91%CE%9C%CE%97%CE%9C%CE%9F%CE%9D%CE%91%CE%9D%CE%9F%CE%A8%CE%99%CE%9D_%28Wash_your_sins%2C_not_only_your_face%2C_in_Greek%29.jpg
 level: Lehtë    
+solved_by: arlinndi9
 ---
 
 ### Problemi
@@ -50,6 +51,20 @@ function assertEquals($ex, $res) {
 	echo "Kaloj\n";
 }
 ```
+
+### Zgjidhja
+
+Problemi është zgjidhur nga [arlinndi9](https://github.com/arlinndi9) në seksionin e komenteve në gjuhën python.
+
+```python
+def palindrom(text):
+    if text==text[::-1]:
+        return True
+    else:
+        return False
+
+```
+      
    
 
 Postojeni zgjidhjen në koment 👇
