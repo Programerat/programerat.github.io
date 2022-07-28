@@ -17,7 +17,7 @@ p.sh.
 
           
 ```php
-function zgjidhja(string $teksti): int {
+function zgjidhja(array $vektori): int {
     // shkruaj Logjikën                        
 }
 
