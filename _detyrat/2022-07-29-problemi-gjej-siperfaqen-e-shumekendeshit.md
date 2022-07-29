@@ -14,7 +14,7 @@ Një `1`-poligon është vetëm një katror ku gjatësia e saj është 1.
 Një `n`-poligon gjenerohet duke marrur `n - 1` -poligon dhe duke e rrethuar me `1`-poligon.      
      
 Mund ta shihni në imazh se si `1`-,`2`-,`3`- dhe `4`-shumëkëndësh.
-![shumkendeshat](https://programerat.github.io/assets/detyra/poligon.jpg)    
+![shumkendeshat](https://programerat.github.io/assets/detyra/poligon.png)    
                 
 Shembull
 * Për `n = 2` rezultati nga metoda është `zgjidhja(n) = 5`.
