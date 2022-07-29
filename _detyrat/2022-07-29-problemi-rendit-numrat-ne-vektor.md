@@ -12,8 +12,8 @@ Pasi të gjendet vlera më e vogël dhe ajo më e madhe, duhet ta gjeni se cilat
 
                      
 Shembull:
-* Për `v = [1,2,7,8,3]` rezultati nga metoda është `zgjidhja(n) = 3`, sepse në vektor mungojnë 4,5 dhe 6.
-* Për `v = [4,9,7]` rezultati nga metoda është `zgjidhja(n) = 3`, sepse në vektor mungojn 5,6 dhe 8.       
+* Për `v = [1,2,7,8,3]` rezultati nga metoda është `zgjidhja(v) = 3`, sepse në vektor mungojnë 4,5 dhe 6.
+* Për `v = [4,9,7]` rezultati nga metoda është `zgjidhja(v) = 3`, sepse në vektor mungojn 5,6 dhe 8.       
      
 Shkruani logjikën mbrenda metodës zgjidhja.      
 ```php
