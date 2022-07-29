@@ -1,7 +1,7 @@
 ---
 title: Sa numra mungojnë?
 description: Do të jepet një vektor, dhe ju duhet ta gjeni se sa numra mungojnë në renditje.
-cover_img: "https://hearingreview.com/wp-content/uploads/2013/12/shutterstock_145266973.jpg"
+cover_img: https://miro.medium.com/max/500/1*ozZ0WzLvwyB9rUJhVFTJTg.jpeg
 level: Lehtë    
 ---
 
