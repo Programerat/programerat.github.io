@@ -13,7 +13,7 @@ Detyra jote është që ta gjesh siperfaqen e poligonit për vlerën e dhënë `
 Një `1`-poligon është vetëm një katror ku gjatësia e saj është 1.
 Një `n`-poligon gjenerohet duke marrur `n - 1` -poligon dhe duke e rrethuar me `1`-poligon.      
      
-Mund ta shihni në imazh se si `1`-,`2`-,`3`- dhe `4`-shumëkëndësh.
+Mund ta shihni në imazh se si `1`-,`2`-,`3`- dhe `4`-poligon gjenerohen.
 ![shumkendeshat](https://programerat.github.io/assets/detyra/poligon.png)    
                 
 Shembull
