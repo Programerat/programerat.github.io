@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://programerat.github.io/autori/diar-selimi</loc>
-<lastmod>2022-07-28T22:07:24+02:00</lastmod>
+<lastmod>2022-07-29T07:09:33+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/autori/donjeta</loc>
-<lastmod>2022-07-28T22:07:24+02:00</lastmod>
+<lastmod>2022-07-29T07:09:33+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/detyrat/zgjedhja-e-problemit-me-mbledhje</loc>
@@ -23,6 +23,14 @@
 <url>
 <loc>https://programerat.github.io/detyrat/problemi-prodhimi-i-numrave-ne-vektor</loc>
 <lastmod>2022-07-28T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://programerat.github.io/detyrat/problemi-gjej-siperfaqen-e-shumekendeshit</loc>
+<lastmod>2022-07-29T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://programerat.github.io/detyrat/problemi-rendit-numrat-ne-vektor</loc>
+<lastmod>2022-07-29T00:00:00+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/2021/11/solid-principet-dhe-si-ti-aplikoni-ne-kod</loc>
@@ -85,10 +93,10 @@
 </url>
 <url>
 <loc>https://programerat.github.io/assets/images/Ecovis%20Personnel%20Questionnaire%20EN.pdf</loc>
-<lastmod>2022-07-28T22:06:29+02:00</lastmod>
+<lastmod>2022-07-29T07:08:39+02:00</lastmod>
 </url>
 <url>
 <loc>https://programerat.github.io/googlec420d363e881ef1e.html</loc>
-<lastmod>2022-07-28T22:06:29+02:00</lastmod>
+<lastmod>2022-07-29T07:08:40+02:00</lastmod>
 </url>
 </urlset>
