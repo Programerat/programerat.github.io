@@ -3,14 +3,13 @@ title: Elementet e vektorit në rritje - 1
 description: Do të jepet një vektor, dhe ju duhet ta gjeni se elementet mbrenda a janë të renditura prej më të voglit deri te më i madhi.
 cover_img: https://datagenetics.com/blog/march102021/title.jpg
 level: Lehtë    
-published: false
 ---
 
 ### Problemi
 
-Nëse jepet një vektor me numra të pa renditur, ju duhet ta gjeni nëse ky vektor përmban numra që janë në rritje dhe e keni një mundësi për ta fshirë një element nga vektori që të bëhet valid.
+Nëse jepet një vektor me numra të pa renditur, ju duhet ta gjeni nëse ky vektor përmban numra që janë vetëm në rritje dhe e keni një mundësi për ta fshirë një numër nga vektori që të bëhet valid.
 
-Nëse vektori përmbanë një element atëherë ai konsiderohet si valid.     
+Nëse vektori përmbanë një numër atëherë ai konsiderohet si valid.     
     
                      
 Shembull:
